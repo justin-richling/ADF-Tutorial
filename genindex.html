@@ -153,25 +153,45 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro to the ADF-X</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Basics of Running CESM</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/basics/adf_welcome.html">Downloading CESM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/basics/downloading.html">Downloading CESM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/basics/running.html">Your first CESM run</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installing the ADF</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simple Modifications</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/install/download.html">Download ADF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/install/env_init.html">Initialize Env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/simple/start_stop.html">Starting &amp; stopping a run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/simple/restart.html">Restarting a run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/simple/run_length.html">Changing the run length</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/simple/run_type.html">Run types: hybrid, branch, restart</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring the Outputs</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Namelist Modifications</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/local.html">Local</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/website.html">Website</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/modifications/namelist/output.html">How to customize output</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/modifications/namelist/output/frequency.html">Changing output frequency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/modifications/namelist/output/files.html">Adding extra history files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/modifications/namelist/output/variables.html">Adding new variables</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Source Modifications</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/source/addfld.html">How to add a new field to history files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/modifications/source/physics.html">How to modify some physics routine (need to pick one!)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/help/github.html">Starting &amp; stopping a run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/help/email.html">Changing the run length</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/help/hackathon.html">Run types: hybrid, branch, restart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Diagnostics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/diagnostics/plot_fields.html">Plotting fields (matplotlib?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/diagnostics/regridding.html">Regridding output</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/diagnostics/packages.html">CESM Diagnostics Packages</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/diagnostics/packages/adf.html">The Atmosphere Diagnostics Framework (ADF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/diagnostics/packages/other.html">Some other diagnostics code..</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
