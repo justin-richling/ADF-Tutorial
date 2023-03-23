@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>CAM vs CMIP &#8212; ADF Tutorial</title>
+    <title>ADF Layout &#8212; ADF Tutorial</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/run/cmip';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/basics/layout';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Single Case Comparison" href="cmip/single.html" />
-    <link rel="prev" title="Multiple Case Comparison" href="obs/multi.html" />
+    <link rel="next" title="Libraries" href="layout/lib.html" />
+    <link rel="prev" title="Welcome to the ADF!" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,44 +157,51 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro to the ADF-X</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../basics/adf_welcome.html">Welcome to the ADF!</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">ADF Layout</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="layout/lib.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout/scripts.html">Scripts</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Installing the ADF</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../install/env_setup.html">Setting up Environment</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/cisl.html">CISL Computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/custom.html">Custom Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../install/download.html">Download ADF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../install/env_init.html">Initialize Env</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../configs/yaml/runtime.html">Run Time</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../configs/other.html">Other Configurations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Running the ADF</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Run Basics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="model.html">CAM vs CAM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="model/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model/multi.html">Multiple Case Comparison</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../run/basics.html">Run Basics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../run/comps.html">Available Comparison Cases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/model.html">CAM vs CAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/obs.html">CAM vs Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/cmip.html">CAM vs CMIP</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="obs.html">CAM vs Observation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="obs/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="obs/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">CAM vs CMIP</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="cmip/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cmip/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../run/multi.html">Multiple Case Comparison</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring the Outputs</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../outputs/local.html">Local</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../outputs/website.html">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/local.html">Local Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/website.html">ADF Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Customizing the ADF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../customize/add.html">Add Custom Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customize/modify.html">Modify ADF Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul class="nav bd-sidenav">
@@ -272,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/cmip.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/basics/layout.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -302,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/run/cmip.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/basics/layout.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +389,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CAM vs CMIP</h1>
+    <h1>ADF Layout</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -396,9 +403,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cam-vs-cmip">
-<h1>CAM vs CMIP<a class="headerlink" href="#cam-vs-cmip" title="Permalink to this heading">#</a></h1>
-<p>Running a CAM simulation vs CMIP simulations</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
+<h1>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this heading">#</a></h1>
+<p>A simple look at how the ADF works</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -416,7 +423,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/run"
+            path: "./notebooks/basics"
         },
         predefinedOutput: true
     }
@@ -432,20 +439,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="obs/multi.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Multiple Case Comparison</p>
+        <p class="prev-next-title">Welcome to the ADF!</p>
       </div>
     </a>
     <a class="right-next"
-       href="cmip/single.html"
+       href="layout/lib.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Single Case Comparison</p>
+        <p class="prev-next-title">Libraries</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

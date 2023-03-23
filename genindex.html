@@ -155,43 +155,50 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro to the ADF-X</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/basics/adf_welcome.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/basics/intro.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/basics/layout.html">ADF Layout</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/basics/layout/lib.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/basics/layout/scripts.html">Scripts</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Installing the ADF</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/install/env_setup.html">Setting up Environment</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/install/env_setup/cisl.html">CISL Computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/install/env_setup/custom.html">Custom Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/install/download.html">Download ADF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/install/env_init.html">Initialize Env</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/configs/yaml/runtime.html">Run Time</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/configs/other.html">Other Configurations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Running the ADF</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/run/basics.html">Run Basics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/run/model.html">CAM vs CAM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/model/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/model/multi.html">Multiple Case Comparison</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/run/comps.html">Available Comparison Cases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/run/comps/model.html">CAM vs CAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/run/comps/obs.html">CAM vs Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/run/comps/cmip.html">CAM vs CMIP</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/run/obs.html">CAM vs Observation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/obs/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/obs/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/run/cmip.html">CAM vs CMIP</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/cmip/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/run/cmip/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/run/multi.html">Multiple Case Comparison</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring the Outputs</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/local.html">Local</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/website.html">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/local.html">Local Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/outputs/website.html">ADF Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Customizing the ADF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/customize/add.html">Add Custom Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/customize/modify.html">Modify ADF Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul class="nav bd-sidenav">

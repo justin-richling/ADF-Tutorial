@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/run/basics';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CAM vs CAM" href="model.html" />
-    <link rel="prev" title="Run Time" href="../configs/yaml/runtime.html" />
+    <link rel="next" title="Available Comparison Cases" href="comps.html" />
+    <link rel="prev" title="Other Configurations" href="../configs/other.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,43 +158,50 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro to the ADF-X</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../basics/adf_welcome.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/intro.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/layout.html">ADF Layout</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/layout/lib.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/layout/scripts.html">Scripts</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Installing the ADF</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../install/env_setup.html">Setting up Environment</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/cisl.html">CISL Computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/custom.html">Custom Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../install/download.html">Download ADF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../install/env_init.html">Initialize Env</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../configs/yaml/runtime.html">Run Time</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../configs/other.html">Other Configurations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Running the ADF</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Run Basics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="model.html">CAM vs CAM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="model/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model/multi.html">Multiple Case Comparison</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="comps.html">Available Comparison Cases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="comps/model.html">CAM vs CAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comps/obs.html">CAM vs Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comps/cmip.html">CAM vs CMIP</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="obs.html">CAM vs Observation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="obs/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="obs/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="cmip.html">CAM vs CMIP</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="cmip/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cmip/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="multi.html">Multiple Case Comparison</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring the Outputs</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../outputs/local.html">Local</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../outputs/website.html">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/local.html">Local Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/website.html">ADF Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Customizing the ADF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../customize/add.html">Add Custom Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customize/modify.html">Modify ADF Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul class="nav bd-sidenav">
@@ -430,20 +437,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../configs/yaml/runtime.html"
+       href="../configs/other.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Run Time</p>
+        <p class="prev-next-title">Other Configurations</p>
       </div>
     </a>
     <a class="right-next"
-       href="model.html"
+       href="comps.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CAM vs CAM</p>
+        <p class="prev-next-title">Available Comparison Cases</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

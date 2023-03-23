@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Website &#8212; ADF Tutorial</title>
+    <title>ADF Website &#8212; ADF Tutorial</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/outputs/website';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GitHub: NCAR/ADF" href="../help/github.html" />
-    <link rel="prev" title="Local" href="local.html" />
+    <link rel="next" title="Add Custom Script" href="../customize/add.html" />
+    <link rel="prev" title="Local Machine" href="local.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,43 +158,50 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intro to the ADF-X</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../basics/adf_welcome.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/intro.html">Welcome to the ADF!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/layout.html">ADF Layout</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/layout/lib.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/layout/scripts.html">Scripts</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Installing the ADF</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../install/env_setup.html">Setting up Environment</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/cisl.html">CISL Computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/env_setup/custom.html">Custom Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../install/download.html">Download ADF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../install/env_init.html">Initialize Env</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configs/yaml.html">Yaml Config Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../configs/yaml/runtime.html">Run Time</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../configs/other.html">Other Configurations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Running the ADF</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../run/basics.html">Run Basics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../run/model.html">CAM vs CAM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../run/model/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../run/model/multi.html">Multiple Case Comparison</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../run/comps.html">Available Comparison Cases</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/model.html">CAM vs CAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/obs.html">CAM vs Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run/comps/cmip.html">CAM vs CMIP</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../run/obs.html">CAM vs Observation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../run/obs/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../run/obs/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../run/cmip.html">CAM vs CMIP</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../run/cmip/single.html">Single Case Comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../run/cmip/multi.html">Multiple Case Comparison</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../run/multi.html">Multiple Case Comparison</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring the Outputs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="local.html">Local</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local.html">Local Machine</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ADF Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Customizing the ADF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../customize/add.html">Add Custom Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customize/modify.html">Modify ADF Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul class="nav bd-sidenav">
@@ -382,7 +389,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Website</h1>
+    <h1>ADF Website</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -396,8 +403,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="website">
-<h1>Website<a class="headerlink" href="#website" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="adf-website">
+<h1>ADF Website<a class="headerlink" href="#adf-website" title="Permalink to this heading">#</a></h1>
+<p>If create website flag is initiated in the yaml file, this is how to push the output to the website</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -434,15 +442,15 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Local</p>
+        <p class="prev-next-title">Local Machine</p>
       </div>
     </a>
     <a class="right-next"
-       href="../help/github.html"
+       href="../customize/add.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GitHub: NCAR/ADF</p>
+        <p class="prev-next-title">Add Custom Script</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
