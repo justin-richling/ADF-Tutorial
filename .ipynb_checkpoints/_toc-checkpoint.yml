@@ -1,0 +1,59 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+
+parts:
+- caption: Intro to the ADF
+  chapters:
+    - file: notebooks/basics/intro
+    - file: notebooks/basics/layout
+      sections:
+      - file: notebooks/basics/layout/lib
+      - file: notebooks/basics/layout/scripts
+
+- caption: Installing the ADF
+  chapters:
+    - file: notebooks/install/env_setup
+      sections:
+      - file: notebooks/install/env_setup/cisl
+      - file: notebooks/install/env_setup/custom
+    - file: notebooks/install/download
+
+- caption: Configuration
+  chapters:
+    - file: notebooks/configs/yaml
+      sections:
+      - file: notebooks/configs/yaml/yaml_basics
+      - file: notebooks/configs/yaml/runtime
+      - file: notebooks/configs/yaml/variable
+    - file: notebooks/configs/other
+
+- caption: Running the ADF
+  chapters:
+    - file: notebooks/run/basics
+    - file: notebooks/run/comps
+      sections:
+      - file: notebooks/run/comps/model
+      - file: notebooks/run/comps/obs
+      - file: notebooks/run/comps/cmip
+    - file: notebooks/run/multi
+
+- caption: Exploring the Outputs
+  chapters:
+    - file: notebooks/outputs/local
+    - file: notebooks/outputs/website
+
+- caption: Customizing the ADF
+  chapters:
+    - file: notebooks/customize/add
+    - file: notebooks/customize/modify
+
+- caption: Troubleshooting
+  chapters:
+    - file: notebooks/help/github
+    - file: notebooks/help/email
+    - file: notebooks/help/hackathon
+
+  
