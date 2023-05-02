@@ -5,101 +5,55 @@ format: jb-book
 root: README
 
 parts:
-- caption: Introduction
+- caption: Intro to the ADF
   chapters:
-    - file: notebooks/introduction/using_jupyter_notebooks
-    - file: notebooks/introduction/running_on_cheyenne
+    - file: notebooks/basics/intro
+    - file: notebooks/basics/layout
       sections:
-      - file: notebooks/introduction/cheyenne/terminals
-      - file: notebooks/introduction/cheyenne/jupyterhub
+      - file: notebooks/basics/layout/lib
+      - file: notebooks/basics/layout/scripts
 
-- caption: The Basics of Running CESM
+- caption: Installing the ADF
   chapters:
-    - file: notebooks/basics/overview
-    - file: notebooks/basics/setting_up_the_workspace
-    - file: notebooks/basics/downloading_cesm
+    - file: notebooks/install/env_setup
       sections:
-      - file: notebooks/basics/downloading_cesm/git_clone
-      - file: notebooks/basics/downloading_cesm/git_checkout
-      - file: notebooks/basics/downloading_cesm/manage_externals
-    - file: notebooks/basics/the_cesm_code
-      sections:
-      - file: notebooks/basics/the_cesm_code/cesm_components
-      - file: notebooks/basics/the_cesm_code/inputdata
-    - file: notebooks/basics/your_first_cesm_run
-      sections:
-      - file: notebooks/basics/your_first_cesm_run/basic_workflow
-      - file: notebooks/basics/your_first_cesm_run/checking_queues_and_jobs
-      - file: notebooks/basics/your_first_cesm_run/case_directory_and_documentation
+      - file: notebooks/install/env_setup/cisl
+      - file: notebooks/install/env_setup/custom
+    - file: notebooks/install/download
 
-- caption: Simple XML Modifications
+- caption: Configuration
   chapters:
-    - file: notebooks/modifications/xml/overview
-    - file: notebooks/modifications/xml/model_control_files
-    - file: notebooks/modifications/xml/run_length
+    - file: notebooks/configs/yaml
       sections:
-      - file: notebooks/modifications/xml/run_length/starting_and_stopping
-      - file: notebooks/modifications/xml/run_length/restarting
-      - file: notebooks/modifications/xml/run_length/changing_run_length
-      - file: notebooks/modifications/xml/run_length/number_of_submissions
-      - file: notebooks/modifications/xml/run_length/timing_files
-    - file: notebooks/modifications/xml/modify_run_type
-      sections: 
-      - file: notebooks/modifications/xml/modify_run_type/hybrid_branch_restart
-      - file: notebooks/modifications/xml/modify_run_type/run_variables
-    - file: notebooks/modifications/xml/copying_cases
-    - file: notebooks/modifications/xml/physics_timestep
+      - file: notebooks/configs/yaml/yaml_basics
+      - file: notebooks/configs/yaml/runtime
+      - file: notebooks/configs/yaml/variable
+    - file: notebooks/configs/other
 
-- caption: Namelist Modifications
+- caption: Running the ADF
   chapters:
-    - file: notebooks/modifications/namelist/overview
+    - file: notebooks/run/basics
+    - file: notebooks/run/comps
       sections:
-      - file: notebooks/modifications/namelist/overview/casedocs
-    - file: notebooks/modifications/namelist/basics
-      sections:
-      - file: notebooks/modifications/namelist/basics/preview_namelists
-      - file: notebooks/modifications/namelist/basics/cam
-      - file: notebooks/modifications/namelist/basics/other_components
-    - file: notebooks/modifications/namelist/output
-      sections:
-      - file: notebooks/modifications/namelist/output/frequency
+      - file: notebooks/run/comps/model
+      - file: notebooks/run/comps/obs
+      - file: notebooks/run/comps/cmip
+    - file: notebooks/run/multi
 
-- caption: Source Modifications
+- caption: Exploring the Outputs
   chapters:
-    - file: notebooks/modifications/source/basics
-    - file: notebooks/modifications/source/add_fields
-      sections:
-      - file: notebooks/modifications/source/add_fields/cam
-      - file: notebooks/modifications/source/add_fields/clm
-      - file: notebooks/modifications/source/add_fields/pop
-    - file: notebooks/modifications/source/modifying_physics
+    - file: notebooks/outputs/local
+    - file: notebooks/outputs/website
+
+- caption: Customizing the ADF
+  chapters:
+    - file: notebooks/customize/add
+    - file: notebooks/customize/modify
 
 - caption: Troubleshooting
   chapters:
-    - file: notebooks/troubleshooting/troubleshooting
-    - file: notebooks/troubleshooting/log_files
+    - file: notebooks/help/github
+    - file: notebooks/help/email
+    - file: notebooks/help/hackathon
 
-- caption: Diagnostics
-  chapters:
-    - file: notebooks/diagnostics/plotting_fields
-    - file: notebooks/diagnostics/regridding
-    - file: notebooks/diagnostics/packages
-    - file: notebooks/diagnostics/geocat
-    - file: notebooks/diagnostics/esds
-
-- caption: Challenge Exercises
-  chapters:
-    - file: notebooks/challenge/breakout1
-
-- caption: Useful Tools
-  chapters:
-    - file: notebooks/tools/jupyter_notebooks
-    - file: notebooks/tools/python
-    - file: notebooks/tools/netcdf_tools
-    - file: notebooks/tools/github
-    - file: notebooks/tools/unix_basics
-    - file: notebooks/tools/fortran
-    - file: notebooks/tools/text_editors
-
-
-
+  
