@@ -115,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Intro to the ADF-X
+  Intro to the ADF
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -212,18 +212,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="other.html">
    Other Configurations
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Running the ADF
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../run/comps.html">
-   Available Comparison Cases
   </a>
  </li>
 </ul>
@@ -462,12 +450,68 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
+   0. Run CAM simulation → get history ( h0** ) file(s)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
+   1. Configure yaml files for the history files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+     <strong>
+      NOTE:
+     </strong>
+     Make copies of these
+     <strong>
+      files
+     </strong>
+     and
+     <u>
+      modify/customize
+     </u>
+     the
+     <strong>
+      copies
+     </strong>
+     !
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-adf">
+   2. Run the ADF
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -479,6 +523,51 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
+   0. Run CAM simulation → get history ( h0** ) file(s)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
+   1. Configure yaml files for the history files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+     <strong>
+      NOTE:
+     </strong>
+     Make copies of these
+     <strong>
+      files
+     </strong>
+     and
+     <u>
+      modify/customize
+     </u>
+     the
+     <strong>
+      copies
+     </strong>
+     !
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-adf">
+   2. Run the ADF
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -488,6 +577,36 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
+<section id="run-cam-simulation-get-history-h0-file-s">
+<h2>0. Run CAM simulation → get history ( h0** ) file(s)<a class="headerlink" href="#run-cam-simulation-get-history-h0-file-s" title="Permalink to this headline">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* or other history files
+</pre></div>
+</div>
+</section>
+<section id="configure-yaml-files-for-the-history-files">
+<h2>1. Configure yaml files for the history files<a class="headerlink" href="#configure-yaml-files-for-the-history-files" title="Permalink to this headline">#</a></h2>
+<section id="note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+<h3><strong>NOTE:</strong>  Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!<a class="headerlink" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>config_cam_baseline_example.yaml  (necessary)</p></li>
+<li><p>lib/adf_variable_defaults.yaml   (optional)**</p>
+<p>** Additionally, you will need to change the defaults_file path in your copy of config_cam_baseline_example.yaml</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="run-the-adf">
+<h2>2. Run the ADF<a class="headerlink" href="#run-the-adf" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Break it:  Check config files?   Check error/logs?   Check data/paths?</p></li>
+<li><p>Success: Check output data/images</p>
+<ul>
+<li><p>Locally</p></li>
+<li><p>via HTML files (optional)</p></li>
+</ul>
+</li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
