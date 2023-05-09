@@ -1,10 +1,9 @@
-
 # Welcome to the [ADF Tutorial](https://justin-richling.github.io/ADF-Tutorial/README.html)
 
 
 <br><br>
 
-Total placeholder for now
+<u>**AMWG**</u> <u>**D**</u>iagnostic <u>**F**</u>ramework
 
 <br><br>
 

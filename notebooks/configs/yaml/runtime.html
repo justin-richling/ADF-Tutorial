@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Run Time &#8212; ADF Tutorial</title>
+    <title>Run Time &#8212; CESM Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../../_static/ncar_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ADF Tutorial</h1>
+      <h1 class="site-logo" id="site-title">CESM Tutorial</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
@@ -332,7 +332,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
+        <a href="https://mybinder.org/v2/gh/NCAR/CESM-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -375,7 +375,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial"
+        <a href="https://github.com/NCAR/CESM-Tutorial"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -392,7 +392,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/NCAR/CESM-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -493,18 +493,6 @@ title="Print to PDF"
       Is this a model vs observations comparison?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-a-model-model-comparison-is-assumed">
-       If “false” or missing, then a model-model comparison is assumed:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#compare-obs-false">
-       compare_obs: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
@@ -512,33 +500,6 @@ title="Print to PDF"
       Generate HTML website (assumed false if missing):
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-the-website-files-themselves-will-be-located-in-the-path">
-       Note:  The website files themselves will be located in the path
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#specified-by-cam-diag-plot-loc-under-the-diag-run-website-subdirectory">
-       specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#where-diag-run-is-the-subdirectory-created-for-this-particular-diagnostics-run">
-       where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#usually-case-vs-obs-xxx-or-case-vs-baseline-xxx">
-       (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-html-true">
-       create_html: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-of-observational-datasets">
@@ -546,23 +507,6 @@ title="Print to PDF"
       Location of observational datasets:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-this-only-matters-if-compare-obs-is-true-and-the-path">
-       Note: this only matters if “compare_obs” is true and the path
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#isn-t-specified-in-the-variable-defaults-file">
-       isn’t specified in the variable defaults file.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#obs-data-loc-glade-work-nusbaume-se-projects-model-diagnostics-adf-obs">
-       obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
@@ -570,13 +514,6 @@ title="Print to PDF"
       Location where re-gridded and interpolated CAM climatology files are stored:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-regrid-loc-glade-scratch-user-adf-regrid">
-       cam_regrid_loc: /glade/scratch/${user}/ADF/regrid
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#overwrite-cam-re-gridded-files">
@@ -584,23 +521,6 @@ title="Print to PDF"
       Overwrite CAM re-gridded files?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-regridding-will-be-skipped-for-regridded-variables">
-       If false, or missing, then regridding will be skipped for regridded variables
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#that-already-exist-in-cam-regrid-loc">
-       that already exist in “cam_regrid_loc”:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-regrid-false">
-       cam_overwrite_regrid: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-where-diagnostic-plots-are-stored">
@@ -608,13 +528,6 @@ title="Print to PDF"
       Location where diagnostic plots are stored:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-diag-plot-loc-glade-scratch-user-adf-plots">
-       cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cam-history-file-number-to-use-h0-h1-h2-etc">
@@ -622,28 +535,6 @@ title="Print to PDF"
       CAM history file number to use (h0,h1,h2, etc)
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#currently-only-affects-timeseries-generation">
-       Currently only affects timeseries generation,
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#as-everything-else-uses-the-timeseries-files-themselves">
-       as everything else uses the timeseries files themselves.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-variable-is-not-present-then-it-will-default-to-h0">
-       If this variable is not present then it will default to “h0”.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hist-num-h0">
-       hist_num: h0
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-default-variable-plot-settings">
@@ -651,23 +542,6 @@ title="Print to PDF"
       Use default variable plot settings?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-true-then-variable-specific-plotting-attributes-as-defined-in">
-       If “true”, then variable-specific plotting attributes as defined in
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adf-lib-adf-variable-defaults-yaml-will-be-used">
-       ADF/lib/adf_variable_defaults.yaml will be used:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#use-defaults-true">
-       use_defaults: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-of-adf-variable-plotting-defaults-yaml-file">
@@ -675,18 +549,6 @@ title="Print to PDF"
       Location of ADF variable plotting defaults YAML file
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-not-using-the-one-in-adf-lib">
-       if not using the one in ADF/lib:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
-       defaults_file: /some/path/to/defaults/file
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
@@ -694,33 +556,6 @@ title="Print to PDF"
       Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-option-is-missing-then-no-3-d-variables-will-be-plotted-on">
-       If this config option is missing, then no 3-D variables will be plotted on
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#horizontal-maps-please-note-too-that-pressure-levels-must-currently-match">
-       horizontal maps.  Please note too that pressure levels must currently match
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-is-available-in-the-observations-file-in-order-to-be-plotted-in-a">
-       what is available in the observations file in order to be plotted in a
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-vs-obs-run">
-       model vs obs run:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plot-press-levels-200-850">
-       plot_press_levels: [200,850]
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
@@ -728,23 +563,6 @@ title="Print to PDF"
       Longitude line on which to center all lat/lon maps.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-option-is-missing-then-the-central">
-       If this config option is missing then the central
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#longitude-will-default-to-180-degrees-e">
-       longitude will default to 180 degrees E.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#central-longitude-180">
-       central_longitude: 180
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
@@ -752,23 +570,6 @@ title="Print to PDF"
       Apply monthly weights to seasonal averages.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-all-months-are">
-       If False or missing, then all months are
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#given-the-same-weight">
-       given the same weight:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#weight-season-true">
-       weight_season: True
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
@@ -776,38 +577,6 @@ title="Print to PDF"
       Number of processors on which to run the ADF.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-variable-isn-t-present-then">
-       If this config variable isn’t present then
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-adf-defaults-to-one-processor-also-if">
-       the ADF defaults to one processor.  Also, if
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-set-it-to-then-it-will-default">
-       you set it to “*” then it will default
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-all-of-the-processors-available-on-a">
-       to all of the processors available on a
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#single-node-machine">
-       single node/machine:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#num-procs-8">
-       num_procs: 8
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
@@ -815,23 +584,6 @@ title="Print to PDF"
       Remake plots?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-true-then-redo-all-plots-even-if-they-already-exist">
-       If set to true, then redo all plots even if they already exist.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-false-then-if-a-plot-is-found-it-will-be-skipped">
-       If set to false, then if a plot is found it will be skipped:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#redo-plot-false">
-       redo_plot: false
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1120,18 +872,6 @@ title="Print to PDF"
       Is this a model vs observations comparison?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-a-model-model-comparison-is-assumed">
-       If “false” or missing, then a model-model comparison is assumed:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#compare-obs-false">
-       compare_obs: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
@@ -1139,33 +879,6 @@ title="Print to PDF"
       Generate HTML website (assumed false if missing):
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-the-website-files-themselves-will-be-located-in-the-path">
-       Note:  The website files themselves will be located in the path
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#specified-by-cam-diag-plot-loc-under-the-diag-run-website-subdirectory">
-       specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#where-diag-run-is-the-subdirectory-created-for-this-particular-diagnostics-run">
-       where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#usually-case-vs-obs-xxx-or-case-vs-baseline-xxx">
-       (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-html-true">
-       create_html: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-of-observational-datasets">
@@ -1173,23 +886,6 @@ title="Print to PDF"
       Location of observational datasets:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-this-only-matters-if-compare-obs-is-true-and-the-path">
-       Note: this only matters if “compare_obs” is true and the path
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#isn-t-specified-in-the-variable-defaults-file">
-       isn’t specified in the variable defaults file.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#obs-data-loc-glade-work-nusbaume-se-projects-model-diagnostics-adf-obs">
-       obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
@@ -1197,13 +893,6 @@ title="Print to PDF"
       Location where re-gridded and interpolated CAM climatology files are stored:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-regrid-loc-glade-scratch-user-adf-regrid">
-       cam_regrid_loc: /glade/scratch/${user}/ADF/regrid
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#overwrite-cam-re-gridded-files">
@@ -1211,23 +900,6 @@ title="Print to PDF"
       Overwrite CAM re-gridded files?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-regridding-will-be-skipped-for-regridded-variables">
-       If false, or missing, then regridding will be skipped for regridded variables
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#that-already-exist-in-cam-regrid-loc">
-       that already exist in “cam_regrid_loc”:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-regrid-false">
-       cam_overwrite_regrid: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-where-diagnostic-plots-are-stored">
@@ -1235,13 +907,6 @@ title="Print to PDF"
       Location where diagnostic plots are stored:
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-diag-plot-loc-glade-scratch-user-adf-plots">
-       cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cam-history-file-number-to-use-h0-h1-h2-etc">
@@ -1249,28 +914,6 @@ title="Print to PDF"
       CAM history file number to use (h0,h1,h2, etc)
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#currently-only-affects-timeseries-generation">
-       Currently only affects timeseries generation,
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#as-everything-else-uses-the-timeseries-files-themselves">
-       as everything else uses the timeseries files themselves.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-variable-is-not-present-then-it-will-default-to-h0">
-       If this variable is not present then it will default to “h0”.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hist-num-h0">
-       hist_num: h0
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-default-variable-plot-settings">
@@ -1278,23 +921,6 @@ title="Print to PDF"
       Use default variable plot settings?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-true-then-variable-specific-plotting-attributes-as-defined-in">
-       If “true”, then variable-specific plotting attributes as defined in
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adf-lib-adf-variable-defaults-yaml-will-be-used">
-       ADF/lib/adf_variable_defaults.yaml will be used:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#use-defaults-true">
-       use_defaults: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#location-of-adf-variable-plotting-defaults-yaml-file">
@@ -1302,18 +928,6 @@ title="Print to PDF"
       Location of ADF variable plotting defaults YAML file
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-not-using-the-one-in-adf-lib">
-       if not using the one in ADF/lib:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
-       defaults_file: /some/path/to/defaults/file
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
@@ -1321,33 +935,6 @@ title="Print to PDF"
       Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-option-is-missing-then-no-3-d-variables-will-be-plotted-on">
-       If this config option is missing, then no 3-D variables will be plotted on
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#horizontal-maps-please-note-too-that-pressure-levels-must-currently-match">
-       horizontal maps.  Please note too that pressure levels must currently match
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-is-available-in-the-observations-file-in-order-to-be-plotted-in-a">
-       what is available in the observations file in order to be plotted in a
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-vs-obs-run">
-       model vs obs run:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plot-press-levels-200-850">
-       plot_press_levels: [200,850]
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
@@ -1355,23 +942,6 @@ title="Print to PDF"
       Longitude line on which to center all lat/lon maps.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-option-is-missing-then-the-central">
-       If this config option is missing then the central
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#longitude-will-default-to-180-degrees-e">
-       longitude will default to 180 degrees E.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#central-longitude-180">
-       central_longitude: 180
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
@@ -1379,23 +949,6 @@ title="Print to PDF"
       Apply monthly weights to seasonal averages.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-missing-then-all-months-are">
-       If False or missing, then all months are
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#given-the-same-weight">
-       given the same weight:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#weight-season-true">
-       weight_season: True
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
@@ -1403,38 +956,6 @@ title="Print to PDF"
       Number of processors on which to run the ADF.
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-this-config-variable-isn-t-present-then">
-       If this config variable isn’t present then
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-adf-defaults-to-one-processor-also-if">
-       the ADF defaults to one processor.  Also, if
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-set-it-to-then-it-will-default">
-       you set it to “*” then it will default
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-all-of-the-processors-available-on-a">
-       to all of the processors available on a
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#single-node-machine">
-       single node/machine:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#num-procs-8">
-       num_procs: 8
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
@@ -1442,23 +963,6 @@ title="Print to PDF"
       Remake plots?
      </strong>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-true-then-redo-all-plots-even-if-they-already-exist">
-       If set to true, then redo all plots even if they already exist.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-false-then-if-a-plot-is-found-it-will-be-skipped">
-       If set to false, then if a plot is found it will be skipped:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#redo-plot-false">
-       redo_plot: false
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1730,179 +1234,89 @@ title="Print to PDF"
 <h2>First set in yaml file:  <span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag\_basic\_info}}\)</span><a class="headerlink" href="#first-set-in-yaml-file-color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
 <section id="is-this-a-model-vs-observations-comparison">
 <h3><strong>Is this a model vs observations comparison?</strong><a class="headerlink" href="#is-this-a-model-vs-observations-comparison" title="Permalink to this headline">#</a></h3>
-<section id="if-false-or-missing-then-a-model-model-comparison-is-assumed">
-<h4>     If “false” or missing, then a model-model comparison is assumed:<a class="headerlink" href="#if-false-or-missing-then-a-model-model-comparison-is-assumed" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="compare-obs-false">
-<h4>     compare_obs: false<a class="headerlink" href="#compare-obs-false" title="Permalink to this headline">#</a></h4>
-<p>     If “false” or missing, then a model-model comparison is assumed:
-     compare_obs: false</p>
-</section>
+<p>     If “false” or missing, then a model-model comparison is assumed:<br />
+     <strong>compare_obs</strong>: false</p>
 </section>
 <section id="generate-html-website-assumed-false-if-missing">
 <h3><strong>Generate HTML website (assumed false if missing):</strong><a class="headerlink" href="#generate-html-website-assumed-false-if-missing" title="Permalink to this headline">#</a></h3>
-<section id="note-the-website-files-themselves-will-be-located-in-the-path">
-<h4>     Note:  The website files themselves will be located in the path<a class="headerlink" href="#note-the-website-files-themselves-will-be-located-in-the-path" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="specified-by-cam-diag-plot-loc-under-the-diag-run-website-subdirectory">
-<h4>     specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,<a class="headerlink" href="#specified-by-cam-diag-plot-loc-under-the-diag-run-website-subdirectory" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="where-diag-run-is-the-subdirectory-created-for-this-particular-diagnostics-run">
-<h4>     where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run<a class="headerlink" href="#where-diag-run-is-the-subdirectory-created-for-this-particular-diagnostics-run" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="usually-case-vs-obs-xxx-or-case-vs-baseline-xxx">
-<h4>     (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).<a class="headerlink" href="#usually-case-vs-obs-xxx-or-case-vs-baseline-xxx" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="create-html-true">
-<h4>     create_html: true<a class="headerlink" href="#create-html-true" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     Note:  The website files themselves will be located in the path
+     specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,
+     where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run
+     (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
+     create_html: true</p>
 </section>
 <section id="location-of-observational-datasets">
 <h3><strong>Location of observational datasets:</strong><a class="headerlink" href="#location-of-observational-datasets" title="Permalink to this headline">#</a></h3>
-<section id="note-this-only-matters-if-compare-obs-is-true-and-the-path">
-<h4>     Note: this only matters if “compare_obs” is true and the path<a class="headerlink" href="#note-this-only-matters-if-compare-obs-is-true-and-the-path" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="isn-t-specified-in-the-variable-defaults-file">
-<h4>     isn’t specified in the variable defaults file.<a class="headerlink" href="#isn-t-specified-in-the-variable-defaults-file" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="obs-data-loc-glade-work-nusbaume-se-projects-model-diagnostics-adf-obs">
-<h4>     obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs<a class="headerlink" href="#obs-data-loc-glade-work-nusbaume-se-projects-model-diagnostics-adf-obs" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     Note: this only matters if “compare_obs” is true and the path
+     isn’t specified in the variable defaults file.
+     obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
 </section>
 <section id="location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
 <h3><strong>Location where re-gridded and interpolated CAM climatology files are stored:</strong><a class="headerlink" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored" title="Permalink to this headline">#</a></h3>
-<section id="cam-regrid-loc-glade-scratch-user-adf-regrid">
-<h4>     cam_regrid_loc: /glade/scratch/${user}/ADF/regrid<a class="headerlink" href="#cam-regrid-loc-glade-scratch-user-adf-regrid" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     cam_regrid_loc: /glade/scratch/${user}/ADF/regrid</p>
 </section>
 <section id="overwrite-cam-re-gridded-files">
 <h3><strong>Overwrite CAM re-gridded files?</strong><a class="headerlink" href="#overwrite-cam-re-gridded-files" title="Permalink to this headline">#</a></h3>
-<section id="if-false-or-missing-then-regridding-will-be-skipped-for-regridded-variables">
-<h4>     If false, or missing, then regridding will be skipped for regridded variables<a class="headerlink" href="#if-false-or-missing-then-regridding-will-be-skipped-for-regridded-variables" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="that-already-exist-in-cam-regrid-loc">
-<h4>     that already exist in “cam_regrid_loc”:<a class="headerlink" href="#that-already-exist-in-cam-regrid-loc" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="cam-overwrite-regrid-false">
-<h4>     cam_overwrite_regrid: false<a class="headerlink" href="#cam-overwrite-regrid-false" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If false, or missing, then regridding will be skipped for regridded variables
+     that already exist in “cam_regrid_loc”:
+     cam_overwrite_regrid: false</p>
 </section>
 <section id="location-where-diagnostic-plots-are-stored">
 <h3><strong>Location where diagnostic plots are stored:</strong><a class="headerlink" href="#location-where-diagnostic-plots-are-stored" title="Permalink to this headline">#</a></h3>
-<section id="cam-diag-plot-loc-glade-scratch-user-adf-plots">
-<h4>     cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots<a class="headerlink" href="#cam-diag-plot-loc-glade-scratch-user-adf-plots" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots</p>
 </section>
 <section id="cam-history-file-number-to-use-h0-h1-h2-etc">
 <h3><strong>CAM history file number to use (h0,h1,h2, etc)</strong><a class="headerlink" href="#cam-history-file-number-to-use-h0-h1-h2-etc" title="Permalink to this headline">#</a></h3>
-<section id="currently-only-affects-timeseries-generation">
-<h4>     Currently only affects timeseries generation,<a class="headerlink" href="#currently-only-affects-timeseries-generation" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="as-everything-else-uses-the-timeseries-files-themselves">
-<h4>     as everything else uses the timeseries files themselves.<a class="headerlink" href="#as-everything-else-uses-the-timeseries-files-themselves" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="if-this-variable-is-not-present-then-it-will-default-to-h0">
-<h4>     If this variable is not present then it will default to “h0”.<a class="headerlink" href="#if-this-variable-is-not-present-then-it-will-default-to-h0" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="hist-num-h0">
-<h4>     hist_num: h0<a class="headerlink" href="#hist-num-h0" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     Currently only affects timeseries generation,
+     as everything else uses the timeseries files themselves.
+     If this variable is not present then it will default to “h0”.
+     hist_num: h0</p>
 </section>
 <section id="use-default-variable-plot-settings">
 <h3><strong>Use default variable plot settings?</strong><a class="headerlink" href="#use-default-variable-plot-settings" title="Permalink to this headline">#</a></h3>
-<section id="if-true-then-variable-specific-plotting-attributes-as-defined-in">
-<h4>     If “true”, then variable-specific plotting attributes as defined in<a class="headerlink" href="#if-true-then-variable-specific-plotting-attributes-as-defined-in" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="adf-lib-adf-variable-defaults-yaml-will-be-used">
-<h4>     ADF/lib/adf_variable_defaults.yaml will be used:<a class="headerlink" href="#adf-lib-adf-variable-defaults-yaml-will-be-used" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="use-defaults-true">
-<h4>     use_defaults: true<a class="headerlink" href="#use-defaults-true" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If “true”, then variable-specific plotting attributes as defined in
+     ADF/lib/adf_variable_defaults.yaml will be used:
+     use_defaults: true</p>
 </section>
 <section id="location-of-adf-variable-plotting-defaults-yaml-file">
 <h3><strong>Location of ADF variable plotting defaults YAML file</strong><a class="headerlink" href="#location-of-adf-variable-plotting-defaults-yaml-file" title="Permalink to this headline">#</a></h3>
-<section id="if-not-using-the-one-in-adf-lib">
-<h4>     if not using the one in ADF/lib:<a class="headerlink" href="#if-not-using-the-one-in-adf-lib" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="defaults-file-some-path-to-defaults-file">
-<h4>     defaults_file: /some/path/to/defaults/file<a class="headerlink" href="#defaults-file-some-path-to-defaults-file" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     if not using the one in ADF/lib:
+     defaults_file: /some/path/to/defaults/file</p>
 </section>
 <section id="vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
 <h3><strong>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.</strong><a class="headerlink" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections" title="Permalink to this headline">#</a></h3>
-<section id="if-this-config-option-is-missing-then-no-3-d-variables-will-be-plotted-on">
-<h4>     If this config option is missing, then no 3-D variables will be plotted on<a class="headerlink" href="#if-this-config-option-is-missing-then-no-3-d-variables-will-be-plotted-on" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="horizontal-maps-please-note-too-that-pressure-levels-must-currently-match">
-<h4>     horizontal maps.  Please note too that pressure levels must currently match<a class="headerlink" href="#horizontal-maps-please-note-too-that-pressure-levels-must-currently-match" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="what-is-available-in-the-observations-file-in-order-to-be-plotted-in-a">
-<h4>     what is available in the observations file in order to be plotted in a<a class="headerlink" href="#what-is-available-in-the-observations-file-in-order-to-be-plotted-in-a" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="model-vs-obs-run">
-<h4>     model vs obs run:<a class="headerlink" href="#model-vs-obs-run" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="plot-press-levels-200-850">
-<h4>     plot_press_levels: [200,850]<a class="headerlink" href="#plot-press-levels-200-850" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If this config option is missing, then no 3-D variables will be plotted on
+     horizontal maps.  Please note too that pressure levels must currently match
+     what is available in the observations file in order to be plotted in a
+     model vs obs run:
+     plot_press_levels: [200,850]</p>
 </section>
 <section id="longitude-line-on-which-to-center-all-lat-lon-maps">
 <h3><strong>Longitude line on which to center all lat/lon maps.</strong><a class="headerlink" href="#longitude-line-on-which-to-center-all-lat-lon-maps" title="Permalink to this headline">#</a></h3>
-<section id="if-this-config-option-is-missing-then-the-central">
-<h4>     If this config option is missing then the central<a class="headerlink" href="#if-this-config-option-is-missing-then-the-central" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="longitude-will-default-to-180-degrees-e">
-<h4>     longitude will default to 180 degrees E.<a class="headerlink" href="#longitude-will-default-to-180-degrees-e" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="central-longitude-180">
-<h4>     central_longitude: 180<a class="headerlink" href="#central-longitude-180" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If this config option is missing then the central
+     longitude will default to 180 degrees E.
+     central_longitude: 180</p>
 </section>
 <section id="apply-monthly-weights-to-seasonal-averages">
 <h3><strong>Apply monthly weights to seasonal averages.</strong><a class="headerlink" href="#apply-monthly-weights-to-seasonal-averages" title="Permalink to this headline">#</a></h3>
-<section id="if-false-or-missing-then-all-months-are">
-<h4>     If False or missing, then all months are<a class="headerlink" href="#if-false-or-missing-then-all-months-are" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="given-the-same-weight">
-<h4>     given the same weight:<a class="headerlink" href="#given-the-same-weight" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="weight-season-true">
-<h4>     weight_season: True<a class="headerlink" href="#weight-season-true" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If False or missing, then all months are
+     given the same weight:
+     weight_season: True</p>
 </section>
 <section id="number-of-processors-on-which-to-run-the-adf">
 <h3><strong>Number of processors on which to run the ADF.</strong><a class="headerlink" href="#number-of-processors-on-which-to-run-the-adf" title="Permalink to this headline">#</a></h3>
-<section id="if-this-config-variable-isn-t-present-then">
-<h4>     If this config variable isn’t present then<a class="headerlink" href="#if-this-config-variable-isn-t-present-then" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="the-adf-defaults-to-one-processor-also-if">
-<h4>     the ADF defaults to one processor.  Also, if<a class="headerlink" href="#the-adf-defaults-to-one-processor-also-if" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="you-set-it-to-then-it-will-default">
-<h4>     you set it to “*” then it will default<a class="headerlink" href="#you-set-it-to-then-it-will-default" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="to-all-of-the-processors-available-on-a">
-<h4>     to all of the processors available on a<a class="headerlink" href="#to-all-of-the-processors-available-on-a" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="single-node-machine">
-<h4>     single node/machine:<a class="headerlink" href="#single-node-machine" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="num-procs-8">
-<h4>     num_procs: 8<a class="headerlink" href="#num-procs-8" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If this config variable isn’t present then
+     the ADF defaults to one processor.  Also, if
+     you set it to “*” then it will default
+     to all of the processors available on a
+     single node/machine:
+     num_procs: 8</p>
 </section>
 <section id="remake-plots">
 <h3><strong>Remake plots?</strong><a class="headerlink" href="#remake-plots" title="Permalink to this headline">#</a></h3>
-<section id="if-set-to-true-then-redo-all-plots-even-if-they-already-exist">
-<h4>     If set to true, then redo all plots even if they already exist.<a class="headerlink" href="#if-set-to-true-then-redo-all-plots-even-if-they-already-exist" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="if-set-to-false-then-if-a-plot-is-found-it-will-be-skipped">
-<h4>     If set to false, then if a plot is found it will be skipped:<a class="headerlink" href="#if-set-to-false-then-if-a-plot-is-found-it-will-be-skipped" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="redo-plot-false">
-<h4>     redo_plot: false<a class="headerlink" href="#redo-plot-false" title="Permalink to this headline">#</a></h4>
-</section>
+<p>     If set to true, then redo all plots even if they already exist.
+     If set to false, then if a plot is found it will be skipped:
+     redo_plot: false</p>
 </section>
 </section>
 <hr class="docutils" />
