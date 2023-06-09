@@ -307,6 +307,11 @@ img.align-default, figure.align-default, .figure.align-default {
     text-align: right;
 }
 
+.waga-waga {
+    font-weight: bold;
+    font-color: #0034AD;
+}
+
 /* -- sidebars -------------------------------------------------------------- */
 
 div.sidebar,
