@@ -933,3 +933,11 @@ div.math:hover a.headerlink {
         display: none;
     }
 }
+
+
+/* -- mine? --------------------------------------------------- */
+.waka-waka {
+    font-weight: bold;
+    font-size: 40px;
+    color: #AD004F;
+}
