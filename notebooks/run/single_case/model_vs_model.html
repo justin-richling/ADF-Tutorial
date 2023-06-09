@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="model_vs_obs.html" />
+    <link rel="next" title="Model vs obs - test" href="model_vs_obs.html" />
     <link rel="prev" title="Single Case Comparison" href="../single_case.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -153,27 +153,10 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../../install/env_setup.html">
    Setting up Environment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../install/env_setup/cisl.html">
-     CISL Computers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../install/env_setup/custom.html">
-     Custom Environment
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../install/download.html">
@@ -191,8 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../single_case.html">
    Single Case Comparison
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -244,6 +227,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Model vs Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="model_vs_obs.html">
+     Model vs obs - test
     </a>
    </li>
    <li class="toctree-l2">
@@ -257,8 +245,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../multi_case.html">
    Multiple Case Comparison
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -537,92 +525,115 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#">
    Model vs Model
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+     It is important to remember the
+     <strong>
+      two
+     </strong>
+     things important in this notebook are the:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adf-location">
+       ADF location
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
+     Single CAM vs CAM case
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#config-yaml-file-location-and-name">
+       Config yaml file location and name
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
-   Single CAM vs CAM case
+  <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
+   Let’s look at some basic info from the ADF
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
-     Let’s look at some basic info from the ADF
+    <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
+     Read out some of the declared variables from the config file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-standard-work-flow">
+   ADF Standard Work Flow
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
+     First part of ADF is to create time series files
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
-       Read out some of the declared variables from the config file
+      <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
+       This is under the hood when the ADF is run via terminal
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-standard-work-flow">
-     ADF Standard Work Flow
+    <a class="reference internal nav-link" href="#next-create-climotology-files-from-time-series-files">
+     Next, create climotology files from time series files
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finally-regrid-climotology-files">
+     Finally, regrid climotology files
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-diagnostics-calls-now">
+     Start diagnostics calls now
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
-       First part of ADF is to create time series files
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-         This is under the hood when the ADF is run via terminal
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#next-create-climotology-files-from-time-series-files">
-       Next, create climotology files from time series files
+      <a class="reference internal nav-link" href="#run-the-analysis-script-to-create-the-amwg-tables">
+       Run the analysis script to create the AMWG tables
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#finally-regrid-climotology-files">
-       Finally, regrid climotology files
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#start-diagnostics-calls-now">
-       Start diagnostics calls now
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#run-the-analysis-script-to-create-the-amwg-tables">
-         Run the analysis script to create the AMWG tables
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#run-the-plotting-scripts">
-         Run the plotting scripts
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-we-can-generate-webpage-html-files">
-       Now we can generate webpage
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         html
-        </span>
-       </code>
-       files
+      <a class="reference internal nav-link" href="#run-the-plotting-scripts">
+       Run the plotting scripts
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
-     End single CAM vs CAM case
+    <a class="reference internal nav-link" href="#now-we-can-generate-webpage-html-files">
+     Now we can generate webpage
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       html
+      </span>
+     </code>
+     files
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
-       Now some custom plotting, what do you think?
-      </a>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
+   End single CAM vs CAM case
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
+     Now some custom plotting, what do you think?
+    </a>
    </li>
   </ul>
  </li>
@@ -649,92 +660,115 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#">
    Model vs Model
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+     It is important to remember the
+     <strong>
+      two
+     </strong>
+     things important in this notebook are the:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adf-location">
+       ADF location
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
+     Single CAM vs CAM case
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#config-yaml-file-location-and-name">
+       Config yaml file location and name
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
-   Single CAM vs CAM case
+  <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
+   Let’s look at some basic info from the ADF
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
-     Let’s look at some basic info from the ADF
+    <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
+     Read out some of the declared variables from the config file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-standard-work-flow">
+   ADF Standard Work Flow
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
+     First part of ADF is to create time series files
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
-       Read out some of the declared variables from the config file
+      <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
+       This is under the hood when the ADF is run via terminal
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-standard-work-flow">
-     ADF Standard Work Flow
+    <a class="reference internal nav-link" href="#next-create-climotology-files-from-time-series-files">
+     Next, create climotology files from time series files
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finally-regrid-climotology-files">
+     Finally, regrid climotology files
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-diagnostics-calls-now">
+     Start diagnostics calls now
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
-       First part of ADF is to create time series files
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-         This is under the hood when the ADF is run via terminal
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#next-create-climotology-files-from-time-series-files">
-       Next, create climotology files from time series files
+      <a class="reference internal nav-link" href="#run-the-analysis-script-to-create-the-amwg-tables">
+       Run the analysis script to create the AMWG tables
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#finally-regrid-climotology-files">
-       Finally, regrid climotology files
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#start-diagnostics-calls-now">
-       Start diagnostics calls now
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#run-the-analysis-script-to-create-the-amwg-tables">
-         Run the analysis script to create the AMWG tables
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#run-the-plotting-scripts">
-         Run the plotting scripts
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-we-can-generate-webpage-html-files">
-       Now we can generate webpage
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         html
-        </span>
-       </code>
-       files
+      <a class="reference internal nav-link" href="#run-the-plotting-scripts">
+       Run the plotting scripts
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
-     End single CAM vs CAM case
+    <a class="reference internal nav-link" href="#now-we-can-generate-webpage-html-files">
+     Now we can generate webpage
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       html
+      </span>
+     </code>
+     files
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
-       Now some custom plotting, what do you think?
-      </a>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
+   End single CAM vs CAM case
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
+     Now some custom plotting, what do you think?
+    </a>
    </li>
   </ul>
  </li>
@@ -777,6 +811,17 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<section id="it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+<h2>It is important to remember the <strong>two</strong> things important in this notebook are the:<a class="headerlink" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the" title="Permalink to this headline">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* ADF branch you want, which will also be dependent on adf_path
+* Config yaml file you want
+</pre></div>
+</div>
+<section id="adf-location">
+<h3>ADF location<a class="headerlink" href="#adf-location" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>NOTE: you will have to change the branch via terminal if you want a certain branch in this notebook</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can change the path to ADF (git branch) so it can be different than the</span>
@@ -839,9 +884,12 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="single-cam-vs-cam-case">
-<h1>Single CAM vs CAM case<a class="headerlink" href="#single-cam-vs-cam-case" title="Permalink to this headline">#</a></h1>
+</section>
+<section id="single-cam-vs-cam-case">
+<h2>Single CAM vs CAM case<a class="headerlink" href="#single-cam-vs-cam-case" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
+<section id="config-yaml-file-location-and-name">
+<h3>Config yaml file location and name<a class="headerlink" href="#config-yaml-file-location-and-name" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set path for config YAML file</span>
@@ -851,8 +899,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 <span class="c1"># Set name of config YAML file:</span>
 <span class="n">config_fil_str</span> <span class="o">=</span> <span class="s2">&quot;config_model_vs_model_single.yaml&quot;</span>
 
-<span class="c1">#config_file=os.path.join(config_path,config_fil_str)</span>
-
+<span class="c1"># Make full path to config file</span>
 <span class="n">config_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span><span class="n">config_fil_str</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -860,7 +907,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Initialize ADF object</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Initialize ADF object with config file</span>
 <span class="n">adf</span> <span class="o">=</span> <span class="n">AdfDiag</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 <span class="n">adf</span>
 </pre></div>
@@ -872,10 +919,13 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
 <section id="let-s-look-at-some-basic-info-from-the-adf">
-<h2>Let’s look at some basic info from the ADF<a class="headerlink" href="#let-s-look-at-some-basic-info-from-the-adf" title="Permalink to this headline">#</a></h2>
+<h1>Let’s look at some basic info from the ADF<a class="headerlink" href="#let-s-look-at-some-basic-info-from-the-adf" title="Permalink to this headline">#</a></h1>
 <section id="read-out-some-of-the-declared-variables-from-the-config-file">
-<h3>Read out some of the declared variables from the config file<a class="headerlink" href="#read-out-some-of-the-declared-variables-from-the-config-file" title="Permalink to this headline">#</a></h3>
+<h2>Read out some of the declared variables from the config file<a class="headerlink" href="#read-out-some-of-the-declared-variables-from-the-config-file" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_info_dict</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">read_config_var</span><span class="p">(</span><span class="s2">&quot;diag_basic_info&quot;</span><span class="p">)</span>
@@ -1128,18 +1178,18 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001
 </div>
 </div>
 </div>
-</section>
-</section>
 <hr class="docutils" />
+</section>
+</section>
 <section id="adf-standard-work-flow">
-<h2>ADF Standard Work Flow<a class="headerlink" href="#adf-standard-work-flow" title="Permalink to this headline">#</a></h2>
+<h1>ADF Standard Work Flow<a class="headerlink" href="#adf-standard-work-flow" title="Permalink to this headline">#</a></h1>
 <section id="first-part-of-adf-is-to-create-time-series-files">
-<h3>First part of ADF is to create time series files<a class="headerlink" href="#first-part-of-adf-is-to-create-time-series-files" title="Permalink to this headline">#</a></h3>
+<h2>First part of ADF is to create time series files<a class="headerlink" href="#first-part-of-adf-is-to-create-time-series-files" title="Permalink to this headline">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* if they don&#39;t already exist or input files are in time series format already
 </pre></div>
 </div>
 <section id="this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-<h4>This is under the hood when the ADF is run via terminal<a class="headerlink" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal" title="Permalink to this headline">#</a></h4>
+<h3>This is under the hood when the ADF is run via terminal<a class="headerlink" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -1238,7 +1288,7 @@ Wall time: 2min 1s
 </section>
 </section>
 <section id="next-create-climotology-files-from-time-series-files">
-<h3>Next, create climotology files from time series files<a class="headerlink" href="#next-create-climotology-files-from-time-series-files" title="Permalink to this headline">#</a></h3>
+<h2>Next, create climotology files from time series files<a class="headerlink" href="#next-create-climotology-files-from-time-series-files" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -1264,7 +1314,7 @@ Wall time: 22min 57s
 </div>
 </section>
 <section id="finally-regrid-climotology-files">
-<h3>Finally, regrid climotology files<a class="headerlink" href="#finally-regrid-climotology-files" title="Permalink to this headline">#</a></h3>
+<h2>Finally, regrid climotology files<a class="headerlink" href="#finally-regrid-climotology-files" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -1387,9 +1437,9 @@ Wall time: 1min 27s
 </div>
 </section>
 <section id="start-diagnostics-calls-now">
-<h3>Start diagnostics calls now<a class="headerlink" href="#start-diagnostics-calls-now" title="Permalink to this headline">#</a></h3>
+<h2>Start diagnostics calls now<a class="headerlink" href="#start-diagnostics-calls-now" title="Permalink to this headline">#</a></h2>
 <section id="run-the-analysis-script-to-create-the-amwg-tables">
-<h4>Run the analysis script to create the AMWG tables<a class="headerlink" href="#run-the-analysis-script-to-create-the-amwg-tables" title="Permalink to this headline">#</a></h4>
+<h3>Run the analysis script to create the AMWG tables<a class="headerlink" href="#run-the-analysis-script-to-create-the-amwg-tables" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Perform analyses on the simulation(s).</span>
@@ -1402,7 +1452,7 @@ Wall time: 1min 27s
 </div>
 </section>
 <section id="run-the-plotting-scripts">
-<h4>Run the plotting scripts<a class="headerlink" href="#run-the-plotting-scripts" title="Permalink to this headline">#</a></h4>
+<h3>Run the plotting scripts<a class="headerlink" href="#run-the-plotting-scripts" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create plots.</span>
@@ -1416,7 +1466,7 @@ Wall time: 1min 27s
 </section>
 </section>
 <section id="now-we-can-generate-webpage-html-files">
-<h3>Now we can generate webpage <code class="docutils literal notranslate"><span class="pre">html</span></code> files<a class="headerlink" href="#now-we-can-generate-webpage-html-files" title="Permalink to this headline">#</a></h3>
+<h2>Now we can generate webpage <code class="docutils literal notranslate"><span class="pre">html</span></code> files<a class="headerlink" href="#now-we-can-generate-webpage-html-files" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create website if requested in the config file</span>
@@ -1429,11 +1479,11 @@ Wall time: 1min 27s
 </section>
 </section>
 <section id="end-single-cam-vs-cam-case">
-<h2>End single CAM vs CAM case<a class="headerlink" href="#end-single-cam-vs-cam-case" title="Permalink to this headline">#</a></h2>
+<h1>End single CAM vs CAM case<a class="headerlink" href="#end-single-cam-vs-cam-case" title="Permalink to this headline">#</a></h1>
 <p>Hope everything went well…</p>
 <hr class="docutils" />
 <section id="now-some-custom-plotting-what-do-you-think">
-<h3>Now some custom plotting, what do you think?<a class="headerlink" href="#now-some-custom-plotting-what-do-you-think" title="Permalink to this headline">#</a></h3>
+<h2>Now some custom plotting, what do you think?<a class="headerlink" href="#now-some-custom-plotting-what-do-you-think" title="Permalink to this headline">#</a></h2>
 <p>Let’s take the time series files the ADF produced and make some time series plots</p>
 <ul class="simple">
 <li><p>Climo years will be on the x-axis and variable values will be on the y-axis</p></li>
@@ -1874,14 +1924,13 @@ Plotting variable: ICEFRAC
 2012
 </pre></div>
 </div>
-<img alt="../../../_images/model_vs_model_56_1.png" src="../../../_images/model_vs_model_56_1.png" />
+<img alt="../../../_images/model_vs_model_60_1.png" src="../../../_images/model_vs_model_60_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 647 ms, total: 2.37 s
 Wall time: 3.58 s
 </pre></div>
 </div>
 </div>
 </div>
-</section>
 </section>
 </section>
 
@@ -1922,7 +1971,7 @@ Wall time: 3.58 s
     <a class='right-next' id="next-link" href="model_vs_obs.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Model vs obs - test</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
