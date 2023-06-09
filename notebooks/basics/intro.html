@@ -153,27 +153,10 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../install/env_setup.html">
    Setting up Environment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../install/env_setup/cisl.html">
-     CISL Computers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../install/env_setup/custom.html">
-     Custom Environment
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../install/download.html">
@@ -191,8 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/single_case.html">
    Single Case Comparison
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -244,6 +227,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../run/single_case/model_vs_model.html">
      Model vs Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../run/single_case/model_vs_obs.html">
+     Model vs obs - test
     </a>
    </li>
    <li class="toctree-l2">
@@ -257,8 +245,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/multi_case.html">
    Multiple Case Comparison
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -511,12 +499,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -528,6 +550,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -539,6 +584,62 @@ title="Print to PDF"
 <h1>Welcome to the ADF!<a class="headerlink" href="#welcome-to-the-adf" title="Permalink to this headline">#</a></h1>
 <p><strong><u>AMWG</u></strong> (Atmospheric Model Working Group) <u><strong>D</strong></u>iagnostics <u><strong>F</strong></u>ramework</p>
 <p>This package is meant to be an update/upgrade to the much used and beloved AMWG diagnostics package used by the atmospheric/chemistry CESM community.</p>
+<section id="adf-layout">
+<h2>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h2>
+<p>Directory tree for the ADF</p>
+<p><img alt="Running on Cheyenne Image" src="../../_images/adf_tree_layout.png" /></p>
+</section>
+<section id="adf-flow">
+<h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
+<p>A simple look at the flow of the ADF</p>
+<ul class="simple">
+<li><p>Create time series files from monthly history files (if they don’t exist or are being overwritten)</p></li>
+<li><p>Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)</p></li>
+<li><p>Regrid Test case from Baseline case and vice-versa from climatology files</p></li>
+<li><p>Run Analysis scripts</p></li>
+<li><p>Run Plotting scripts</p></li>
+<li><p>Generate Website pages</p></li>
+</ul>
+<p>** Most parts of the ADF are optional and can be turned off for your desired need:
+Potential Examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you only want regridded data, turn off plotting, analysis, website parts
+
+If you want plotting and only need a few plot images, you can turn off the website part
+
+If you only want time series files, you can turn off all other parts
+
+If you don’t care about the statistics (AMWG) tables, turn off analysis part
+
+etc.
+</pre></div>
+</div>
+<p>NOTE: depending on how many years, plot types and variables you configure, the more time it takes
+* Rough average for: all default plots, 10-20 years for 30 variables is ~45 minutes
+!! But could take longer !!
+* This is an active area of development      there are potential ways of cutting time/processes</p>
+</section>
+<section id="adf-setup">
+<h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
+<p>A simple look at the flow of the ADF</p>
+<ol>
+<li><p>Run CAM simulation          get history ( h0* ) file(s)
+*or other history files</p></li>
+<li><p>Configure yaml file(s) for the history files
+NOTE:  Make copies of these files and modify/customize the copies!</p>
+<p>config_cam_baseline_example.yaml  (necessary, must change!)</p>
+<p>lib/adf_variable_defaults.yaml   (necessary, but optional to change)**</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ** Additionally, you will need to change the defaults_file path in your copy of config_cam_baseline_example.yaml file
+</pre></div>
+</div>
+</li>
+</ol>
+<p></p>
+2. Run the ADF
+Errors?  Check config files   Check error/logs   Check data/paths
+Success: Check output data/images
+Locally
+Via HTML files  (optional)
+</section>
 </section>
 
     <script type="text/x-thebe-config">

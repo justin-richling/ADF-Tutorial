@@ -639,7 +639,6 @@ title="Print to PDF"
 <p style="font-size:16px">It is fairly straight forward to get the ADF. You will need to clone the <a style="color: blue;" source="https://github.com/NCAR/ADF">NCAR/ADF</a> repository to your machine</p>
 <p>Navigate to some where you want to house the ADF root directory. An example would be to put the ADF in your <code class="docutils literal notranslate"><span class="pre">work</span></code> drive on <code class="docutils literal notranslate"><span class="pre">glade</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">cd /glade/work/{user}/</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">git clone https://github.com/NCAR/ADF.git</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>git clone https://github.com/NCAR/ADF.git
 </pre><button class="copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#codecell0">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -650,11 +649,13 @@ title="Print to PDF"
 </svg>
     </button></div>
 </div>
-<p>This will create a new folder called <strong>ADF</strong> and will be the root directory: <code class="docutils literal notranslate"><span class="pre">/glade/work/{user}/ADF/</span></code></p>
+<p>This will create a new folder called <strong>ADF</strong> and will be the root directory: <code class="docutils literal notranslate"><span class="pre">/glade/work/{user}/ADF/</span></code>  This will house all the necessary scripts for the ADF to run and where custom scripts would be added if desired!</p>
 <section id="advanced-features">
 <h2>* Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">#</a></h2>
+<p>Here is the ADF directory tree</p>
+<p><img alt="ADF directory tree" src="../../_images/adf_tree_layout.png" /></p>
 <h2>2. CESM XML files and CESM environment variables<a class="headerlink" href="#cesm-xml-files-and-cesm-environment-variables" title="Permalink to this heading">#</a></h2>
-<p>CESM cases are customized, built and run largely through setting what CESM calls <strong>“environment variables”</strong>. These actually appear to the user as variables defined in xml files.</p><img class="object-fit:fill" src="NCAR-Waves.jpeg" width=60 height=60 /><p id="waka-waka">Woo</p><div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>ssh –XY [username]@cheyenne.ucar.edu
+<p>CESM cases are customized, built and run largely through setting what CESM calls <strong>“environment variables”</strong>. These actually appear to the user as variables defined in xml files.</p><img class="object-fit:fill" src="NCAR-Waves.jpeg" width=60 height=60 /><div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>ssh –XY [username]@cheyenne.ucar.edu
 </pre><button class="copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#codecell0">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <title>Copy to clipboard</title>

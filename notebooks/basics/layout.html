@@ -153,27 +153,10 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../install/env_setup.html">
    Setting up Environment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../install/env_setup/cisl.html">
-     CISL Computers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../install/env_setup/custom.html">
-     Custom Environment
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../install/download.html">
@@ -191,8 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/single_case.html">
    Single Case Comparison
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -262,8 +245,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/multi_case.html">
    Multiple Case Comparison
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -544,6 +527,29 @@ title="Print to PDF"
 <h1>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h1>
 <p>A simple look at how the ADF works</p>
 <p><img alt="Running on Cheyenne Image" src="../../_images/adf_tree_layout.png" /></p>
+<p>Create time series files from monthly history files (if they don’t exist or are being overwritten)
+Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)
+Regrid Test case from Baseline case and vice-versa from climatology files
+Run Analysis scripts
+Run Plotting scripts
+Generate Website pages</p>
+<p>** Most parts of the ADF are optional and can be turned off for your desired need:
+Potential Examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you only want regridded data, turn off plotting, analysis, website parts
+
+If you want plotting and only need a few plot images, you can turn off the website part
+
+If you only want time series files, you can turn off all other parts
+
+If you don’t care about the statistics (AMWG) tables, turn off analysis part
+
+etc.
+</pre></div>
+</div>
+<p>NOTE: depending on how many years, plot types and variables you configure, the more time it takes
+* Rough average for: all default plots, 10-20 years for 30 variables is ~45 minutes
+!! But could take longer !!
+* This is an active area of development      there are potential ways of cutting time/processes</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
