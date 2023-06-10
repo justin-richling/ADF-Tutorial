@@ -531,6 +531,61 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obs-data-loc">
+     obs_data_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-regrid-loc">
+     cam_regrid_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-overwrite-regrid">
+     cam_overwrite_regrid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-diag-plot-loc">
+     cam_diag_plot_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hist-num">
+     hist_num
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-defaults">
+     use_defaults
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defaults-file">
+     defaults_file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+     Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
+     Longitude line on which to center all lat/lon maps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
+     Apply monthly weights to seasonal averages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
+     Number of processors on which to run the ADF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
      <strong>
       Remake plots?
@@ -833,6 +888,61 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obs-data-loc">
+     obs_data_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-regrid-loc">
+     cam_regrid_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-overwrite-regrid">
+     cam_overwrite_regrid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-diag-plot-loc">
+     cam_diag_plot_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hist-num">
+     hist_num
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-defaults">
+     use_defaults
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defaults-file">
+     defaults_file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+     Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
+     Longitude line on which to center all lat/lon maps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
+     Apply monthly weights to seasonal averages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
+     Number of processors on which to run the ADF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
      <strong>
       Remake plots?
@@ -1119,50 +1229,69 @@ title="Print to PDF"
 </section>
 <section id="create-html">
 <h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Generate HTML website (assumed false if missing)
-
-Note:  The website files themselves will be located in the path specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory, where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run (usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).
-</pre></div>
-</div>
-<h5>obs_data_loc</h5>
-   &emsp;    Location of observational datasets
-   &emsp;    Note: this only matters if "compare_obs" is true and the path isn't specified in the variable defaults file.
-   &emsp;    default: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
-<h5>Location where re-gridded and interpolated CAM climatology files are stored:</h5>
-<p>     cam_regrid_loc: /glade/scratch/${user}/ADF/regrid</p>
-<h5>Overwrite CAM re-gridded files?</h5>
-<p>     If false, or missing, then regridding will be skipped for regridded variables
-     that already exist in “cam_regrid_loc”:
-     cam_overwrite_regrid: false</p>
-<h5>Location where diagnostic plots are stored:</h5>
-<p>     cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots</p>
-<h5>CAM history file number to use (h0,h1,h2, etc)</h5>
-<p>     Currently only affects timeseries generation,
-     as everything else uses the timeseries files themselves.
-     If this variable is not present then it will default to “h0”.
-     hist_num: h0</p>
-<h5>Use default variable plot settings?</h5>
-<p>     If “true”, then variable-specific plotting attributes as defined in
-     ADF/lib/adf_variable_defaults.yaml will be used:
-     use_defaults: true</p>
-<h5>Location of ADF variable plotting defaults YAML file</h5>
-<p>     if not using the one in ADF/lib:
-     defaults_file: /some/path/to/defaults/file</p>
-<h5>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.</h5>
+<p>Generate HTML website (assumed false if missing)</p>
+<p>Note:  The website files themselves will be located in the path specified by "cam_diag_plot_loc", under the "{diag_run}/website" subdirectory, where "{diag_run}" is the subdirectory created for this particular diagnostics run (usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p>
+</section>
+<section id="obs-data-loc">
+<h3>obs_data_loc<a class="headerlink" href="#obs-data-loc" title="Permalink to this headline">#</a></h3>
+<p>Location of observational datasets</p>
+<p>Note: this only matters if "compare_obs" is true and the path isn't specified in the variable defaults file.</p>
+<p>default: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
+</section>
+<section id="cam-regrid-loc">
+<h3>cam_regrid_loc<a class="headerlink" href="#cam-regrid-loc" title="Permalink to this headline">#</a></h3>
+<p>Location where re-gridded and interpolated CAM climatology files are stored</p>
+<p>example: /glade/scratch/${user}/ADF/regrid</p>
+</section>
+<section id="cam-overwrite-regrid">
+<h3>cam_overwrite_regrid<a class="headerlink" href="#cam-overwrite-regrid" title="Permalink to this headline">#</a></h3>
+<p>Overwrite CAM re-gridded files?</p>
+<p>If false, or missing, then regridding will be skipped for regridded variables that already exist in "cam_regrid_loc"</p>
+</section>
+<section id="cam-diag-plot-loc">
+<h3>cam_diag_plot_loc<a class="headerlink" href="#cam-diag-plot-loc" title="Permalink to this headline">#</a></h3>
+<p>Location where diagnostic plots are stored</p>
+<p>example: /glade/scratch/${user}/ADF/plots</p>
+</section>
+<section id="hist-num">
+<h3>hist_num<a class="headerlink" href="#hist-num" title="Permalink to this headline">#</a></h3>
+<p>CAM history file number to use (h0,h1,h2, etc)</p>
+<p>Currently only affects timeseries generation, as everything else uses the timeseries files themselves.
+<p>If this variable is not present then it will default to "h0"</p>
+</p>example: hist_num: h0</p>
+</section>
+<section id="use-defaults">
+<h3>use_defaults<a class="headerlink" href="#use-defaults" title="Permalink to this headline">#</a></h3>
+<p>Use default variable plot settings?</p>
+<p>If "true", then variable-specific plotting attributes as defined in ADF/lib/adf_variable_defaults.yaml will be used</p>
+</section>
+<section id="defaults-file">
+<h3>defaults_file<a class="headerlink" href="#defaults-file" title="Permalink to this headline">#</a></h3>
+<p>Location of ADF variable plotting defaults YAML file if not using the one in ADF/lib</p>
+<p>example: /some/path/to/defaults/file</p>
+</section>
+<section id="vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+<h3>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections<a class="headerlink" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections" title="Permalink to this headline">#</a></h3>
 <p>     If this config option is missing, then no 3-D variables will be plotted on
      horizontal maps.  Please note too that pressure levels must currently match
      what is available in the observations file in order to be plotted in a
      model vs obs run:
      plot_press_levels: [200,850]</p>
-<h5>Longitude line on which to center all lat/lon maps.</h5>
+</section>
+<section id="longitude-line-on-which-to-center-all-lat-lon-maps">
+<h3>Longitude line on which to center all lat/lon maps<a class="headerlink" href="#longitude-line-on-which-to-center-all-lat-lon-maps" title="Permalink to this headline">#</a></h3>
 <p>     If this config option is missing then the central
      longitude will default to 180 degrees E.
      central_longitude: 180</p>
-<h5>Apply monthly weights to seasonal averages.</h5>
+</section>
+<section id="apply-monthly-weights-to-seasonal-averages">
+<h3>Apply monthly weights to seasonal averages<a class="headerlink" href="#apply-monthly-weights-to-seasonal-averages" title="Permalink to this headline">#</a></h3>
 <p>     If False or missing, then all months are
      given the same weight:
      weight_season: True</p>
-<h5>Number of processors on which to run the ADF.</h5>
+</section>
+<section id="number-of-processors-on-which-to-run-the-adf">
+<h3>Number of processors on which to run the ADF<a class="headerlink" href="#number-of-processors-on-which-to-run-the-adf" title="Permalink to this headline">#</a></h3>
 <p>     If this config variable isn’t present then
      the ADF defaults to one processor.  Also, if
      you set it to “*” then it will default
