@@ -522,11 +522,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
-   0. Run CAM simulation → get history ( h0** ) file(s)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
    1. Configure yaml files for the history files
   </a>
@@ -554,8 +549,13 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-the-adf">
-   2. Run the ADF
+  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
+   Using variables in the yaml file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
+   Using variables in sub sections
   </a>
  </li>
 </ul>
@@ -578,11 +578,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
-   0. Run CAM simulation → get history ( h0** ) file(s)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
    1. Configure yaml files for the history files
   </a>
@@ -610,8 +605,13 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-the-adf">
-   2. Run the ADF
+  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
+   Using variables in the yaml file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
+   Using variables in sub sections
   </a>
  </li>
 </ul>
@@ -626,12 +626,6 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
-<section id="run-cam-simulation-get-history-h0-file-s">
-<h2>0. Run CAM simulation → get history ( h0** ) file(s)<a class="headerlink" href="#run-cam-simulation-get-history-h0-file-s" title="Permalink to this headline">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* or other history files
-</pre></div>
-</div>
-</section>
 <section id="configure-yaml-files-for-the-history-files">
 <h2>1. Configure yaml files for the history files<a class="headerlink" href="#configure-yaml-files-for-the-history-files" title="Permalink to this headline">#</a></h2>
 <section id="note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
@@ -642,20 +636,18 @@ title="Print to PDF"
 <p>** Additionally, you will need to change the defaults_file path in your copy of config_cam_baseline_example.yaml</p>
 </li>
 </ul>
+<h2>YAML File Basics</h2>
+<p>YAML files are a special type of text file, which in our case (using Python) the information in the yaml file will become dictionaries in python scripts.</p>
+<p>Here are a couple hints</p>
+<p>Some paths in the config yaml file are optional and some are <strong>required</strong></p>
 </section>
 </section>
-<section id="run-the-adf">
-<h2>2. Run the ADF<a class="headerlink" href="#run-the-adf" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Break it:  Check config files?   Check error/logs?   Check data/paths?</p></li>
-<li><p>Success: Check output data/images</p>
-<ul>
-<li><p>Locally</p></li>
-<li><p>via HTML files (optional)</p></li>
-</ul>
-</li>
-</ul>
-</section>
+<section id="using-variables-in-the-yaml-file">
+<h2>Using variables in the yaml file<a class="headerlink" href="#using-variables-in-the-yaml-file" title="Permalink to this headline">#</a></h2>
+<img src="../../images/Slide13.png"></section>
+<section id="using-variables-in-sub-sections">
+<h2>Using variables in sub sections<a class="headerlink" href="#using-variables-in-sub-sections" title="Permalink to this headline">#</a></h2>
+<img src="../../images/Slide15.png"></section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
