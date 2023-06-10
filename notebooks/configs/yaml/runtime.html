@@ -521,16 +521,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#is-this-a-model-vs-observations-comparison">
+    <a class="reference internal nav-link" href="#compare-obs">
      <strong>
-      Is this a model vs observations comparison?
+      compare_obs
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
+    <a class="reference internal nav-link" href="#create-html">
      <strong>
-      Generate HTML website (assumed false if missing):
+      create_html
      </strong>
     </a>
    </li>
@@ -904,16 +904,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#is-this-a-model-vs-observations-comparison">
+    <a class="reference internal nav-link" href="#compare-obs">
      <strong>
-      Is this a model vs observations comparison?
+      compare_obs
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
+    <a class="reference internal nav-link" href="#create-html">
      <strong>
-      Generate HTML website (assumed false if missing):
+      create_html
      </strong>
     </a>
    </li>
@@ -1275,14 +1275,15 @@ title="Print to PDF"
 <p><img alt="sub-sections" src="images/Slide12.png" /></p>
 <section id="color-117284-textit-diag-basic-info">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_basic_info}}\)</span><a class="headerlink" href="#color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
-<section id="is-this-a-model-vs-observations-comparison">
-<h3><strong>Is this a model vs observations comparison?</strong><a class="headerlink" href="#is-this-a-model-vs-observations-comparison" title="Permalink to this headline">#</a></h3>
-<p>     If “false” or missing, then a model-model comparison is assumed:<br />
-     <strong>compare_obs</strong>: false</p>
+<section id="compare-obs">
+<h3><strong>compare_obs</strong><a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
+<p>     Is this a model vs observations comparison?
+     If “false” or missing, then a model-model comparison is assumed <strong>false</strong></p>
 </section>
-<section id="generate-html-website-assumed-false-if-missing">
-<h3><strong>Generate HTML website (assumed false if missing):</strong><a class="headerlink" href="#generate-html-website-assumed-false-if-missing" title="Permalink to this headline">#</a></h3>
-<p>     Note:  The website files themselves will be located in the path
+<section id="create-html">
+<h3><strong>create_html</strong><a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
+<p>     Generate HTML website (assumed false if missing)
+     Note:  The website files themselves will be located in the path
      specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,
      where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run
      (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
