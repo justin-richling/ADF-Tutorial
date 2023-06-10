@@ -521,6 +521,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-obs">
+     compare_obs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-html">
+     create_html
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
      <strong>
       Remake plots?
@@ -813,6 +823,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-obs">
+     compare_obs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-html">
+     create_html
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remake-plots">
      <strong>
       Remake plots?
@@ -1092,13 +1112,18 @@ title="Print to PDF"
 <h1>Run Time<a class="headerlink" href="#run-time" title="Permalink to this headline">#</a></h1>
 <section id="color-117284-textit-diag-basic-info">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_basic_info}}\)</span><a class="headerlink" href="#color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
-<h5>compare_obs</h5>
+<section id="compare-obs">
+<h3>compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
 <p>     Is this a model vs observations comparison?</p>
 <p>     If “false” or missing, then a model-model comparison is assumed <strong>false</strong></p>
-<h5>create_html</h5>
-<p>     Generate HTML website (assumed false if missing)
-     Note:  The website files themselves will be located in the path specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory, where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
-     create_html: true</p>
+</section>
+<section id="create-html">
+<h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Generate HTML website (assumed false if missing)
+
+Note:  The website files themselves will be located in the path specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory, where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run (usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).
+</pre></div>
+</div>
 <h5>obs_data_loc</h5>
    &emsp;    Location of observational datasets
    &emsp;    Note: this only matters if "compare_obs" is true and the path isn't specified in the variable defaults file.
@@ -1144,6 +1169,7 @@ title="Print to PDF"
      to all of the processors available on a
      single node/machine:
      num_procs: 8</p>
+</section>
 <section id="remake-plots">
 <h3><strong>Remake plots?</strong><a class="headerlink" href="#remake-plots" title="Permalink to this headline">#</a></h3>
 <p>     If set to true, then redo all plots even if they already exist.
