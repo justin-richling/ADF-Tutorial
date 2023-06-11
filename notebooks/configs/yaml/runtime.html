@@ -526,11 +526,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-html">
-     create_html
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#obs-data-loc">
      obs_data_loc
     </a>
@@ -566,31 +561,36 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
-     Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
+    <a class="reference internal nav-link" href="#plot-press-levels">
+     plot_press_levels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
-     Longitude line on which to center all lat/lon maps
+    <a class="reference internal nav-link" href="#central-longitude">
+     central_longitude
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
-     Apply monthly weights to seasonal averages
+    <a class="reference internal nav-link" href="#weight-season">
+     weight_season
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
-     Number of processors on which to run the ADF
+    <a class="reference internal nav-link" href="#num-procs">
+     num_procs
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#remake-plots">
-     <strong>
-      Remake plots?
-     </strong>
+    <a class="reference internal nav-link" href="#redo-plot">
+     redo_plot
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-html">
+       create_html
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -883,11 +883,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-html">
-     create_html
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#obs-data-loc">
      obs_data_loc
     </a>
@@ -923,31 +918,36 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
-     Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
+    <a class="reference internal nav-link" href="#plot-press-levels">
+     plot_press_levels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
-     Longitude line on which to center all lat/lon maps
+    <a class="reference internal nav-link" href="#central-longitude">
+     central_longitude
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
-     Apply monthly weights to seasonal averages
+    <a class="reference internal nav-link" href="#weight-season">
+     weight_season
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
-     Number of processors on which to run the ADF
+    <a class="reference internal nav-link" href="#num-procs">
+     num_procs
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#remake-plots">
-     <strong>
-      Remake plots?
-     </strong>
+    <a class="reference internal nav-link" href="#redo-plot">
+     redo_plot
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-html">
+       create_html
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -1224,13 +1224,8 @@ title="Print to PDF"
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_basic_info}}\)</span><a class="headerlink" href="#color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
 <section id="compare-obs">
 <h3>compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
-<p>     Is this a model vs observations comparison?</p>
-<p>     If “false” or missing, then a model-model comparison is assumed <strong>false</strong></p>
-</section>
-<section id="create-html">
-<h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
-<p>Generate HTML website (assumed false if missing)</p>
-<p>Note:  The website files themselves will be located in the path specified by "cam_diag_plot_loc", under the "{diag_run}/website" subdirectory, where "{diag_run}" is the subdirectory created for this particular diagnostics run (usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p>
+<p>Is this a model vs observations comparison?</p>   
+<p>If "false" or missing, then a model-model comparison is assumed **false**</p>
 </section>
 <section id="obs-data-loc">
 <h3>obs_data_loc<a class="headerlink" href="#obs-data-loc" title="Permalink to this headline">#</a></h3>
@@ -1270,40 +1265,41 @@ title="Print to PDF"
 <p>Location of ADF variable plotting defaults YAML file if not using the one in ADF/lib</p>
 <p>example: /some/path/to/defaults/file</p>
 </section>
-<section id="vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
-<h3>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections<a class="headerlink" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections" title="Permalink to this headline">#</a></h3>
-<p>     If this config option is missing, then no 3-D variables will be plotted on
-     horizontal maps.  Please note too that pressure levels must currently match
-     what is available in the observations file in order to be plotted in a
-     model vs obs run:
-     plot_press_levels: [200,850]</p>
+<section id="plot-press-levels">
+<h3>plot_press_levels<a class="headerlink" href="#plot-press-levels" title="Permalink to this headline">#</a></h3>
+<p>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
+<p>If this config option is missing, then no 3-D variables will be plotted on horizontal maps.  Please note too that pressure levels must currently match what is available in the observations file in order to be plotted in a model vs obs run:</p>
+<p>example: [200,850]</p>
 </section>
-<section id="longitude-line-on-which-to-center-all-lat-lon-maps">
-<h3>Longitude line on which to center all lat/lon maps<a class="headerlink" href="#longitude-line-on-which-to-center-all-lat-lon-maps" title="Permalink to this headline">#</a></h3>
-<p>     If this config option is missing then the central
-     longitude will default to 180 degrees E.
-     central_longitude: 180</p>
+<section id="central-longitude">
+<h3>central_longitude<a class="headerlink" href="#central-longitude" title="Permalink to this headline">#</a></h3>
+<p>Longitude line on which to center all lat/lon maps</p>
+<p>If this config option is missing then the central longitude will default to 180 degrees E.</p>
+<p>example: 180</p>
 </section>
-<section id="apply-monthly-weights-to-seasonal-averages">
-<h3>Apply monthly weights to seasonal averages<a class="headerlink" href="#apply-monthly-weights-to-seasonal-averages" title="Permalink to this headline">#</a></h3>
-<p>     If False or missing, then all months are
-     given the same weight:
-     weight_season: True</p>
+<section id="weight-season">
+<h3>weight_season<a class="headerlink" href="#weight-season" title="Permalink to this headline">#</a></h3>
+<p>Apply monthly weights to seasonal averages</p>
+<p>If False or missing, then all months are given the same weight</p>
+<p>weight_season: True/False</p>
 </section>
-<section id="number-of-processors-on-which-to-run-the-adf">
-<h3>Number of processors on which to run the ADF<a class="headerlink" href="#number-of-processors-on-which-to-run-the-adf" title="Permalink to this headline">#</a></h3>
-<p>     If this config variable isn’t present then
-     the ADF defaults to one processor.  Also, if
-     you set it to “*” then it will default
-     to all of the processors available on a
-     single node/machine:
-     num_procs: 8</p>
+<section id="num-procs">
+<h3>num_procs<a class="headerlink" href="#num-procs" title="Permalink to this headline">#</a></h3>
+<p>Number of processors on which to run the ADF</p>
+<p>If this config variable isn't present then the ADF defaults to one processor.</p>
+<p>you set it to "*" then it will default to all of the processors available on a single node/machine</p>
+<p>default: 8</p>
 </section>
-<section id="remake-plots">
-<h3><strong>Remake plots?</strong><a class="headerlink" href="#remake-plots" title="Permalink to this headline">#</a></h3>
-<p>     If set to true, then redo all plots even if they already exist.
-     If set to false, then if a plot is found it will be skipped:
-     redo_plot: false</p>
+<section id="redo-plot">
+<h3>redo_plot<a class="headerlink" href="#redo-plot" title="Permalink to this headline">#</a></h3>
+<p>Remake plots?</p>
+<p>If set to true, then redo all plots even if they already exist.</p>
+<p>If set to false, then if a plot is found it will be skipped</p>
+<p>default: false</p>
+<section id="create-html">
+<h4>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h4>
+<p>Generate HTML website (assumed false if missing)</p>
+<p>Note:  The website files themselves will be located in the path specified by "cam_diag_plot_loc", under the "{diag_run}/website" subdirectory, where "{diag_run}" is the subdirectory created for this particular diagnostics run (usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p></section>
 </section>
 </section>
 <hr class="docutils" />
