@@ -584,13 +584,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#redo-plot">
      redo_plot
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-html">
-       create_html
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-html">
+     create_html
+    </a>
    </li>
   </ul>
  </li>
@@ -836,13 +834,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#redo-plot">
      redo_plot
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-html">
-       create_html
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-html">
+     create_html
+    </a>
    </li>
   </ul>
  </li>
@@ -1086,11 +1082,11 @@ title="Print to PDF"
 <p>If set to true, then redo all plots even if they already exist.</p>
 <p>If set to false, then if a plot is found it will be skipped</p>
 <p>default: false</p>
+</section>
 <section id="create-html">
-<h4>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h4>
+<h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
 <p>Generate HTML website (assumed false if missing)</p>
 <p>Note:  The website files themselves will be located in the path specified by "cam_diag_plot_loc", under the "{diag_run}/website" subdirectory, where "{diag_run}" is the subdirectory created for this particular diagnostics run (usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p></section>
-</section>
 </section>
 <hr class="docutils" />
 <section id="color-117284-textit-diag-cam-climo">
@@ -1171,6 +1167,11 @@ title="Print to PDF"
 </section>
 <section id="color-117284-textit-diag-cam-baseline-climo">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_baseline_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are the same variable names as diag_cam_climo above, but for the baseline case</p>
+<p>They are not necessary if comapring against observations, and will be skipped</p>
+</div>
 <section id="id1">
 <h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -30px;">&ensp; Calculate climatologies?</p>
