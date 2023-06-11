@@ -602,243 +602,138 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-climatologies">
-     <strong>
-      Calculate climatologies?
-     </strong>
+    <a class="reference internal nav-link" href="#calc-cam-climo">
+     calc_cam_climo
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created">
-       If false, neither the climatology or time-series files will be created:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calc-cam-climo-true">
-       calc_cam_climo: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overwrite-cam-climatology-files">
-     <strong>
-      Overwrite CAM climatology files?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-overwrite-climo">
+     cam_overwrite_climo
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
-       If false, or not present, then already existing climatology files will be skipped:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-climo-false">
-       <strong>
-        cam_overwrite_climo
-       </strong>
-       : false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#name-of-cam-case-or-cam-run-name">
-     <strong>
-      Name of CAM case (or CAM run name):
-     </strong>
+    <a class="reference internal nav-link" href="#cam-case-name">
+     cam_case_name
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
-       cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#case-nickname">
-     <strong>
-      Case nickname
-     </strong>
+     case_nickname
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-left-blank-it-will-default-to-cam-case-name">
-       If left blank, it will default to cam_case_name
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
-       ** NOTE: if nickname starts with a zero, the string must be in quotes! **
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-nickname-diag-cam-climo-cam-case-name">
-       case_nickname: ${diag_cam_climo.cam_case_name}
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-of-cam-history-h0-files">
-     <strong>
-      Location of CAM history (h0) files:
-     </strong>
+    <a class="reference internal nav-link" href="#cam-hist-loc">
+     cam_hist_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
-       cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
-     <strong>
-      Location of CAM climatologies (to be created and then used by this script)
-     </strong>
+    <a class="reference internal nav-link" href="#cam-climo-loc">
+     cam_climo_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
-       cam_climo_loc: /glade/scratch/
-       <span class="math notranslate nohighlight">
-        \({user}/ADF/\)
-       </span>
-       {diag_cam_climo.cam_case_name}/climo
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-start">
-     <strong>
-      Model year when time series files should start:
-     </strong>
+    <a class="reference internal nav-link" href="#start-year">
+     start_year
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
-       Note:  Leaving this entry blank will make time series start at earliest available year.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#start-year-1990">
-       start_year: 1990
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-end">
-     <strong>
-      Model year when time series files should end:
-     </strong>
+    <a class="reference internal nav-link" href="#end-year">
+     end_year
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
-       Note:  Leaving this entry blank will make time series end at latest available year.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#end-year-1999">
-       end_year: 1999
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-time-series-files-need-to-be-generated">
-     <strong>
-      Do time series files need to be generated?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-done">
+     cam_ts_done
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
-       If True, then diagnostics assumes that model files are already time series.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
-       If False, or if simply not present, then diagnostics will attempt to create
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#time-series-files-from-history-time-slice-files">
-       time series files from history (time-slice) files:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-done-false">
-       cam_ts_done: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-interim-time-series-files">
-     <strong>
-      Save interim time series files?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-save">
+     cam_ts_save
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
-       WARNING:  This can take up a significant amount of space, but will save processing time the next time
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-save-true">
-       cam_ts_save: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overwrite-time-series-files-if-found">
-     <strong>
-      Overwrite time series files, if found?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-overwrite-ts">
+     cam_overwrite_ts
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
-       If set to false, then time series creation will be skipped if files are found:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-ts-false">
-       cam_overwrite_ts: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-where-time-series-files-are-or-will-be-stored">
-     <strong>
-      Location where time series files are (or will be) stored:
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-loc">
+     cam_ts_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
-       cam_ts_loc: /glade/scratch/
-       <span class="math notranslate nohighlight">
-        \({user}/ADF/\)
-       </span>
-       {diag_cam_climo.cam_case_name}/ts
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#color-117284-textit-diag-cam-baseline-climo">
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag_cam_baseline_climo}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     calc_cam_climo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     cam_overwrite_climo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     cam_case_name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     case_nickname
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     cam_hist_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     cam_climo_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     start_year
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     end_year
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     cam_ts_done
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     cam_ts_save
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     cam_overwrite_ts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     cam_ts_loc
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
    <span class="math notranslate nohighlight">
     \(\color{#117284}{\textit{diag_cam_baseline_climo}}\)
    </span>
@@ -959,243 +854,138 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-climatologies">
-     <strong>
-      Calculate climatologies?
-     </strong>
+    <a class="reference internal nav-link" href="#calc-cam-climo">
+     calc_cam_climo
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created">
-       If false, neither the climatology or time-series files will be created:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calc-cam-climo-true">
-       calc_cam_climo: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overwrite-cam-climatology-files">
-     <strong>
-      Overwrite CAM climatology files?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-overwrite-climo">
+     cam_overwrite_climo
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
-       If false, or not present, then already existing climatology files will be skipped:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-climo-false">
-       <strong>
-        cam_overwrite_climo
-       </strong>
-       : false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#name-of-cam-case-or-cam-run-name">
-     <strong>
-      Name of CAM case (or CAM run name):
-     </strong>
+    <a class="reference internal nav-link" href="#cam-case-name">
+     cam_case_name
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
-       cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#case-nickname">
-     <strong>
-      Case nickname
-     </strong>
+     case_nickname
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-left-blank-it-will-default-to-cam-case-name">
-       If left blank, it will default to cam_case_name
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
-       ** NOTE: if nickname starts with a zero, the string must be in quotes! **
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-nickname-diag-cam-climo-cam-case-name">
-       case_nickname: ${diag_cam_climo.cam_case_name}
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-of-cam-history-h0-files">
-     <strong>
-      Location of CAM history (h0) files:
-     </strong>
+    <a class="reference internal nav-link" href="#cam-hist-loc">
+     cam_hist_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
-       cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
-     <strong>
-      Location of CAM climatologies (to be created and then used by this script)
-     </strong>
+    <a class="reference internal nav-link" href="#cam-climo-loc">
+     cam_climo_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
-       cam_climo_loc: /glade/scratch/
-       <span class="math notranslate nohighlight">
-        \({user}/ADF/\)
-       </span>
-       {diag_cam_climo.cam_case_name}/climo
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-start">
-     <strong>
-      Model year when time series files should start:
-     </strong>
+    <a class="reference internal nav-link" href="#start-year">
+     start_year
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
-       Note:  Leaving this entry blank will make time series start at earliest available year.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#start-year-1990">
-       start_year: 1990
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-end">
-     <strong>
-      Model year when time series files should end:
-     </strong>
+    <a class="reference internal nav-link" href="#end-year">
+     end_year
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
-       Note:  Leaving this entry blank will make time series end at latest available year.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#end-year-1999">
-       end_year: 1999
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-time-series-files-need-to-be-generated">
-     <strong>
-      Do time series files need to be generated?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-done">
+     cam_ts_done
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
-       If True, then diagnostics assumes that model files are already time series.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
-       If False, or if simply not present, then diagnostics will attempt to create
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#time-series-files-from-history-time-slice-files">
-       time series files from history (time-slice) files:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-done-false">
-       cam_ts_done: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-interim-time-series-files">
-     <strong>
-      Save interim time series files?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-save">
+     cam_ts_save
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
-       WARNING:  This can take up a significant amount of space, but will save processing time the next time
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-save-true">
-       cam_ts_save: true
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overwrite-time-series-files-if-found">
-     <strong>
-      Overwrite time series files, if found?
-     </strong>
+    <a class="reference internal nav-link" href="#cam-overwrite-ts">
+     cam_overwrite_ts
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
-       If set to false, then time series creation will be skipped if files are found:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-overwrite-ts-false">
-       cam_overwrite_ts: false
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#location-where-time-series-files-are-or-will-be-stored">
-     <strong>
-      Location where time series files are (or will be) stored:
-     </strong>
+    <a class="reference internal nav-link" href="#cam-ts-loc">
+     cam_ts_loc
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
-       cam_ts_loc: /glade/scratch/
-       <span class="math notranslate nohighlight">
-        \({user}/ADF/\)
-       </span>
-       {diag_cam_climo.cam_case_name}/ts
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#color-117284-textit-diag-cam-baseline-climo">
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag_cam_baseline_climo}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     calc_cam_climo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     cam_overwrite_climo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     cam_case_name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     case_nickname
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     cam_hist_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     cam_climo_loc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     start_year
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     end_year
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     cam_ts_done
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     cam_ts_save
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     cam_overwrite_ts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     cam_ts_loc
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
    <span class="math notranslate nohighlight">
     \(\color{#117284}{\textit{diag_cam_baseline_climo}}\)
    </span>
@@ -1305,115 +1095,159 @@ title="Print to PDF"
 <hr class="docutils" />
 <section id="color-117284-textit-diag-cam-climo">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-climo" title="Permalink to this headline">#</a></h2>
-<section id="calculate-climatologies">
-<h3><strong>Calculate climatologies?</strong><a class="headerlink" href="#calculate-climatologies" title="Permalink to this headline">#</a></h3>
-<section id="if-false-neither-the-climatology-or-time-series-files-will-be-created">
-<h4>     If false, neither the climatology or time-series files will be created:<a class="headerlink" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created" title="Permalink to this headline">#</a></h4>
+<section id="calc-cam-climo">
+<h3>calc_cam_climo<a class="headerlink" href="#calc-cam-climo" title="Permalink to this headline">#</a></h3>
+<p>Calculate climatologies?</p>
+<p>If false, neither the climatology or time-series files will be created:</p>
+<p>default: true</p>
 </section>
-<section id="calc-cam-climo-true">
-<h4>     calc_cam_climo: true<a class="headerlink" href="#calc-cam-climo-true" title="Permalink to this headline">#</a></h4>
+<section id="cam-overwrite-climo">
+<h3>cam_overwrite_climo<a class="headerlink" href="#cam-overwrite-climo" title="Permalink to this headline">#</a></h3>
+<p>Overwrite CAM climatology files?</p>
+<p>If false, or not present, then already existing climatology files will be skipped:</p>
+<p>default: false</p>
 </section>
-</section>
-<section id="overwrite-cam-climatology-files">
-<h3><strong>Overwrite CAM climatology files?</strong><a class="headerlink" href="#overwrite-cam-climatology-files" title="Permalink to this headline">#</a></h3>
-<section id="if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
-<h4> If false, or not present, then already existing climatology files will be skipped:<a class="headerlink" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="cam-overwrite-climo-false">
-<h4> <strong>cam_overwrite_climo</strong>: false<a class="headerlink" href="#cam-overwrite-climo-false" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-<section id="name-of-cam-case-or-cam-run-name">
-<h3><strong>Name of CAM case (or CAM run name):</strong><a class="headerlink" href="#name-of-cam-case-or-cam-run-name" title="Permalink to this headline">#</a></h3>
-<section id="cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
-<h4>     cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05<a class="headerlink" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05" title="Permalink to this headline">#</a></h4>
-</section>
+<section id="cam-case-name">
+<h3>cam_case_name<a class="headerlink" href="#cam-case-name" title="Permalink to this headline">#</a></h3>
+<p>Name of CAM case (or CAM run name)</p>
+<p>example: b.e20.BHIST.f09_g17.20thC.297_05</p>
 </section>
 <section id="case-nickname">
-<h3><strong>Case nickname</strong><a class="headerlink" href="#case-nickname" title="Permalink to this headline">#</a></h3>
-<section id="if-left-blank-it-will-default-to-cam-case-name">
-<h4>     If left blank, it will default to cam_case_name<a class="headerlink" href="#if-left-blank-it-will-default-to-cam-case-name" title="Permalink to this headline">#</a></h4>
+<h3>case_nickname<a class="headerlink" href="#case-nickname" title="Permalink to this headline">#</a></h3>
+<p>Case nickname</p>
+<p>If left blank, it will default to cam_case_name</p>
+<p>** NOTE: if nickname starts with a zero, the string must be in quotes! **</p>
+<p>example: cool_nickname</p>
 </section>
-<section id="note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
-<h4>      ** NOTE: if nickname starts with a zero, the string must be in quotes! **<a class="headerlink" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes" title="Permalink to this headline">#</a></h4>
+<section id="cam-hist-loc">
+<h3>cam_hist_loc<a class="headerlink" href="#cam-hist-loc" title="Permalink to this headline">#</a></h3>
+<p>Location of CAM history (h0) files</p>
+<p>example: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p>
 </section>
-<section id="case-nickname-diag-cam-climo-cam-case-name">
-<h4>     case_nickname: ${diag_cam_climo.cam_case_name}<a class="headerlink" href="#case-nickname-diag-cam-climo-cam-case-name" title="Permalink to this headline">#</a></h4>
+<section id="cam-climo-loc">
+<h3>cam_climo_loc<a class="headerlink" href="#cam-climo-loc" title="Permalink to this headline">#</a></h3>
+<p>Location of CAM climatologies (to be created and then used by this script)</p>
+<p>example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p>
 </section>
+<section id="start-year">
+<h3>start_year<a class="headerlink" href="#start-year" title="Permalink to this headline">#</a></h3>
+<p>Model year when time series files should start</p>
+<p>Note:  Leaving this entry blank will make time series start at earliest available year.</p>
+<p>example: 1990</p>
+<p>example: 10</p>
+<p>example: 0010??</p>
 </section>
-<section id="location-of-cam-history-h0-files">
-<h3><strong>Location of CAM history (h0) files:</strong><a class="headerlink" href="#location-of-cam-history-h0-files" title="Permalink to this headline">#</a></h3>
-<section id="cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
-<h4>     cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}<a class="headerlink" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name" title="Permalink to this headline">#</a></h4>
+<section id="end-year">
+<h3>end_year<a class="headerlink" href="#end-year" title="Permalink to this headline">#</a></h3>
+<p>Model year when time series files should end</p>
+<p>Note:  Leaving this entry blank will make time series end at latest available year.</p>
+<p>example: 1999</p>
+<p>example: 15</p>
 </section>
+<section id="cam-ts-done">
+<h3>cam_ts_done<a class="headerlink" href="#cam-ts-done" title="Permalink to this headline">#</a></h3>
+<p>Do time series files need to be generated?</p>
+<p>If True, then diagnostics assumes that model files are already time series.</p>
+<p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p>
+<p>default: false</p>
 </section>
-<section id="location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
-<h3><strong>Location of CAM climatologies (to be created and then used by this script)</strong><a class="headerlink" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script" title="Permalink to this headline">#</a></h3>
-<section id="cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
-<h4>     cam_climo_loc: /glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/\)</span>{diag_cam_climo.cam_case_name}/climo<a class="headerlink" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo" title="Permalink to this headline">#</a></h4>
+<section id="cam-ts-save">
+<h3>cam_ts_save<a class="headerlink" href="#cam-ts-save" title="Permalink to this headline">#</a></h3>
+<p>Save interim time series files?</p>
+<p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p>
+<p>default: true</p>
 </section>
+<section id="cam-overwrite-ts">
+<h3>cam_overwrite_ts<a class="headerlink" href="#cam-overwrite-ts" title="Permalink to this headline">#</a></h3>
+<p>Overwrite time series files, if found?</p>
+<p>If set to false, then time series creation will be skipped if files are found:</p>
+<p>default: false</p>
 </section>
-<section id="model-year-when-time-series-files-should-start">
-<h3><strong>Model year when time series files should start:</strong><a class="headerlink" href="#model-year-when-time-series-files-should-start" title="Permalink to this headline">#</a></h3>
-<section id="note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
-<h4>     Note:  Leaving this entry blank will make time series start at earliest available year.<a class="headerlink" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="start-year-1990">
-<h4>     start_year: 1990<a class="headerlink" href="#start-year-1990" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-<section id="model-year-when-time-series-files-should-end">
-<h3><strong>Model year when time series files should end:</strong><a class="headerlink" href="#model-year-when-time-series-files-should-end" title="Permalink to this headline">#</a></h3>
-<section id="note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
-<h4>     Note:  Leaving this entry blank will make time series end at latest available year.<a class="headerlink" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="end-year-1999">
-<h4>     end_year: 1999<a class="headerlink" href="#end-year-1999" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-<section id="do-time-series-files-need-to-be-generated">
-<h3><strong>Do time series files need to be generated?</strong><a class="headerlink" href="#do-time-series-files-need-to-be-generated" title="Permalink to this headline">#</a></h3>
-<section id="if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
-<h4>     If True, then diagnostics assumes that model files are already time series.<a class="headerlink" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
-<h4>     If False, or if simply not present, then diagnostics will attempt to create<a class="headerlink" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="time-series-files-from-history-time-slice-files">
-<h4>     time series files from history (time-slice) files:<a class="headerlink" href="#time-series-files-from-history-time-slice-files" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="cam-ts-done-false">
-<h4>     cam_ts_done: false<a class="headerlink" href="#cam-ts-done-false" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-<section id="save-interim-time-series-files">
-<h3><strong>Save interim time series files?</strong><a class="headerlink" href="#save-interim-time-series-files" title="Permalink to this headline">#</a></h3>
-<section id="warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
-<h4>     WARNING:  This can take up a significant amount of space, but will save processing time the next time<a class="headerlink" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="cam-ts-save-true">
-<h4>     cam_ts_save: true<a class="headerlink" href="#cam-ts-save-true" title="Permalink to this headline">#</a></h4>
+<section id="cam-ts-loc">
+<h3>cam_ts_loc<a class="headerlink" href="#cam-ts-loc" title="Permalink to this headline">#</a></h3>
+<p>Location where time series files are (or will be) stored</p>    
+<p>example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p>
 </section>
 </section>
-<section id="overwrite-time-series-files-if-found">
-<h3><strong>Overwrite time series files, if found?</strong><a class="headerlink" href="#overwrite-time-series-files-if-found" title="Permalink to this headline">#</a></h3>
-<section id="if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
-<h4>     If set to false, then time series creation will be skipped if files are found:<a class="headerlink" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found" title="Permalink to this headline">#</a></h4>
+<section id="color-117284-textit-diag-cam-baseline-climo">
+<h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_baseline_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Calculate climatologies?</p>
+<p>If false, neither the climatology or time-series files will be created:</p>
+<p>default: true</p>
 </section>
-<section id="cam-overwrite-ts-false">
-<h4>     cam_overwrite_ts: false<a class="headerlink" href="#cam-overwrite-ts-false" title="Permalink to this headline">#</a></h4>
+<section id="id2">
+<h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Overwrite CAM climatology files?</p>
+<p>If false, or not present, then already existing climatology files will be skipped:</p>
+<p>default: false</p>
 </section>
+<section id="id3">
+<h3>cam_case_name<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>Name of baseline case (or CAM/other run name)</p>
+<p>example: b.e20.BHIST.f09_g16.20thC.125.02</p>
 </section>
-<section id="location-where-time-series-files-are-or-will-be-stored">
-<h3><strong>Location where time series files are (or will be) stored:</strong><a class="headerlink" href="#location-where-time-series-files-are-or-will-be-stored" title="Permalink to this headline">#</a></h3>
-<section id="cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
-<h4>     cam_ts_loc: /glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/\)</span>{diag_cam_climo.cam_case_name}/ts<a class="headerlink" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts" title="Permalink to this headline">#</a></h4>
+<section id="id4">
+<h3>case_nickname<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>Baseline nickname</p>
+<p>If left blank, it will default to cam_case_name</p>
+<p>** NOTE: if nickname starts with a zero, the string must be in quotes! **</p>
+<p>example: cool_nickname</p>
 </section>
+<section id="id5">
+<h3>cam_hist_loc<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<p>Location of baseline history (h0) files</p>
+<p>example: /glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</p>
+</section>
+<section id="id6">
+<h3>cam_climo_loc<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<p>Location of CAM climatologies (to be created and then used by this script)</p>
+<p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</p>
+</section>
+<section id="id7">
+<h3>start_year<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<p>Baseline year when time series files should start</p>
+<p>Note:  Leaving this entry blank will make time series start at earliest available year.</p>
+<p>example: 1990</p>
+<p>example: 10</p>
+<p>example: 0010??</p>
+</section>
+<section id="id8">
+<h3>end_year<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<p>Baseline year when time series files should end</p>
+<p>Note:  Leaving this entry blank will make time series end at latest available year.</p>
+<p>example: 1999</p>
+<p>example: 15</p>
+</section>
+<section id="id9">
+<h3>cam_ts_done<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<p>Do time series files need to be generated?</p>
+<p>If True, then diagnostics assumes that baseline files are already time series.</p>
+<p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p>
+<p>default: false</p>
+</section>
+<section id="id10">
+<h3>cam_ts_save<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<p>Save interim time series files?</p>
+<p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p>
+<p>default: true</p>
+</section>
+<section id="id11">
+<h3>cam_overwrite_ts<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<p>Overwrite time series files, if found?</p>
+<p>If set to false, then time series creation will be skipped if files are found:</p>
+<p>default: false</p>
+</section>
+<section id="id12">
+<h3>cam_ts_loc<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<p>Location where time series files are (or will be) stored</p>    
+<p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="color-117284-textit-diag-cam-baseline-climo">
-<h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_baseline_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<section id="id13">
+<h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_baseline_climo}}\)</span><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Syntax</p></th>
