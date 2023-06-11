@@ -1106,54 +1106,57 @@ title="Print to PDF"
 <hr class="docutils" />
 <section id="color-117284-textit-diag-cam-climo">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-climo" title="Permalink to this headline">#</a></h2>
+<script>
+    p2 {margin-top: -5px;}
+</script>
 <section id="calc-cam-climo">
 <h3>calc_cam_climo<a class="headerlink" href="#calc-cam-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Calculate climatologies?</p>
-<p style="margin-top: -15px;">&ensp; If false, neither the climatology or time-series files will be created</p>
-<p style="margin-top: -15px;">&ensp; default: true</p>
+<p><p2>  Calculate climatologies?</p2></p>
+<p>&ensp; If false, neither the climatology or time-series files will be created</p>
+<p>&ensp; default: true</p>
 </section>
 <section id="cam-overwrite-climo">
 <h3>cam_overwrite_climo<a class="headerlink" href="#cam-overwrite-climo" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files?</p>
-<p style="margin-top: -15px;">&ensp; If false, or not present, then already existing climatology files will be skipped</p>
-<p style="margin-top: -15px;">&ensp; default: false</p>
+<p>&ensp; If false, or not present, then already existing climatology files will be skipped</p>
+<p>&ensp; default: false</p>
 </section>
 <section id="cam-case-name">
 <h3>cam_case_name<a class="headerlink" href="#cam-case-name" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Name of CAM case (or CAM run name)</p>
-<p style="margin-top: -15px;">&ensp; example: b.e20.BHIST.f09_g17.20thC.297_05</p>
+<p>&ensp; example: b.e20.BHIST.f09_g17.20thC.297_05</p>
 </section>
 <section id="case-nickname">
 <h3>case_nickname<a class="headerlink" href="#case-nickname" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Case nickname</p>
-<p style="margin-top: -15px;">&ensp; If left blank, it will default to cam_case_name</p>
-<p style="margin-top: -15px;">&ensp; ** NOTE: if nickname starts with a zero, the string must be in quotes! **</p>
-<p style="margin-top: -15px;">&ensp; example: cool_nickname</p>
+<p>&ensp; If left blank, it will default to cam_case_name</p>
+<p>&ensp; ** NOTE: if nickname starts with a zero, the string must be in quotes! **</p>
+<p>&ensp; example: cool_nickname</p>
 </section>
 <section id="cam-hist-loc">
 <h3>cam_hist_loc<a class="headerlink" href="#cam-hist-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM history (h0) files</p>
-<p style="margin-top: -15px;">&ensp; example: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p>
+<p>&ensp; example: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p>
 </section>
 <section id="cam-climo-loc">
 <h3>cam_climo_loc<a class="headerlink" href="#cam-climo-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM climatologies (to be created and then used by this script)</p>
-<p style="margin-top: -15px;">&ensp; example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p>
+<p>&ensp; example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p>
 </section>
 <section id="start-year">
 <h3>start_year<a class="headerlink" href="#start-year" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Model year when time series files should start</p>
-<p style="margin-top: -15px;">&ensp; Note:  Leaving this entry blank will make time series start at earliest available year.</p>
-<p style="margin-top: -15px;">&ensp; example: 1990</p>
-<p style="margin-top: -15px;">&ensp; example: 10</p>
-<p style="margin-top: -15px;">&ensp; example: 0010??</p>
+<p>&ensp; Note:  Leaving this entry blank will make time series start at earliest available year.</p>
+<p>&ensp; example: 1990</p>
+<p>&ensp; example: 10</p>
+<p>&ensp; example: 0010??</p>
 </section>
 <section id="end-year">
 <h3>end_year<a class="headerlink" href="#end-year" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Model year when time series files should end</p>
-<p style="margin-top: -15px;">&ensp; Note:  Leaving this entry blank will make time series end at latest available year.</p>
-<p style="margin-top: -15px;">&ensp; example: 1999</p>
-<p style="margin-top: -15px;">&ensp; example: 15</p>
+<p>&ensp; Note:  Leaving this entry blank will make time series end at latest available year.</p>
+<p>&ensp; example: 1999</p>
+<p>&ensp; example: 15</p>
 </section>
 <section id="cam-ts-done">
 <h3>cam_ts_done<a class="headerlink" href="#cam-ts-done" title="Permalink to this headline">#</a></h3>
