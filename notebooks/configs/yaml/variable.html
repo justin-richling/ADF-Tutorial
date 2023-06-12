@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Other Configurations" href="../other.html" />
@@ -592,24 +590,23 @@ If you would like to modify this file for your personal ADF runs then it is reco
 to make a copy of this file, make modifications in that copy, and then point the ADF to
 it using the “defaults_file” config variable.</p>
 </div>
-<p>U:
-colormap: “Blues”
-contour_levels_range: [-10, 90, 5]
-diff_colormap: “BrBG”
-diff_contour_range: [-15, 15, 2]
-scale_factor: 1
-add_offset: 0
-new_unit: “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-mpl:
-colorbar:
-label : “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-obs_file: “U_ERA5_monthly_climo_197901-202112.nc”
-obs_name: “ERA5”
-obs_var_name: “U”
-vector_pair: “V”
-vector_name: “Wind”
-category: “State”</p>
-<section id="plotting">
+<p>U:</p>
+<p>&ensp;colormap: "Blues"
+<p>&ensp;contour_levels_range: [-10, 90, 5]
+<p>&ensp;diff_colormap: "BrBG"
+<p>&ensp;diff_contour_range: [-15, 15, 2]
+<p>&ensp;scale_factor: 1
+<p>&ensp;add_offset: 0
+<p>&ensp;new_unit: "ms$^{-1}$"
+<p>&ensp;mpl:
+<p>&emsp;colorbar:
+<p>&ensp;&ensp;label : "ms$^{-1}$"
+<p>&ensp;obs_file: "U_ERA5_monthly_climo_197901-202112.nc"
+<p>&ensp;obs_name: "ERA5"
+<p>&ensp;obs_var_name: "U"
+<p>&ensp;vector_pair: "V"
+<p>&ensp;vector_name: "Wind"
+<p>&ensp;category: "State"<section id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code></h4>
 <ul>
