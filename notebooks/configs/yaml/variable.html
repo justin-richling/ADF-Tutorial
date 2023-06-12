@@ -585,48 +585,48 @@ title="Print to PDF"
 <p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
 <section id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
-<h4>colormap</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code></h4>
 <p>The colormap that will be used for filled contour plots.</p>
-<h4>contour_levels</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">contour_levels</span></code></h4>
 <p>A list of the specific contour values that will be used for contour plots.</p>
 <p>Cannot be used with "contour_levels_range".</p>
-<h4>contour_levels_range</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">contour_levels_range</span></code></h4>
 <p>The contour range that will be used for plots.</p>
 <p>Values are min, max, and stride.</p>
 <p>Cannot be used with "contour_levels".</p>
-<h4>diff_colormap</h4> 
+<h4><code class="docutils literal notranslate"><span class="pre">diff_colormap</span></code></h4>
 <p>The colormap that will be used for filled contour different plots</p>
-<h4>diff_contour_levels</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">diff_contour_levels</span></code></h4>
 <p>A list of the specific contour values thta will be used for difference plots.</p>
 <p>Cannot be used with "diff_contour_range".</p>
-<h4>diff_contour_range</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">diff_contour_range</span></code></h4>
 <p>The contour range that will be used for difference plots.</p>
 <p>Values are min, max, and stride. Cannot be used with "diff_contour_levels".</p>
-<h4>scale_factor</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">scale_factor</span></code></h4>
 <p>Amount to scale the variable (relative to its "raw" model values).</p>
-<h4>add_offset</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">add_offset</span></code></h4>
 <p>Amount of offset to add to the variable (relatie to its "raw" model values).</p>
-<h4>new_unit</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">new_unit</span></code></h4>
 <p>Variable units (if not using the  "raw" model units).</p>
-<h4>mpl</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">mpl</span></code></h4>
 <p>Dictionary that contains keyword arguments explicitly for matplotlib</p>
-<h4>mask</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">mask</span></code></h4>
 <p>Setting that specifies whether the variable should be masked.</p>
 <p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></section>
 <section id="observations">
 <h2>Observations:<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
-<h4>obs_file</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code></h4>
 <p>Path to observations file.</p>
 <p>If only the file name is given, then the file is assumed to exist in the path specified by "obs_data_loc" in the config file.</p>
-<h4>obs_name</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_name</span></code></h4>
 <p>Name of the observational dataset (mostly used for plotting and generated file naming).</p>
 <p>If this isn't present then the obs_file name is used.</p>
-<h4>obs_var_name</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_var_name</span></code></h4>
 <p>Variable in the observations file to compare against.</p>
 <p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></section>
 <section id="vector">
 <h2>Vector:<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h2>
-<h4>vector_pair</h4>
+<h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
 <p>Another variable that when combined with the given variable makes up a vector pair.</p>
 <p>If this default is not present then it is assumed the given variable is not a vector component, and will thus be skipped during the vector plotting phase.</p>
 <h4>vector_name</h4>
