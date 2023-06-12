@@ -518,17 +518,17 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#observations">
-   Observations:
+   Observations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector">
-   Vector:
+   Vector
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#website">
-   Website:
+   Website
   </a>
  </li>
 </ul>
@@ -557,17 +557,17 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#observations">
-   Observations:
+   Observations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector">
-   Vector:
+   Vector
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#website">
-   Website:
+   Website
   </a>
  </li>
 </ul>
@@ -614,27 +614,28 @@ title="Print to PDF"
 <p>Setting that specifies whether the variable should be masked.</p>
 <p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></section>
 <section id="observations">
-<h2>Observations:<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code></h4>
-<p>Path to observations file.</p>
-<p>If only the file name is given, then the file is assumed to exist in the path specified by "obs_data_loc" in the config file.</p>
+<p>&emsp;Path to observations file.</p>
+<p>&emsp;If only the file name is given, then the file is assumed to exist in the path specified by "obs_data_loc" in the config file.</p>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_name</span></code></h4>
-<p>Name of the observational dataset (mostly used for plotting and generated file naming).</p>
-<p>If this isn't present then the obs_file name is used.</p>
+<p>&emsp;Name of the observational dataset (mostly used for plotting and generated file naming).</p>
+<p>&emsp;If this isn't present then the obs_file name is used.</p>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_var_name</span></code></h4>
-<p>Variable in the observations file to compare against.</p>
-<p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></section>
+<p>&emsp;Variable in the observations file to compare against.</p>
+<p>&emsp;If this isn't present then the variable name is assumed to be the same as the model variable name.</p></section>
 <section id="vector">
-<h2>Vector:<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h2>
+<h2>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
-<p>Another variable that when combined with the given variable makes up a vector pair.</p>
-<p>If this default is not present then it is assumed the given variable is not a vector component, and will thus be skipped during the vector plotting phase.</p>
+<p>&emsp;Another variable that when combined with the given variable makes up a vector pair.</p>
+<p>&emsp;If this default is not present then it is assumed the given variable is not a vector component, and will thus be skipped during the vector plotting phase.</p>
 <h4>vector_name</h4>
-<p>The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></section>
+<h4><code class="docutils literal notranslate"><span class="pre">vector_name</span></code></h4>
+<p>&emsp;The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></section>
 <section id="website">
-<h2>Website:<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h2>
+<h2>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
-<p>The website category the variable will be placed under.</p><div class="admonition warning">
+<p>&emsp;The website category the variable will be placed under.</p><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Final Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.
 If you would like to modify this file for your personal ADF runs then it is recommended
