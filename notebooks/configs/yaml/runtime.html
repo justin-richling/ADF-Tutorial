@@ -1328,14 +1328,14 @@ title="Print to PDF"
     <li><p>If left blank, it will default to cam_case_name</p></li>
     <li><p>example: cool_nickname</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>If nickname starts with a <strong>zero</strong>, the value must be in quotes in this yaml file.</p>
-</div>
 <ul>
-    <li><p>example: desired name; 026b -> case_nicklname: "026b" (notice the quotes for a leading zero)</p></li>
+    <li><p>example: desired nick name 026b</p></li>
 </ul>
-<p>case_nicklname: "026b" (notice the quotes for a leading zero)</p>
+<p>case_nickname: "026b" (notice the quotes for a leading zero)</p>
+</div>
 </section>
 <section id="id5">
 <h3>cam_hist_loc<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
@@ -1382,8 +1382,11 @@ title="Print to PDF"
 <section id="id10">
 <h3>cam_ts_save<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Save interim time series files?</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This can take up a significant amount of space, but will save processing time the next time</p>
+</div>
 <ul>
-    <li><p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p></li>
     <li><p>default: true</p></li>
 </ul>
 </section>
