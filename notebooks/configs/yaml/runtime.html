@@ -1195,9 +1195,9 @@ title="Print to PDF"
 </script>
 <section id="calc-cam-climo">
 <h3>calc_cam_climo<a class="headerlink" href="#calc-cam-climo" title="Permalink to this headline">#</a></h3>
-<p><p2>  Calculate climatologies?</p2></p>
+<p><p2>  Calculate climatology files?</p2></p>
 <ul>
-<li><p>If false, neither the climatology or time-series files will be created</p></li>
+<li><p>If false, the climatology files will not be created</p></li>
 <li><p>default: true</p></li>
 </ul>
 </section>
@@ -1211,19 +1211,26 @@ title="Print to PDF"
 </section>
 <section id="cam-case-name">
 <h3>cam_case_name<a class="headerlink" href="#cam-case-name" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Name of CAM case (or CAM run name)</p>
+<p style="margin-top: -5px;">&ensp; Name of CAM run</p>
 <ul>
 <li><p>example: b.e20.BHIST.f09_g17.20thC.297_05</p></li>
 </ul>
 </section>
 <section id="case-nickname">
 <h3>case_nickname<a class="headerlink" href="#case-nickname" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Case nickname</p>
+<p style="margin-top: -5px;">&ensp; Case nickname to be used for plotting purposes as well as any custom place in the diagnsotics output if desired</p>
 <ul>
-<li><p>If left blank, it will default to cam_case_name</p></li>
-<li><p>** NOTE: if nickname starts with a zero, the string must be in quotes! **</p></li>
-<li><p>example: cool_nickname</p></li>
+    <li><p>If left blank, it will default to cam_case_name</p></li>
+    <li><p>example: cool_nickname</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If nickname starts with a <strong>zero</strong>, the value must be in quotes in this yaml file.</p>
+<ul>
+    <li><p>example: desired nick name 026b</p></li>
+</ul>
+<p>case_nickname: "026b" (notice the quotes for a leading zero)</p>
+</div>
 </section>
 <section id="cam-hist-loc">
 <h3>cam_hist_loc<a class="headerlink" href="#cam-hist-loc" title="Permalink to this headline">#</a></h3>
@@ -1243,7 +1250,7 @@ title="Print to PDF"
 <h3>start_year<a class="headerlink" href="#start-year" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Model year when time series files should start</p>
 <ul>
-<li><p>Note:  Leaving this entry blank will make time series start at earliest available year.</p></li>
+<li><p>Note:  Leaving this entry blank will make time series start at earliest available year</p></li>
 <li><p>example: 1990</p></li>
 <li><p>example: 10</p></li>
 <li><p>example: 0010??</p></li>
@@ -1253,7 +1260,7 @@ title="Print to PDF"
 <h3>end_year<a class="headerlink" href="#end-year" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Model year when time series files should end</p>
 <ul>
-<li><p>Note:  Leaving this entry blank will make time series end at latest available year.</p></li>
+<li><p>Note:  Leaving this entry blank will make time series end at latest available year</p></li>
 <li><p>example: 1999</p></li>
 <li><p>example: 15</p></li>
 </ul>
@@ -1262,24 +1269,27 @@ title="Print to PDF"
 <h3>cam_ts_done<a class="headerlink" href="#cam-ts-done" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated?</p>
 <ul>
-<li><p>If True, then diagnostics assumes that model files are already time series.</p></li>
-<li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p></li>
+<li><p>If True, then diagnostics assumes that model files are already time series</p></li>
+<li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
 <section id="cam-ts-save">
 <h3>cam_ts_save<a class="headerlink" href="#cam-ts-save" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Save interim time series files?</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This can take up a significant amount of space, but will save processing time the next time</p>
+</div>
 <ul>
-<li><p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p></li>
-<li><p>default: true</p></li>
+    <li><p>default: true</p></li>
 </ul>
 </section>
 <section id="cam-overwrite-ts">
 <h3>cam_overwrite_ts<a class="headerlink" href="#cam-overwrite-ts" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found?</p>
 <ul>
-<li><p>If set to false, then time series creation will be skipped if files are found:</p></li>
+<li><p>If set to false, then time series creation will be skipped if files are found</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1295,14 +1305,14 @@ title="Print to PDF"
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_cam_baseline_climo}}\)</span><a class="headerlink" href="#color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These are the same variable names as <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#color-117284-textit-diag-cam-climo">diag_cam_climo above</a>, but for the baseline case</p>
+<p>These are the same variable names as <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#color-117284-textit-diag-cam-climo">diag_cam_climo</a> above, but for the baseline case</p>
 <p>They are not necessary if comapring against observations, and will be skipped</p>
 </div>
 <section id="id1">
 <h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Calculate climatologies?</p>
+<p style="margin-top: -5px;">&ensp; Calculate climatology files?</p>
 <ul>
-    <li><p>If false, neither the climatology or time-series files will be created:</p></li>
+    <li><p>If false, the climatology files will not be created</p></li>
     <li><p>default: true</p></li>
 </ul>
 </section>
@@ -1310,7 +1320,7 @@ title="Print to PDF"
 <h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files?</p>
 <ul>
-    <li><p>If false, or not present, then already existing climatology files will be skipped:</p></li>
+    <li><p>If false, or not present, then already existing climatology files will be skipped</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1355,7 +1365,7 @@ title="Print to PDF"
 <h3>start_year<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should start</p>
 <ul>
-    <li><p>Note:  Leaving this entry blank will make time series start at earliest available year.</p></li>
+    <li><p>Note:  Leaving this entry blank will make time series start at earliest available year</p></li>
     <li><p>example: 1990</p></li>
     <li><p>example: 10</p></li>
     <li><p>example: 0010??</p></li>
@@ -1365,7 +1375,7 @@ title="Print to PDF"
 <h3>end_year<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should end</p>
 <ul>
-    <li><p>Note:  Leaving this entry blank will make time series end at latest available year.</p></li>
+    <li><p>Note:  Leaving this entry blank will make time series end at latest available year</p></li>
     <li><p>example: 1999</p></li>
     <li><p>example: 15</p></li>
 </ul>
@@ -1374,8 +1384,8 @@ title="Print to PDF"
 <h3>cam_ts_done<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated?</p>
 <ul>
-    <li><p>If True, then diagnostics assumes that baseline files are already time series.</p></li>
-    <li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p></li>
+    <li><p>If True, then diagnostics assumes that baseline files are already time series</p></li>
+    <li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1394,7 +1404,7 @@ title="Print to PDF"
 <h3>cam_overwrite_ts<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found?</p>
 <ul>
-    <li><p>If set to false, then time series creation will be skipped if files are found:</p></li>
+    <li><p>If set to false, then time series creation will be skipped if files are found</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
