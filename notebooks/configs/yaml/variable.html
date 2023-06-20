@@ -525,28 +525,26 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#custom-set">
      Custom Set
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plotting">
-       Plotting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#observations">
-       Observations
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vector">
-       Vector
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#website">
-       Website
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector">
+     Vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
    </li>
   </ul>
  </li>
@@ -583,28 +581,26 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#custom-set">
      Custom Set
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plotting">
-       Plotting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#observations">
-       Observations
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vector">
-       Vector
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#website">
-       Website
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector">
+     Vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
    </li>
   </ul>
  </li>
@@ -658,8 +654,10 @@ it using the “defaults_file” config variable.</p>
 <h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
+<p>These are the values that can be set for each variable. Non are required.</p>
+</section>
 <section id="plotting">
-<h4>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h4>
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
 <h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code><a class="headerlink" href="#colormap" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>The colormap that will be used for filled contour plots.</p></li>
@@ -711,7 +709,7 @@ it using the “defaults_file” config variable.</p>
 <li><p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></li>
 </ul></section>
 <section id="observations">
-<h4>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h4>
+<h3>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h3>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code></h4>
 <ul>
 <li><p>Path to observations file.</p></li>
@@ -728,7 +726,7 @@ it using the “defaults_file” config variable.</p>
 <li><p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></li>
 </ul></section>
 <section id="vector">
-<h4>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h4>
+<h3>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h3>
 <h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
 <ul>
 <li><p>Another variable that when combined with the given variable makes up a vector pair.</p></li>
@@ -739,12 +737,11 @@ it using the “defaults_file” config variable.</p>
 <li><p>The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></li>
 </ul></section>
 <section id="website">
-<h4>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h4>
+<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
 <h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
 <ul>
 <li><p>The website category the variable will be placed under.</p>
 </ul></section>
-</section>
 </section>
 </section>
 
