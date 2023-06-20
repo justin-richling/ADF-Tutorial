@@ -1089,15 +1089,15 @@ title="Print to PDF"
 <h3>obs_data_loc<a class="headerlink" href="#obs-data-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of observational datasets</p>
 <ul>
-<li><p>Note: this only matters if "compare_obs" is <code class="docutils literal notranslate"><span class="pre">true</span></code> and the path isn't specified in the variable defaults file.</p></li>
-<li><p>default: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p></li>
+<li><p>Note: this only matters if <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#compare-obs"><code class="docutils literal notranslate"><span class="pre">compare_obs</span></code></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and the path isn't specified in the variable defaults file.</p></li>
+<li><p>default: <code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p></li>
 </ul>
 </section>
 <section id="cam-regrid-loc">
 <h3>cam_regrid_loc<a class="headerlink" href="#cam-regrid-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where re-gridded and interpolated CAM climatology files are stored</p>
 <ul>
-<li><p>example: /glade/scratch/${user}/ADF/regrid</p></li>
+<li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p></li>
 </ul>
 </section>
 <section id="cam-overwrite-regrid">
@@ -1111,7 +1111,7 @@ title="Print to PDF"
 <h3>cam_diag_plot_loc<a class="headerlink" href="#cam-diag-plot-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where diagnostic plots are stored</p>
 <ul>
-<li><p>example: /glade/scratch/${user}/ADF/plots</p></li>
+<li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p></li>
 </ul>
 </section>
 <section id="hist-num">
@@ -1128,7 +1128,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Use default variable plot settings? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then variable-specific plotting attributes will be defined in <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code></p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, then variable-specific plotting attributes will be defined in supplied <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file in <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> (see blow)</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, then variable-specific plotting attributes will be defined in supplied <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file in <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> (see below)</p></li>
 </ul>
 </section>
 <section id="defaults-file">
@@ -1236,14 +1236,14 @@ title="Print to PDF"
 <h3>cam_hist_loc<a class="headerlink" href="#cam-hist-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM history (h0) files</p>
 <ul>
-<li><p>&ensp; example: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p></li>
+<li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</span></code></p></li>
 </ul>
 </section>
 <section id="cam-climo-loc">
 <h3>cam_climo_loc<a class="headerlink" href="#cam-climo-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM climatologies (to be created and then used by this script)</p>
 <ul>
-<li><p>&ensp; example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p></li>
+<li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</span></code></p></li>
 </ul>
 </section>
 <section id="start-year">
@@ -1279,7 +1279,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
 </div>
 <ul>
     <li><p>default: true</p></li>
@@ -1297,7 +1297,7 @@ title="Print to PDF"
 <h3>cam_ts_loc<a class="headerlink" href="#cam-ts-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where time series files are (or will be) stored</p>
 <ul>
-<li><p>example: /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p></li>
+<li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</span></code></p></li>
 </ul>
 </section>
 </section>
@@ -1351,14 +1351,14 @@ title="Print to PDF"
 <h3>cam_hist_loc<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of baseline history (h0) files</p>
 <ul>
-    <li><p>example: /glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</p></li>
+    <li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</span></code></p></li>
 </ul>
 </section>
 <section id="id6">
 <h3>cam_climo_loc<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM climatologies (to be created and then used by this script)</p>
 <ul>
-    <li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</p></li>
+    <li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</span></code></p></li>
 </ul>
 </section>
 <section id="id7">
@@ -1394,7 +1394,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
 </div>
 <ul>
     <li><p>default: true</p></li>
@@ -1412,7 +1412,7 @@ title="Print to PDF"
 <h3>cam_ts_loc<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where time series files are (or will be) stored</p>
 <ul>
-    <li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</p></li>
+    <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</span></code></p></li>
 </ul>
 </section>
 </section>
