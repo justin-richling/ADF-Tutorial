@@ -489,12 +489,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-basic-info">
+   diag_basic_info
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-cam-climo">
+   diag_cam_climo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+   diag_cam_baseline_climo
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -506,6 +540,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-basic-info">
+   diag_basic_info
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-cam-climo">
+   diag_cam_climo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+   diag_cam_baseline_climo
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -516,25 +573,31 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
 <h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
 <p>You will need to open the config runtime yaml file with your favorite editor and edit the following variables:</p>
-<p>diag_basic_info</p>
-<a>compare_obs</a>
-<a>cam_regrid_loc</a>
-<a>cam_diag_plot_loc</a>
-<a>use_defaults</a>
-<p>diag_cam_climo</p>
-<a>cam_case_name</a>
-<a>cam_hist_loc</a>
-<a>cam_climo_loc</a>
-<a>start_year</a>
-<a>end_year</a>
-<a>cam_ts_loc</a>
-<p>diag_cam_baseline_climo</p>
-<a>cam_case_name</a>
-<a>cam_hist_loc</a>
-<a>cam_climo_loc</a>
-<a>start_year</a>
-<a>end_year</a>
-<a>cam_ts_loc</a><div class="toctree-wrapper compound">
+<section id="diag-basic-info">
+<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
+<p>compare_obs</p>
+<p>cam_regrid_loc</p>
+<p>cam_diag_plot_loc</p>
+<p>use_defaults</p>
+</section>
+<section id="diag-cam-climo">
+<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
+<p>cam_case_name</p>
+<p>cam_hist_loc</p>
+<p>cam_climo_loc</p>
+<p>start_year</p>
+<p>end_year</p>
+<p>cam_ts_loc</p>
+</section>
+<section id="diag-cam-baseline-climo">
+<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<p>cam_case_name</p>
+<p>cam_hist_loc</p>
+<p>cam_climo_loc</p>
+<p>start_year</p>
+<p>end_year</p>
+<p>cam_ts_loc</p></section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
