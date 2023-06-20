@@ -1076,6 +1076,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="configuring-run-time">
 <h1>Configuring Run Time<a class="headerlink" href="#configuring-run-time" title="Permalink to this headline">#</a></h1>
+<p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some of these variables are optional and some are required. In each of the config file subsections below, all required variables will be indicated as such, otherwise assume the variable is optional</p>
+</div>
 <section id="color-117284-textit-diag-basic-info">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_basic_info}}\)</span><a class="headerlink" href="#color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
 <section id="compare-obs">
@@ -1185,7 +1190,7 @@ title="Print to PDF"
 <h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Generate HTML website (assumed false if missing)</p>
 <ul>
-<li><p>Note:  The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">case_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">case_YYYY_vs_baseline_YYYY</span></code>)</p></li>
+<li><p>Note:  The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_{baseline}_YYYY</span></code>)</p></li>
 </ul></section>
 </section>
 <hr class="docutils" />
