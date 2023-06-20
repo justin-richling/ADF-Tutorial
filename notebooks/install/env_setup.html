@@ -601,6 +601,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-environment">
 <h1>Setting up Environment<a class="headerlink" href="#setting-up-environment" title="Permalink to this headline">#</a></h1>
 <p>Instructions on how to build the necessary environment for running the ADF.</p>
+<p>Setting up the environment and getting the ADF will be done in the command line, so basic working knowledge of command line language is needed</p>
 <section id="cisl-computers">
 <h2>CISL Computers<a class="headerlink" href="#cisl-computers" title="Permalink to this headline">#</a></h2>
 <p>Setting up the ADF environment if on CISL (Cheyenne/Casper) machines</p>
@@ -615,6 +616,7 @@ title="Print to PDF"
 <section id="loading-conda">
 <h2>Loading Conda<a class="headerlink" href="#loading-conda" title="Permalink to this headline">#</a></h2>
 <p>To make the ADF as flexible as possible, it is recommended that you run in a precompiled <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment - <code class="docutils literal notranslate"><span class="pre">npl</span></code></p>
+<p>** <strong>Must be on CISL machine</strong> **</p>
 <hr class="docutils" />
 <p>First load conda via <code class="docutils literal notranslate"><span class="pre">module</span></code> command</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>module load conda
@@ -627,7 +629,7 @@ title="Print to PDF"
 </svg>
     </button></div>
 </div>
-<p>* you may encounter a <code class="docutils literal notranslate"><span class="pre">module load</span></code> error, try unloading python and re-try? <code class="docutils literal notranslate"><span class="pre">module unload python</span></code></p>
+<p>* you may encounter a <code class="docutils literal notranslate"><span class="pre">module load</span></code> error, try unloading python <code class="docutils literal notranslate"><span class="pre">module unload python</span></code> and re-try?</p>
 <p>In addition to conda package, the <code class="docutils literal notranslate"><span class="pre">ncrcat</span></code> NetCDF Operator (NCO) is needed</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>module load nco
 </pre><button class="copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#codecell0">
