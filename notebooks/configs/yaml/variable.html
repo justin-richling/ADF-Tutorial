@@ -512,24 +512,43 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting">
-   Plotting
+  <a class="reference internal nav-link" href="#variable-default-settings">
+   Variable Default Settings
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observations">
-   Observations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vector">
-   Vector
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#website">
-   Website
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-default-set">
+     ADF Default Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-set">
+     Custom Set
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plotting">
+       Plotting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#observations">
+       Observations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vector">
+       Vector
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#website">
+       Website
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -551,24 +570,43 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting">
-   Plotting
+  <a class="reference internal nav-link" href="#variable-default-settings">
+   Variable Default Settings
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observations">
-   Observations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vector">
-   Vector
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#website">
-   Website
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-default-set">
+     ADF Default Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-set">
+     Custom Set
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plotting">
+       Plotting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#observations">
+       Observations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vector">
+       Vector
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#website">
+       Website
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -610,9 +648,22 @@ it using the “defaults_file” config variable.</p>
 <p style="margin-top: -22px;">&ensp;vector_name: "Wind"</p>
 <p style="margin-top: -22px;">&ensp;category: "State"</p>
 </div>
+<section id="variable-default-settings">
+<h2>Variable Default Settings<a class="headerlink" href="#variable-default-settings" title="Permalink to this headline">#</a></h2>
+<section id="adf-default-set">
+<h3>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h3>
+<p>Reminder: </p>
+You need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
+</section>
+<section id="custom-set">
+<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
+<div class="admonition-reminder admonition">
+<p class="admonition-title">Reminder</p>
+<p>You need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a></p>
+</div>
 <section id="plotting">
-<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
-<h4><code class="docutils literal notranslate"><span class="pre">colormapppy</span></code><a class="headerlink" href="#compare_obs2" title="Permalink to this heading">#</a></h4>
+<h4>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code><a class="headerlink" href="#colormap" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>The colormap that will be used for filled contour plots.</p></li>
 </ul>
@@ -663,7 +714,7 @@ it using the “defaults_file” config variable.</p>
 <li><p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></li>
 </ul></section>
 <section id="observations">
-<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
+<h4>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h4>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code></h4>
 <ul>
 <li><p>Path to observations file.</p></li>
@@ -680,7 +731,7 @@ it using the “defaults_file” config variable.</p>
 <li><p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></li>
 </ul></section>
 <section id="vector">
-<h2>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h2>
+<h4>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h4>
 <h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
 <ul>
 <li><p>Another variable that when combined with the given variable makes up a vector pair.</p></li>
@@ -691,11 +742,13 @@ it using the “defaults_file” config variable.</p>
 <li><p>The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></li>
 </ul></section>
 <section id="website">
-<h2>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h2>
+<h4>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h4>
 <h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
 <ul>
 <li><p>The website category the variable will be placed under.</p>
 </ul></section>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
