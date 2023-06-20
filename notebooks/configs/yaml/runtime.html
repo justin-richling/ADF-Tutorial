@@ -1082,14 +1082,14 @@ title="Print to PDF"
 <h3>compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Is this a model vs observations comparison? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If false or missing, then a model-model comparison is assumed</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, then a model-model comparison is assumed</p></li>
 </ul>
 </section>
 <section id="obs-data-loc">
 <h3>obs_data_loc<a class="headerlink" href="#obs-data-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of observational datasets</p>
 <ul>
-<li><p>Note: this only matters if "compare_obs" is true and the path isn't specified in the variable defaults file.</p></li>
+<li><p>Note: this only matters if "compare_obs" is <code class="docutils literal notranslate"><span class="pre">true</span></code> and the path isn't specified in the variable defaults file.</p></li>
 <li><p>default: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p></li>
 </ul>
 </section>
@@ -1104,7 +1104,7 @@ title="Print to PDF"
 <h3>cam_overwrite_regrid<a class="headerlink" href="#cam-overwrite-regrid" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM re-gridded files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If false, or missing, then regridding will be skipped for regridded variables that already exist in "cam_regrid_loc"</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or missing, then regridding will be skipped for regridded variables that already exist in "cam_regrid_loc"</p></li>
 </ul>
 </section>
 <section id="cam-diag-plot-loc">
@@ -1127,8 +1127,8 @@ title="Print to PDF"
 <h3>use_defaults<a class="headerlink" href="#use-defaults" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Use default variable plot settings? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If true, then variable-specific plotting attributes will be defined in <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code></p></li>
-<li><p>If false, then variable-specific plotting attributes will be defined in supplied <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file in <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> (see blow)</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then variable-specific plotting attributes will be defined in <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, then variable-specific plotting attributes will be defined in supplied <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file in <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> (see blow)</p></li>
 </ul>
 </section>
 <section id="defaults-file">
@@ -1159,7 +1159,7 @@ title="Print to PDF"
 <h3>weight_season<a class="headerlink" href="#weight-season" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Apply monthly weights to seasonal averages? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If False or missing, then all months are given the same weight</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, then all months are given the same weight</p></li>
 </ul>
 </section>
 <section id="num-procs">
@@ -1175,8 +1175,8 @@ title="Print to PDF"
 <h3>redo_plot<a class="headerlink" href="#redo-plot" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Remake plots? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If set to true, redo all plots even if they already exist</p></li>
-<li><p>If set to false, if a plot is found it will be skipped</p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, redo all plots even if they already exist</p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, a plot will be skipped if found</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1197,7 +1197,7 @@ title="Print to PDF"
 <h3>calc_cam_climo<a class="headerlink" href="#calc-cam-climo" title="Permalink to this headline">#</a></h3>
 <p><p2>  Calculate climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p2></p>
 <ul>
-<li><p>If false, the climatology files will not be created</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, the climatology files will not be created</p></li>
 <li><p>default: true</p></li>
 </ul>
 </section>
@@ -1205,7 +1205,7 @@ title="Print to PDF"
 <h3>cam_overwrite_climo<a class="headerlink" href="#cam-overwrite-climo" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If false, or not present, then already existing climatology files will be skipped</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or not present, then already existing climatology files will be skipped</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1269,8 +1269,8 @@ title="Print to PDF"
 <h3>cam_ts_done<a class="headerlink" href="#cam-ts-done" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If True, then diagnostics assumes that model files are already time series</p></li>
-<li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then diagnostics assumes that model files are already time series</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1279,7 +1279,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This can take up a significant amount of space, but will save processing time the next time</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
 </div>
 <ul>
     <li><p>default: true</p></li>
@@ -1289,7 +1289,7 @@ title="Print to PDF"
 <h3>cam_overwrite_ts<a class="headerlink" href="#cam-overwrite-ts" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If set to false, then time series creation will be skipped if files are found</p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, then time series creation will be skipped if files are found</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1312,7 +1312,7 @@ title="Print to PDF"
 <h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Calculate climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-    <li><p>If false, the climatology files will not be created</p></li>
+    <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, the climatology files will not be created</p></li>
     <li><p>default: true</p></li>
 </ul>
 </section>
@@ -1320,7 +1320,7 @@ title="Print to PDF"
 <h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-    <li><p>If false, or not present, then already existing climatology files will be skipped</p></li>
+    <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or not present, then already existing climatology files will be skipped</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1384,8 +1384,8 @@ title="Print to PDF"
 <h3>cam_ts_done<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-    <li><p>If True, then diagnostics assumes that baseline files are already time series</p></li>
-    <li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
+    <li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then diagnostics assumes that baseline files are already time series</p></li>
+    <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
@@ -1394,7 +1394,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This can take up a significant amount of space, but will save processing time the next time</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
 </div>
 <ul>
     <li><p>default: true</p></li>
@@ -1404,7 +1404,7 @@ title="Print to PDF"
 <h3>cam_overwrite_ts<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-    <li><p>If set to false, then time series creation will be skipped if files are found</p></li>
+    <li><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, then time series creation will be skipped if files are found</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
