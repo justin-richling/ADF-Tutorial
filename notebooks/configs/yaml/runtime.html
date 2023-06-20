@@ -1308,7 +1308,7 @@ title="Print to PDF"
 </section>
 <section id="id2">
 <h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p><p2>Overwrite CAM climatology files?</p2></p>
+<p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files?</p>
 <ul>
 <li><p>If false, or not present, then already existing climatology files will be skipped:</p></li>
 <li><p>default: false</p></li>
@@ -1324,10 +1324,14 @@ title="Print to PDF"
 <section id="id4">
 <h3>case_nickname<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline nickname</p>
+```{note}
+If nickname starts with a zero, the string must be in quotes in this yaml file. Not sure exactly why...
+```
 <ul>
 <li><p>If left blank, it will default to cam_case_name</p></li>
-<li><p>** NOTE: if nickname starts with a zero, the string must be in quotes! **</p></li>
+<!--><li><p>** NOTE: if nickname starts with a zero, the string must be in quotes! **</p></li><!-->
 <li><p>example: cool_nickname</p></li>
+<li><p>example: "026b" (notice the quotes for a leading zero)</p></li>
 </ul>
 </section>
 <section id="id5">
@@ -1457,6 +1461,7 @@ Possible addition examples:
 </section>
 <section id="color-117284-textit-diag-var-list">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag_var_list}}\)</span><a class="headerlink" href="#color-117284-textit-diag-var-list" title="Permalink to this headline">#</a></h2>
+<p>List of variables to be executed in the ADF</p>
 </section>
 <section id="color-117284-textit-region-multicase">
 <h2><span class="math notranslate nohighlight">\(\color{#117284}{\textit{region_multicase}}\)</span><a class="headerlink" href="#color-117284-textit-region-multicase" title="Permalink to this headline">#</a></h2>
