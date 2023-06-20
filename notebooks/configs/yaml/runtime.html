@@ -1302,101 +1302,104 @@ title="Print to PDF"
 <h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Calculate climatologies?</p>
 <ul>
-<li><p>If false, neither the climatology or time-series files will be created:</p></li>
-<li><p>default: true</p></li>
+    <li><p>If false, neither the climatology or time-series files will be created:</p></li>
+    <li><p>default: true</p></li>
 </ul>
 </section>
 <section id="id2">
 <h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files?</p>
 <ul>
-<li><p>If false, or not present, then already existing climatology files will be skipped:</p></li>
-<li><p>default: false</p></li>
+    <li><p>If false, or not present, then already existing climatology files will be skipped:</p></li>
+    <li><p>default: false</p></li>
 </ul>
 </section>
 <section id="id3">
 <h3>cam_case_name<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Name of baseline case (or CAM/other run name)</p>
 <ul>
-<li><p>example: b.e20.BHIST.f09_g16.20thC.125.02</p></li>
+    <li><p>example: b.e20.BHIST.f09_g16.20thC.125.02</p></li>
 </ul>
 </section>
 <section id="id4">
 <h3>case_nickname<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline nickname to be used for plotting purposes as well as any custom place in the diagnsotics output if desired</p>
+<ul>
+    <li><p>If left blank, it will default to cam_case_name</p></li>
+    <li><p>example: cool_nickname</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If nickname starts with a zero, the string must be in quotes in this yaml file. Not sure exactly why…</p>
+<p>If nickname starts with a <strong>zero</strong>, the value must be in quotes in this yaml file.</p>
 </div>
 <ul>
-<li><p>If left blank, it will default to cam_case_name</p></li>
-<li><p>example: cool_nickname</p></li>
-<li><p>example: "026b" (notice the quotes for a leading zero)</p></li>
+    <li><p>example: desired name; 026b -> case_nicklname: "026b" (notice the quotes for a leading zero)</p></li>
 </ul>
+<p>case_nicklname: "026b" (notice the quotes for a leading zero)</p>
 </section>
 <section id="id5">
 <h3>cam_hist_loc<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of baseline history (h0) files</p>
 <ul>
-<li><p>example: /glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</p></li>
+    <li><p>example: /glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</p></li>
 </ul>
 </section>
 <section id="id6">
 <h3>cam_climo_loc<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM climatologies (to be created and then used by this script)</p>
 <ul>
-<li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</p></li>
+    <li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</p></li>
 </ul>
 </section>
 <section id="id7">
 <h3>start_year<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should start</p>
 <ul>
-<li><p>Note:  Leaving this entry blank will make time series start at earliest available year.</p></li>
-<li><p>example: 1990</p></li>
-<li><p>example: 10</p></li>
-<li><p>example: 0010??</p></li>
+    <li><p>Note:  Leaving this entry blank will make time series start at earliest available year.</p></li>
+    <li><p>example: 1990</p></li>
+    <li><p>example: 10</p></li>
+    <li><p>example: 0010??</p></li>
 </ul>
 </section>
 <section id="id8">
 <h3>end_year<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should end</p>
 <ul>
-<li><p>Note:  Leaving this entry blank will make time series end at latest available year.</p></li>
-<li><p>example: 1999</p></li>
-<li><p>example: 15</p></li>
+    <li><p>Note:  Leaving this entry blank will make time series end at latest available year.</p></li>
+    <li><p>example: 1999</p></li>
+    <li><p>example: 15</p></li>
 </ul>
 </section>
 <section id="id9">
 <h3>cam_ts_done<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated?</p>
 <ul>
-<li><p>If True, then diagnostics assumes that baseline files are already time series.</p></li>
-<li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p></li>
-<li><p>default: false</p></li>
+    <li><p>If True, then diagnostics assumes that baseline files are already time series.</p></li>
+    <li><p>If False, or if simply not present, then diagnostics will attempt to create time series files from history (time-slice) files:</p></li>
+    <li><p>default: false</p></li>
 </ul>
 </section>
 <section id="id10">
 <h3>cam_ts_save<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Save interim time series files?</p>
 <ul>
-<li><p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p></li>
-<li><p>default: true</p></li>
+    <li><p>WARNING:  This can take up a significant amount of space, but will save processing time the next time</p></li>
+    <li><p>default: true</p></li>
 </ul>
 </section>
 <section id="id11">
 <h3>cam_overwrite_ts<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found?</p>
 <ul>
-<li><p>If set to false, then time series creation will be skipped if files are found:</p></li>
-<li><p>default: false</p></li>
+    <li><p>If set to false, then time series creation will be skipped if files are found:</p></li>
+    <li><p>default: false</p></li>
 </ul>
 </section>
 <section id="id12">
 <h3>cam_ts_loc<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where time series files are (or will be) stored</p>
 <ul>
-<li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</p></li>
+    <li><p>example: /glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</p></li>
 </ul>
 </section>
 </section>
