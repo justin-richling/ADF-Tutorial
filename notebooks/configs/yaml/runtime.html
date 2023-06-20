@@ -1127,12 +1127,13 @@ title="Print to PDF"
 <h3>use_defaults<a class="headerlink" href="#use-defaults" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Use default variable plot settings?</p>
 <ul>
-<li><p>If "true", then variable-specific plotting attributes as defined in <code class="docutils literal notranslate"><span class="pre">ADF/lib/adf_variable_defaults.yaml</span></code> will be used</p></li>
+<li><p>If "true", then variable-specific plotting attributes as defined in <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code> will be used</p></li>
+<li><p>If "false", then variable-specific plotting attributes as defined in <code class="docutils literal notranslate"><span class="pre"><a source="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> </p></li>
 </ul>
 </section>
 <section id="defaults-file">
 <h3>defaults_file<a class="headerlink" href="#defaults-file" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Location of ADF variable plotting defaults YAML file if not using <code class="docutils literal notranslate"><span class="pre">ADF/lib/adf_variable_defaults.yaml</span></code></p>
+<p style="margin-top: -5px;">&ensp; Location of ADF variable plotting defaults YAML file if not using <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code></p>
 <ul>
 <li><p>example: <code class="docutils literal notranslate"><span class="pre">/path/to/custom/defaults/file/my_variable_defaults.yaml</span></code></p>
 </li>
@@ -1158,8 +1159,8 @@ title="Print to PDF"
 <h3>weight_season<a class="headerlink" href="#weight-season" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Apply monthly weights to seasonal averages</p>
 <ul>
-<li><p>If False or missing, then all months are given the same weight</p></li>
 <li><p>weight_season: True/False</p></li>
+<li><p>If False or missing, then all months are given the same weight</p></li>
 </ul>
 </section>
 <section id="num-procs">
@@ -1167,7 +1168,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; Number of processors on which to run the ADF</p>
 <ul>
 <li><p>If this config variable isn't present then the ADF defaults to one processor.</p></li>
-<li><p>If you set it to "*" then it will default to all of the processors available on a single node/machine</p></li>
+<li><p>If you set it to <code class="docutils literal notranslate"><span class="pre"> * </span></code> then it will default to all of the processors available on a single node/machine</p></li>
 <li><p>default: 8</p></li>
 </ul>
 </section>
@@ -1175,8 +1176,8 @@ title="Print to PDF"
 <h3>redo_plot<a class="headerlink" href="#redo-plot" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Remake plots?</p>
 <ul>
-<li><p>If set to true, then redo all plots even if they already exist.</p></li>
-<li><p>If set to false, then if a plot is found it will be skipped</p></li>
+<li><p>If set to true, redo all plots even if they already exist</p></li>
+<li><p>If set to false, if a plot is found it will be skipped</p></li>
 <li><p>default: false</p></li>
 </ul>
 </section>
