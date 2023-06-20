@@ -1104,7 +1104,7 @@ title="Print to PDF"
 <h3>cam_overwrite_regrid<a class="headerlink" href="#cam-overwrite-regrid" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM re-gridded files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or missing, then regridding will be skipped for regridded variables that already exist in "cam_regrid_loc"</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or missing, then regridding will be skipped for regridded variables that already exist in <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-regrid-loc"><code class="docutils literal notranslate"><span class="pre">cam_regrid_loc</span></code></a></p></li>
 </ul>
 </section>
 <section id="cam-diag-plot-loc">
@@ -1120,7 +1120,7 @@ title="Print to PDF"
 <ul>
 <li><p>Currently only affects timeseries generation, as everything else uses the timeseries files themselves.</p></li>
 <li><p>If this variable is not present then it will default to "h0"</p></li>
-<li><p>example: hist_num: h0</p></li>
+<li><p>example: h0</p></li>
 </ul>
 </section>
 <section id="use-defaults">
@@ -1184,7 +1184,7 @@ title="Print to PDF"
 <h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Generate HTML website (assumed false if missing)</p>
 <ul>
-<li><p>Note:  The website files themselves will be located in the path specified by "cam_diag_plot_loc", under the "{diag_run}/website" subdirectory, where "{diag_run}" is the subdirectory created for this particular diagnostics run (usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p></li>
+<li><p>Note:  The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">case_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">case_YYYY_vs_baseline_YYYY</span></code>)</p></li>
 </ul></section>
 </section>
 <hr class="docutils" />
