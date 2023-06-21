@@ -534,11 +534,6 @@ title="Print to PDF"
       diag_basic_info
      </strong>
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#compare-obs">
@@ -829,11 +824,6 @@ title="Print to PDF"
      <strong>
       diag_basic_info
      </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -1145,22 +1135,12 @@ title="Print to PDF"
 <p class="admonition-title">Tip</p>
 <p>Each subsection is laid out in the table on the right hand side of this page. Each subsection includes all variable names for that particular subsection. Please us this as a dynamic table of contents</p>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config_cam_baseline_example</span><span class="o">.</span><span class="n">yaml</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="subsections">
 <h1>Subsections<a class="headerlink" href="#subsections" title="Permalink to this headline">#</a></h1>
 <section id="strong-diag-basic-info-strong">
 <h2><strong>diag_basic_info</strong><a class="headerlink" href="#strong-diag-basic-info-strong" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="diag-basic-info">
-<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
 <section id="compare-obs">
 <h3>compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Is this a model vs observations comparison? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
@@ -1170,7 +1150,7 @@ title="Print to PDF"
 </section>
 <section id="obs-data-loc">
 <h3>obs_data_loc<a class="headerlink" href="#obs-data-loc" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; Location of observational datasets</p>
+<p style="margin-top: -5px;">&ensp; Location of observational datasets. NOTE: you can override this on a variable by variable basis in the variable defaults file</p>
 <ul>
 <li><p>Note: this only matters if <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#compare-obs"><code class="docutils literal notranslate"><span class="pre">compare_obs</span></code></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and the path isn't specified in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/variable.html" target="_blank">variable defaults file</a>.</p></li>
 <li><p>default: <code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p></li>
