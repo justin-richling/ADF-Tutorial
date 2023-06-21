@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Yaml Config Files &#8212; ADF Tutorial</title>
+    <title>Welcome to the ADF! &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Configuring Run Time" href="yaml/runtime.html" />
-    <link rel="prev" title="Scripts" href="../intro/layout/scripts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../intro/layout.html">
+  <a class="reference internal" href="layout.html">
    ADF Layout
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -154,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro/layout/lib.html">
+    <a class="reference internal" href="layout/lib.html">
      Libraries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro/layout/scripts.html">
+    <a class="reference internal" href="layout/scripts.html">
      Scripts
     </a>
    </li>
@@ -171,31 +169,31 @@ const thebe_selector_output = ".output, .cell_output"
   Configuration
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="yaml/runtime.html">
+    <a class="reference internal" href="../configs/yaml/runtime.html">
      Configuring Run Time
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="yaml/variable.html">
+    <a class="reference internal" href="../configs/yaml/variable.html">
      Configuring Variable Defaults
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="other.html">
+  <a class="reference internal" href="../configs/other.html">
    Other Configurations
   </a>
  </li>
@@ -371,7 +369,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/intro/intro.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +429,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/intro/intro.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,7 +457,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/notebooks/configs/yaml.ipynb"
+        <a href="../../_sources/notebooks/intro/intro.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -519,40 +517,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   1. Configure yaml file for ADF using the history (h0) files
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-     <strong>
-      NOTE:
-     </strong>
-     Make copies of these
-     <strong>
-      files
-     </strong>
-     and
-     <u>
-      modify/customize
-     </u>
-     the
-     <strong>
-      copies
-     </strong>
-     !
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
   </a>
  </li>
 </ul>
@@ -564,7 +540,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Yaml Config Files</h1>
+                <h1>Welcome to the ADF!</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -575,40 +551,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   1. Configure yaml file for ADF using the history (h0) files
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-     <strong>
-      NOTE:
-     </strong>
-     Make copies of these
-     <strong>
-      files
-     </strong>
-     and
-     <u>
-      modify/customize
-     </u>
-     the
-     <strong>
-      copies
-     </strong>
-     !
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
   </a>
  </li>
 </ul>
@@ -621,40 +575,66 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
-<h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
-<section id="configure-yaml-file-for-adf-using-the-history-h0-files">
-<h2>1. Configure yaml file for ADF using the history (h0) files<a class="headerlink" href="#configure-yaml-file-for-adf-using-the-history-h0-files" title="Permalink to this headline">#</a></h2>
-<section id="note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-<h3><strong>NOTE:</strong>  Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!<a class="headerlink" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies" title="Permalink to this headline">#</a></h3>
-<ul>
-<li><p>config_cam_baseline_example.yaml  (necessary)</p></li>
-<li><p>lib/adf_variable_defaults.yaml   (optional)**</p>
-<p>** Additionally, you will need to change the <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a> path in your copy of <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html">config_cam_baseline_example.yaml</a></p>
-</li>
+  <section id="welcome-to-the-adf">
+<h1>Welcome to the ADF!<a class="headerlink" href="#welcome-to-the-adf" title="Permalink to this headline">#</a></h1>
+<p><strong><u>AMWG</u></strong> (Atmospheric Model Working Group) <u><strong>D</strong></u>iagnostics <u><strong>F</strong></u>ramework</p>
+<p>This package is meant to be an update/upgrade to the much used and beloved AMWG diagnostics package used by the atmospheric/chemistry CESM community.</p>
+<section id="adf-layout">
+<h2>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h2>
+<p>Directory tree for the ADF</p>
+<p><img alt="Running on Cheyenne Image" src="../../_images/adf_tree_layout.png" /></p>
+</section>
+<section id="adf-flow">
+<h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
+<p>A simple look at the flow of the ADF</p>
+<ul class="simple">
+<li><p>Create time series files from monthly history files (if they don’t exist or are being overwritten)</p></li>
+<li><p>Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)</p></li>
+<li><p>Regrid Test case from Baseline case and vice-versa from climatology files</p></li>
+<li><p>Run Analysis scripts</p></li>
+<li><p>Run Plotting scripts</p></li>
+<li><p>Generate Website pages</p></li>
 </ul>
-<h2>YAML File Basics</h2>
-<p>YAML files are a special type of text file, which in our case (using Python) the information in the yaml file will become dictionaries in python scripts.</p>
-<p>Here are a couple hints</p>
-<p>Some paths in the config yaml file are optional and some are <strong>required</strong></p>
-</section>
-</section>
-<section id="using-variables-in-the-yaml-file">
-<h2>Using variables in the yaml file<a class="headerlink" href="#using-variables-in-the-yaml-file" title="Permalink to this headline">#</a></h2>
-<p><img alt="Running on Cheyenne Image" src="../../_images/Slide13.png" /></p>
-</section>
-<section id="using-variables-in-sub-sections">
-<h2>Using variables in sub sections<a class="headerlink" href="#using-variables-in-sub-sections" title="Permalink to this headline">#</a></h2>
-<p><img alt="Running on Cheyenne Image" src="../../_images/Slide15.png" /></p>
-<figure class="align-default" id="jupiter-figure">
-<a class="reference internal image-reference" href="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg"><img alt="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" src="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The beautiful planet Jupiter! Source: <a class="reference external" href="https://solarsystem.nasa.gov/resources/2486/hubbles-new-portrait-of-jupiter/?category=planets_jupiter">NASA</a>.</span><a class="headerlink" href="#jupiter-figure" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<div class="toctree-wrapper compound">
+<p>** Most parts of the ADF are optional and can be turned off for your desired need:
+Potential Examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you only want regridded data, turn off plotting, analysis, website parts
+
+If you want plotting and only need a few plot images, you can turn off the website part
+
+If you only want time series files, you can turn off all other parts
+
+If you don’t care about the statistics (AMWG) tables, turn off analysis part
+
+etc.
+</pre></div>
 </div>
+<p>NOTE: depending on how many years, plot types and variables you configure, the more time it takes
+* Rough average for: all default plots, 10-20 years for 30 variables is ~45 minutes
+!! But could take longer !!
+* This is an active area of development      there are potential ways of cutting time/processes</p>
+</section>
+<section id="adf-setup">
+<h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
+<p>A simple look at the flow of the ADF</p>
+<ol>
+<li><p>Run CAM simulation          get history ( h0* ) file(s)
+*or other history files</p></li>
+<li><p>Configure yaml file(s) for the history files
+NOTE:  Make copies of these files and modify/customize the copies!</p>
+<p>config_cam_baseline_example.yaml  (necessary, must change!)</p>
+<p>lib/adf_variable_defaults.yaml   (necessary, but optional to change)**</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ** Additionally, you will need to change the defaults_file path in your copy of config_cam_baseline_example.yaml file
+</pre></div>
+</div>
+</li>
+</ol>
+<p></p>
+2. Run the ADF
+Errors?  Check config files   Check error/logs   Check data/paths
+Success: Check output data/images
+Locally
+Via HTML files  (optional)
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -670,7 +650,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/configs"
+            path: "./notebooks/intro"
         },
         predefinedOutput: true
     }
@@ -684,20 +664,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro/layout/scripts.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Scripts</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="yaml/runtime.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Configuring Run Time</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
