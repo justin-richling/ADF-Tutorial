@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Single Case Comparison &#8212; ADF Tutorial</title>
+    <title>Configuring Variable Defaults &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Configuring Variable Defaults" href="variable.html" />
-    <link rel="prev" title="Yaml Config Files" href="../yaml.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,12 +142,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro/intro.html">
+  <a class="reference internal" href="../intro.html">
    Welcome to the ADF!
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../intro/layout.html">
+  <a class="reference internal" href="../layout.html">
    ADF Layout
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -159,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../intro/layout/lib.html">
+    <a class="reference internal" href="../layout/lib.html">
      Libraries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../intro/layout/scripts.html">
+    <a class="reference internal" href="../layout/scripts.html">
      Scripts
     </a>
    </li>
@@ -176,24 +174,24 @@ const thebe_selector_output = ".output, .cell_output"
   Configuration
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../yaml.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../configs/yaml/runtime.html">
      Single Case Comparison
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="variable.html">
+    <a class="reference internal" href="../../configs/yaml/variable.html">
      Configuring Variable Defaults
     </a>
    </li>
@@ -371,7 +369,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/intro/yaml/adf_variable_defaults.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +429,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/intro/yaml/adf_variable_defaults.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,7 +457,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/notebooks/configs/yaml/runtime.ipynb"
+        <a href="../../../_sources/notebooks/intro/yaml/adf_variable_defaults.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -519,60 +517,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#edit-the-following-variables">
-   Edit the following variables
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
-   Diagnostic Scripts “Subsections”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-averaging-scripts">
-   time_averaging_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regridding-scripts">
-   regridding_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-scripts">
-   analysis_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-scripts">
-   plotting_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-var-list">
-   diag_var_list
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#region-multicase">
-   region_multicase
+  <a class="reference internal nav-link" href="#variable-default-settings">
+   Variable Default Settings
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -583,6 +529,26 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#custom-set">
      Custom Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector">
+     Vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
     </a>
    </li>
   </ul>
@@ -596,7 +562,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Single Case Comparison</h1>
+                <h1>Configuring Variable Defaults</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -607,60 +573,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#edit-the-following-variables">
-   Edit the following variables
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
-   Diagnostic Scripts “Subsections”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-averaging-scripts">
-   time_averaging_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regridding-scripts">
-   regridding_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-scripts">
-   analysis_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-scripts">
-   plotting_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-var-list">
-   diag_var_list
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#region-multicase">
-   region_multicase
+  <a class="reference internal nav-link" href="#variable-default-settings">
+   Variable Default Settings
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -671,6 +585,26 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#custom-set">
      Custom Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector">
+     Vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
     </a>
    </li>
   </ul>
@@ -685,109 +619,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
-<h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
-<p>You will need to open the your custom config runtime yaml file (your_config_d.yaml) with your favorite editor</p>
-<p>Please refer back to the ADF Reference page for more info on these variables and for other optional variables</p>
-<section id="edit-the-following-variables">
-<h2>Edit the following variables<a class="headerlink" href="#edit-the-following-variables" title="Permalink to this headline">#</a></h2>
-<section id="diag-basic-info">
-<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>use_defaults: false
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="configuring-variable-defaults">
+<h1>Configuring Variable Defaults<a class="headerlink" href="#configuring-variable-defaults" title="Permalink to this headline">#</a></h1>
+<p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Final Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.</p>
+<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the “defaults_file” config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">your_config_cam.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
 </div>
-<p></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots
-</pre></div>
-</div>
-</section>
-<section id="diag-cam-climo">
-<h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</section>
-<section id="diag-cam-baseline-climo">
-<h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></section>
-</section>
-<section id="diagnostic-scripts-subsections">
-<h2>Diagnostic Scripts “Subsections”<a class="headerlink" href="#diagnostic-scripts-subsections" title="Permalink to this headline">#</a></h2>
-<p>Each of the following sets are also considered subsections. These are all components of the actual diagnostics workflow of the ADF.</p></section>
-<section id="time-averaging-scripts">
-<h2>time_averaging_scripts<a class="headerlink" href="#time-averaging-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for any time averaging scripts</p>
-<ul>
-<li><p>Must be located in scripts/averaging!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/averaging/create_climo_files.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="regridding-scripts">
-<h2>regridding_scripts<a class="headerlink" href="#regridding-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for any regridding scripts</p>
-<ul>
-<li><p>Must be located in scripts/regridding!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/regridding /regrid_and_vert_interp.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="analysis-scripts">
-<h2>analysis_scripts<a class="headerlink" href="#analysis-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for a broad spectra of data analysis scripts</p>
-<ul>
-<li><p>Must be located in scripts/analysis!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/analysis/amwg_table.py
-
-Possible addition examples:
-- scripts/analysis/amwg_chem_table.py
-- scripts/analysis/amwg_aerosol_table.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="plotting-scripts">
-<h2>plotting_scripts<a class="headerlink" href="#plotting-scripts" title="Permalink to this headline">#</a></h2>
-<p>Set of plotting scripts, both ADF default as well as any custom scripts</p>
-<ul>
-<li><p>Must be located in scripts/plotting!</p>
-<ul class="simple">
-<li><p>scripts/averaging/cam_taylor_diagram.py</p></li>
-<li><p>scripts/averaging/global_latlon_map.py</p></li>
-<li><p>scripts/averaging/…</p></li>
-</ul>
-<p>Possible addition examples:</p>
-<ul class="simple">
-<li><p>scripts/averaging/tem.py</p></li>
-<li><p>scripts/averaging/time_series.py</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="diag-var-list">
-<h2>diag_var_list<a class="headerlink" href="#diag-var-list" title="Permalink to this headline">#</a></h2>
-<p>List of variables to be executed in the ADF</p>
-</section>
-<section id="region-multicase">
-<h2>region_multicase<a class="headerlink" href="#region-multicase" title="Permalink to this headline">#</a></h2>
-<hr class="docutils" />
+<section id="variable-default-settings">
+<h2>Variable Default Settings<a class="headerlink" href="#variable-default-settings" title="Permalink to this headline">#</a></h2>
 <section id="adf-default-set">
 <h3>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h3>
 <p>If you want to use the ADF default values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
@@ -795,7 +636,95 @@ Possible addition examples:
 <section id="custom-set">
 <h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p></section>
+</p>
+<p>These are the values that can be set for each variable. Non are required.</p>
+</section>
+<section id="plotting">
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code><a class="headerlink" href="#colormap" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p>The colormap that will be used for filled contour plots.</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">contour_levels</span></code></h4>
+<ul>
+<li><p>A list of the specific contour values that will be used for contour plots.</p></li>
+<li><p>Cannot be used with "contour_levels_range".</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">contour_levels_range</span></code></h4>
+<ul>
+<li><p>The contour range that will be used for plots.</p></li>
+<li><p>Values are min, max, and stride.</p></li>
+<li><p>Cannot be used with "contour_levels".</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">diff_colormap</span></code></h4>
+<ul>
+<li><p>The colormap that will be used for filled contour different plots</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">diff_contour_levels</span></code></h4>
+<ul>
+<li><p>A list of the specific contour values thta will be used for difference plots.</p></li>
+<li><p>Cannot be used with "diff_contour_range".</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">diff_contour_range</span></code></h4>
+<ul>
+<li><p>The contour range that will be used for difference plots.</p></li>
+<li><p>Values are min, max, and stride. Cannot be used with "diff_contour_levels".</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">scale_factor</span></code></h4>
+<ul>
+<li><p>Amount to scale the variable (relative to its "raw" model values).</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">add_offset</span></code></h4>
+<ul>
+<li><p>Amount of offset to add to the variable (relatie to its "raw" model values).</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">new_unit</span></code></h4>
+<ul>
+<li><p>Variable units (if not using the  "raw" model units).</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">mpl</span></code></h4>
+<ul>
+<li><p>Dictionary that contains keyword arguments explicitly for matplotlib</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">mask</span></code></h4>
+<ul>
+<li><p>Setting that specifies whether the variable should be masked.</p></li>
+<li><p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></li>
+</ul></section>
+<section id="observations">
+<h3>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code></h4>
+<ul>
+<li><p>Path to observations file.</p></li>
+<li><p>If only the file name is given, then the file is assumed to exist in the path specified by "obs_data_loc" in the config file.</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_name</span></code></h4>
+<ul>
+<li><p>Name of the observational dataset (mostly used for plotting and generated file naming).</p></li>
+<li><p>If this isn't present then the obs_file name is used.</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">obs_var_name</span></code></h4>
+<ul>
+<li><p>Variable in the observations file to compare against.</p></li>
+<li><p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></li>
+</ul></section>
+<section id="vector">
+<h3>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
+<ul>
+<li><p>Another variable that when combined with the given variable makes up a vector pair.</p></li>
+<li><p>If this default is not present then it is assumed the given variable is not a vector component, and will thus be skipped during the vector plotting phase.</p></li>
+</ul>
+<h4><code class="docutils literal notranslate"><span class="pre">vector_name</span></code></h4>
+<ul>
+<li><p>The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></li>
+</ul></section>
+<section id="website">
+<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
+<ul>
+<li><p>The website category the variable will be placed under.</p>
+</ul></section>
 </section>
 </section>
 
@@ -812,7 +741,7 @@ Possible addition examples:
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/configs/yaml"
+            path: "./notebooks/intro/yaml"
         },
         predefinedOutput: true
     }
@@ -826,20 +755,6 @@ Possible addition examples:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../yaml.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Yaml Config Files</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="variable.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Configuring Variable Defaults</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
