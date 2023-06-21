@@ -529,14 +529,15 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-a-style-color-117284-strong-diag-basic-info-strong-a-code">
-     <code>
-      <a style="color: #117284">
-       <strong>
-        diag_basic_info
-       </strong>
-      </a>
-     </code>
+    <a class="reference internal nav-link" href="#strong-diag-basic-info-strong">
+     <strong>
+      diag_basic_info
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -824,14 +825,15 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-a-style-color-117284-strong-diag-basic-info-strong-a-code">
-     <code>
-      <a style="color: #117284">
-       <strong>
-        diag_basic_info
-       </strong>
-      </a>
-     </code>
+    <a class="reference internal nav-link" href="#strong-diag-basic-info-strong">
+     <strong>
+      diag_basic_info
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -1143,12 +1145,22 @@ title="Print to PDF"
 <p class="admonition-title">Tip</p>
 <p>Each subsection is laid out in the table on the right hand side of this page. Each subsection includes all variable names for that particular subsection. Please us this as a dynamic table of contents</p>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config_cam_baseline_example</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="subsections">
 <h1>Subsections<a class="headerlink" href="#subsections" title="Permalink to this headline">#</a></h1>
-<section id="code-a-style-color-117284-strong-diag-basic-info-strong-a-code">
-<h2><code><a style='color: #117284'><strong>diag_basic_info</strong></a></code><a class="headerlink" href="#code-a-style-color-117284-strong-diag-basic-info-strong-a-code" title="Permalink to this headline">#</a></h2>
+<section id="strong-diag-basic-info-strong">
+<h2><strong>diag_basic_info</strong><a class="headerlink" href="#strong-diag-basic-info-strong" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="diag-basic-info">
+<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
 <section id="compare-obs">
 <h3>compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Is this a model vs observations comparison? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
@@ -1166,7 +1178,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="cam-regrid-loc">
-<h3>  cam_regrid_loc<a class="headerlink" href="#cam-regrid-loc" title="Permalink to this headline">#</a></h3>
+<h3>cam_regrid_loc<a class="headerlink" href="#cam-regrid-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Location where re-gridded and interpolated CAM climatology files are stored</p>
 <p style="margin-top: -5px;">&emsp; Required if regridding is desired and </p>
 <ul>
@@ -1174,21 +1186,21 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="cam-overwrite-regrid">
-<h3>  cam_overwrite_regrid<a class="headerlink" href="#cam-overwrite-regrid" title="Permalink to this headline">#</a></h3>
+<h3>cam_overwrite_regrid<a class="headerlink" href="#cam-overwrite-regrid" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Overwrite CAM re-gridded files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or missing, then regridding will be skipped for regridded variables that already exist in <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-regrid-loc"><code class="docutils literal notranslate"><span class="pre">cam_regrid_loc</span></code></a></p></li>
 </ul>
 </section>
 <section id="cam-diag-plot-loc">
-<h3>  cam_diag_plot_loc<a class="headerlink" href="#cam-diag-plot-loc" title="Permalink to this headline">#</a></h3>
+<h3>cam_diag_plot_loc<a class="headerlink" href="#cam-diag-plot-loc" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Location where diagnostic plots are stored</p>
 <ul>
 <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p></li>
 </ul>
 </section>
 <section id="hist-num">
-<h3>  hist_num<a class="headerlink" href="#hist-num" title="Permalink to this headline">#</a></h3>
+<h3>hist_num<a class="headerlink" href="#hist-num" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; CAM history file number to use (h0, h1, h2, etc)</p>
 <ul>
 <li><p>Currently only affects timeseries generation, as everything else uses the timeseries files themselves.</p></li>
@@ -1197,7 +1209,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="use-defaults">
-<h3>  use_defaults<a class="headerlink" href="#use-defaults" title="Permalink to this headline">#</a></h3>
+<h3>use_defaults<a class="headerlink" href="#use-defaults" title="Permalink to this headline">#</a></h3>
 <p><strong>Required</strong></p>
 <p style="margin-top: -5px;">&emsp; Use default variable plot settings? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
@@ -1206,7 +1218,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="defaults-file">
-<h3>  defaults_file<a class="headerlink" href="#defaults-file" title="Permalink to this headline">#</a></h3>
+<h3>defaults_file<a class="headerlink" href="#defaults-file" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Location of ADF variable plotting defaults YAML file if not using ADF default file: <code class="docutils literal notranslate"><span class="pre"> lib/adf_variable_defaults.yaml</span></code></p>
 <ul>
 <li><p>example: <code class="docutils literal notranslate"><span class="pre">/path/to/custom/defaults/file/my_variable_defaults.yaml</span></code></p>
@@ -1214,7 +1226,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="plot-press-levels">
-<h3>  plot_press_levels<a class="headerlink" href="#plot-press-levels" title="Permalink to this headline">#</a></h3>
+<h3>plot_press_levels<a class="headerlink" href="#plot-press-levels" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections
 <ul>
 <li><p>If this config option is missing, then no 3-D variables will be plotted on horizontal maps.  Please note too that pressure levels must currently match what is available in the observations file in order to be plotted in a model vs obs run:</p></li>
@@ -1222,7 +1234,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="central-longitude">
-<h3>  central_longitude<a class="headerlink" href="#central-longitude" title="Permalink to this headline">#</a></h3>
+<h3>central_longitude<a class="headerlink" href="#central-longitude" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Longitude line on which to center all lat/lon maps</p>
 <ul>
 <li><p>If this config option is missing then the central longitude will default to 180 degrees E.</p></li>
@@ -1230,7 +1242,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="weight-season">
-<h3>  weight_season<a class="headerlink" href="#weight-season" title="Permalink to this headline">#</a></h3>
+<h3>weight_season<a class="headerlink" href="#weight-season" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Apply monthly weights to seasonal averages? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, then all months are given the same weight</p></li>
@@ -1238,7 +1250,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="num-procs">
-<h3>  num_procs<a class="headerlink" href="#num-procs" title="Permalink to this headline">#</a></h3>
+<h3>num_procs<a class="headerlink" href="#num-procs" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Number of processors on which to run the ADF</p>
 <ul>
 <li><p>If this config variable isn't present then the ADF defaults to one processor.</p></li>
@@ -1247,7 +1259,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="redo-plot">
-<h3>  redo_plot<a class="headerlink" href="#redo-plot" title="Permalink to this headline">#</a></h3>
+<h3>redo_plot<a class="headerlink" href="#redo-plot" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Remake plots? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
 <li><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, redo all plots even if they already exist</p></li>
@@ -1256,7 +1268,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="create-html">
-<h3>  create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
+<h3>create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp; Generate HTML website (assumed false if missing)</p>
 <ul>
 <li><p>&emsp;&ensp; Note:  The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_{baseline}_YYYY</span></code>)</p></li>
