@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Single Case Comparison &#8212; ADF Tutorial</title>
+    <title>Configuring Run Time &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Configuring Variable Defaults" href="variable.html" />
-    <link rel="prev" title="Yaml Config Files" href="../yaml.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../intro/layout.html">
+  <a class="reference internal" href="../layout.html">
    ADF Layout
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -154,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../intro/layout/lib.html">
+    <a class="reference internal" href="../layout/lib.html">
      Libraries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../intro/layout/scripts.html">
+    <a class="reference internal" href="../layout/scripts.html">
      Scripts
     </a>
    </li>
@@ -171,31 +169,31 @@ const thebe_selector_output = ".output, .cell_output"
   Configuration
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../yaml.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../configs/yaml.html">
    Yaml Config Files
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../configs/yaml/runtime.html">
      Single Case Comparison
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="variable.html">
+    <a class="reference internal" href="../../configs/yaml/variable.html">
      Configuring Variable Defaults
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../other.html">
+  <a class="reference internal" href="../../configs/other.html">
    Other Configurations
   </a>
  </li>
@@ -371,7 +369,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/intro/yaml/runtime.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +429,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/intro/yaml/runtime.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,7 +457,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/notebooks/configs/yaml/runtime.ipynb"
+        <a href="../../../_sources/notebooks/intro/yaml/runtime.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -520,28 +518,6 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Single Case Comparison
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuring-run-time">
    Configuring Run Time
   </a>
   <ul class="visible nav section-nav flex-column">
@@ -637,7 +613,7 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
     </a>
     <ul class="nav section-nav flex-column">
@@ -704,67 +680,67 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
      diag_cam_baseline_climo
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id1">
        calc_cam_climo
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id2">
        cam_overwrite_climo
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
+      <a class="reference internal nav-link" href="#id3">
        cam_case_name
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id4">
        case_nickname
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id5">
        cam_hist_loc
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id6">
        cam_climo_loc
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id7">
        start_year
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id8">
        end_year
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
+      <a class="reference internal nav-link" href="#id9">
        cam_ts_done
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#id10">
        cam_ts_save
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
+      <a class="reference internal nav-link" href="#id11">
        cam_overwrite_ts
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
+      <a class="reference internal nav-link" href="#id12">
        cam_ts_loc
       </a>
      </li>
@@ -821,7 +797,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Single Case Comparison</h1>
+                <h1>Configuring Run Time</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -833,28 +809,6 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Single Case Comparison
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuring-run-time">
    Configuring Run Time
   </a>
   <ul class="visible nav section-nav flex-column">
@@ -950,7 +904,7 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
     </a>
     <ul class="nav section-nav flex-column">
@@ -1017,67 +971,67 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
      diag_cam_baseline_climo
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id1">
        calc_cam_climo
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id2">
        cam_overwrite_climo
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
+      <a class="reference internal nav-link" href="#id3">
        cam_case_name
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id4">
        case_nickname
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id5">
        cam_hist_loc
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id6">
        cam_climo_loc
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id7">
        start_year
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id8">
        end_year
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
+      <a class="reference internal nav-link" href="#id9">
        cam_ts_done
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#id10">
        cam_ts_save
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
+      <a class="reference internal nav-link" href="#id11">
        cam_overwrite_ts
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
+      <a class="reference internal nav-link" href="#id12">
        cam_ts_loc
       </a>
      </li>
@@ -1135,42 +1089,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
-<h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
-<p>You will need to open the config runtime yaml file with your favorite editor and edit the following variables:</p>
-<section id="diag-basic-info">
-<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>use_defaults: false
-</pre></div>
-</div>
-<p></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots
-</pre></div>
-</div>
-</section>
-<section id="diag-cam-climo">
-<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</section>
-<section id="diag-cam-baseline-climo">
-<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="configuring-run-time">
+  <section class="tex2jax_ignore mathjax_ignore" id="configuring-run-time">
 <h1>Configuring Run Time<a class="headerlink" href="#configuring-run-time" title="Permalink to this headline">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
@@ -1341,8 +1260,8 @@ title="Print to PDF"
 </ul></section>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h2>diag_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="diag-cam-climo">
+<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
 <script>
     p2 {margin-top: -10px;}
 </script>
@@ -1456,39 +1375,39 @@ title="Print to PDF"
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>diag_cam_baseline_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<section id="diag-cam-baseline-climo">
+<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These are the same variable names as <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#color-117284-textit-diag-cam-climo">diag_cam_climo</a> above, but for the baseline case</p>
 <p>They are not necessary if comapring against observations, and will be skipped</p>
 </div>
-<section id="id3">
-<h3>calc_cam_climo<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id1">
+<h3>calc_cam_climo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Calculate climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
     <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, the climatology files will not be created</p></li>
     <li><p>default: true</p></li>
 </ul>
 </section>
-<section id="id4">
-<h3>cam_overwrite_climo<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3>cam_overwrite_climo<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite CAM climatology files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
     <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, or not present, then already existing climatology files will be skipped</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
-<section id="id5">
-<h3>cam_case_name<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<section id="id3">
+<h3>cam_case_name<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p><strong>Required</strong></p>
 <p style="margin-top: -5px;">&ensp; Name of baseline case (or CAM/other run name)</p>
 <ul>
     <li><p>example: b.e20.BHIST.f09_g16.20thC.125.02</p></li>
 </ul>
 </section>
-<section id="id6">
-<h3>case_nickname<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<section id="id4">
+<h3>case_nickname<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline nickname to be used for plotting purposes as well as any custom place in the diagnsotics output if desired</p>
 <ul>
     <li><p>If left blank, it will default to cam_case_name</p></li>
@@ -1503,23 +1422,23 @@ title="Print to PDF"
 <p>case_nickname: "026b" (notice the quotes for a leading zero)</p>
 </div>
 </section>
-<section id="id7">
-<h3>cam_hist_loc<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<section id="id5">
+<h3>cam_hist_loc<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p><strong>Required</strong></p>
 <p style="margin-top: -5px;">&ensp; Location of baseline history (h0) files</p>
 <ul>
     <li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/ADF/${diag_cam_baseline_climo.cam_case_name}</span></code></p></li>
 </ul>
 </section>
-<section id="id8">
-<h3>cam_climo_loc<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<section id="id6">
+<h3>cam_climo_loc<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location of CAM climatologies (to be created and then used by this script)</p>
 <ul>
     <li><p>&ensp; example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/climo</span></code></p></li>
 </ul>
 </section>
-<section id="id9">
-<h3>start_year<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<section id="id7">
+<h3>start_year<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should start</p>
 <ul>
     <li><p>Note:  Leaving this entry blank will make time series start at earliest available year</p></li>
@@ -1528,8 +1447,8 @@ title="Print to PDF"
     <li><p>example: 0010??</p></li>
 </ul>
 </section>
-<section id="id10">
-<h3>end_year<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<section id="id8">
+<h3>end_year<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Baseline year when time series files should end</p>
 <ul>
     <li><p>Note:  Leaving this entry blank will make time series end at latest available year</p></li>
@@ -1537,8 +1456,8 @@ title="Print to PDF"
     <li><p>example: 15</p></li>
 </ul>
 </section>
-<section id="id11">
-<h3>cam_ts_done<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<section id="id9">
+<h3>cam_ts_done<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Do time series files need to be generated? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
     <li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then diagnostics assumes that baseline files are already time series</p></li>
@@ -1546,8 +1465,8 @@ title="Print to PDF"
     <li><p>default: false</p></li>
 </ul>
 </section>
-<section id="id12">
-<h3>cam_ts_save<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<section id="id10">
+<h3>cam_ts_save<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1557,16 +1476,16 @@ title="Print to PDF"
     <li><p>default: true</p></li>
 </ul>
 </section>
-<section id="id13">
-<h3>cam_overwrite_ts<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<section id="id11">
+<h3>cam_overwrite_ts<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Overwrite time series files, if found? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
     <li><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, then time series creation will be skipped if files are found</p></li>
     <li><p>default: false</p></li>
 </ul>
 </section>
-<section id="id14">
-<h3>cam_ts_loc<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h3>
+<section id="id12">
+<h3>cam_ts_loc<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; Location where time series files are (or will be) stored</p>
 <ul>
     <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</span></code></p></li>
@@ -1657,7 +1576,7 @@ Possible addition examples:
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/configs/yaml"
+            path: "./notebooks/intro/yaml"
         },
         predefinedOutput: true
     }
@@ -1671,20 +1590,6 @@ Possible addition examples:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../yaml.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Yaml Config Files</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="variable.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Configuring Variable Defaults</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

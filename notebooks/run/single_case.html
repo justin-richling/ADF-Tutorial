@@ -115,36 +115,14 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Intro to the ADF
+  ADF
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../basics/intro.html">
-   Welcome to the ADF!
+   Quick Peek at the ADF
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../basics/layout.html">
-   ADF Layout
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics/layout/lib.html">
-     Libraries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics/layout/scripts.html">
-     Scripts
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -157,6 +135,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../install/env_setup.html">
    Setting up Environment
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF - Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/layout.html">
+   ADF Layout
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/layout/lib.html">
+     Libraries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/layout/scripts.html">
+     Scripts
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -177,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../configs/yaml/runtime.html">
-     Configuring Run Time
+     Single Case Comparison
     </a>
    </li>
    <li class="toctree-l2">
@@ -489,46 +496,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-basic-info">
-   diag_basic_info
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-cam-climo">
-   diag_cam_climo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-   diag_cam_baseline_climo
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -540,29 +513,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-basic-info">
-   diag_basic_info
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-cam-climo">
-   diag_cam_climo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-   diag_cam_baseline_climo
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -573,38 +523,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
 <h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
 <p>Let's now put it all together and do a CAM vs CAM comparison.</p>
-<p>Revisit (or reopen) your copy of the runtime configure file (ie )</p><p>You will need to open the config runtime yaml file with your favorite editor and edit the following variables:</p>
-<section id="diag-basic-info">
-<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>use_defaults: false
-</pre></div>
-</div>
-<p></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots
-</pre></div>
-</div>
-</section>
-<section id="diag-cam-climo">
-<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</section>
-<section id="diag-cam-baseline-climo">
-<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p><section id="sidebar-content">
+<p>Revisit (or reopen) your copy of the runtime configure file (ie )</p><section id="sidebar-content">
 <span id="layout-sidebar"></span><h2>Sidebar content<a class="headerlink" href="#sidebar-content" title="Permalink to this heading">#</a></h2>
 <p>Adding sidebar elements allow you to provide contextual information that doesn’t break
 up the flow of your main content. It is one of the main patterns recommended in the
@@ -748,8 +667,7 @@ MyST Text File</label><div class="sd-tab-content docutils">
 </div>
 <p>This can be combined with other tags like <code class="docutils literal notranslate"><span class="pre">remove-input</span></code> to <strong>only display the figure</strong>.</p>
 <p>The <a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet"><span class="std std-ref">MyST cheat sheet</span></a> provides a <a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet-code-cell-tags"><span class="std std-ref">list of <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> tags available</span></a></p>
-</section></section>
-<div class="toctree-wrapper compound">
+</section><div class="toctree-wrapper compound">
 </div>
 </section>
 
