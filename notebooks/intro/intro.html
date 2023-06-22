@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ADF Layout &#8212; ADF Tutorial</title>
+    <title>ADF Basics &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -145,7 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   ADF Layout
+   ADF Basics
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -540,17 +540,17 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-flow">
    ADF Flow
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-setup">
    ADF Setup
   </a>
@@ -564,7 +564,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ADF Layout</h1>
+                <h1>ADF Basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -574,17 +574,17 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-flow">
    ADF Flow
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-setup">
    ADF Setup
   </a>
@@ -599,13 +599,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="adf-layout">
-<h1>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h1>
+  <section id="adf-basics">
+<h1>ADF Basics<a class="headerlink" href="#adf-basics" title="Permalink to this headline">#</a></h1>
+<section id="adf-layout">
+<h2>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h2>
 <p>Directory tree for the ADF</p>
 <p><img alt="Running on Cheyenne Image" src="../../_images/adf_tree_layout.png" /></p>
 </section>
 <section id="adf-flow">
-<h1>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h1>
+<h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the flow of the ADF</p>
 <ul class="simple">
 <li><p>Create time series files from monthly history files (if they don’t exist or are being overwritten)</p></li>
@@ -632,9 +634,17 @@ etc.
 * Rough average for: all default plots, 10-20 years for 30 variables is ~45 minutes
 !! But could take longer !!
 * This is an active area of development      there are potential ways of cutting time/processes</p>
+<p>::::{warning}
+Depending on how many years, plot types and variables you configure, the more time it takes</p>
+<ul class="simple">
+<li><p>Rough average for all default plots, 10-20 years for 30 variables is ~45 minutes</p></li>
+</ul>
+<p>:::{note}This is an active area of development; there are potential ways of cutting time/processes
+:::
+::::</p>
 </section>
 <section id="adf-setup">
-<h1>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h1>
+<h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the flow of the ADF</p>
 <ol>
 <li><p>Run CAM simulation          get history ( h0* ) file(s)
@@ -654,6 +664,7 @@ Errors?  Check config files   Check error/logs   Check data/paths
 Success: Check output data/images
 Locally
 Via HTML files  (optional)
+</section>
 </section>
 
     <script type="text/x-thebe-config">
