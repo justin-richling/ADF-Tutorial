@@ -557,9 +557,26 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-conda">
-     Loading Conda
+    <a class="reference internal nav-link" href="#loading-modules">
+     Loading
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       modules
+      </span>
+     </code>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-conda">
+       Load
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         conda
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -604,9 +621,26 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-conda">
-     Loading Conda
+    <a class="reference internal nav-link" href="#loading-modules">
+     Loading
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       modules
+      </span>
+     </code>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-conda">
+       Load
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         conda
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -634,7 +668,8 @@ title="Print to PDF"
 2) Using git to clone the main branch of the ADF
 </pre></div>
 </div>
-<section id="setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
+<p>** NOTE: <strong>For this tutorial you must be on a CISL machine</strong> **</p>
+<p>There are some instructions for non-CISL machines, but there can be many obstacles, and for simplicity this tutorial will only be towards users who have a CISL account and access to CISL machines, ie Casper/Cheyenne and JupyterHub</p><section id="setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
 <h2>Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment<a class="headerlink" href="#setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment" title="Permalink to this headline">#</a></h2>
 <section id="cisl-computers">
 <h3>CISL Computers<a class="headerlink" href="#cisl-computers" title="Permalink to this headline">#</a></h3>
@@ -647,10 +682,20 @@ title="Print to PDF"
 <p>Uh, where’s my car dude</p>
 </div>
 </section>
-<section id="loading-conda">
-<h3>Loading Conda<a class="headerlink" href="#loading-conda" title="Permalink to this headline">#</a></h3>
-<p>To make the ADF as flexible as possible, it is recommended that you run in a precompiled <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment - <code class="docutils literal notranslate"><span class="pre">npl</span></code></p>
-<p>** <strong>Must be on CISL machine</strong> **</p>
+<section id="loading-modules">
+<h3>Loading <code class="docutils literal notranslate"><span class="pre">modules</span></code><a class="headerlink" href="#loading-modules" title="Permalink to this headline">#</a></h3>
+<p>CISL machines have a cluster of modules that are available to load/unload. Such modules include: conda, nco, python, etc.</p>
+<p>To see a list of the available modules, in a terminal, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module avail
+</pre></div>
+</div>
+<p>To see a list of the default modules, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module --default avail
+</pre></div>
+</div>
+<section id="load-conda">
+<h4>Load <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#load-conda" title="Permalink to this headline">#</a></h4>
+<p>To make the ADF as flexible as possible, it is recommended that you run in an NCAR precompiled <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment called <code class="docutils literal notranslate"><span class="pre">npl</span></code></p>
 <hr class="docutils" />
 <p>First load conda via <code class="docutils literal notranslate"><span class="pre">module</span></code> command</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>module load conda
@@ -701,6 +746,7 @@ title="Print to PDF"
 <p>Here’s the admonition content</p>
 </div>
 <div><p style="font-size: 25px; font-weight: bold; color: #076E85;">Alright here we go</p></div></section>
+</section>
 </section>
 <section id="cloing-the-adf">
 <h2>Cloing the ADF<a class="headerlink" href="#cloing-the-adf" title="Permalink to this headline">#</a></h2>
