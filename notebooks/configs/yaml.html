@@ -617,16 +617,23 @@ title="Print to PDF"
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
 <section id="configure-yaml-file-for-adf-using-the-history-h0-files">
 <h2>Configure yaml file for ADF using the history (h0) files<a class="headerlink" href="#configure-yaml-file-for-adf-using-the-history-h0-files" title="Permalink to this headline">#</a></h2>
+<p>There are three yaml files included with the ADF. Two are templates for the runtime config file</p>
+<p><code class="docutils literal notranslate"> <span class="pre">config_cam_baseline_example.yaml</span></code></p>
+<ul class="simple">
+<li><p>General default file</p></li>
+</ul>
+<p><code class="docutils literal notranslate"> <span class="pre">config_amwg_default_plots.yaml</span></code></p>
+<ul class="simple">
+<li><p>This is meant for a subset of commonly used variables and plot types for the AMWG</p></li>
+</ul>
+<p>And the third is for plotting and observation variable data to be used in the ADF.</p>
+<p><code class="docutils literal notranslate"> <span class="pre">lib/adf_variable_defaults.yaml</span>&#160;&#160; <span class="pre">(optional)**</span></code></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!</p>
 </div>
-<ul>
-<li><p>config_cam_baseline_example.yaml  (necessary)</p></li>
-<li><p>lib/adf_variable_defaults.yaml   (optional)**</p>
-<p>** Additionally, you will need to change the <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a> path in your copy of <a class="reference external" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html">config_cam_baseline_example.yaml</a></p>
-</li>
-</ul>
+<p>This file makes plotting variables more flexible as you can tailor <em>each</em> variable of interst with plotting details and observational dataset information.</p>
+<p>For examples of ways to setup variable defaults please refer back to the blahblahblah</p>
 <h2>YAML File Basics</h2>
 <p>YAML files are a special type of text file, which in our case (using Python) the information in the yaml file will become dictionaries in python scripts.</p>
 <p>Here are a couple hints</p>
