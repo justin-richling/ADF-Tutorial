@@ -542,40 +542,25 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   1. Configure yaml file for ADF using the history (h0) files
+   Configure yaml file for ADF using the history (h0) files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-     <strong>
-      NOTE:
-     </strong>
-     Make copies of these
-     <strong>
-      files
-     </strong>
-     and
-     <u>
-      modify/customize
-     </u>
-     the
-     <strong>
-      copies
-     </strong>
-     !
+    <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
+     Using variables in the yaml file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
+     Using variables in sub sections
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
-  </a>
  </li>
 </ul>
 
@@ -598,40 +583,25 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   1. Configure yaml file for ADF using the history (h0) files
+   Configure yaml file for ADF using the history (h0) files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-     <strong>
-      NOTE:
-     </strong>
-     Make copies of these
-     <strong>
-      files
-     </strong>
-     and
-     <u>
-      modify/customize
-     </u>
-     the
-     <strong>
-      copies
-     </strong>
-     !
+    <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
+     Using variables in the yaml file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
+     Using variables in sub sections
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
-  </a>
  </li>
 </ul>
 
@@ -646,9 +616,11 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
 <section id="configure-yaml-file-for-adf-using-the-history-h0-files">
-<h2>1. Configure yaml file for ADF using the history (h0) files<a class="headerlink" href="#configure-yaml-file-for-adf-using-the-history-h0-files" title="Permalink to this headline">#</a></h2>
-<section id="note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
-<h3><strong>NOTE:</strong>  Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!<a class="headerlink" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies" title="Permalink to this headline">#</a></h3>
+<h2>Configure yaml file for ADF using the history (h0) files<a class="headerlink" href="#configure-yaml-file-for-adf-using-the-history-h0-files" title="Permalink to this headline">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!</p>
+</div>
 <ul>
 <li><p>config_cam_baseline_example.yaml  (necessary)</p></li>
 <li><p>lib/adf_variable_defaults.yaml   (optional)**</p>
@@ -660,13 +632,16 @@ title="Print to PDF"
 <p>Here are a couple hints</p>
 <p>Some paths in the config yaml file are optional and some are <strong>required</strong></p>
 </section>
-</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>In the root ADF directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">config_cam_baseline_example.yaml</span> <span class="pre">config_adf_tutorial.yaml</span></code></p>
 <section id="using-variables-in-the-yaml-file">
-<h2>Using variables in the yaml file<a class="headerlink" href="#using-variables-in-the-yaml-file" title="Permalink to this headline">#</a></h2>
+<h3>Using variables in the yaml file<a class="headerlink" href="#using-variables-in-the-yaml-file" title="Permalink to this headline">#</a></h3>
 <p><img alt="Running on Cheyenne Image" src="../../_images/Slide13.png" /></p>
 </section>
 <section id="using-variables-in-sub-sections">
-<h2>Using variables in sub sections<a class="headerlink" href="#using-variables-in-sub-sections" title="Permalink to this headline">#</a></h2>
+<h3>Using variables in sub sections<a class="headerlink" href="#using-variables-in-sub-sections" title="Permalink to this headline">#</a></h3>
 <p><img alt="Running on Cheyenne Image" src="../../_images/Slide15.png" /></p>
 <figure class="align-default" id="jupiter-figure">
 <a class="reference internal image-reference" href="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg"><img alt="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" src="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" style="height: 300px;" /></a>
@@ -674,6 +649,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">The beautiful planet Jupiter! Source: <a class="reference external" href="https://solarsystem.nasa.gov/resources/2486/hubbles-new-portrait-of-jupiter/?category=planets_jupiter">NASA</a>.</span><a class="headerlink" href="#jupiter-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
