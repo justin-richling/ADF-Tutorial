@@ -848,7 +848,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> file with your favorite editor again</p>
+<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> file with your favorite editor again</p>
 <p>The following subsections have variables that will be changed:</p>
 <ul class="simple">
 <li><p><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-basic-info">diag_basic_info</a></p></li>
@@ -858,10 +858,8 @@ title="Print to PDF"
 <section id="diag-basic-info">
 <h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
 <h6>Edit the following variables</h6>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="diag-cam-climo">
 <h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
@@ -902,6 +900,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_example.yaml):</p>
+<p>Under the subset<code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
+<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your/variable/defaults/file/your_variable_defaults.yaml</span></code></p>
 </div>
 <hr class="docutils" />
 <hr class="docutils" />
