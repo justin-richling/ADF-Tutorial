@@ -533,13 +533,6 @@ title="Print to PDF"
      adf_variable_defaults.yaml
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example:
-  </a>
-  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adf-default-set">
      ADF Default Set
@@ -726,13 +719,6 @@ title="Print to PDF"
      adf_variable_defaults.yaml
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example:
-  </a>
-  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adf-default-set">
      ADF Default Set
@@ -889,11 +875,16 @@ title="Print to PDF"
 <p class="admonition-title">Warning</p>
 <p>Note:  Please do not modify this file.</p>
 <p>It is recommended to make a copy of this file, make modifications in that copy, and then run that in the ADF.</p>
-<p>Example:</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
 <p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_adf_tutorial.yaml
 </pre></div>
 </div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 <p>Open the config_adf_tutorial.yaml file with your favorite editor again</p>
 <p>The following subsections have variables that will be changed:</p>
@@ -938,15 +929,18 @@ title="Print to PDF"
 <p class="admonition-title">Warning</p>
 <p>Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.</p>
 <p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the “defaults_file” config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
-</div>
-</section>
-</section>
-<section id="example">
-<h1>Example:<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
 <p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
 <section id="adf-default-set">
 <h2>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h2>
 <p>If you want to use the ADF default values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
