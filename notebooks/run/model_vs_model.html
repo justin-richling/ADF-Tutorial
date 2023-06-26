@@ -507,19 +507,26 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
+    <a class="reference internal nav-link" href="#config-cam-example-yaml">
+     config_cam_example.yaml
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-basic-info">
+       diag_basic_info
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-climo">
+       diag_cam_climo
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
@@ -686,19 +693,26 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
+    <a class="reference internal nav-link" href="#config-cam-example-yaml">
+     config_cam_example.yaml
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-basic-info">
+       diag_basic_info
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-climo">
+       diag_cam_climo
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
@@ -854,28 +868,23 @@ title="Print to PDF"
 <h1>Model vs Model<a class="headerlink" href="#model-vs-model" title="Permalink to this headline">#</a></h1>
 <p>Let’s get started.</p>
 <p>What needs to be done is to change a couple of variables in your copy of the config run-time yaml file (your_config.yaml)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>#### config_cam_example.yaml
-
-Please refer back to the ADF Reference page for more info on these variables and for other optional variables
-
-```{Warning}
-Note:  Please do not modify this file.
-             
-It is recommended to make a copy of this file, make modifications in that copy, and then run that in the ADF.
-
-
-`````{admonition} Example
-:class: seealso
-From the ADF root directory
-
-    cp config_cam_example.yaml config_adf_tutorial.yaml
-`````
-```
+<section id="config-cam-example-yaml">
+<h2>config_cam_example.yaml<a class="headerlink" href="#config-cam-example-yaml" title="Permalink to this headline">#</a></h2>
+<p>Please refer back to the ADF Reference page for more info on these variables and for other optional variables</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note:  Please do not modify this file.</p>
+<p>It is recommended to make a copy of this file, make modifications in that copy, and then run that in the ADF.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_adf_tutorial.yaml
 </pre></div>
 </div>
 </div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 <p>Open the config_adf_tutorial.yaml file with your favorite editor again</p>
 <p>juh</p>
@@ -886,7 +895,7 @@ From the ADF root directory
 <li><p>diag_cam_baseline_climo</p></li>
 </ul>
 <section id="diag-basic-info">
-<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
+<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
 <h6>Edit the following variables</h6>
 <p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
@@ -894,7 +903,7 @@ From the ADF root directory
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="diag-cam-climo">
-<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
+<h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
 <h6>Edit the following variables</h6>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
@@ -904,7 +913,7 @@ From the ADF root directory
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="diag-cam-baseline-climo">
-<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
 <h6>Edit the following variables</h6>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -912,6 +921,7 @@ From the ADF root directory
 <p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p><hr class="docutils" />
+</section>
 </section>
 <section id="adf-variable-defaults-yaml">
 <h2>adf_variable_defaults.yaml<a class="headerlink" href="#adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h2>
