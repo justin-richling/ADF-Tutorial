@@ -52,8 +52,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Model vs obs" href="model_vs_obs.html" />
@@ -887,13 +885,13 @@ title="Print to PDF"
 <p>Diagnostic plot location:
 <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
 <p>This will output a new directory in this location:
-<code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2006_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2006/</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">{cam_case_name}_1995_2006_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2006/</span></code></p>
 <p>Climatology file locations:
-<code class="docutils literal notranslate"><span class="pre">/glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/climo/{diag_cam_climo.cam_case_name}&lt;/span&gt;&lt;/code&gt;
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/glade/scratch/\)</span>{user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_climo.cam_case_name}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
 <p>Timeseries locations:
-<code class="docutils literal notranslate"><span class="pre">/glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/ts/{diag_cam_climo.cam_case_name}&lt;/span&gt;&lt;/code&gt;
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/glade/scratch/\)</span>{user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_climo.cam_case_name}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
 <hr class="docutils" />
 </section>
 </section>
