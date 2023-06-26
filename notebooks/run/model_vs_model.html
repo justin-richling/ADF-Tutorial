@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Model vs obs" href="model_vs_obs.html" />
@@ -866,20 +868,32 @@ title="Print to PDF"
 <h6>Edit the following variables</h6>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2006</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_climo.cam_case_name}</span></code></p>
 </section>
 <section id="diag-cam-baseline-climo">
 <h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
 <h6>Edit the following variables</h6>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p><hr class="docutils" />
+<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2006</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><p>With all these variables now set, let’s take a quick catalogue of the different paths we just set:</p>
+<p>Regridded file location:
+/glade/scratch/${user}/ADF/regrid</p>
+<p>Diagnostic plot location:
+/glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/plots
+This will output a new directory in this location: `/glade/scratch/\)</span>{user}/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2006_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2006/`</p>
+<p>Climatology file locations:
+/glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/climo/{diag_cam_climo.cam_case_name}
+/glade/scratch/\)</span>{user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</p>
+<p>Timeseries locations:
+/glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/ts/{diag_cam_climo.cam_case_name}
+/glade/scratch/\)</span>{user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</p>
+<hr class="docutils" />
 </section>
 </section>
 <section id="adf-variable-defaults-yaml">
@@ -2130,7 +2144,7 @@ Plotting variable: ICEFRAC
 2012
 </pre></div>
 </div>
-<img alt="../../_images/model_vs_model_84_1.png" src="../../_images/model_vs_model_84_1.png" />
+<img alt="../../_images/model_vs_model_86_1.png" src="../../_images/model_vs_model_86_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 647 ms, total: 2.37 s
 Wall time: 3.58 s
 </pre></div>
