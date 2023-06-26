@@ -543,13 +543,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   Configure yaml file for ADF using the history (h0) files
+  <a class="reference internal nav-link" href="#run-time-yaml-config-file">
+   Run-time yaml config file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-variables">
-   Configure yaml file for ADF variables
+  <a class="reference internal nav-link" href="#variable-defaults-yaml-config-file">
+   Variable defaults yaml config file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -582,13 +582,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-using-the-history-h0-files">
-   Configure yaml file for ADF using the history (h0) files
+  <a class="reference internal nav-link" href="#run-time-yaml-config-file">
+   Run-time yaml config file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-yaml-file-for-adf-variables">
-   Configure yaml file for ADF variables
+  <a class="reference internal nav-link" href="#variable-defaults-yaml-config-file">
+   Variable defaults yaml config file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -614,16 +614,18 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
 <p>There are three yaml files included with the ADF</p>
-<section id="configure-yaml-file-for-adf-using-the-history-h0-files">
-<h2>Configure yaml file for ADF using the history (h0) files<a class="headerlink" href="#configure-yaml-file-for-adf-using-the-history-h0-files" title="Permalink to this headline">#</a></h2>
+<section id="run-time-yaml-config-file">
+<h2>Run-time yaml config file<a class="headerlink" href="#run-time-yaml-config-file" title="Permalink to this headline">#</a></h2>
+<p>Configure yaml file for ADF using the history (h0) files</p>
 <p>Two are templates for the runtime config file. Chose one to copy and run with ./run_adf_diag</p>
 <p><code class="docutils literal notranslate"> <span class="pre">config_cam_baseline_example.yaml</span></code></p>
 <p style="margin-top: -5px;">&ensp; General default file</p>
 <p><code class="docutils literal notranslate"> <span class="pre">config_amwg_default_plots.yaml</span></code></p>
 <p style="margin-top: -5px;">&ensp; This is meant for a subset of commonly used variables and plot types for the AMWG</p>
 </section>
-<section id="configure-yaml-file-for-adf-variables">
-<h2>Configure yaml file for ADF variables<a class="headerlink" href="#configure-yaml-file-for-adf-variables" title="Permalink to this headline">#</a></h2>
+<section id="variable-defaults-yaml-config-file">
+<h2>Variable defaults yaml config file<a class="headerlink" href="#variable-defaults-yaml-config-file" title="Permalink to this headline">#</a></h2>
+<p>Configure yaml file for ADF variables</p>
 <p>And the third is for plotting and observational variable data to be used in the ADF.</p>
 <p><code class="docutils literal notranslate"> <span class="pre">lib/adf_variable_defaults.yaml</span>&#160;&#160; <span class="pre">(optional)**</span></code></p>
 <p style="margin-top: -5px;">&ensp; This file makes plotting variables more flexible as you can tailor <em>each</em> variable of interst with plotting details and observational dataset information.</p>
