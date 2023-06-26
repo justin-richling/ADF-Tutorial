@@ -900,10 +900,51 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_example.yaml):</p>
-<p>Under the subset<code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
+<p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your/variable/defaults/file/your_variable_defaults.yaml</span></code></p>
+<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/lib/your_variable_defaults.yaml</span></code></p>
 </div>
+</div>
+<p>After the new file `/lib/your_variable_defaults.yaml` has been created, open the file with your favorite editor</p>
+<p>Example of <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
+</div>
+<p>Example of custom variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
 </div>
 <hr class="docutils" />
 <hr class="docutils" />
