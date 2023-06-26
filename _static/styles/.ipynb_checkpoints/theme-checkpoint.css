@@ -93,7 +93,7 @@
   --pst-icon-exclamation-triangle: "\f071";
   --pst-icon-exclamation-circle: "\f06a";
   --pst-icon-times-circle: "\f057";
-  /*--pst-icon-lightbulb: "\f0eb";*/
+  --pst-icon-tip: "\f0eb";
   --pst-icon-lightbulb: "\f059";
 
   /*****************************************************************************
@@ -122,7 +122,7 @@
   --pst-icon-admonition-danger: var(--pst-icon-exclamation-triangle);
   --pst-icon-admonition-error: var(--pst-icon-times-circle);
   --pst-icon-admonition-hint: var(--pst-icon-lightbulb);
-  --pst-icon-admonition-tip: var(--pst-icon-lightbulb);
+  --pst-icon-admonition-tip: var(--pst-icon-tip);
   --pst-icon-admonition-important: var(--pst-icon-exclamation-circle);
 
   /*****************************************************************************
