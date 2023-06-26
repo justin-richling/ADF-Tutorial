@@ -51,7 +51,6 @@
   --pst-color-warning: 255, 193, 7;
   --pst-color-danger: 220, 53, 69;
   --pst-color-text-base: 51, 51, 51;
-  --pst-color-hint: 19, 159, 9;
 
   --pst-color-h1: var(--pst-color-primary);
   --pst-color-h2: var(--pst-color-primary);
@@ -92,8 +91,6 @@
   --pst-icon-exclamation-circle: "\f06a";
   --pst-icon-times-circle: "\f057";
   --pst-icon-lightbulb: "\f0eb";
-  --pst-icon-lightbulb: "\f059";
-  /*--pst-icon-question-circle: "\f059";*/
 
   /*****************************************************************************
   * Admonitions
@@ -106,7 +103,7 @@
   --pst-color-admonition-warning: var(--pst-color-warning);
   --pst-color-admonition-danger: var(--pst-color-danger);
   --pst-color-admonition-error: var(--pst-color-danger);
-  --pst-color-admonition-hint: var(--pst-color-hint);
+  --pst-color-admonition-hint: var(--pst-color-success);
   --pst-color-admonition-tip: var(--pst-color-success);
   --pst-color-admonition-important: var(--pst-color-success);
 
@@ -127,12 +124,10 @@
 
   --pst-color-versionmodified-default: var(--pst-color-info);
   --pst-color-versionmodified-added: var(--pst-color-success);
-  --pst-color-versionmodified-added: var(--pst-color-hint);
   --pst-color-versionmodified-changed: var(--pst-color-warning);
   --pst-color-versionmodified-deprecated: var(--pst-color-danger);
 
   --pst-icon-versionmodified-default: var(--pst-icon-exclamation-circle);
-  --pst-icon-versionmodified-added: var(--pst-icon-question-circle);
   --pst-icon-versionmodified-added: var(--pst-icon-exclamation-circle);
   --pst-icon-versionmodified-changed: var(--pst-icon-exclamation-circle);
   --pst-icon-versionmodified-deprecated: var(--pst-icon-exclamation-circle);
