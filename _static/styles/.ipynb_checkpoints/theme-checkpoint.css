@@ -93,8 +93,8 @@
   --pst-icon-exclamation-triangle: "\f071";
   --pst-icon-exclamation-circle: "\f06a";
   --pst-icon-times-circle: "\f057";
-  --pst-icon-tip: "\f0eb";
-  --pst-icon-lightbulb: "\f059";
+  --pst-icon-lightbulb: "\f0eb";
+  --pst-icon-question-circle: "\f059";
 
   /*****************************************************************************
   * Admonitions
@@ -107,10 +107,8 @@
   --pst-color-admonition-warning: var(--pst-color-warning);
   --pst-color-admonition-danger: var(--pst-color-danger);
   --pst-color-admonition-error: var(--pst-color-danger);
-    
   --pst-color-admonition-hint: var(--pst-color-hint);
   /*--pst-color-admonition-hint: var(--pst-color-success);*/
-  
   --pst-color-admonition-tip: var(--pst-color-success);
   --pst-color-admonition-important: var(--pst-color-success);
 
@@ -121,8 +119,9 @@
   --pst-icon-admonition-warning: var(--pst-icon-exclamation-triangle);
   --pst-icon-admonition-danger: var(--pst-icon-exclamation-triangle);
   --pst-icon-admonition-error: var(--pst-icon-times-circle);
-  --pst-icon-admonition-hint: var(--pst-icon-lightbulb);
-  --pst-icon-admonition-tip: var(--pst-icon-tip);
+  /*--pst-icon-admonition-hint: var(--pst-icon-lightbulb);*/
+    --pst-icon-admonition-hint: var(--pst-icon-question-circle);
+  --pst-icon-admonition-tip: var(--pst-icon-lightbulb);
   --pst-icon-admonition-important: var(--pst-icon-exclamation-circle);
 
   /*****************************************************************************
