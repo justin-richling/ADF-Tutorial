@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Single Case Comparison &#8212; ADF Tutorial</title>
+    <title>config_cam_example.yaml &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Configuring Variable Defaults" href="variable.html" />
+    <link rel="next" title="adf_variable_defaults.yaml" href="variable.html" />
     <link rel="prev" title="Yaml Config Files" href="../yaml.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -213,12 +213,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Single Case Comparison
+     config_cam_example.yaml
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="variable.html">
-     Configuring Variable Defaults
+     adf_variable_defaults.yaml
     </a>
    </li>
   </ul>
@@ -543,24 +543,31 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#edit-the-following-variables">
-   Edit the following variables
+  <a class="reference internal nav-link" href="#example">
+   Example:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
+    <a class="reference internal nav-link" href="#edit-the-following-variables">
+     Edit the following variables
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-basic-info">
+       diag_basic_info
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-climo">
+       diag_cam_climo
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -620,7 +627,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Single Case Comparison</h1>
+                <h1>config_cam_example.yaml</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -631,24 +638,31 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#edit-the-following-variables">
-   Edit the following variables
+  <a class="reference internal nav-link" href="#example">
+   Example:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
+    <a class="reference internal nav-link" href="#edit-the-following-variables">
+     Edit the following variables
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-basic-info">
+       diag_basic_info
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-climo">
+       diag_cam_climo
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -709,21 +723,25 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
-<h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
-<p>You will need to open the your custom config runtime yaml file (your_config_d.yaml) with your favorite editor</p>
-<p>Please refer back to the ADF Reference page for more info on these variables and for other optional variables</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="config-cam-example-yaml">
+<h1>config_cam_example.yaml<a class="headerlink" href="#config-cam-example-yaml" title="Permalink to this headline">#</a></h1>
+<section id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_adf_tutorial.yaml
+</pre></div>
+</div>
 <section id="edit-the-following-variables">
-<h2>Edit the following variables<a class="headerlink" href="#edit-the-following-variables" title="Permalink to this headline">#</a></h2>
+<h3>Edit the following variables<a class="headerlink" href="#edit-the-following-variables" title="Permalink to this headline">#</a></h3>
 <section id="diag-basic-info">
-<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
+<h4>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h4>
 <p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="diag-cam-climo">
-<h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
+<h4>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h4>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -732,7 +750,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="diag-cam-baseline-climo">
-<h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
+<h4>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h4>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -740,6 +758,14 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></section>
 </section>
+</section>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note:  Please do not modify this file.</p>
+<p>It is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">your_config_cam.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
+</div>
+<p>You will need to open the your custom config runtime yaml file (config_adf_tutorial.yaml) with your favorite editor</p>
+<p>Please refer back to the ADF Reference page for more info on these variables and for other optional variables</p>
 <section id="diagnostic-scripts-subsections">
 <h2>Diagnostic Scripts “Subsections”<a class="headerlink" href="#diagnostic-scripts-subsections" title="Permalink to this headline">#</a></h2>
 <p>Each of the following sets are also considered subsections. These are all components of the actual diagnostics workflow of the ADF.</p></section>
@@ -853,7 +879,7 @@ Possible addition examples:
     <a class='right-next' id="next-link" href="variable.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Configuring Variable Defaults</p>
+        <p class="prev-next-title">adf_variable_defaults.yaml</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
