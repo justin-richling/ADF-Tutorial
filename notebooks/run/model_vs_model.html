@@ -532,16 +532,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
      adf_variable_defaults.yaml
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-default-set">
-     ADF Default Set
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-set">
+       Custom Set
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
@@ -704,16 +701,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
      adf_variable_defaults.yaml
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-default-set">
-     ADF Default Set
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-set">
+       Custom Set
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
@@ -898,6 +892,10 @@ title="Print to PDF"
 <section id="adf-variable-defaults-yaml">
 <h2>adf_variable_defaults.yaml<a class="headerlink" href="#adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h2>
 <p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
+<section id="custom-set">
+<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
+<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.</p>
@@ -913,15 +911,6 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</section>
-<section id="adf-default-set">
-<h2>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h2>
-<p>If you want to use the ADF default values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
-</p></section>
-<section id="custom-set">
-<h2>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h2>
-<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p>
 <hr class="docutils" />
 <hr class="docutils" />
 <p>Cam Test Case:
@@ -987,6 +976,7 @@ The note body will be hidden!
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
 <h2>It is important to remember the <strong>two</strong> things important in this notebook are the:<a class="headerlink" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the" title="Permalink to this headline">#</a></h2>
