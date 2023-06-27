@@ -838,7 +838,7 @@ title="Print to PDF"
 <h2>config_cam_baseline_example.yaml<a class="headerlink" href="#config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Note:  Please do not modify this file.</p>
+<p><strong>Please do not modify this file!</strong></p>
 <p>It is recommended to make a copy of this file, make modifications in that copy, and then run that with the ADF.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Example</p>
@@ -907,15 +907,15 @@ title="Print to PDF"
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.</p>
-<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the “defaults_file” config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
+<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!<strong></p>
+<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Example</p>
 <p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
-<p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_example.yaml):</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml):</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code></p>
@@ -974,32 +974,6 @@ end_year: 2000</p>
 <p>Cam_history_file locations:
 /glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001
 /glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Whataboutatishtofhgpsuvnnnf[ndf[nfn</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Here’s my dropdown<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">And here’s my dropdown content</p>
-</div>
-</details><div class="dropdown admonition note">
-<p class="admonition-title">Note</p>
-<p>The note body will be hidden!</p>
-</div>
-<div class="dropdown admonition note">
-<p class="admonition-title">Note</p>
-<p>The note body will be hidden!</p>
-</div>
-<aside class="hint admonition"><p class="admonition-title">The Title</p><p>This is the body.</p></aside>
-<div class="seealso admonition">
-<p class="admonition-title">This admonition was styled…</p>
-<p>With a seealso class!</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -2146,7 +2120,7 @@ Plotting variable: ICEFRAC
 2012
 </pre></div>
 </div>
-<img alt="../../_images/model_vs_model_86_1.png" src="../../_images/model_vs_model_86_1.png" />
+<img alt="../../_images/model_vs_model_80_1.png" src="../../_images/model_vs_model_80_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 647 ms, total: 2.37 s
 Wall time: 3.58 s
 </pre></div>
