@@ -208,17 +208,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_model.html">
-   Model vs Model
+   CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_obs.html">
-   Model vs obs
+   Cam vs Obs/Reanalysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_cmip.html">
-   Model vs CMIP
+   CAM vs CMIP
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -663,7 +663,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-adf">
 <h1>Setting up ADF<a class="headerlink" href="#setting-up-adf" title="Permalink to this headline">#</a></h1>
 <p>Instructions on how to build the necessary environment for running the ADF.</p>
-<p>Setting up the environment and getting the ADF will be done in the command line and with <code class="docutils literal notranslate"><span class="pre">git/GitHub</span></code>. This tutorial assumes working knowledge of both.</p>
+<p>Setting up the environment and getting the ADF will be done in the command line and with <code class="docutils literal notranslate"><span class="pre">git/GitHub</span></code>, this tutorial assumes working knowledge of both.</p>
 <p>There are two steps (in this tutorial) to get the ADF up and running on your CISL machine:</p>
 <ol class="simple">
 <li><p>Setting up the conda environment for all ADF necessary libraries</p></li>
@@ -677,6 +677,13 @@ title="Print to PDF"
 </div>
 <section id="setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
 <h2>Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment<a class="headerlink" href="#setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment" title="Permalink to this headline">#</a></h2>
+<p>If you are unfamiliar with <code class="docutils literal notranslate"><span class="pre">conda</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> is a great package manager that allows installing different python packages. Usually, there can be conflicts between certain python packages and even between packages of different versions. To avoid this, <code class="docutils literal notranslate"><span class="pre">conda</span></code> is an industry leading package manager that the ADF will use to avoid any required python packages interfering with the packages you have installed on your machine.</p>
+<p>You don’t need to be an expert with <code class="docutils literal notranslate"><span class="pre">conda</span></code> to follow along with this tutorial, but please visit <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">conda</span></code>’s website</span> for more information and basics of working with <code class="docutils literal notranslate"><span class="pre">conda</span></code> if you want to read more.</p>
+<div class="dropdown admonition tip">
+<p class="admonition-title">Tip</p>
+<embed src="../images/conda-cheatsheet.pdf" width="800px" height="2100px" />
+</div>
 <section id="cisl-computers">
 <h3>CISL Computers<a class="headerlink" href="#cisl-computers" title="Permalink to this headline">#</a></h3>
 <p>Setting up the ADF environment if on CISL (Cheyenne/Casper) machines</p>
