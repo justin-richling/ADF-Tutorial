@@ -208,17 +208,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_model.html">
-   Model vs Model
+   CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_obs.html">
-   Model vs obs
+   Cam vs Obs/Reanalysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_cmip.html">
-   Model vs CMIP
+   CAM vs CMIP
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -514,8 +514,10 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subsections">
-   Subsections
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -526,8 +528,12 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#compare-obs">
-       compare_obs
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-compare-obs-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         compare_obs
+        </span>
+       </code>
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -823,8 +829,10 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subsections">
-   Subsections
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -835,8 +843,12 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#compare-obs">
-       compare_obs
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-compare-obs-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         compare_obs
+        </span>
+       </code>
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -1163,12 +1175,12 @@ title="Print to PDF"
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="subsections">
-<h1>Subsections<a class="headerlink" href="#subsections" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="u-subsections-u">
+<h1><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h1>
 <section id="strong-diag-basic-info-strong">
 <h2><strong>diag_basic_info</strong><a class="headerlink" href="#strong-diag-basic-info-strong" title="Permalink to this headline">#</a></h2>
-<section id="compare-obs">
-<h3>  compare_obs<a class="headerlink" href="#compare-obs" title="Permalink to this headline">#</a></h3>
+<section id="code-class-docutils-literal-notranslate-span-class-pre-compare-obs-span-code">
+<h3>  <code class="docutils literal notranslate"><span class="pre">compare_obs</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-compare-obs-span-code" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp;&ensp; Is this a model vs observations comparison? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
 <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, then a model-model comparison is assumed</p></li>
@@ -1274,9 +1286,11 @@ title="Print to PDF"
 </section>
 <section id="create-html">
 <h3>  create_html<a class="headerlink" href="#create-html" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&emsp;&ensp; Generate HTML website (assumed false if missing)</p>
+<p style="margin-top: -5px;">&emsp;&ensp; Generate HTML website - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
-<li><p>&emsp;&ensp; Note:  The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_{baseline}_YYYY</span></code>)</p></li>
+    <li><p style="margin-top: -5px;">&emsp;&ensp; If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, no html pages will be made</p></li>
+<li><p style="margin-top: -5px;">&emsp;&ensp; If <code class="docutils literal notranslate"><span class="pre">true</span></code> The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_{baseline}_YYYY</span></code>)</p>
+    </li>
 </ul></section>
 </section>
 <hr class="docutils" />
