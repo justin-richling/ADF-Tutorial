@@ -995,6 +995,15 @@ title="Print to PDF"
 <p>The second is via Jupyter</p>
 <section id="running-in-the-terminal">
 <h2>Running in the Terminal<a class="headerlink" href="#running-in-the-terminal" title="Permalink to this headline">#</a></h2>
+<p>Open a Cheyenne terminal window on your machine and navigate to the root directory of the ADF</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd /glade/work/{user}/ADF/ 
+</pre></div>
+</div>
+<p>Now we can run the ADF with our new config file <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>time ./run_adf_diag config_adf_tutorial.yaml
+</pre></div>
+</div>
+<p>NOTE: the <code class="docutils literal notranslate"><span class="pre">time</span></code> command will give us a readout of the wall and user time for the ADF to run this configuration</p>
 <p>Cam Test Case:
 f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</p>
 <p>Cam Baseline Case:
