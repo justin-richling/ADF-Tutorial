@@ -890,6 +890,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
 <p>Also set a variable for the path to the history files</p>
 <p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
+<p>Now we can change the paths for the regridded data and plot locations</p>
 <p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
 </section>
@@ -909,19 +910,19 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
 <p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
 <p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><p>With all these variables now set, let’s take a quick catalogue of the different paths we just set:</p>
+<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><h5>With all these variables now set, let's take a quick catalogue of the different paths we just set:</h5>
 <p>Regridded file location:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
 <p>Diagnostic plot location:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
 <p>This will output a new directory in this location:</p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">{cam_case_name}_{YYYY}_{YYYY}_vs_{baseline_name}_{YYYY}_{YYYY}_/</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_{YYYY}_{YYYY}_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_{YYYY}_{YYYY}/</span></code></p>
 <p>Climatology file locations:</p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>Timeseries locations:</p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><hr class="docutils" />
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p><hr class="docutils" />
 </section>
 </section>
 <section id="adf-variable-defaults-yaml">
