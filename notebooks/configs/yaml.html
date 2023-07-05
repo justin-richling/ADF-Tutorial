@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Yaml Config Files &#8212; ADF Tutorial</title>
+    <title>Yaml Config Files &#8212; CESM Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../_static/ncar_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ADF Tutorial</h1>
+      <h1 class="site-logo" id="site-title">CESM Tutorial</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -182,12 +182,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../intro/yaml/config_cam_baseline_example.html">
-     Configuring Run Time
+     Run Time - config_cam_baseline_example.yaml
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../intro/yaml/adf_variable_defaults.html">
-     Configuring Variable Defaults
+     Variable Defaults - adf_variable_defaults.yaml
     </a>
    </li>
   </ul>
@@ -206,17 +206,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_model.html">
-   Model vs Model
+   CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_obs.html">
-   Model vs obs
+   Cam vs Obs/Reanalysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../run/model_vs_cmip.html">
-   Model vs CMIP
+   CAM vs CMIP
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -352,7 +352,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml.ipynb"
+        <a href="https://mybinder.org/v2/gh/NCAR/CESM-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -395,7 +395,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial"
+        <a href="https://github.com/NCAR/CESM-Tutorial"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -412,7 +412,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/NCAR/CESM-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -500,23 +500,40 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml-config-file">
-   Run-time yaml config file
+  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
+   0. Run CAM simulation → get history ( h0** ) file(s)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-defaults-yaml-config-file">
-   Variable defaults yaml config file
+  <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
+   1. Configure yaml files for the history files
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+     <strong>
+      NOTE:
+     </strong>
+     Make copies of these
+     <strong>
+      files
+     </strong>
+     and
+     <u>
+      modify/customize
+     </u>
+     the
+     <strong>
+      copies
+     </strong>
+     !
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
+  <a class="reference internal nav-link" href="#run-the-adf">
+   2. Run the ADF
   </a>
  </li>
 </ul>
@@ -539,23 +556,40 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml-config-file">
-   Run-time yaml config file
+  <a class="reference internal nav-link" href="#run-cam-simulation-get-history-h0-file-s">
+   0. Run CAM simulation → get history ( h0** ) file(s)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-defaults-yaml-config-file">
-   Variable defaults yaml config file
+  <a class="reference internal nav-link" href="#configure-yaml-files-for-the-history-files">
+   1. Configure yaml files for the history files
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+     <strong>
+      NOTE:
+     </strong>
+     Make copies of these
+     <strong>
+      files
+     </strong>
+     and
+     <u>
+      modify/customize
+     </u>
+     the
+     <strong>
+      copies
+     </strong>
+     !
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-the-yaml-file">
-   Using variables in the yaml file
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-variables-in-sub-sections">
-   Using variables in sub sections
+  <a class="reference internal nav-link" href="#run-the-adf">
+   2. Run the ADF
   </a>
  </li>
 </ul>
@@ -570,40 +604,35 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-config-files">
 <h1>Yaml Config Files<a class="headerlink" href="#yaml-config-files" title="Permalink to this headline">#</a></h1>
-<p>There are three yaml files included with the ADF</p>
-<section id="run-time-yaml-config-file">
-<h2>Run-time yaml config file<a class="headerlink" href="#run-time-yaml-config-file" title="Permalink to this headline">#</a></h2>
-<p>Configure yaml file for ADF using the history (h0) files</p>
-<p>Two are templates for the runtime config file. Chose one to copy and run with ./run_adf_diag</p>
-<p><code class="docutils literal notranslate"> <span class="pre">config_cam_baseline_example.yaml</span></code></p>
-<p style="margin-top: -5px;">&ensp; General default file</p>
-<p><code class="docutils literal notranslate"> <span class="pre">config_amwg_default_plots.yaml</span></code></p>
-<p style="margin-top: -5px;">&ensp; This is meant for a subset of commonly used variables and plot types for the AMWG</p>
+<section id="run-cam-simulation-get-history-h0-file-s">
+<h2>0. Run CAM simulation → get history ( h0** ) file(s)<a class="headerlink" href="#run-cam-simulation-get-history-h0-file-s" title="Permalink to this headline">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* or other history files
+</pre></div>
+</div>
 </section>
-<section id="variable-defaults-yaml-config-file">
-<h2>Variable defaults yaml config file<a class="headerlink" href="#variable-defaults-yaml-config-file" title="Permalink to this headline">#</a></h2>
-<p>Configure yaml file for ADF variables</p>
-<p>And the third is for plotting and observational variable data to be used in the ADF.</p>
-<p><code class="docutils literal notranslate"> <span class="pre">lib/adf_variable_defaults.yaml</span>&#160;&#160; <span class="pre">(optional)**</span></code></p>
-<p style="margin-top: -5px;">&ensp; This file makes plotting variables more flexible as you can tailor <em>each</em> variable of interst with plotting details and observational dataset information.</p>
-<p style="margin-top: -5px;">&ensp; For examples of ways to setup variable defaults please refer back to the blahblahblah</p><h2>YAML File Basics</h2>
-<p>YAML files are a special type of text file, which in our case (using Python) the information in the yaml file will become dictionaries in python scripts.</p>
-<p>Here are a couple hints</p>
-<p>Some paths in the config yaml file are optional and some are <strong>required</strong></p>
+<section id="configure-yaml-files-for-the-history-files">
+<h2>1. Configure yaml files for the history files<a class="headerlink" href="#configure-yaml-files-for-the-history-files" title="Permalink to this headline">#</a></h2>
+<section id="note-make-copies-of-these-files-and-u-modify-customize-u-the-copies">
+<h3><strong>NOTE:</strong>  Make copies of these <strong>files</strong> and <u>modify/customize</u> the <strong>copies</strong>!<a class="headerlink" href="#note-make-copies-of-these-files-and-u-modify-customize-u-the-copies" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>config_cam_baseline_example.yaml  (necessary)</p></li>
+<li><p>lib/adf_variable_defaults.yaml   (optional)**</p>
+<p>** Additionally, you will need to change the defaults_file path in your copy of config_cam_baseline_example.yaml</p>
+</li>
+</ul>
 </section>
-<section id="using-variables-in-the-yaml-file">
-<h2>Using variables in the yaml file<a class="headerlink" href="#using-variables-in-the-yaml-file" title="Permalink to this headline">#</a></h2>
-<p><img alt="Running on Cheyenne Image" src="../../_images/Slide13.png" /></p>
 </section>
-<section id="using-variables-in-sub-sections">
-<h2>Using variables in sub sections<a class="headerlink" href="#using-variables-in-sub-sections" title="Permalink to this headline">#</a></h2>
-<p><img alt="Running on Cheyenne Image" src="../../_images/Slide15.png" /></p>
-<figure class="align-default" id="jupiter-figure">
-<a class="reference internal image-reference" href="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg"><img alt="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" src="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-text">The beautiful planet Jupiter! Source: <a class="reference external" href="https://solarsystem.nasa.gov/resources/2486/hubbles-new-portrait-of-jupiter/?category=planets_jupiter">NASA</a>.</span><a class="headerlink" href="#jupiter-figure" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="run-the-adf">
+<h2>2. Run the ADF<a class="headerlink" href="#run-the-adf" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Break it:  Check config files?   Check error/logs?   Check data/paths?</p></li>
+<li><p>Success: Check output data/images</p>
+<ul>
+<li><p>Locally</p></li>
+<li><p>via HTML files (optional)</p></li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 
@@ -641,7 +670,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Justin Richling<br/>
+    By NCAR/CGD Staff<br/>
   
 </p>
         </footer>

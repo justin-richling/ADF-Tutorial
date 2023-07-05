@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>adf_variable_defaults.yaml &#8212; ADF Tutorial</title>
+    <title>Configuring Variable Defualts &#8212; CESM Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../../_static/ncar_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ADF Tutorial</h1>
+      <h1 class="site-logo" id="site-title">CESM Tutorial</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
@@ -182,12 +182,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intro/yaml/config_cam_baseline_example.html">
-     Configuring Run Time
+     Run Time - config_cam_baseline_example.yaml
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intro/yaml/adf_variable_defaults.html">
-     Configuring Variable Defaults
+     Variable Defaults - adf_variable_defaults.yaml
     </a>
    </li>
   </ul>
@@ -206,17 +206,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_model.html">
-   Model vs Model
+   CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_obs.html">
-   Model vs obs
+   Cam vs Obs/Reanalysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_cmip.html">
-   Model vs CMIP
+   CAM vs CMIP
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -352,7 +352,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/variable.ipynb"
+        <a href="https://mybinder.org/v2/gh/NCAR/CESM-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/variable.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -395,7 +395,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial"
+        <a href="https://github.com/NCAR/CESM-Tutorial"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -412,7 +412,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/variable.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/NCAR/CESM-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/variable.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -477,122 +477,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   adf_variable_defaults.yaml
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuring-variable-defaults">
-   Configuring Variable Defaults
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variable-default-settings">
-     Variable Default Settings
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adf-default-set">
-       ADF Default Set
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#custom-set">
-       Custom Set
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>adf_variable_defaults.yaml</h1>
+                <h1>Configuring Variable Defualts</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   adf_variable_defaults.yaml
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuring-variable-defaults">
-   Configuring Variable Defaults
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variable-default-settings">
-     Variable Default Settings
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adf-default-set">
-       ADF Default Set
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#custom-set">
-       Custom Set
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -600,56 +501,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adf-variable-defaults-yaml">
-<h1>adf_variable_defaults.yaml<a class="headerlink" href="#adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="configuring-variable-defualts">
+<h1>Configuring Variable Defualts<a class="headerlink" href="#configuring-variable-defualts" title="Permalink to this headline">#</a></h1>
 <p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
-<section id="example">
-<h2>Example:<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
-<p>From the ADF root directory</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
-</pre></div>
-</div>
-</section>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Note:  Please do not modify this file unless you plan to push your changes back to the ADF repo.</p>
-<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the “defaults_file” config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">your_config_cam.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="configuring-variable-defaults">
-<h1>Configuring Variable Defaults<a class="headerlink" href="#configuring-variable-defaults" title="Permalink to this headline">#</a></h1>
-<section id="variable-default-settings">
-<h2>Variable Default Settings<a class="headerlink" href="#variable-default-settings" title="Permalink to this headline">#</a></h2>
-<section id="adf-default-set">
-<h3>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h3>
-<p>If you want to use the ADF default values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
-</p></section>
-<section id="custom-set">
-<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
-<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
-  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
-  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
-  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="n">mpl</span><span class="p">:</span>
-    <span class="n">colorbar</span><span class="p">:</span>
-      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
-  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
-  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
-  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
-  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
-  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
-</pre></div>
-</div>
-<p>These are the values that can be set for each variable. Non are required.</p>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -686,7 +540,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Justin Richling<br/>
+    By NCAR/CGD Staff<br/>
   
 </p>
         </footer>

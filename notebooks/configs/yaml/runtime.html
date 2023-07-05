@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>config_cam_example.yaml &#8212; ADF Tutorial</title>
+    <title>Run Time &#8212; CESM Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../../_static/ncar_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ADF Tutorial</h1>
+      <h1 class="site-logo" id="site-title">CESM Tutorial</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
@@ -182,12 +184,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intro/yaml/config_cam_baseline_example.html">
-     Configuring Run Time
+     Run Time - config_cam_baseline_example.yaml
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intro/yaml/adf_variable_defaults.html">
-     Configuring Variable Defaults
+     Variable Defaults - adf_variable_defaults.yaml
     </a>
    </li>
   </ul>
@@ -206,17 +208,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_model.html">
-   Model vs Model
+   CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_obs.html">
-   Model vs obs
+   Cam vs Obs/Reanalysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/model_vs_cmip.html">
-   Model vs CMIP
+   CAM vs CMIP
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -352,7 +354,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
+        <a href="https://mybinder.org/v2/gh/NCAR/CESM-Tutorial/main?urlpath=tree/docs/notebooks/configs/yaml/runtime.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -395,7 +397,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial"
+        <a href="https://github.com/NCAR/CESM-Tutorial"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -412,7 +414,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/NCAR/CESM-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/configs/yaml/runtime.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -500,26 +502,351 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#first-set-in-yaml-file-color-117284-textit-diag-basic-info">
+   First set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_basic\_info}}\)
+   </span>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#is-this-a-model-vs-observations-comparison">
+     <strong>
+      Is this a model vs observations comparison?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
+     <strong>
+      Generate HTML website (assumed false if missing):
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-observational-datasets">
+     <strong>
+      Location of observational datasets:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
+     <strong>
+      Location where re-gridded and interpolated CAM climatology files are stored:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-cam-re-gridded-files">
+     <strong>
+      Overwrite CAM re-gridded files?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-diagnostic-plots-are-stored">
+     <strong>
+      Location where diagnostic plots are stored:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-history-file-number-to-use-h0-h1-h2-etc">
+     <strong>
+      CAM history file number to use (h0,h1,h2, etc)
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-default-variable-plot-settings">
+     <strong>
+      Use default variable plot settings?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-adf-variable-plotting-defaults-yaml-file">
+     <strong>
+      Location of ADF variable plotting defaults YAML file
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+     <strong>
+      Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
+     <strong>
+      Longitude line on which to center all lat/lon maps.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
+     <strong>
+      Apply monthly weights to seasonal averages.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
+     <strong>
+      Number of processors on which to run the ADF.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remake-plots">
+     <strong>
+      Remake plots?
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-set-in-yaml-file-color-117284-textit-diag-cam-climo">
+   Second set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_cam\_climo}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-climatologies">
+     <strong>
+      Calculate climatologies?
+     </strong>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-basic-info">
-       diag_basic_info
+      <a class="reference internal nav-link" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created">
+       If false, neither the climatology or time-series files will be created:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-cam-climo">
-       diag_cam_climo
+      <a class="reference internal nav-link" href="#calc-cam-climo-true">
+       calc_cam_climo: true
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-cam-climatology-files">
+     <strong>
+      Overwrite CAM climatology files?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
+       If false, or not present, then already existing climatology files will be skipped:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-       diag_cam_baseline_climo
+      <a class="reference internal nav-link" href="#cam-overwrite-climo-false">
+       <strong>
+        cam_overwrite_climo
+       </strong>
+       : false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#name-of-cam-case-or-cam-run-name">
+     <strong>
+      Name of CAM case (or CAM run name):
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
+       cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-nickname">
+     <strong>
+      Case nickname
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-left-blank-it-will-default-to-cam-case-name">
+       If left blank, it will default to cam_case_name
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
+       ** NOTE: if nickname starts with a zero, the string must be in quotes! **
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#case-nickname-diag-cam-climo-cam-case-name">
+       case_nickname: ${diag_cam_climo.cam_case_name}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-cam-history-h0-files">
+     <strong>
+      Location of CAM history (h0) files:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
+       cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
+     <strong>
+      Location of CAM climatologies (to be created and then used by this script)
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
+       cam_climo_loc: /glade/scratch/
+       <span class="math notranslate nohighlight">
+        \({user}/ADF/\)
+       </span>
+       {diag_cam_climo.cam_case_name}/climo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-start">
+     <strong>
+      Model year when time series files should start:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
+       Note:  Leaving this entry blank will make time series start at earliest available year.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#start-year-1990">
+       start_year: 1990
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-end">
+     <strong>
+      Model year when time series files should end:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
+       Note:  Leaving this entry blank will make time series end at latest available year.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#end-year-1999">
+       end_year: 1999
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-time-series-files-need-to-be-generated">
+     <strong>
+      Do time series files need to be generated?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
+       If True, then diagnostics assumes that model files are already time series.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
+       If False, or if simply not present, then diagnostics will attempt to create
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#time-series-files-from-history-time-slice-files">
+       time series files from history (time-slice) files:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-done-false">
+       cam_ts_done: false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-interim-time-series-files">
+     <strong>
+      Save interim time series files?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
+       WARNING:  This can take up a significant amount of space, but will save processing time the next time
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-save-true">
+       cam_ts_save: true
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-time-series-files-if-found">
+     <strong>
+      Overwrite time series files, if found?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
+       If set to false, then time series creation will be skipped if files are found:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-overwrite-ts-false">
+       cam_overwrite_ts: false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-time-series-files-are-or-will-be-stored">
+     <strong>
+      Location where time series files are (or will be) stored:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
+       cam_ts_loc: /glade/scratch/
+       <span class="math notranslate nohighlight">
+        \({user}/ADF/\)
+       </span>
+       {diag_cam_climo.cam_case_name}/ts
       </a>
      </li>
     </ul>
@@ -527,51 +854,12 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
-   Diagnostic Scripts “Subsections”
+  <a class="reference internal nav-link" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+   Third set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)
+   </span>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-averaging-scripts">
-   time_averaging_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regridding-scripts">
-   regridding_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-scripts">
-   analysis_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-scripts">
-   plotting_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-var-list">
-   diag_var_list
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#region-multicase">
-   region_multicase
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-default-set">
-     ADF Default Set
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -582,7 +870,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>config_cam_example.yaml</h1>
+                <h1>Run Time</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -593,26 +881,351 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#first-set-in-yaml-file-color-117284-textit-diag-basic-info">
+   First set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_basic\_info}}\)
+   </span>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#is-this-a-model-vs-observations-comparison">
+     <strong>
+      Is this a model vs observations comparison?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-html-website-assumed-false-if-missing">
+     <strong>
+      Generate HTML website (assumed false if missing):
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-observational-datasets">
+     <strong>
+      Location of observational datasets:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
+     <strong>
+      Location where re-gridded and interpolated CAM climatology files are stored:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-cam-re-gridded-files">
+     <strong>
+      Overwrite CAM re-gridded files?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-diagnostic-plots-are-stored">
+     <strong>
+      Location where diagnostic plots are stored:
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cam-history-file-number-to-use-h0-h1-h2-etc">
+     <strong>
+      CAM history file number to use (h0,h1,h2, etc)
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-default-variable-plot-settings">
+     <strong>
+      Use default variable plot settings?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-adf-variable-plotting-defaults-yaml-file">
+     <strong>
+      Location of ADF variable plotting defaults YAML file
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+     <strong>
+      Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#longitude-line-on-which-to-center-all-lat-lon-maps">
+     <strong>
+      Longitude line on which to center all lat/lon maps.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-monthly-weights-to-seasonal-averages">
+     <strong>
+      Apply monthly weights to seasonal averages.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-processors-on-which-to-run-the-adf">
+     <strong>
+      Number of processors on which to run the ADF.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remake-plots">
+     <strong>
+      Remake plots?
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-set-in-yaml-file-color-117284-textit-diag-cam-climo">
+   Second set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_cam\_climo}}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-climatologies">
+     <strong>
+      Calculate climatologies?
+     </strong>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-basic-info">
-       diag_basic_info
+      <a class="reference internal nav-link" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created">
+       If false, neither the climatology or time-series files will be created:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-cam-climo">
-       diag_cam_climo
+      <a class="reference internal nav-link" href="#calc-cam-climo-true">
+       calc_cam_climo: true
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-cam-climatology-files">
+     <strong>
+      Overwrite CAM climatology files?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
+       If false, or not present, then already existing climatology files will be skipped:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-       diag_cam_baseline_climo
+      <a class="reference internal nav-link" href="#cam-overwrite-climo-false">
+       <strong>
+        cam_overwrite_climo
+       </strong>
+       : false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#name-of-cam-case-or-cam-run-name">
+     <strong>
+      Name of CAM case (or CAM run name):
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
+       cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-nickname">
+     <strong>
+      Case nickname
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-left-blank-it-will-default-to-cam-case-name">
+       If left blank, it will default to cam_case_name
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
+       ** NOTE: if nickname starts with a zero, the string must be in quotes! **
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#case-nickname-diag-cam-climo-cam-case-name">
+       case_nickname: ${diag_cam_climo.cam_case_name}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-cam-history-h0-files">
+     <strong>
+      Location of CAM history (h0) files:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
+       cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
+     <strong>
+      Location of CAM climatologies (to be created and then used by this script)
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
+       cam_climo_loc: /glade/scratch/
+       <span class="math notranslate nohighlight">
+        \({user}/ADF/\)
+       </span>
+       {diag_cam_climo.cam_case_name}/climo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-start">
+     <strong>
+      Model year when time series files should start:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
+       Note:  Leaving this entry blank will make time series start at earliest available year.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#start-year-1990">
+       start_year: 1990
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-year-when-time-series-files-should-end">
+     <strong>
+      Model year when time series files should end:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
+       Note:  Leaving this entry blank will make time series end at latest available year.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#end-year-1999">
+       end_year: 1999
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-time-series-files-need-to-be-generated">
+     <strong>
+      Do time series files need to be generated?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
+       If True, then diagnostics assumes that model files are already time series.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
+       If False, or if simply not present, then diagnostics will attempt to create
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#time-series-files-from-history-time-slice-files">
+       time series files from history (time-slice) files:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-done-false">
+       cam_ts_done: false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-interim-time-series-files">
+     <strong>
+      Save interim time series files?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
+       WARNING:  This can take up a significant amount of space, but will save processing time the next time
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-save-true">
+       cam_ts_save: true
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overwrite-time-series-files-if-found">
+     <strong>
+      Overwrite time series files, if found?
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
+       If set to false, then time series creation will be skipped if files are found:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-overwrite-ts-false">
+       cam_overwrite_ts: false
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location-where-time-series-files-are-or-will-be-stored">
+     <strong>
+      Location where time series files are (or will be) stored:
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
+       cam_ts_loc: /glade/scratch/
+       <span class="math notranslate nohighlight">
+        \({user}/ADF/\)
+       </span>
+       {diag_cam_climo.cam_case_name}/ts
       </a>
      </li>
     </ul>
@@ -620,51 +1233,12 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
-   Diagnostic Scripts “Subsections”
+  <a class="reference internal nav-link" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+   Third set in yaml file:
+   <span class="math notranslate nohighlight">
+    \(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)
+   </span>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-averaging-scripts">
-   time_averaging_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regridding-scripts">
-   regridding_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-scripts">
-   analysis_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-scripts">
-   plotting_scripts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-var-list">
-   diag_var_list
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#region-multicase">
-   region_multicase
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-default-set">
-     ADF Default Set
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -676,125 +1250,242 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="config-cam-example-yaml">
-<h1>config_cam_example.yaml<a class="headerlink" href="#config-cam-example-yaml" title="Permalink to this headline">#</a></h1>
-<p>Please refer back to the ADF Reference page for more info on these variables and for other optional variables</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Note:  Please do not modify this file.</p>
-<p>It is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it in <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">your_config_cam.yaml</span></code> (copy of config_cam_example.yaml)</a>.</p>
-<p>Example:</p>
-<p>From the ADF root directory</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_adf_tutorial.yaml
-</pre></div>
-</div>
-</div>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<section id="id2">
-<h3><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<section id="diag-basic-info">
-<h4>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h4>
-<h6>Edit the following variables</h6>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="run-time">
+<h1>Run Time<a class="headerlink" href="#run-time" title="Permalink to this headline">#</a></h1>
+<section id="first-set-in-yaml-file-color-117284-textit-diag-basic-info">
+<h2>First set in yaml file:  <span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag\_basic\_info}}\)</span><a class="headerlink" href="#first-set-in-yaml-file-color-117284-textit-diag-basic-info" title="Permalink to this headline">#</a></h2>
+<section id="is-this-a-model-vs-observations-comparison">
+<h3><strong>Is this a model vs observations comparison?</strong><a class="headerlink" href="#is-this-a-model-vs-observations-comparison" title="Permalink to this headline">#</a></h3>
+<p>     If “false” or missing, then a model-model comparison is assumed:<br />
+     <strong>compare_obs</strong>: false</p>
 </section>
-<section id="diag-cam-climo">
-<h4>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h4>
-<h6>Edit the following variables</h6>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<section id="generate-html-website-assumed-false-if-missing">
+<h3><strong>Generate HTML website (assumed false if missing):</strong><a class="headerlink" href="#generate-html-website-assumed-false-if-missing" title="Permalink to this headline">#</a></h3>
+<p>     Note:  The website files themselves will be located in the path
+     specified by “cam_diag_plot_loc”, under the “&lt;diag_run&gt;/website” subdirectory,
+     where “&lt;diag_run&gt;” is the subdirectory created for this particular diagnostics run
+     (usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
+     create_html: true</p>
 </section>
-<section id="diag-cam-baseline-climo">
-<h4>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h4>
-<h6>Edit the following variables</h6>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></section>
+<section id="location-of-observational-datasets">
+<h3><strong>Location of observational datasets:</strong><a class="headerlink" href="#location-of-observational-datasets" title="Permalink to this headline">#</a></h3>
+<p>     Note: this only matters if “compare_obs” is true and the path
+     isn’t specified in the variable defaults file.
+     obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
+</section>
+<section id="location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored">
+<h3><strong>Location where re-gridded and interpolated CAM climatology files are stored:</strong><a class="headerlink" href="#location-where-re-gridded-and-interpolated-cam-climatology-files-are-stored" title="Permalink to this headline">#</a></h3>
+<p>     cam_regrid_loc: /glade/scratch/${user}/ADF/regrid</p>
+</section>
+<section id="overwrite-cam-re-gridded-files">
+<h3><strong>Overwrite CAM re-gridded files?</strong><a class="headerlink" href="#overwrite-cam-re-gridded-files" title="Permalink to this headline">#</a></h3>
+<p>     If false, or missing, then regridding will be skipped for regridded variables
+     that already exist in “cam_regrid_loc”:
+     cam_overwrite_regrid: false</p>
+</section>
+<section id="location-where-diagnostic-plots-are-stored">
+<h3><strong>Location where diagnostic plots are stored:</strong><a class="headerlink" href="#location-where-diagnostic-plots-are-stored" title="Permalink to this headline">#</a></h3>
+<p>     cam_diag_plot_loc: /glade/scratch/${user}/ADF/plots</p>
+</section>
+<section id="cam-history-file-number-to-use-h0-h1-h2-etc">
+<h3><strong>CAM history file number to use (h0,h1,h2, etc)</strong><a class="headerlink" href="#cam-history-file-number-to-use-h0-h1-h2-etc" title="Permalink to this headline">#</a></h3>
+<p>     Currently only affects timeseries generation,
+     as everything else uses the timeseries files themselves.
+     If this variable is not present then it will default to “h0”.
+     hist_num: h0</p>
+</section>
+<section id="use-default-variable-plot-settings">
+<h3><strong>Use default variable plot settings?</strong><a class="headerlink" href="#use-default-variable-plot-settings" title="Permalink to this headline">#</a></h3>
+<p>     If “true”, then variable-specific plotting attributes as defined in
+     ADF/lib/adf_variable_defaults.yaml will be used:
+     use_defaults: true</p>
+</section>
+<section id="location-of-adf-variable-plotting-defaults-yaml-file">
+<h3><strong>Location of ADF variable plotting defaults YAML file</strong><a class="headerlink" href="#location-of-adf-variable-plotting-defaults-yaml-file" title="Permalink to this headline">#</a></h3>
+<p>     if not using the one in ADF/lib:
+     defaults_file: /some/path/to/defaults/file</p>
+</section>
+<section id="vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections">
+<h3><strong>Vertical pressure levels (in hPa) on which to plot 3-D variables when using horizontal (e.g. lat/lon) map projections.</strong><a class="headerlink" href="#vertical-pressure-levels-in-hpa-on-which-to-plot-3-d-variables-when-using-horizontal-e-g-lat-lon-map-projections" title="Permalink to this headline">#</a></h3>
+<p>     If this config option is missing, then no 3-D variables will be plotted on
+     horizontal maps.  Please note too that pressure levels must currently match
+     what is available in the observations file in order to be plotted in a
+     model vs obs run:
+     plot_press_levels: [200,850]</p>
+</section>
+<section id="longitude-line-on-which-to-center-all-lat-lon-maps">
+<h3><strong>Longitude line on which to center all lat/lon maps.</strong><a class="headerlink" href="#longitude-line-on-which-to-center-all-lat-lon-maps" title="Permalink to this headline">#</a></h3>
+<p>     If this config option is missing then the central
+     longitude will default to 180 degrees E.
+     central_longitude: 180</p>
+</section>
+<section id="apply-monthly-weights-to-seasonal-averages">
+<h3><strong>Apply monthly weights to seasonal averages.</strong><a class="headerlink" href="#apply-monthly-weights-to-seasonal-averages" title="Permalink to this headline">#</a></h3>
+<p>     If False or missing, then all months are
+     given the same weight:
+     weight_season: True</p>
+</section>
+<section id="number-of-processors-on-which-to-run-the-adf">
+<h3><strong>Number of processors on which to run the ADF.</strong><a class="headerlink" href="#number-of-processors-on-which-to-run-the-adf" title="Permalink to this headline">#</a></h3>
+<p>     If this config variable isn’t present then
+     the ADF defaults to one processor.  Also, if
+     you set it to “*” then it will default
+     to all of the processors available on a
+     single node/machine:
+     num_procs: 8</p>
+</section>
+<section id="remake-plots">
+<h3><strong>Remake plots?</strong><a class="headerlink" href="#remake-plots" title="Permalink to this headline">#</a></h3>
+<p>     If set to true, then redo all plots even if they already exist.
+     If set to false, then if a plot is found it will be skipped:
+     redo_plot: false</p>
 </section>
 </section>
-<section id="diagnostic-scripts-subsections">
-<h2>Diagnostic Scripts “Subsections”<a class="headerlink" href="#diagnostic-scripts-subsections" title="Permalink to this headline">#</a></h2>
-<p>Each of the following sets are also considered subsections. These are all components of the actual diagnostics workflow of the ADF.</p></section>
-<section id="time-averaging-scripts">
-<h2>time_averaging_scripts<a class="headerlink" href="#time-averaging-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for any time averaging scripts</p>
-<ul>
-<li><p>Must be located in scripts/averaging!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/averaging/create_climo_files.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="regridding-scripts">
-<h2>regridding_scripts<a class="headerlink" href="#regridding-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for any regridding scripts</p>
-<ul>
-<li><p>Must be located in scripts/regridding!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/regridding /regrid_and_vert_interp.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="analysis-scripts">
-<h2>analysis_scripts<a class="headerlink" href="#analysis-scripts" title="Permalink to this headline">#</a></h2>
-<p>This section allows for a broad spectra of data analysis scripts</p>
-<ul>
-<li><p>Must be located in scripts/analysis!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/analysis/amwg_table.py
-
-Possible addition examples:
-- scripts/analysis/amwg_chem_table.py
-- scripts/analysis/amwg_aerosol_table.py
-</pre></div>
-</div>
-</li>
-</ul>
-</section>
-<section id="plotting-scripts">
-<h2>plotting_scripts<a class="headerlink" href="#plotting-scripts" title="Permalink to this headline">#</a></h2>
-<p>Set of plotting scripts, both ADF default as well as any custom scripts</p>
-<ul>
-<li><p>Must be located in scripts/plotting!</p>
-<ul class="simple">
-<li><p>scripts/averaging/cam_taylor_diagram.py</p></li>
-<li><p>scripts/averaging/global_latlon_map.py</p></li>
-<li><p>scripts/averaging/…</p></li>
-</ul>
-<p>Possible addition examples:</p>
-<ul class="simple">
-<li><p>scripts/averaging/tem.py</p></li>
-<li><p>scripts/averaging/time_series.py</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="diag-var-list">
-<h2>diag_var_list<a class="headerlink" href="#diag-var-list" title="Permalink to this headline">#</a></h2>
-<p>List of variables to be executed in the ADF</p>
-</section>
-<section id="region-multicase">
-<h2>region_multicase<a class="headerlink" href="#region-multicase" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
-<section id="adf-default-set">
-<h3>ADF Default Set<a class="headerlink" href="#adf-default-set" title="Permalink to this headline">#</a></h3>
-<p>If you want to use the ADF default values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to true
-</p></section>
-<section id="custom-set">
-<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
-<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p></section>
+<section id="second-set-in-yaml-file-color-117284-textit-diag-cam-climo">
+<h2>Second set in yaml file:  <span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag\_cam\_climo}}\)</span><a class="headerlink" href="#second-set-in-yaml-file-color-117284-textit-diag-cam-climo" title="Permalink to this headline">#</a></h2>
+<section id="calculate-climatologies">
+<h3><strong>Calculate climatologies?</strong><a class="headerlink" href="#calculate-climatologies" title="Permalink to this headline">#</a></h3>
+<section id="if-false-neither-the-climatology-or-time-series-files-will-be-created">
+<h4>     If false, neither the climatology or time-series files will be created:<a class="headerlink" href="#if-false-neither-the-climatology-or-time-series-files-will-be-created" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="calc-cam-climo-true">
+<h4>     calc_cam_climo: true<a class="headerlink" href="#calc-cam-climo-true" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="overwrite-cam-climatology-files">
+<h3><strong>Overwrite CAM climatology files?</strong><a class="headerlink" href="#overwrite-cam-climatology-files" title="Permalink to this headline">#</a></h3>
+<section id="if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped">
+<h4> If false, or not present, then already existing climatology files will be skipped:<a class="headerlink" href="#if-false-or-not-present-then-already-existing-climatology-files-will-be-skipped" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="cam-overwrite-climo-false">
+<h4> <strong>cam_overwrite_climo</strong>: false<a class="headerlink" href="#cam-overwrite-climo-false" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="name-of-cam-case-or-cam-run-name">
+<h3><strong>Name of CAM case (or CAM run name):</strong><a class="headerlink" href="#name-of-cam-case-or-cam-run-name" title="Permalink to this headline">#</a></h3>
+<section id="cam-case-name-b-e20-bhist-f09-g17-20thc-297-05">
+<h4>     cam_case_name: b.e20.BHIST.f09_g17.20thC.297_05<a class="headerlink" href="#cam-case-name-b-e20-bhist-f09-g17-20thc-297-05" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="case-nickname">
+<h3><strong>Case nickname</strong><a class="headerlink" href="#case-nickname" title="Permalink to this headline">#</a></h3>
+<section id="if-left-blank-it-will-default-to-cam-case-name">
+<h4>     If left blank, it will default to cam_case_name<a class="headerlink" href="#if-left-blank-it-will-default-to-cam-case-name" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes">
+<h4>      ** NOTE: if nickname starts with a zero, the string must be in quotes! **<a class="headerlink" href="#note-if-nickname-starts-with-a-zero-the-string-must-be-in-quotes" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="case-nickname-diag-cam-climo-cam-case-name">
+<h4>     case_nickname: ${diag_cam_climo.cam_case_name}<a class="headerlink" href="#case-nickname-diag-cam-climo-cam-case-name" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="location-of-cam-history-h0-files">
+<h3><strong>Location of CAM history (h0) files:</strong><a class="headerlink" href="#location-of-cam-history-h0-files" title="Permalink to this headline">#</a></h3>
+<section id="cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name">
+<h4>     cam_hist_loc: /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}<a class="headerlink" href="#cam-hist-loc-glade-p-cesm-adf-diag-cam-climo-cam-case-name" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="location-of-cam-climatologies-to-be-created-and-then-used-by-this-script">
+<h3><strong>Location of CAM climatologies (to be created and then used by this script)</strong><a class="headerlink" href="#location-of-cam-climatologies-to-be-created-and-then-used-by-this-script" title="Permalink to this headline">#</a></h3>
+<section id="cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo">
+<h4>     cam_climo_loc: /glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/\)</span>{diag_cam_climo.cam_case_name}/climo<a class="headerlink" href="#cam-climo-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-climo" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="model-year-when-time-series-files-should-start">
+<h3><strong>Model year when time series files should start:</strong><a class="headerlink" href="#model-year-when-time-series-files-should-start" title="Permalink to this headline">#</a></h3>
+<section id="note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year">
+<h4>     Note:  Leaving this entry blank will make time series start at earliest available year.<a class="headerlink" href="#note-leaving-this-entry-blank-will-make-time-series-start-at-earliest-available-year" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="start-year-1990">
+<h4>     start_year: 1990<a class="headerlink" href="#start-year-1990" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="model-year-when-time-series-files-should-end">
+<h3><strong>Model year when time series files should end:</strong><a class="headerlink" href="#model-year-when-time-series-files-should-end" title="Permalink to this headline">#</a></h3>
+<section id="note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year">
+<h4>     Note:  Leaving this entry blank will make time series end at latest available year.<a class="headerlink" href="#note-leaving-this-entry-blank-will-make-time-series-end-at-latest-available-year" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="end-year-1999">
+<h4>     end_year: 1999<a class="headerlink" href="#end-year-1999" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="do-time-series-files-need-to-be-generated">
+<h3><strong>Do time series files need to be generated?</strong><a class="headerlink" href="#do-time-series-files-need-to-be-generated" title="Permalink to this headline">#</a></h3>
+<section id="if-true-then-diagnostics-assumes-that-model-files-are-already-time-series">
+<h4>     If True, then diagnostics assumes that model files are already time series.<a class="headerlink" href="#if-true-then-diagnostics-assumes-that-model-files-are-already-time-series" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create">
+<h4>     If False, or if simply not present, then diagnostics will attempt to create<a class="headerlink" href="#if-false-or-if-simply-not-present-then-diagnostics-will-attempt-to-create" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="time-series-files-from-history-time-slice-files">
+<h4>     time series files from history (time-slice) files:<a class="headerlink" href="#time-series-files-from-history-time-slice-files" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="cam-ts-done-false">
+<h4>     cam_ts_done: false<a class="headerlink" href="#cam-ts-done-false" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="save-interim-time-series-files">
+<h3><strong>Save interim time series files?</strong><a class="headerlink" href="#save-interim-time-series-files" title="Permalink to this headline">#</a></h3>
+<section id="warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time">
+<h4>     WARNING:  This can take up a significant amount of space, but will save processing time the next time<a class="headerlink" href="#warning-this-can-take-up-a-significant-amount-of-space-but-will-save-processing-time-the-next-time" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="cam-ts-save-true">
+<h4>     cam_ts_save: true<a class="headerlink" href="#cam-ts-save-true" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="overwrite-time-series-files-if-found">
+<h3><strong>Overwrite time series files, if found?</strong><a class="headerlink" href="#overwrite-time-series-files-if-found" title="Permalink to this headline">#</a></h3>
+<section id="if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found">
+<h4>     If set to false, then time series creation will be skipped if files are found:<a class="headerlink" href="#if-set-to-false-then-time-series-creation-will-be-skipped-if-files-are-found" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="cam-overwrite-ts-false">
+<h4>     cam_overwrite_ts: false<a class="headerlink" href="#cam-overwrite-ts-false" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="location-where-time-series-files-are-or-will-be-stored">
+<h3><strong>Location where time series files are (or will be) stored:</strong><a class="headerlink" href="#location-where-time-series-files-are-or-will-be-stored" title="Permalink to this headline">#</a></h3>
+<section id="cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts">
+<h4>     cam_ts_loc: /glade/scratch/<span class="math notranslate nohighlight">\({user}/ADF/\)</span>{diag_cam_climo.cam_case_name}/ts<a class="headerlink" href="#cam-ts-loc-glade-scratch-user-adf-diag-cam-climo-cam-case-name-ts" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+<h2>Third set in yaml file:  <span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)</span><a class="headerlink" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Header</p></td>
+<td><p>Title</p></td>
+</tr>
+<tr class="row-odd"><td><p>Paragraph</p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:right head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Header</p></td>
+<td class="text-align:center"><p>Title</p></td>
+<td class="text-align:right"><p>Here’s this</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Paragraph</p></td>
+<td class="text-align:center"><p>Text</p></td>
+<td class="text-align:right"><p>And more</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -832,7 +1523,7 @@ Possible addition examples:
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Justin Richling<br/>
+    By NCAR/CGD Staff<br/>
   
 </p>
         </footer>
