@@ -5,40 +5,58 @@ format: jb-book
 root: README
 
 parts:
-- caption: Intro to the ADF
+- caption: ADF
   chapters:
-    - file: notebooks/basics/intro
-    - file: notebooks/basics/layout
-      sections:
-      - file: notebooks/basics/layout/lib
-      - file: notebooks/basics/layout/scripts
+    - file: notebooks/basics/adf
 
 - caption: Installing the ADF
   chapters:
-    - file: notebooks/install/env_setup
-      sections:
-      - file: notebooks/install/env_setup/cisl
-      - file: notebooks/install/env_setup/custom
-    - file: notebooks/install/download
-
-- caption: Configuration
+    - file: notebooks/install/setup
+    
+- caption: ADF - Reference
   chapters:
-    - file: notebooks/configs/yaml
+    - file: notebooks/intro/intro
+    - file: notebooks/intro/layout
       sections:
-      - file: notebooks/configs/yaml/yaml_basics
-      - file: notebooks/configs/yaml/runtime
-      - file: notebooks/configs/yaml/variable
-    - file: notebooks/configs/other
+      - file: notebooks/intro/layout/lib
+      - file: notebooks/intro/layout/scripts
+    - file: notebooks/intro/yaml
+      sections:
+      - file: notebooks/intro/yaml/config_cam_baseline_example
+      - file: notebooks/intro/yaml/adf_variable_defaults
+
+#- caption: Configuration
+#  chapters:
+#    - file: notebooks/configs/yaml
+#      sections:
+#      - file: notebooks/configs/yaml/runtime
+#      - file: notebooks/configs/yaml/variable
+
+
 
 - caption: Running the ADF
   chapters:
     - file: notebooks/run/basics
-    - file: notebooks/run/comps
+    - file: notebooks/run/model_vs_model
+    - file: notebooks/run/model_vs_obs
+    - file: notebooks/run/model_vs_cmip
+    - file: notebooks/run/multi_case
       sections:
-      - file: notebooks/run/comps/model
-      - file: notebooks/run/comps/obs
-      - file: notebooks/run/comps/cmip
-    - file: notebooks/run/multi
+      - file: notebooks/run/multi_case/models_vs_model
+      - file: notebooks/run/multi_case/models_vs_obs
+
+#- caption: Running the ADF
+#  chapters:
+#    - file: notebooks/run/basics
+#    - file: notebooks/run/single_case
+#      sections:
+#      - file: notebooks/run/single_case/model_vs_model
+#      - file: notebooks/run/single_case/model_vs_obs
+#      - file: notebooks/run/single_case/model_vs_cmip
+#    - file: notebooks/run/multi_case
+#      sections:
+#      - file: notebooks/run/multi_case/models_vs_model
+#      - file: notebooks/run/multi_case/models_vs_obs
 
 - caption: Exploring the Outputs
   chapters:
