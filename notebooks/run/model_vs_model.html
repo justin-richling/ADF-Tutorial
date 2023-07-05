@@ -860,7 +860,9 @@ title="Print to PDF"
                 
   <section id="cam-vs-cam">
 <h1>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h1>
-<p>Let’s get started.</p>
+<p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 1995-2000</p>
+<p>The test case (experiment) is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p>The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>What needs to be done is to change a couple of variables in your copy of the config run-time yaml file (your_config.yaml)</p>
 <section id="config-cam-baseline-example-yaml">
 <h2>config_cam_baseline_example.yaml<a class="headerlink" href="#config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
@@ -890,11 +892,11 @@ title="Print to PDF"
 </section>
 <section id="diag-cam-climo">
 <h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_climo.cam_case_name}</span></code></p>
 <p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2006</span></code></p>
+<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_climo.cam_case_name}</span></code></p>
 </section>
 <section id="diag-cam-baseline-climo">
@@ -903,7 +905,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
 <p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2006</span></code></p>
+<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><p>With all these variables now set, let’s take a quick catalogue of the different paths we just set:</p>
 <p>Regridded file location:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/regrid</span></code></p>
