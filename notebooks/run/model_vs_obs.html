@@ -740,23 +740,23 @@ title="Print to PDF"
 <p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
 <p>Example</p>
 <div>
-U:
-  colormap: "Blues"
-  contour_levels_range: [-10, 90, 5]
-  diff_colormap: "BrBG"
-  diff_contour_range: [-15, 15, 2]
-  scale_factor: 1
-  add_offset: 0
-  new_unit: "ms$^{-1}$"
-  mpl:
-    colorbar:
-      label : "ms$^{-1}$"
-  <span style="background-color: #FFFF00">obs_file: "U_ERA5_monthly_climo_197901-202112.nc"</span>
-  obs_name: "ERA5"
-  obs_var_name: "U"
-  vector_pair: "V"
-  vector_name: "Wind"
-  category: "State"
+<p>U:
+<p>  colormap: "Blues"
+<p>  contour_levels_range: [-10, 90, 5]
+<p>  diff_colormap: "BrBG"
+<p>  diff_contour_range: [-15, 15, 2]
+<p>  scale_factor: 1
+<p>  add_offset: 0
+<p>  new_unit: "ms$^{-1}$"
+<p>  mpl:
+<p>    colorbar:
+<p>      label : "ms$^{-1}$"
+<p>  <span style="background-color: #FFFF00">obs_file: "U_ERA5_monthly_climo_197901-202112.nc"</span>
+<p>  obs_name: "ERA5"
+<p>  obs_var_name: "U"
+<p>  vector_pair: "V"
+<p>  vector_name: "Wind"
+<p>  category: "State"
 </div>
 <p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
 <p>Golly I hope that helped, not hurt…</p>
