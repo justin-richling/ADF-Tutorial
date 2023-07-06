@@ -587,12 +587,13 @@ title="Print to PDF"
 <h3>Custom Set <p>*</p><a class="headerlink" href="#custom-set-p-p" title="Permalink to this headline">#</a></h3>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
-<p>::::{Warning}
-<strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
 <p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
-<p>:::{admonition} Example
-:class: seealso
-From the ADF root directory</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
@@ -600,8 +601,9 @@ From the ADF root directory</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your_variable_defaults.yaml</span></code></p>
-:::
-::::<p>These are the values that can be set for each variable. Non are required.</p>
+</div>
+</div>
+<p>These are the values that can be set for each variable. Non are required.</p>
 </section>
 <section id="plotting">
 <h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
