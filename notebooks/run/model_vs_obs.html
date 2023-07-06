@@ -52,8 +52,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CAM vs CMIP" href="model_vs_cmip.html" />
@@ -739,33 +737,31 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>This only matters if the path isn’t specified in the variable defaults file.</p>
 <p>In the variable defaults file each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
-</div>
-<p>Example of U</p>
-<p>U:
-colormap: “Blues”
-contour_levels_range: [-10, 90, 5]
-diff_colormap: “BrBG”
-diff_contour_range: [-15, 15, 2]
-scale_factor: 1
-add_offset: 0
-new_unit: “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-mpl:
-colorbar:
-label : “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-obs_file: “U_ERA5_monthly_climo_197901-202112.nc”
-obs_name: “ERA5”
-obs_var_name: “U”
-vector_pair: “V”
-vector_name: “Wind”
-category: “State”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-Golly I hope that helped, not hurt...
-```
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span> <span class="n">of</span> <span class="n">U</span>
 
-&lt;p style=&quot;margin-top: -5px;&quot;&gt;&amp;ensp; obs_data_loc: &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/path/to/your/obs/&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+<span class="n">U</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+
 </pre></div>
 </div>
-<div class="cell docutils container">
+<p>Golly I hope that helped, not hurt…</p>
+</div>
+<p style="margin-top: -5px;">&ensp; obs_data_loc: <code class="docutils literal notranslate"><span class="pre">/path/to/your/obs/</span></code></p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
