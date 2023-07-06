@@ -738,19 +738,15 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>This only matters if the path isn’t specified in the variable defaults file.</p>
 <p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
-<p>Example</p>
+<p>Example of custom location for Boundary Layer obs file</p>
 <div>
 <p>PBLH:
 <p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   category:  "Surface variables"
-<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   <span style="background-color: #FFFF00">obs_file: "PBLH_ERA5_monthly_climo_197901-202112.nc"</span>
+<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   <span style="background-color: #FFFF00">obs_file: "/path/to/my/ADF_obs/Some_PBLH_climo.nc"</span>
 <p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_name: "ERA5"
 <p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_var_name: "PBLH"
 </div>
-<p>PBLH:
-category: “Surface variables”
-obs_file: “PBLH_ERA5_monthly_climo_197901-202112.nc”
-obs_name: “ERA5”
-obs_var_name: “PBLH”</p>
+<p>For PBLH, the ADF will use <code class="docutils literal notranslate"><span class="pre">/path/to/my/ADF_obs/Some_PBLH_climo.nc</span></code> instead of default /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs/PBLH_ERA5_monthly_climo_197901-202112.nc</p>
 <br>
 <p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
 <p>Golly I hope that helped, not hurt…</p>
