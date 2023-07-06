@@ -517,6 +517,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#running-in-the-terminal">
    Running in the Terminal
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-the-adf-finishes">
+     If the ADF finishes:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-the-adf-fails">
+     If the ADF fails:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -575,6 +587,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#running-in-the-terminal">
    Running in the Terminal
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-the-adf-finishes">
+     If the ADF finishes:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-the-adf-fails">
+     If the ADF fails:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -741,15 +765,19 @@ title="Print to PDF"
 </div>
 <p>NOTE: the <code class="docutils literal notranslate"><span class="pre">time</span></code> command will give us a readout of the wall and user time for the ADF to run this configuration</p>
 <p>This will take a while, why don’t you stretch your legs and get a snack :)</p>
-<p>If the ADF finishes:</p>
+<section id="if-the-adf-finishes">
+<h3>If the ADF finishes:<a class="headerlink" href="#if-the-adf-finishes" title="Permalink to this headline">#</a></h3>
 <div class="admonition-success admonition">
 <p class="admonition-title">Success?</p>
 <div id="box">
-Check output data/images:
-<p>Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/plots</span></code></p>
+<p>Check output data/images:</p>
+<p>Navigate to the diagnostic plots directory: `/glade/scratch/{user}/ADF/plots`</p>
 <p>Then go to <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
 </div>
 </div>
+</section>
+<section id="if-the-adf-fails">
+<h3>If the ADF fails:<a class="headerlink" href="#if-the-adf-fails" title="Permalink to this headline">#</a></h3>
 <div class="error admonition">
 <p class="admonition-title">Error?</p>
 <p>Check config files   Check error/logs   Check data/paths</p>
@@ -757,6 +785,7 @@ Check output data/images:
 <h4>End single CAM vs CAM case</h4>
 <p>Hope everything went well…</p>
 <hr class="docutils" />
+</section>
 </section>
 </section>
 
