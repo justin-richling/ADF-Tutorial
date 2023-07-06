@@ -494,11 +494,6 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
    Single CAM vs CAM case
   </a>
@@ -616,11 +611,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
@@ -750,6 +740,26 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>This only matters if the path isn’t specified in the variable defaults file.</p>
 <p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
+<p>Example</p>
+<p>U:
+colormap: “Blues”
+contour_levels_range: [-10, 90, 5]
+diff_colormap: “BrBG”
+diff_contour_range: [-15, 15, 2]
+scale_factor: 1
+add_offset: 0
+new_unit: “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
+mpl:
+colorbar:
+label : “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
+<span style="background-color: #FFFF00">obs_file: “U_ERA5_monthly_climo_197901-202112.nc”</span>
+obs_name: “ERA5”
+obs_var_name: “U”
+vector_pair: “V”
+vector_name: “Wind”
+category: “State”</p>
+<p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
+<p>Golly I hope that helped, not hurt…</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -840,28 +850,6 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 </div>
 </section>
-</section>
-<section id="example">
-<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
-<p>U:
-colormap: “Blues”
-contour_levels_range: [-10, 90, 5]
-diff_colormap: “BrBG”
-diff_contour_range: [-15, 15, 2]
-scale_factor: 1
-add_offset: 0
-new_unit: “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-mpl:
-colorbar:
-label : “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-<span style="background-color: #FFFF00">obs_file: “U_ERA5_monthly_climo_197901-202112.nc”</span>
-obs_name: “ERA5”
-obs_var_name: “U”
-vector_pair: “V”
-vector_name: “Wind”
-category: “State”</p>
-<p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
-<p>Golly I hope that helped, not hurt…</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="single-cam-vs-cam-case">
 <h1>Single CAM vs CAM case<a class="headerlink" href="#single-cam-vs-cam-case" title="Permalink to this headline">#</a></h1>
