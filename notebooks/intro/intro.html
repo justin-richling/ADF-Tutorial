@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ADF Layout" href="layout.html" />
+    <link rel="next" title="Libraries" href="layout/lib.html" />
     <link rel="prev" title="Setting up ADF" href="../install/setup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -151,33 +151,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="layout.html">
-   ADF Layout
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="layout/lib.html">
-     Libraries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="layout/scripts.html">
-     Scripts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -225,8 +203,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/Jupyter.html">
    ADF in Jupyter
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -501,14 +479,26 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adf-flow">
-   ADF Flow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ADF Basics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-flow">
+     ADF Flow
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adf-setup">
-   ADF Setup
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
   </a>
  </li>
 </ul>
@@ -530,14 +520,26 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adf-flow">
-   ADF Flow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ADF Basics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-flow">
+     ADF Flow
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adf-setup">
-   ADF Setup
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-layout">
+   ADF Layout
   </a>
  </li>
 </ul>
@@ -598,6 +600,68 @@ title="Print to PDF"
 </div>
 <p>&#x26A0; Errors?  Check config files   Check error/logs   Check data/paths</p></section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
+<h1>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h1>
+<p>A simple look at the structure of the ADF directories</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+|-- config_amwg_default_plots.yaml
+|-- config_cam_baseline_example.yaml
+|-- env
+|   `-- conda_environment.yaml
+|-- jupyter_sample.ipynb
+|-- lib
+|   |-- adf_base.py
+|   |-- adf_config.py
+|   |-- adf_diag.py
+|   |-- adf_info.py
+|   |-- adf_obs.py
+|   |-- adf_variable_defaults.yaml
+|   |-- adf_web.py
+|   |-- plotting_functions.py
+|   |-- test
+|   |   |-- pylintrc
+|   |   `-- unit_tests
+|   |       |-- pytest.ini
+|   |       |-- test_adf_base.py
+|   |       |-- test_adf_config.py
+|   |       `-- test_files
+|   |           |-- config_cam_double_nested.yaml
+|   |           |-- config_cam_keywords.yaml
+|   |           `-- config_cam_unset_var.yaml
+|   `-- website_templates
+|       |-- adf_diag.css
+|       |-- NCAR.gif
+|       |-- template.html
+|       |-- template_index.html
+|       |-- template_mean_diag.html
+|       |-- template_mean_tables.html
+|       |-- template_multi_case_index.html
+|       |-- template_table.html
+|       `-- template_var.html
+|-- LICENSE
+|-- README.md
+|-- run_adf_diag
+`-- scripts
+    |-- analysis
+    |   `-- amwg_table.py
+    |-- averaging
+    |   `-- create_climo_files.py
+    |-- plotting
+    |   |-- cam_taylor_diagram.py
+    |   |-- global_latlon_map.py
+    |   |-- global_latlon_vect_map.py
+    |   |-- meridional_mean.py
+    |   |-- polar_map.py
+    |   |-- qbo.py
+    |   |-- regional_map_multicase.py
+    |   `-- zonal_mean.py
+    `-- regridding
+        `-- regrid_and_vert_interp.py
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -633,10 +697,10 @@ title="Print to PDF"
             <p class="prev-next-title">Setting up ADF</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="layout.html" title="next page">
+    <a class='right-next' id="next-link" href="layout/lib.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ADF Layout</p>
+        <p class="prev-next-title">Libraries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
