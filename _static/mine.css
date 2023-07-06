@@ -104,7 +104,7 @@
   **/
 
   --pst-color-admonition-success: var(--pst-color-success);
-  --pst-color-admonition-default: var(--pst-color-success);
+  --pst-color-admonition-default: var(--pst-color-hint);
   --pst-color-admonition-note: var(--pst-color-info);
   --pst-color-admonition-attention: var(--pst-color-attention);
   --pst-color-admonition-caution: var(--pst-color-warning);
