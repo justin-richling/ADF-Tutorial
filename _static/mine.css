@@ -105,7 +105,7 @@
   **/
 
   --pst-color-admonition-success: var(--pst-color-success);
-  --pst-color-admonition-default: var(--pst-color-info);
+  --pst-color-admonition-default: var(--pst-color-success);
   --pst-color-admonition-note: var(--pst-color-info);
   --pst-color-admonition-attention: var(--pst-color-attention);
   --pst-color-admonition-caution: var(--pst-color-warning);
@@ -118,7 +118,8 @@
   --pst-color-admonition-important: var(--pst-color-success);
 
   --pst-icon-admonition-success: var(--pst-icon-check-circle);
-  --pst-icon-admonition-default: var(--pst-icon-info-circle);
+  /*--pst-icon-admonition-default: var(--pst-icon-info-circle);*/
+  --pst-icon-admonition-default: var(--pst-icon-check-circle);
   --pst-icon-admonition-note: var(--pst-icon-info-circle);
   --pst-icon-admonition-attention: var(--pst-icon-exclamation-circle);
   --pst-icon-admonition-caution: var(--pst-icon-exclamation-triangle);
