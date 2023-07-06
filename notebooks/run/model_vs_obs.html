@@ -737,25 +737,25 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>This only matters if the path isn’t specified in the variable defaults file.</p>
 <p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Example</span> <span class="n">of</span> <span class="n">U</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Example of U
 
-<span class="n">U</span><span class="p">:</span>
-  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
-  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
-  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="n">mpl</span><span class="p">:</span>
-    <span class="n">colorbar</span><span class="p">:</span>
-      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="o">&lt;</span><span class="n">span</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;background-color: #FFFF00&quot;</span><span class="o">&gt;</span><span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
-  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
-  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
-  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
-  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
-  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+U:
+  colormap: &quot;Blues&quot;
+  contour_levels_range: [-10, 90, 5]
+  diff_colormap: &quot;BrBG&quot;
+  diff_contour_range: [-15, 15, 2]
+  scale_factor: 1
+  add_offset: 0
+  new_unit: &quot;ms$^{-1}$&quot;
+  mpl:
+    colorbar:
+      label : &quot;ms$^{-1}$&quot;
+  ````html&lt;span style=&quot;background-color: #FFFF00&quot;&gt;obs_file: &quot;U_ERA5_monthly_climo_197901-202112.nc&quot;&lt;/span&gt;````
+  obs_name: &quot;ERA5&quot;
+  obs_var_name: &quot;U&quot;
+  vector_pair: &quot;V&quot;
+  vector_name: &quot;Wind&quot;
+  category: &quot;State&quot;
 
 </pre></div>
 </div>
