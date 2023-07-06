@@ -489,11 +489,6 @@ title="Print to PDF"
      diag_basic_info
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -613,11 +608,6 @@ title="Print to PDF"
      diag_basic_info
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-climo">
-     diag_cam_climo
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -724,38 +714,32 @@ title="Print to PDF"
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p>The baseline (control) case will be a designated set of observations/reanalysis</p>
 <p>What needs to be done is to change a couple of variables in your copy of the config run-time yaml file (your_config.yaml)</p>
-<p>From the ADF root directory you can just copy the config file you made for CAM vs CAM</p>
+<p>From the ADF root directory you can just copy the config file you made for CAM vs CAM.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_vs_cam.yaml config_cam_vs_obs.yaml
 </pre></div>
 </div>
 <p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_obs.yaml</span></code> file with your favorite editor again</p>
-<p>The following subsections have variables that will be changed:</p>
+<p>The only subsection that has variables that will be changed:</p>
 <ul>
 <li><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-basic-info">diag_basic_info</a></p>
 </li>
-<li><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-cam-climo">diag_cam_climo</a></p></li>
 </ul>
+<p>All the info from the CAM vs CAM case for the test case () will be copied over, so it’s just the diag_basic_info that needs to be changed.</p>
 <section id="diag-basic-info">
 <h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
-<p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
-<p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
-<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
-<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
-<p>Change the observations variable</p>
+<p>If you use the ADF default observation files, there is only one thing to change:</p>
+<p>Change to compare against observations</p>
 <p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-<p>Now we can change the paths for the regridded data and plot locations</p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
-</section>
-<section id="diag-cam-climo">
-<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/climo/{diag_cam_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
-<div class="cell docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p>
+<p>If you want to provide a location for a different set of observations than the ADF default ones, one further step is required:</p>
+<p>Change the location of obs files</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only matters if the path isn’t specified in the variable defaults file.</p>
+<p>In the variable defaults file each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
+<p>Golly I hope that helped, not hurt…</p>
+</div>
+<p style="margin-top: -5px;">&ensp; obs_data_loc: <code class="docutils literal notranslate"><span class="pre">/path/to/your/obs/</span></code></p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
