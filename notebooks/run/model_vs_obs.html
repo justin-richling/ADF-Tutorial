@@ -52,8 +52,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CAM vs CMIP" href="model_vs_cmip.html" />
@@ -741,23 +739,25 @@ title="Print to PDF"
 <p>This only matters if the path isn’t specified in the variable defaults file.</p>
 <p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
 <p>Example</p>
-<p>U:
-colormap: “Blues”
-contour_levels_range: [-10, 90, 5]
-diff_colormap: “BrBG”
-diff_contour_range: [-15, 15, 2]
-scale_factor: 1
-add_offset: 0
-new_unit: “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-mpl:
-colorbar:
-label : “ms<span class="math notranslate nohighlight">\(^{-1}\)</span>”
-<span style="background-color: #FFFF00">obs_file: “U_ERA5_monthly_climo_197901-202112.nc”</span>
-obs_name: “ERA5”
-obs_var_name: “U”
-vector_pair: “V”
-vector_name: “Wind”
-category: “State”</p>
+<div>
+U:
+  colormap: "Blues"
+  contour_levels_range: [-10, 90, 5]
+  diff_colormap: "BrBG"
+  diff_contour_range: [-15, 15, 2]
+  scale_factor: 1
+  add_offset: 0
+  new_unit: "ms$^{-1}$"
+  mpl:
+    colorbar:
+      label : "ms$^{-1}$"
+  <span style="background-color: #FFFF00">obs_file: "U_ERA5_monthly_climo_197901-202112.nc"</span>
+  obs_name: "ERA5"
+  obs_var_name: "U"
+  vector_pair: "V"
+  vector_name: "Wind"
+  category: "State"
+</div>
 <p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
 <p>Golly I hope that helped, not hurt…</p>
 </div>
