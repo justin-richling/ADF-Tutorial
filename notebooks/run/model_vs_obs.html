@@ -485,11 +485,6 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
     </a>
@@ -537,11 +532,6 @@ title="Print to PDF"
    config_cam_baseline_example.yaml
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-basic-info">
-     diag_basic_info
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
@@ -601,16 +591,29 @@ title="Print to PDF"
 </li>
 </ul>
 <hr class="docutils" />
-<section id="diag-basic-info">
-<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
-<p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
-<p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
-<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
-<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
-<p>Now we can change the paths for the regridded data and plot locations</p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
-</section>
+<p>If you use the ADF default observation files, there is only one thing to change:</p>
+<p>Change to compare against observations</p>
+<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p>
+<p>If you want to provide a location for a different set of observations than the ADF default ones, one further step is required:</p>
+<p>Change the location of obs files</p>
+<p style="margin-top: -5px;">&ensp; obs_data_loc: <code class="docutils literal notranslate"><span class="pre">/path/to/your/obs/</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only matters if the path isn’t specified in the variable defaults file.</p>
+<p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
+<p>Example of custom location for Boundary Layer obs file</p>
+<div>
+<p>PBLH:
+<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   category:  "Surface variables"
+<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   <span style="background-color: #FFFF00">obs_file: "/path/to/my/ADF_obs/Some_PBLH_climo.nc"</span>
+<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_name: "SOME_OBS"
+<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_var_name: "PBLH"
+</div>
+<br>
+<p>For PBLH, the ADF will use <code class="docutils literal notranslate"><span class="pre">/path/to/my/ADF_obs/Some_PBLH_climo.nc</span></code> instead of default</p>
+<p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
+</div>
 <section id="diag-cam-climo">
 <h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
@@ -650,6 +653,7 @@ title="Print to PDF"
 <h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
+<p>For running the ADF against obs, you can customize the obs file for each specific variable!</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
@@ -689,22 +693,10 @@ title="Print to PDF"
 </div>
 <p>Example of custom variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR</span><span class="p">:</span>
-  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
-  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
-  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="n">mpl</span><span class="p">:</span>
-    <span class="n">colorbar</span><span class="p">:</span>
-      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
-  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
-  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
-  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
-  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
-  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
-  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;OBS_for_VAR.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;SOME_OBS&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;OBS_VAR&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;VAR_category&quot;</span>
 </pre></div>
 </div>
 </section>
