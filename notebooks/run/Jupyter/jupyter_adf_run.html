@@ -943,14 +943,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">adf</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="admonition tip">
-<p>Some **content**</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>```python
-dir(adf)
-```
-</pre></div>
-</div>
-</div><div class="dropdown hint admonition">
+<div class="dropdown hint admonition">
 <p class="admonition-title"> </p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;_AdfBase__debug_log&#39;</span><span class="p">,</span>
  <span class="s1">&#39;_AdfConfig__config_dict&#39;</span><span class="p">,</span>
@@ -1050,7 +1043,6 @@ dir(adf)
 </pre></div>
 </div>
 </div>
-<p>sdad</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">adf</span><span class="p">)</span>
@@ -1371,116 +1363,6 @@ Wall time: 22min 57s
 <span class="c1">#Regrid model climatology files to match either observations or CAM baseline climatologies.</span>
 <span class="c1">#This call uses the &quot;regridding_scripts&quot; specified in the config file:</span>
 <span class="n">adf</span><span class="o">.</span><span class="n">regrid_climo</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Regridding CAM climatologies...
-    /glade/work/richling/ADF/adf-tutorials/adf-output/regrid not found, making new directory
-	 Regridding case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
-	 - regridding PS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	    /glade/work/richling/ADF/adf-tutorials/adf-output/diag-plot/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2012_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2012 not found, making new directory
-	 - regridding FLNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding FSNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding LHFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding LWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding OMEGA500 (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding PBLH (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding PRECL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding PRECT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding PSL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding QFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding CLDLIQ (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding Q (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding RELHUM (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding SHFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding SST (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding SWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding T (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding TAUX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding TAUY (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding THETA (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding THETA failed, no file. Continuing to next variable.
-	 - regridding TREFHT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding TS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding U (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding U10 (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding ICEFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding OCNFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-	 - regridding LANDFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39;])
-  ...CAM climatologies have been regridded successfully.
-CPU times: user 59.7 s, sys: 17.7 s, total: 1min 17s
-Wall time: 1min 27s
 </pre></div>
 </div>
 </div>
