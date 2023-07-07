@@ -666,82 +666,40 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="s2">#This second set of variables provides info for the CAM simulation(s) being diagnosed:</span>
 <span class="s2">diag_cam_climo:</span>
 
-<span class="s2">    #Calculate climatologies?</span>
-<span class="s2">    #If false, neither the climatology or time-series files will be created:</span>
 <span class="s2">    calc_cam_climo: true</span>
-
-<span class="s2">    #Overwrite CAM climatology files?</span>
-<span class="s2">    #If false, or not prsent, then already existing climatology files will be skipped:</span>
 <span class="s2">    cam_overwrite_climo: false</span>
+<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
 
 <span class="s2">    cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span>
 <span class="s2">    case_nickname: $</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2"></span>
 
-<span class="s2">    #Location of CAM history (h0) files:</span>
 <span class="s2">    cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
-
-<span class="s2">    #Location of CAM climatologies (to be created and then used by this script)</span>
-<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
 
 <span class="s2">    start_year: 2001</span>
 <span class="s2">    end_year: 2005</span>
 
-<span class="s2">    #Do time series files need to be generated?</span>
-<span class="s2">    #If True, then diagnostics assumes that model files are already time series.</span>
-<span class="s2">    #If False, or if simply not present, then diagnostics will attempt to create</span>
-<span class="s2">    #time series files from history (time-slice) files:</span>
 <span class="s2">    cam_ts_done: false</span>
-
-<span class="s2">    #Save interim time series files?</span>
-<span class="s2">    #WARNING:  This can take up a significant amount of space,</span>
-<span class="s2">       #          but will save processing time the next time</span>
 <span class="s2">    cam_ts_save: true</span>
-
-<span class="s2">    #Overwrite time series files, if found?</span>
-<span class="s2">    #If set to false, then time series creation will be skipped if files are found:</span>
 <span class="s2">    cam_overwrite_ts: false</span>
-
-<span class="s2">    #Location where time series files are (or will be) stored:</span>
 <span class="s2">    cam_ts_loc: $</span><span class="si">{ts_loc}</span><span class="s2">$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
 
-<span class="s2">#This only matters if &quot;compare_obs&quot; is false:</span>
 <span class="s2">diag_cam_baseline_climo:</span>
 
-<span class="s2">    #Calculate cam baseline climatologies?</span>
-<span class="s2">    #If false, neither the climatology or time-series files will be created:</span>
 <span class="s2">    calc_cam_climo: true</span>
-
-<span class="s2">    #Overwrite CAM climatology files?</span>
-<span class="s2">    #If false, or not present, then already existing climatology files will be skipped:</span>
 <span class="s2">    cam_overwrite_climo: false</span>
+<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
 
 <span class="s2">    cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span>
 <span class="s2">    case_nickname: $</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2"> </span>
 
-<span class="s2">    #Location of CAM baseline history (h0) files:</span>
 <span class="s2">    cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
-
-<span class="s2">    #Location of baseline CAM climatologies:</span>
-<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
 
 <span class="s2">    start_year: 2001</span>
 <span class="s2">    end_year: 2005</span>
 
-<span class="s2">    #Do time series files need to be generated?</span>
-<span class="s2">    #If True, then diagnostics assumes that model files are already time series.</span>
-<span class="s2">    #If False, or if simply not present, then diagnostics will attempt to create</span>
-<span class="s2">    #time series files from history (time-slice) files:</span>
 <span class="s2">    cam_ts_done: false</span>
-
-<span class="s2">    #Save interim time series files for baseline run?</span>
-<span class="s2">    #WARNING:  This can take up a significant amount of space:</span>
 <span class="s2">    cam_ts_save: true</span>
-
-<span class="s2">    #Overwrite baseline time series files, if found?</span>
-<span class="s2">    #If set to false, then time series creation will be skipped if files are found:</span>
 <span class="s2">    cam_overwrite_ts: false</span>
-
-<span class="s2">    #Location where time series files are (or will be) stored:</span>
 <span class="s2">    cam_ts_loc: $</span><span class="si">{ts_loc}</span><span class="s2">$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
 
 <span class="s2">time_averaging_scripts:</span>
@@ -757,8 +715,6 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="s2">    - global_latlon_map</span>
 <span class="s2">    - zonal_mean</span>
 
-<span class="s2">#List of CAM variables that will be processesd:</span>
-<span class="s2">#If CVDP is to be run PSL, TREFHT, TS and PRECT (or PRECC and PRECL) should be listed</span>
 <span class="s2">diag_var_list:</span>
 <span class="s2">   - FLNT</span>
 <span class="s2">   - FSNT</span>
@@ -795,8 +751,7 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">config_file</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File exists, I&#39;m going to override it, ok? (too bad, womp womp)&quot;</span><span class="p">)</span>
 
-    <span class="n">names</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">names_yaml</span><span class="p">)</span>
-
+<span class="n">names</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">names_yaml</span><span class="p">)</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
 
