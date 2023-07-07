@@ -715,8 +715,9 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-run-adf-via-jupyter">
 <h1>Exercise - Run ADF via Jupyter<a class="headerlink" href="#exercise-run-adf-via-jupyter" title="Permalink to this headline">#</a></h1>
 <p>In addition to running the ADF in the terminal, it can also be run in Jupyter Notebooks!</p>
-<p>Let’s use the same two CAM simulations we used to run the ADF in the terminal, but this time let’s run it for climo years 2000-2005</p>
+<p>Let’s use the same two CAM simulations we used to run the ADF in the terminal, but this time let’s run it for climo years 2001-2005</p>
 <p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 2000-2006</p>
+<p>Running the ADF in a Jupyter Notebook allows for some really handy access to the output data as well as all the paths</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p>The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <div class="cell docutils container">
@@ -938,6 +939,106 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </pre></div>
 </div>
 </div>
+</div>
+<p>```{admonition} <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">dir(adf)</span></code>
+:class: dropdown, hint
+[‘_AdfBase__debug_log’,
+‘_AdfConfig__config_dict’,
+‘_AdfConfig__create_search_dict’,
+‘_AdfConfig__expand_yaml_var_ref’,
+‘_AdfConfig__kword_pattern’,
+‘_AdfConfig__search_dict’,
+‘_AdfDiag__analysis_scripts’,
+‘_AdfDiag__cvdp_info’,
+‘_AdfDiag__diag_scripts_caller’,
+‘_AdfDiag__function_caller’,
+‘_AdfDiag__plotting_scripts’,
+‘_AdfDiag__regridding_scripts’,
+‘_AdfDiag__time_averaging_scripts’,
+‘_AdfInfo__base_nickname’,
+‘_AdfInfo__basic_info’,
+‘_AdfInfo__cam_bl_climo_info’,
+‘_AdfInfo__cam_climo_info’,
+‘_AdfInfo__compare_obs’,
+‘_AdfInfo__derived_var_list’,
+‘_AdfInfo__diag_var_list’,
+‘_AdfInfo__eyear_baseline’,
+‘_AdfInfo__eyears’,
+‘_AdfInfo__num_cases’,
+‘_AdfInfo__num_procs’,
+‘_AdfInfo__plot_location’,
+‘_AdfInfo__syear_baseline’,
+‘_AdfInfo__syears’,
+‘_AdfInfo__test_nicknames’,
+‘_AdfObs__use_defaults’,
+‘_AdfObs__var_obs_dict’,
+‘_AdfObs__variable_defaults’,
+‘_AdfWeb__case_web_paths’,
+‘_AdfWeb__plot_type_multi’,
+‘_AdfWeb__plot_type_order’,
+‘_AdfWeb__website_data’,
+‘<strong>class</strong>’,
+‘<strong>delattr</strong>’,
+‘<strong>dict</strong>’,
+‘<strong>dir</strong>’,
+‘<strong>doc</strong>’,
+‘<strong>eq</strong>’,
+‘<strong>format</strong>’,
+‘<strong>ge</strong>’,
+‘<strong>getattribute</strong>’,
+‘<strong>gt</strong>’,
+‘<strong>hash</strong>’,
+‘<strong>init</strong>’,
+‘<strong>init_subclass</strong>’,
+‘<strong>le</strong>’,
+‘<strong>lt</strong>’,
+‘<strong>module</strong>’,
+‘<strong>ne</strong>’,
+‘<strong>new</strong>’,
+‘<strong>reduce</strong>’,
+‘<strong>reduce_ex</strong>’,
+‘<strong>repr</strong>’,
+‘<strong>setattr</strong>’,
+‘<strong>sizeof</strong>’,
+‘<strong>str</strong>’,
+‘<strong>subclasshook</strong>’,
+‘<strong>weakref</strong>’,
+‘add_diag_var’,
+‘add_website_data’,
+‘baseline_climo_dict’,
+‘basic_info_dict’,
+‘cam_climo_dict’,
+‘case_nicknames’,
+‘climo_yrs’,
+‘compare_obs’,
+‘create_climo’,
+‘create_html’,
+‘create_plots’,
+‘create_time_series’,
+‘create_website’,
+‘debug_log’,
+‘derived_var_list’,
+‘diag_var_list’,
+‘end_diag_fail’,
+‘expand_references’,
+‘get_baseline_info’,
+‘get_basic_info’,
+‘get_cam_info’,
+‘get_cvdp_info’,
+‘log_press’,
+‘main_site_paths’,
+‘num_cases’,
+‘num_procs’,
+‘perform_analyses’,
+‘plot_location’,
+‘read_config_var’,
+‘regrid_climo’,
+‘setup_run_cvdp’,
+‘use_defaults’,
+‘var_obs_dict’,
+‘variable_defaults’]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

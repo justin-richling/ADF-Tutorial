@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Exercise - Run ADF via Jupyter" href="jupyter_adf_run.html" />
-    <link rel="prev" title="ADF in Jupyter" href="../Jupyter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -178,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
   Running the ADF
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../basics.html">
    Running ADF Basics
@@ -199,18 +197,18 @@ const thebe_selector_output = ".output, .cell_output"
    CAM vs CMIP
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Jupyter.html">
    ADF in Jupyter
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyter_adf_analysis.html">
      Analysing ADF Output via Jupyter
     </a>
    </li>
@@ -332,7 +330,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/run/Jupyter/jupyter_adf_analysis.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/run/Jupyter/jupyter_adf_analysis-Copy1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -392,7 +390,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/Jupyter/jupyter_adf_analysis.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/Jupyter/jupyter_adf_analysis-Copy1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -420,7 +418,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/notebooks/run/Jupyter/jupyter_adf_analysis.ipynb"
+        <a href="../../../_sources/notebooks/run/Jupyter/jupyter_adf_analysis-Copy1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -480,6 +478,22 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+   It is important to remember the
+   <strong>
+    two
+   </strong>
+   things important in this notebook are the:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-location">
+     ADF location
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
    Single CAM vs CAM case
   </a>
@@ -528,6 +542,22 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+   It is important to remember the
+   <strong>
+    two
+   </strong>
+   things important in this notebook are the:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-location">
+     ADF location
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
    Single CAM vs CAM case
   </a>
@@ -575,8 +605,13 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-
-<span class="kn">import</span> <span class="nn">os.path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 </pre></div>
@@ -593,6 +628,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</div>
+<section id="it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the">
+<h2>It is important to remember the <strong>two</strong> things important in this notebook are the:<a class="headerlink" href="#it-is-important-to-remember-the-strong-two-strong-things-important-in-this-notebook-are-the" title="Permalink to this headline">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* ADF branch you want, which will also be dependent on adf_path
+* Config yaml file you want
+</pre></div>
+</div>
+<section id="adf-location">
+<h3>ADF location<a class="headerlink" href="#adf-location" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>NOTE: you will have to change the branch via terminal if you want a certain branch in this notebook</p></li>
+</ul>
+<p>Or you could use a cell to do it:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>!git checkout &lt;your-branch&gt;
+</pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -655,6 +705,8 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 </div>
 </div>
+</section>
+</section>
 <section id="single-cam-vs-cam-case">
 <h2>Single CAM vs CAM case<a class="headerlink" href="#single-cam-vs-cam-case" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
@@ -1391,7 +1443,7 @@ Plotting variable: ICEFRAC
 2012
 </pre></div>
 </div>
-<img alt="../../../_images/jupyter_adf_analysis_35_1.png" src="../../../_images/jupyter_adf_analysis_35_1.png" />
+<img alt="../../../_images/jupyter_adf_analysis-Copy1_39_1.png" src="../../../_images/jupyter_adf_analysis-Copy1_39_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 647 ms, total: 2.37 s
 Wall time: 3.58 s
 </pre></div>
@@ -1433,20 +1485,6 @@ Wall time: 3.58 s
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Jupyter.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ADF in Jupyter</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="jupyter_adf_run.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise - Run ADF via Jupyter</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
