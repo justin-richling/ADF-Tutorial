@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Exercise - Run ADF via Jupyter" href="jupyter_adf_run.html" />
-    <link rel="prev" title="ADF in Jupyter" href="../Jupyter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -178,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
   Running the ADF
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../basics.html">
    Running ADF Basics
@@ -199,18 +197,18 @@ const thebe_selector_output = ".output, .cell_output"
    CAM vs CMIP
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Jupyter.html">
    ADF in Jupyter
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyter_adf_analysis.html">
      Analysing ADF Output via Jupyter
     </a>
    </li>
@@ -344,7 +342,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/run/Jupyter/jupyter_adf_analysis.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/run/Jupyter/jupyter_adf_analysis-Copy2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -404,7 +402,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/Jupyter/jupyter_adf_analysis.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/Jupyter/jupyter_adf_analysis-Copy2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -432,7 +430,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/notebooks/run/Jupyter/jupyter_adf_analysis.ipynb"
+        <a href="../../../_sources/notebooks/run/Jupyter/jupyter_adf_analysis-Copy2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -504,9 +502,21 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
-   Now some custom plotting, what do you think?
+  <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
+   Let’s look at some basic info from the ADF
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
+     Read out some of the declared variables from the config file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
+     Now some custom plotting, what do you think?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -540,9 +550,21 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
-   Now some custom plotting, what do you think?
+  <a class="reference internal nav-link" href="#let-s-look-at-some-basic-info-from-the-adf">
+   Let’s look at some basic info from the ADF
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-out-some-of-the-declared-variables-from-the-config-file">
+     Read out some of the declared variables from the config file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-some-custom-plotting-what-do-you-think">
+     Now some custom plotting, what do you think?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -679,8 +701,266 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 </div>
 </section>
 </section>
+<section id="let-s-look-at-some-basic-info-from-the-adf">
+<h2>Let’s look at some basic info from the ADF<a class="headerlink" href="#let-s-look-at-some-basic-info-from-the-adf" title="Permalink to this headline">#</a></h2>
+<section id="read-out-some-of-the-declared-variables-from-the-config-file">
+<h3>Read out some of the declared variables from the config file<a class="headerlink" href="#read-out-some-of-the-declared-variables-from-the-config-file" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_info_dict</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">read_config_var</span><span class="p">(</span><span class="s2">&quot;diag_basic_info&quot;</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">basic_info_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;compare_obs&#39;,
+ &#39;create_html&#39;,
+ &#39;obs_data_loc&#39;,
+ &#39;cam_regrid_loc&#39;,
+ &#39;cam_overwrite_regrid&#39;,
+ &#39;cam_diag_plot_loc&#39;,
+ &#39;use_defaults&#39;,
+ &#39;plot_press_levels&#39;,
+ &#39;weight_season&#39;,
+ &#39;num_procs&#39;,
+ &#39;redo_plot&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quick check if we are comparing against obs, in case we forgot our ginkaloba pills this morning</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_basic_info</span><span class="p">(</span><span class="s1">&#39;compare_obs&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;get basic info&#39; found compare_obs =&quot;</span><span class="p">,</span><span class="n">obs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;get basic info&#39; found compare_obs = False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A similar but different way to check directly from the adf object:</span>
+<span class="n">adf</span><span class="o">.</span><span class="n">compare_obs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Baseline case details</span>
+<span class="n">baseline_dict</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">read_config_var</span><span class="p">(</span><span class="s2">&quot;diag_cam_baseline_climo&quot;</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">baseline_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;calc_cam_climo&#39;,
+ &#39;cam_overwrite_climo&#39;,
+ &#39;cam_case_name&#39;,
+ &#39;cam_hist_loc&#39;,
+ &#39;cam_climo_loc&#39;,
+ &#39;start_year&#39;,
+ &#39;end_year&#39;,
+ &#39;cam_ts_done&#39;,
+ &#39;cam_ts_save&#39;,
+ &#39;cam_overwrite_ts&#39;,
+ &#39;cam_ts_loc&#39;,
+ &#39;case_nickname&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">adf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_AdfBase__debug_log&#39;,
+ &#39;_AdfConfig__config_dict&#39;,
+ &#39;_AdfConfig__create_search_dict&#39;,
+ &#39;_AdfConfig__expand_yaml_var_ref&#39;,
+ &#39;_AdfConfig__kword_pattern&#39;,
+ &#39;_AdfConfig__search_dict&#39;,
+ &#39;_AdfDiag__analysis_scripts&#39;,
+ &#39;_AdfDiag__cvdp_info&#39;,
+ &#39;_AdfDiag__diag_scripts_caller&#39;,
+ &#39;_AdfDiag__function_caller&#39;,
+ &#39;_AdfDiag__plotting_scripts&#39;,
+ &#39;_AdfDiag__regridding_scripts&#39;,
+ &#39;_AdfDiag__time_averaging_scripts&#39;,
+ &#39;_AdfInfo__base_nickname&#39;,
+ &#39;_AdfInfo__basic_info&#39;,
+ &#39;_AdfInfo__cam_bl_climo_info&#39;,
+ &#39;_AdfInfo__cam_climo_info&#39;,
+ &#39;_AdfInfo__compare_obs&#39;,
+ &#39;_AdfInfo__derived_var_list&#39;,
+ &#39;_AdfInfo__diag_var_list&#39;,
+ &#39;_AdfInfo__eyear_baseline&#39;,
+ &#39;_AdfInfo__eyears&#39;,
+ &#39;_AdfInfo__num_cases&#39;,
+ &#39;_AdfInfo__num_procs&#39;,
+ &#39;_AdfInfo__plot_location&#39;,
+ &#39;_AdfInfo__syear_baseline&#39;,
+ &#39;_AdfInfo__syears&#39;,
+ &#39;_AdfInfo__test_nicknames&#39;,
+ &#39;_AdfObs__use_defaults&#39;,
+ &#39;_AdfObs__var_obs_dict&#39;,
+ &#39;_AdfObs__variable_defaults&#39;,
+ &#39;_AdfWeb__case_web_paths&#39;,
+ &#39;_AdfWeb__plot_type_multi&#39;,
+ &#39;_AdfWeb__plot_type_order&#39;,
+ &#39;_AdfWeb__website_data&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;add_diag_var&#39;,
+ &#39;add_website_data&#39;,
+ &#39;baseline_climo_dict&#39;,
+ &#39;basic_info_dict&#39;,
+ &#39;cam_climo_dict&#39;,
+ &#39;case_nicknames&#39;,
+ &#39;climo_yrs&#39;,
+ &#39;compare_obs&#39;,
+ &#39;create_climo&#39;,
+ &#39;create_html&#39;,
+ &#39;create_plots&#39;,
+ &#39;create_time_series&#39;,
+ &#39;create_website&#39;,
+ &#39;debug_log&#39;,
+ &#39;derived_var_list&#39;,
+ &#39;diag_var_list&#39;,
+ &#39;end_diag_fail&#39;,
+ &#39;expand_references&#39;,
+ &#39;get_baseline_info&#39;,
+ &#39;get_basic_info&#39;,
+ &#39;get_cam_info&#39;,
+ &#39;get_cvdp_info&#39;,
+ &#39;log_press&#39;,
+ &#39;main_site_paths&#39;,
+ &#39;num_cases&#39;,
+ &#39;num_procs&#39;,
+ &#39;perform_analyses&#39;,
+ &#39;plot_location&#39;,
+ &#39;read_config_var&#39;,
+ &#39;regrid_climo&#39;,
+ &#39;setup_run_cvdp&#39;,
+ &#39;use_defaults&#39;,
+ &#39;var_obs_dict&#39;,
+ &#39;variable_defaults&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
+<span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;]
+f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">climo_yrs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;syears&#39;: [1995],
+ &#39;eyears&#39;: [2012],
+ &#39;syear_baseline&#39;: 1995,
+ &#39;eyear_baseline&#39;: 2012}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_list</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">diag_var_list</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">var_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;FLNT&#39;,
+ &#39;FSNT&#39;,
+ &#39;LHFLX&#39;,
+ &#39;LWCF&#39;,
+ &#39;OMEGA500&#39;,
+ &#39;PBLH&#39;,
+ &#39;PRECL&#39;,
+ &#39;PRECT&#39;,
+ &#39;PS&#39;,
+ &#39;PSL&#39;,
+ &#39;QFLX&#39;,
+ &#39;CLDLIQ&#39;,
+ &#39;Q&#39;,
+ &#39;RELHUM&#39;,
+ &#39;SHFLX&#39;,
+ &#39;SST&#39;,
+ &#39;SWCF&#39;,
+ &#39;T&#39;,
+ &#39;TAUX&#39;,
+ &#39;TAUY&#39;,
+ &#39;THETA&#39;,
+ &#39;TREFHT&#39;,
+ &#39;TS&#39;,
+ &#39;U&#39;,
+ &#39;U10&#39;,
+ &#39;ICEFRAC&#39;,
+ &#39;OCNFRAC&#39;,
+ &#39;LANDFRAC&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
 <section id="now-some-custom-plotting-what-do-you-think">
-<h2>Now some custom plotting, what do you think?<a class="headerlink" href="#now-some-custom-plotting-what-do-you-think" title="Permalink to this headline">#</a></h2>
+<h3>Now some custom plotting, what do you think?<a class="headerlink" href="#now-some-custom-plotting-what-do-you-think" title="Permalink to this headline">#</a></h3>
 <p>Let’s take the time series files the ADF produced and make some time series plots</p>
 <ul class="simple">
 <li><p>Climo years will be on the x-axis and variable values will be on the y-axis</p></li>
@@ -1121,7 +1401,7 @@ Plotting variable: ICEFRAC
 2012
 </pre></div>
 </div>
-<img alt="../../../_images/jupyter_adf_analysis_23_1.png" src="../../../_images/jupyter_adf_analysis_23_1.png" />
+<img alt="../../../_images/jupyter_adf_analysis-Copy2_35_1.png" src="../../../_images/jupyter_adf_analysis-Copy2_35_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.72 s, sys: 647 ms, total: 2.37 s
 Wall time: 3.58 s
 </pre></div>
@@ -1132,6 +1412,7 @@ Wall time: 3.58 s
 <p class="admonition-title">Note</p>
 <p>You can run these types of analysis in the previous</p>
 </div>
+</section>
 </section>
 </section>
 
@@ -1162,20 +1443,6 @@ Wall time: 3.58 s
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Jupyter.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ADF in Jupyter</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="jupyter_adf_run.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise - Run ADF via Jupyter</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
