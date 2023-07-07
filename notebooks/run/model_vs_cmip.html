@@ -710,6 +710,9 @@ title="Print to PDF"
 <h1>CAM vs CMIP<a class="headerlink" href="#cam-vs-cmip" title="Permalink to this headline">#</a></h1>
 <p>Running the ADF against CMIP simulations requires a bit different configuration of the run-time config file.</p>
 <p>Let’s again copy the the config yaml file we made in <a href = "">CAM vs CAM</a> section</p>
+<p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 1995-2000</p>
+<p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -15px;">The baseline (control) case will be CMIP simulations</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1854,16 +1857,16 @@ Wall time: 3.58 s
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "npl-conda"
+            mode: "npl-2023b"
         },
         kernelOptions: {
-            name: "npl-conda",
+            name: "npl-2023b",
             path: "./notebooks/run"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'npl-conda'</script>
+    <script>kernelName = 'npl-2023b'</script>
 
               </div>
               
