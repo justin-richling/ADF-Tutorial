@@ -496,6 +496,11 @@ title="Print to PDF"
    Exercise 1 - Plot Timeseries for RESTOM
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-configure-run-time-yaml-then-run-the-adf">
+   Exercise 2 - Configure run-time yaml then run the ADF
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -520,6 +525,11 @@ title="Print to PDF"
    Exercise 1 - Plot Timeseries for RESTOM
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-configure-run-time-yaml-then-run-the-adf">
+   Exercise 2 - Configure run-time yaml then run the ADF
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -532,16 +542,365 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
-<p>Here are a couple exercises to get a different look at the ADF</p>
+<p>Here are a couple exercises to get a different look at the ADF.</p>
 <section id="exercise-1-plot-timeseries-for-restom">
 <h2>Exercise 1 - Plot Timeseries for RESTOM<a class="headerlink" href="#exercise-1-plot-timeseries-for-restom" title="Permalink to this headline">#</a></h2>
-<p>In this exercise you will try to run the ADF to make a single plot for time series data</p>
+<p>In this exercise you will try to run the ADF to make a single plot for time series data from your own case</p>
 <p>Objectives:</p>
 <ul class="simple">
 <li><p>Produce only time series files (no climo or regridded files)</p></li>
 <li><p>Produce RESTOM from standard CAM output variables</p></li>
 <li><p>Plot only the time series plot (no default ADF plots or tables)</p></li>
 </ul>
+</section>
+<section id="exercise-2-configure-run-time-yaml-then-run-the-adf">
+<h2>Exercise 2 - Configure run-time yaml then run the ADF<a class="headerlink" href="#exercise-2-configure-run-time-yaml-then-run-the-adf" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Determine ADF directory path</span>
+<span class="c1"># If it is in your cwd, set adf_path = local_path, </span>
+<span class="c1"># otherwise set adf_path appropriately</span>
+
+<span class="n">local_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1">#adf_path = &quot;/glade/work/{user}/ADF&quot;</span>
+<span class="n">adf_path</span> <span class="o">=</span> <span class="s2">&quot;/glade/work/richling/ADF/ADF&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;current working directory = </span><span class="si">{</span><span class="n">local_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ADF path                  = </span><span class="si">{</span><span class="n">adf_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#set path to ADF lib</span>
+<span class="n">lib_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">adf_path</span><span class="p">,</span><span class="s2">&quot;lib&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The lib scripts live here, right? </span><span class="si">{</span><span class="n">lib_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#set path to ADF plotting scripts directory</span>
+<span class="n">plotting_scripts_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">adf_path</span><span class="p">,</span><span class="s2">&quot;scripts&quot;</span><span class="p">,</span><span class="s2">&quot;plotting&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The plotting scripts live here, right? </span><span class="si">{</span><span class="n">plotting_scripts_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#Add paths to python path:</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lib_path</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plotting_scripts_path</span><span class="p">)</span>
+
+<span class="c1">#import ADF diagnostics object</span>
+<span class="kn">from</span> <span class="nn">adf_diag</span> <span class="kn">import</span> <span class="n">AdfDiag</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>current working directory = /glade/work/richling/ADF/ADF-Tutorial/notebooks/exercises
+ADF path                  = /glade/work/richling/ADF/ADF
+The lib scripts live here, right? /glade/work/richling/ADF/ADF/lib
+The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plotting
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names_yaml</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">user: &#39;richling&#39;</span>
+<span class="s2">diag_basic_info:</span>
+
+<span class="s2">    diag_loc: /glade/scratch/$</span><span class="si">{user}</span><span class="s2">/ADF_output/TEST/</span>
+
+<span class="s2">    climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/</span>
+<span class="s2">    ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</span>
+
+<span class="s2">    hist_str: cam.h0           </span>
+
+<span class="s2">    #Is this a model vs observations comparison?</span>
+<span class="s2">    #If &quot;false&quot; or missing, then a model-model comparison is assumed:</span>
+<span class="s2">    compare_obs: false</span>
+
+<span class="s2">    #Generate HTML website (assumed false if missing):</span>
+<span class="s2">    #Note:  The website files themselves will be located in the path</span>
+<span class="s2">    #specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory,</span>
+<span class="s2">    #where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run</span>
+<span class="s2">    #(usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).</span>
+<span class="s2">    create_html: true</span>
+
+<span class="s2">    #Location of observational datasets:</span>
+<span class="s2">    #Note: this only matters if &quot;compare_obs&quot; is true and the path</span>
+<span class="s2">    #isn&#39;t specified in the variable defaults file.</span>
+<span class="s2">    obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span>
+
+<span class="s2">    #Location where re-gridded and interpolated CAM climatology files are stored:</span>
+<span class="s2">    cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/</span>
+
+<span class="s2">    #Overwrite CAM re-gridded files?</span>
+<span class="s2">    #If false, or missing, then regridding will be skipped for regridded variables</span>
+<span class="s2">    #that already exist in &quot;cam_regrid_loc&quot;:</span>
+<span class="s2">    cam_overwrite_regrid: false</span>
+
+<span class="s2">    #Location where diagnostic plots are stored:</span>
+<span class="s2">    cam_diag_plot_loc: $</span><span class="si">{diag_loc}</span><span class="s2">diag-plot/</span>
+
+<span class="s2">    #Use default variable plot settings?</span>
+<span class="s2">    #If &quot;true&quot;, then variable-specific plotting attributes as defined in</span>
+<span class="s2">    #ADF/lib/adf_variable_defaults.yaml will be used:</span>
+<span class="s2">    use_defaults: true</span>
+
+<span class="s2">    #Location of ADF variable plotting defaults YAML file</span>
+<span class="s2">    #if not using the one in ADF/lib:</span>
+<span class="s2">  #  defaults_file: /some/path/to/defaults/file</span>
+
+<span class="s2">    plot_press_levels: [200,850]</span>
+
+<span class="s2">    central_longitude: 180</span>
+
+<span class="s2">    weight_season: True</span>
+
+<span class="s2">    num_procs: 8</span>
+
+<span class="s2">    #redo_plot: false</span>
+
+
+<span class="s2">#This second set of variables provides info for the CAM simulation(s) being diagnosed:</span>
+<span class="s2">diag_cam_climo:</span>
+
+<span class="s2">    #Calculate climatologies?</span>
+<span class="s2">    #If false, neither the climatology or time-series files will be created:</span>
+<span class="s2">    calc_cam_climo: true</span>
+
+<span class="s2">    #Overwrite CAM climatology files?</span>
+<span class="s2">    #If false, or not prsent, then already existing climatology files will be skipped:</span>
+<span class="s2">    cam_overwrite_climo: false</span>
+
+<span class="s2">    cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span>
+<span class="s2">    case_nickname: $</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2"></span>
+
+<span class="s2">    #Location of CAM history (h0) files:</span>
+<span class="s2">    cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">    #Location of CAM climatologies (to be created and then used by this script)</span>
+<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">    start_year: 2001</span>
+<span class="s2">    end_year: 2005</span>
+
+<span class="s2">    #Do time series files need to be generated?</span>
+<span class="s2">    #If True, then diagnostics assumes that model files are already time series.</span>
+<span class="s2">    #If False, or if simply not present, then diagnostics will attempt to create</span>
+<span class="s2">    #time series files from history (time-slice) files:</span>
+<span class="s2">    cam_ts_done: false</span>
+
+<span class="s2">    #Save interim time series files?</span>
+<span class="s2">    #WARNING:  This can take up a significant amount of space,</span>
+<span class="s2">       #          but will save processing time the next time</span>
+<span class="s2">    cam_ts_save: true</span>
+
+<span class="s2">    #Overwrite time series files, if found?</span>
+<span class="s2">    #If set to false, then time series creation will be skipped if files are found:</span>
+<span class="s2">    cam_overwrite_ts: false</span>
+
+<span class="s2">    #Location where time series files are (or will be) stored:</span>
+<span class="s2">    cam_ts_loc: $</span><span class="si">{ts_loc}</span><span class="s2">$</span><span class="si">{diag_cam_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">#This only matters if &quot;compare_obs&quot; is false:</span>
+<span class="s2">diag_cam_baseline_climo:</span>
+
+<span class="s2">    #Calculate cam baseline climatologies?</span>
+<span class="s2">    #If false, neither the climatology or time-series files will be created:</span>
+<span class="s2">    calc_cam_climo: true</span>
+
+<span class="s2">    #Overwrite CAM climatology files?</span>
+<span class="s2">    #If false, or not present, then already existing climatology files will be skipped:</span>
+<span class="s2">    cam_overwrite_climo: false</span>
+
+<span class="s2">    cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span>
+<span class="s2">    case_nickname: $</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2"> </span>
+
+<span class="s2">    #Location of CAM baseline history (h0) files:</span>
+<span class="s2">    cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">    #Location of baseline CAM climatologies:</span>
+<span class="s2">    cam_climo_loc: $</span><span class="si">{climo_loc}</span><span class="s2">$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">    start_year: 2001</span>
+<span class="s2">    end_year: 2005</span>
+
+<span class="s2">    #Do time series files need to be generated?</span>
+<span class="s2">    #If True, then diagnostics assumes that model files are already time series.</span>
+<span class="s2">    #If False, or if simply not present, then diagnostics will attempt to create</span>
+<span class="s2">    #time series files from history (time-slice) files:</span>
+<span class="s2">    cam_ts_done: false</span>
+
+<span class="s2">    #Save interim time series files for baseline run?</span>
+<span class="s2">    #WARNING:  This can take up a significant amount of space:</span>
+<span class="s2">    cam_ts_save: true</span>
+
+<span class="s2">    #Overwrite baseline time series files, if found?</span>
+<span class="s2">    #If set to false, then time series creation will be skipped if files are found:</span>
+<span class="s2">    cam_overwrite_ts: false</span>
+
+<span class="s2">    #Location where time series files are (or will be) stored:</span>
+<span class="s2">    cam_ts_loc: $</span><span class="si">{ts_loc}</span><span class="s2">$</span><span class="si">{diag_cam_baseline_climo.cam_case_name}</span><span class="s2">/</span>
+
+<span class="s2">time_averaging_scripts:</span>
+<span class="s2">    - create_climo_files</span>
+
+<span class="s2">regridding_scripts:</span>
+<span class="s2">    - regrid_and_vert_interp</span>
+
+<span class="s2">analysis_scripts:</span>
+<span class="s2">    - amwg_table</span>
+
+<span class="s2">plotting_scripts:</span>
+<span class="s2">    - global_latlon_map</span>
+<span class="s2">    - zonal_mean</span>
+
+<span class="s2">#List of CAM variables that will be processesd:</span>
+<span class="s2">#If CVDP is to be run PSL, TREFHT, TS and PRECT (or PRECC and PRECL) should be listed</span>
+<span class="s2">diag_var_list:</span>
+<span class="s2">   - FLNT</span>
+<span class="s2">   - FSNT</span>
+<span class="s2">   - LWCF</span>
+<span class="s2">   - PBLH</span>
+<span class="s2">   - PS</span>
+<span class="s2">   - PSL</span>
+<span class="s2">   - Q</span>
+<span class="s2">   - RELHUM</span>
+<span class="s2">   - SST</span>
+<span class="s2">   - SWCF</span>
+<span class="s2">   - T</span>
+<span class="s2">   - TS</span>
+<span class="s2">   - U</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config_file</span> <span class="o">=</span> <span class="s1">&#39;../../config_files/custom_config.yaml&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>analysis_scripts:
+- amwg_table
+diag_basic_info:
+  cam_diag_plot_loc: ${diag_loc}diag-plot/
+  cam_overwrite_regrid: false
+  cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/
+  central_longitude: 180
+  climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/
+  compare_obs: false
+  create_html: true
+  diag_loc: /glade/scratch/${user}/ADF_output/TEST/
+  hist_str: cam.h0
+  num_procs: 8
+  obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
+  plot_press_levels:
+  - 200
+  - 850
+  ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/
+  use_defaults: true
+  weight_season: true
+diag_cam_baseline_climo:
+  calc_cam_climo: true
+  cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
+  cam_climo_loc: ${climo_loc}${diag_cam_baseline_climo.cam_case_name}/
+  cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/${diag_cam_baseline_climo.cam_case_name}/
+  cam_overwrite_climo: false
+  cam_overwrite_ts: false
+  cam_ts_done: false
+  cam_ts_loc: ${ts_loc}${diag_cam_baseline_climo.cam_case_name}/
+  cam_ts_save: true
+  case_nickname: ${diag_cam_baseline_climo.cam_case_name}
+  end_year: 2005
+  start_year: 2001
+diag_cam_climo:
+  calc_cam_climo: true
+  cam_case_name: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001
+  cam_climo_loc: ${climo_loc}${diag_cam_climo.cam_case_name}/
+  cam_hist_loc: /glade/scratch/richling/ADF/tutorials/data/${diag_cam_climo.cam_case_name}/
+  cam_overwrite_climo: false
+  cam_overwrite_ts: false
+  cam_ts_done: false
+  cam_ts_loc: ${ts_loc}${diag_cam_climo.cam_case_name}/
+  cam_ts_save: true
+  case_nickname: ${diag_cam_climo.cam_case_name}
+  end_year: 2005
+  start_year: 2001
+diag_var_list:
+- FLNT
+- FSNT
+- LWCF
+- PBLH
+- PS
+- PSL
+- Q
+- RELHUM
+- SST
+- SWCF
+- T
+- TS
+- U
+plotting_scripts:
+- global_latlon_map
+- zonal_mean
+regridding_scripts:
+- regrid_and_vert_interp
+time_averaging_scripts:
+- create_climo_files
+user: richling
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span> <span class="o">=</span> <span class="n">AdfDiag</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1">#Create model time series.</span>
+<span class="n">adf</span><span class="o">.</span><span class="n">create_time_series</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
+	 Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
+	 - time series for FLNT
+	 - time series for FSNT
+	 - time series for LWCF
+	 - time series for PBLH
+	 - time series for PS
+	 - time series for PSL
+	 - time series for Q
+Adding PS to file
+	 - time series for RELHUM
+Adding PS to file
+	 - time series for SST
+	 - time series for SWCF
+	 - time series for T
+Adding PS to file
+	 - time series for TS
+	 - time series for U
+Adding PS to file
+	 - time series for OCNFRAC
+  ...CAM time series file generation has finished successfully.
+CPU times: user 1.29 s, sys: 255 ms, total: 1.55 s
+Wall time: 16.6 s
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -554,16 +913,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "npl-3.7.9"
+            mode: "npl-2023b"
         },
         kernelOptions: {
-            name: "npl-3.7.9",
+            name: "npl-2023b",
             path: "./notebooks/exercises"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'npl-3.7.9'</script>
+    <script>kernelName = 'npl-2023b'</script>
 
               </div>
               
