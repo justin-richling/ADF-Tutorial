@@ -469,12 +469,52 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-adf-in-jupyter">
+   Tips for ADF in Jupyter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-info-from-run-time-yaml-file">
+     Basic Info from Run-time Yaml File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-for-observations-in-basic-info-from-run-time-yaml-file">
+     Boolean for Observations in Basic Info from Run-time Yaml File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -486,6 +526,35 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-adf-in-jupyter">
+   Tips for ADF in Jupyter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-info-from-run-time-yaml-file">
+     Basic Info from Run-time Yaml File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-for-observations-in-basic-info-from-run-time-yaml-file">
+     Boolean for Observations in Basic Info from Run-time Yaml File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -497,6 +566,8 @@ title="Print to PDF"
 <h1>ADF in Jupyter<a class="headerlink" href="#adf-in-jupyter" title="Permalink to this headline">#</a></h1>
 <p>In addition to running the ADF in the terminal, it can also be run in Jupyter Notebooks!</p>
 <p>Since NCAR has a JupyterHub account, we can either <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/Jupyter/jupyter_adf_run.html">run the ADF via Jupyter</a> or <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/Jupyter/jupyter_adf_analysis.html">analyze already run ADF diagnostics</a> in Jupyter too! Holy Cow.</p>
+<section id="tips-for-adf-in-jupyter">
+<h2>Tips for ADF in Jupyter<a class="headerlink" href="#tips-for-adf-in-jupyter" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Initialize ADF object with config file</span>
@@ -507,6 +578,8 @@ title="Print to PDF"
 </div>
 </div>
 <p>&lt;adf_diag.AdfDiag at 0x2b4984b32b80&gt;</p>
+<section id="basic-info-from-run-time-yaml-file">
+<h3>Basic Info from Run-time Yaml File<a class="headerlink" href="#basic-info-from-run-time-yaml-file" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_info_dict</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">read_config_var</span><span class="p">(</span><span class="s2">&quot;diag_basic_info&quot;</span><span class="p">)</span>
@@ -528,6 +601,9 @@ title="Print to PDF"
  <span class="s1">&#39;redo_plot&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
+</section>
+<section id="boolean-for-observations-in-basic-info-from-run-time-yaml-file">
+<h3>Boolean for Observations in Basic Info from Run-time Yaml File<a class="headerlink" href="#boolean-for-observations-in-basic-info-from-run-time-yaml-file" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quick check if we are comparing against obs, in case we forgot our ginkaloba pills this morning</span>
@@ -546,6 +622,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Baseline case details</span>
@@ -726,6 +805,8 @@ title="Print to PDF"
  <span class="s1">&#39;variable_defaults&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
