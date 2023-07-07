@@ -637,43 +637,18 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="s2">    climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/</span>
 <span class="s2">    ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</span>
 
-<span class="s2">    hist_str: cam.h0           </span>
+<span class="s2">    #hist_str: cam.h0           </span>
 
-<span class="s2">    #Is this a model vs observations comparison?</span>
-<span class="s2">    #If &quot;false&quot; or missing, then a model-model comparison is assumed:</span>
 <span class="s2">    compare_obs: false</span>
-
-<span class="s2">    #Generate HTML website (assumed false if missing):</span>
-<span class="s2">    #Note:  The website files themselves will be located in the path</span>
-<span class="s2">    #specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory,</span>
-<span class="s2">    #where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run</span>
-<span class="s2">    #(usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).</span>
-<span class="s2">    create_html: true</span>
-
-<span class="s2">    #Location of observational datasets:</span>
-<span class="s2">    #Note: this only matters if &quot;compare_obs&quot; is true and the path</span>
-<span class="s2">    #isn&#39;t specified in the variable defaults file.</span>
 <span class="s2">    obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span>
 
-<span class="s2">    #Location where re-gridded and interpolated CAM climatology files are stored:</span>
 <span class="s2">    cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/</span>
-
-<span class="s2">    #Overwrite CAM re-gridded files?</span>
-<span class="s2">    #If false, or missing, then regridding will be skipped for regridded variables</span>
-<span class="s2">    #that already exist in &quot;cam_regrid_loc&quot;:</span>
 <span class="s2">    cam_overwrite_regrid: false</span>
 
-<span class="s2">    #Location where diagnostic plots are stored:</span>
 <span class="s2">    cam_diag_plot_loc: $</span><span class="si">{diag_loc}</span><span class="s2">diag-plot/</span>
 
-<span class="s2">    #Use default variable plot settings?</span>
-<span class="s2">    #If &quot;true&quot;, then variable-specific plotting attributes as defined in</span>
-<span class="s2">    #ADF/lib/adf_variable_defaults.yaml will be used:</span>
 <span class="s2">    use_defaults: true</span>
-
-<span class="s2">    #Location of ADF variable plotting defaults YAML file</span>
-<span class="s2">    #if not using the one in ADF/lib:</span>
-<span class="s2">  #  defaults_file: /some/path/to/defaults/file</span>
+<span class="s2">    #defaults_file: /some/path/to/defaults/file</span>
 
 <span class="s2">    plot_press_levels: [200,850]</span>
 
@@ -684,6 +659,8 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="s2">    num_procs: 8</span>
 
 <span class="s2">    #redo_plot: false</span>
+<span class="s2">    </span>
+<span class="s2">    create_html: true</span>
 
 
 <span class="s2">#This second set of variables provides info for the CAM simulation(s) being diagnosed:</span>
@@ -803,16 +780,6 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">names_yaml</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../config_files/custom_config.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config_file</span> <span class="o">=</span> <span class="s1">&#39;../../config_files/custom_config.yaml&#39;</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -825,7 +792,7 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 <span class="sd">        yaml.dump(names, file)</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">config_file</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File exists, I&#39;m going to override it, ok? (too bad, womp womp)&quot;</span><span class="p">)</span>
 
     <span class="n">names</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">names_yaml</span><span class="p">)</span>
@@ -838,7 +805,8 @@ As long as we stay consistent with the ADF ?????nomenclature?????? when it gets 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>analysis_scripts:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File exists, I&#39;m going to override it, ok? (too bad, womp womp)
+analysis_scripts:
 - amwg_table
 diag_basic_info:
   cam_diag_plot_loc: ${diag_loc}diag-plot/
@@ -928,27 +896,9 @@ user: richling
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
 	 Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-	 - time series for FLNT
-	 - time series for FSNT
-	 - time series for LWCF
-	 - time series for PBLH
-	 - time series for PS
-	 - time series for PSL
-	 - time series for Q
-Adding PS to file
-	 - time series for RELHUM
-Adding PS to file
-	 - time series for SST
-	 - time series for SWCF
-	 - time series for T
-Adding PS to file
-	 - time series for TS
-	 - time series for U
-Adding PS to file
-	 - time series for OCNFRAC
   ...CAM time series file generation has finished successfully.
-CPU times: user 1.29 s, sys: 255 ms, total: 1.55 s
-Wall time: 16.6 s
+CPU times: user 26.1 ms, sys: 85.4 ms, total: 112 ms
+Wall time: 229 ms
 </pre></div>
 </div>
 </div>
