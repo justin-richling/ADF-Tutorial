@@ -480,8 +480,37 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-basic-info">
-   diag_basic_info
+  <a class="reference internal nav-link" href="#config-cam-baseline-example-yaml">
+   config_cam_baseline_example.yaml
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
+     diag_cam_climo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
+   adf_variable_defaults.yaml
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-set">
+     Custom Set
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-in-the-terminal">
+   Running in the Terminal
   </a>
  </li>
 </ul>
@@ -504,8 +533,37 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diag-basic-info">
-   diag_basic_info
+  <a class="reference internal nav-link" href="#config-cam-baseline-example-yaml">
+   config_cam_baseline_example.yaml
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
+     diag_cam_climo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-variable-defaults-yaml">
+   adf_variable_defaults.yaml
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-set">
+     Custom Set
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-in-the-terminal">
+   Running in the Terminal
   </a>
  </li>
 </ul>
@@ -523,43 +581,161 @@ title="Print to PDF"
 <p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 1995-2000</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p>The baseline (control) case will be a designated set of observations/reanalysis</p>
-<p>What needs to be done is to change a couple of variables in your copy of the config run-time yaml file (your_config.yaml)</p>
-<p>From the ADF root directory you can just copy the config file you made for CAM vs CAM.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_vs_cam.yaml config_cam_vs_obs.yaml
+<section id="config-cam-baseline-example-yaml">
+<h2>config_cam_baseline_example.yaml<a class="headerlink" href="#config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify this file!</strong></p>
+<p>It is recommended to make a copy of this file, make modifications in that copy, and then run that with the ADF.</p>
+</div>
+<p>From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_cam_vs_obs.yaml
 </pre></div>
 </div>
 <p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_obs.yaml</span></code> file with your favorite editor again</p>
-<p>The only subsection that has variables that will be changed:</p>
+<p>The following subsections have variables that will be changed:</p>
 <ul>
 <li><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-basic-info">diag_basic_info</a></p>
 </li>
+<li><p style="margin-top: -5px;"><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-cam-climo">diag_cam_climo</a></p>
+</li>
 </ul>
-<p>All the info from the CAM vs CAM case for the test case () will be copied over, so it’s just the diag_basic_info that needs to be changed.</p>
+<hr class="docutils" />
 <section id="diag-basic-info">
-<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
-<p>If you use the ADF default observation files, there is only one thing to change:</p>
-<p>Change to compare against observations</p>
-<p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p>
-<p>If you want to provide a location for a different set of observations than the ADF default ones, one further step is required:</p>
-<p>Change the location of obs files</p>
-<p style="margin-top: -5px;">&ensp; obs_data_loc: <code class="docutils literal notranslate"><span class="pre">/path/to/your/obs/</span></code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This only matters if the path isn’t specified in the variable defaults file.</p>
-<p>In the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html">variable defaults file</a> each variable can be assigned a specific obs file from any given path different from what is being set here.</p>
-<p>Example of custom location for Boundary Layer obs file</p>
-<div>
-<p>PBLH:
-<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   category:  "Surface variables"
-<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   <span style="background-color: #FFFF00">obs_file: "/path/to/my/ADF_obs/Some_PBLH_climo.nc"</span>
-<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_name: "SOME_OBS"
-<p style="margin-top: -20px; font-family:georgia,garamond,serif;">&ensp;   obs_var_name: "PBLH"
+<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
+<p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
+<p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
+<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
+<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
+<p>Now we can change the paths for the regridded data and plot locations</p>
+<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
+</section>
+<section id="diag-cam-climo">
+<h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
+<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/climo/{diag_cam_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
+<hr class="docutils" />
+<style>
+    #box {
+    word-wrap:normal;
+    overflow:scroll;
+}
+</style>
+<h5>With all these variables now set, let's take a quick catalogue of the different paths we just set:</h5>
+<p>Regridded file location:</p>
+<div id="box" >
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/regrid</span></code></p>
+<p>Diagnostic plot location:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/plots</span></code></p>
+<p>This will output a new directory in this location:</p>
+<p style="margin-top: -25px;"><code class="docutils literal notranslate"><span class="pre">&ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+<p>Climatology file locations:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p>Timeseries locations:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+</div><hr class="docutils" />
+</section>
+</section>
+<section id="adf-variable-defaults-yaml">
+<h2>adf_variable_defaults.yaml<a class="headerlink" href="#adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h2>
+<p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
+<section id="custom-set">
+<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
+<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
+</pre></div>
 </div>
-<br>
-<p>For PBLH, the ADF will use <code class="docutils literal notranslate"><span class="pre">/path/to/my/ADF_obs/Some_PBLH_climo.nc</span></code> instead of default</p>
-<p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
+<p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml):</p>
+<p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
+<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code></p>
 </div>
+</div>
+<p>After the new file <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code> has been created, open the file with your favorite editor</p>
+<p>Example of <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
+</div>
+<p>Example of custom variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="running-in-the-terminal">
+<h2>Running in the Terminal<a class="headerlink" href="#running-in-the-terminal" title="Permalink to this headline">#</a></h2>
+<p>Open a Cheyenne terminal window on your machine and navigate to the root directory of the ADF</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd /glade/work/{user}/ADF/ 
+</pre></div>
+</div>
+<p>Now we can run the ADF with our new config file <code class="docutils literal notranslate"><span class="pre">config_cam_vs_obs.yaml</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>time ./run_adf_diag config_cam_vs_obs.yaml
+</pre></div>
+</div>
+<p>NOTE: the <code class="docutils literal notranslate"><span class="pre">time</span></code> command will give us a readout of the wall and user time for the ADF to run this configuration</p>
+<p>This will take a while, why don’t you stretch your legs and get a snack :)</p>
+<div class="admonition-did-the-adf-finish admonition">
+<p class="admonition-title">Did the ADF finish?</p>
+<div id="box">
+<p>Check output data/images:</p>
+<p style="margin-top: -5px;">Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/{user}/ADF/plots</span></code></p>
+<p style="margin-top: -5px;">Then go to <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+</div>
+</div>
+<div class="error admonition">
+<p class="admonition-title">Did the ADF fail?</p>
+<p>Check config files   Check error/logs   Check data/paths</p>
+</div>
+<h4>End single CAM vs CAM case</h4>
+<p>Hope everything went well…</p>
+<hr class="docutils" />
 </section>
 </section>
 
