@@ -184,27 +184,39 @@ const thebe_selector_output = ".output, .cell_output"
    Running ADF Basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../run/model_vs_model.html">
-   CAM vs CAM
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../run/terminal.html">
+   ADF in the Terminal
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../run/model_vs_obs.html">
-   Cam vs Obs/Reanalysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../run/model_vs_cmip.html">
-   CAM vs CMIP
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../run/terminal/model_vs_model.html">
+     CAM vs CAM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../run/terminal/model_vs_obs.html">
+     CAM vs Obs/Reanalysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../run/terminal/model_vs_cmip.html">
+     CAM vs CMIP
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../run/Jupyter.html">
    ADF in Jupyter
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -528,6 +540,16 @@ title="Print to PDF"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-npl">
+       Activate
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         npl
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-nco">
        Load
        <code class="docutils literal notranslate">
@@ -607,6 +629,16 @@ title="Print to PDF"
        <code class="docutils literal notranslate">
         <span class="pre">
          conda
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-npl">
+       Activate
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         npl
         </span>
        </code>
       </a>
@@ -711,6 +743,20 @@ title="Print to PDF"
 <p class="admonition-title">Attention</p>
 <p>You may encounter a <code class="docutils literal notranslate"><span class="pre">module</span></code> <code class="docutils literal notranslate"><span class="pre">load</span></code> error.</p>
 <p>Try unloading the python module: <code class="docutils literal notranslate"><span class="pre">module unload python</span></code> and re-try?</p>
+</div>
+</section>
+<section id="activate-npl">
+<h4>Activate <code class="docutils literal notranslate"><span class="pre">npl</span></code><a class="headerlink" href="#activate-npl" title="Permalink to this headline">#</a></h4>
+<p>Now you will want to activate NCAR's <code class="docutils literal notranslate"><span class="pre">npl</span></code> environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>conda activate npl
+</pre><button class="copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#codecell0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>Copy to clipboard</title>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+</svg>
+    </button></div>
 </div>
 </section>
 <section id="load-nco">
