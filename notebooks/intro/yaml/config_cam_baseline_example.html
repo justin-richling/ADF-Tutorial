@@ -1942,6 +1942,8 @@ Possible addition examples:
 <section id="strong-diag-var-list-strong">
 <h2><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h2>
 <p>List of variables to be executed in the ADF</p>
+<p>These usually are the CAM variables, but nocesessarily the only ones, ie RESTOM can be added to this list and the ADF will attempt to calculate based off constituents.</p>
+<p>If the ADF searches for time series/climo/regridded/tem, etc. files for a given variable from this list and does not find one in the data files, it will skip that variable with an explaination in most cases. The ADF will not crash, but continue on to the next variable in the list.</p>
 </section>
 <section id="strong-region-multicase-strong">
 <h2><strong>region_multicase</strong><a class="headerlink" href="#strong-region-multicase-strong" title="Permalink to this headline">#</a></h2>

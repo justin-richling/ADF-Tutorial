@@ -238,11 +238,6 @@ const thebe_selector_output = ".output, .cell_output"
    Add Custom Script
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../customize/modify.html">
-   Modify ADF Structure
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -658,7 +653,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 <span class="n">config_fil_str</span> <span class="o">=</span> <span class="s2">&quot;config_model_vs_model_single.yaml&quot;</span>
 
 <span class="c1"># Make full path to config file</span>
-<span class="n">config_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span><span class="n">config_fil_str</span><span class="p">)</span>
+<span class="n">config_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span><span class="n">config_fil_str</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -868,8 +863,8 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF_dev/Justin_A
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
-<span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
+<span class="n">base_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
