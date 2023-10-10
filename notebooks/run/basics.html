@@ -641,8 +641,9 @@ title="Print to PDF"
 <p>diag_basic_info:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Change this to a path on your machine!
 # This is just a suggestion
-diag_loc: /glade/scratch/${user}/ADF_output/TEST/
-
+&lt;div class=&quot;admonition error&quot;&gt;
+    diag_loc: /glade/scratch/${user}/ADF_output/TEST/
+&lt;/div&gt;
 climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/
 ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/
 
@@ -669,15 +670,15 @@ create_html: true
 obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
 
 #Location where re-gridded and interpolated CAM climatology files are stored:
-cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/
-
+&lt;div class=&quot;admonition error&quot;&gt;cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/
+&lt;/div&gt;
 #Overwrite CAM re-gridded files?
 #If false, or missing, then regridding will be skipped for regridded variables
 #that already exist in &quot;cam_regrid_loc&quot;:
 cam_overwrite_regrid: false
 
 #Location where diagnostic plots are stored:
-cam_diag_plot_loc: ${diag_loc}diag-plot/
+&lt;div class=&quot;admonition error&quot;&gt;cam_diag_plot_loc: ${diag_loc}diag-plot/
 
 #Use default variable plot settings?
 #If &quot;true&quot;, then variable-specific plotting attributes as defined in
