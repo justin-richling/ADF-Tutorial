@@ -464,34 +464,46 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run-the-adf">
-   How to run the ADF
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Running ADF Basics
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
-   Types of ADF Comparisons
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-case-comparison">
-     Single Case Comparison
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-run-the-adf">
+     How to run the ADF
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-adf-comparisons">
+     Types of ADF Comparisons
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#available-comparison-cases">
-       Available Comparison Cases
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#single-case-comparison">
+       Single Case Comparison
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-vs-cam">
-       CAM vs CAM
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#available-comparison-cases">
+         Available Comparison Cases
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#cam-vs-cam">
+         CAM vs CAM
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
+   defaults_file: /some/path/to/defaults/file
+  </a>
  </li>
 </ul>
 
@@ -512,34 +524,46 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run-the-adf">
-   How to run the ADF
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Running ADF Basics
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
-   Types of ADF Comparisons
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-case-comparison">
-     Single Case Comparison
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-run-the-adf">
+     How to run the ADF
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-adf-comparisons">
+     Types of ADF Comparisons
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#available-comparison-cases">
-       Available Comparison Cases
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#single-case-comparison">
+       Single Case Comparison
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-vs-cam">
-       CAM vs CAM
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#available-comparison-cases">
+         Available Comparison Cases
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#cam-vs-cam">
+         CAM vs CAM
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
+   defaults_file: /some/path/to/defaults/file
+  </a>
  </li>
 </ul>
 
@@ -589,15 +613,114 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Then, open <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam_demo.yaml</span></code> in your favorite editor.</p>
-<p>We will do a simple run of two CAM siumulations, with the sample data living at:
-<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/</span></code></p>
+<p>We will do a simple run of two CAM siumulations, with the sample data living at:</p>
 <p>test case: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 (1995-2012)
-baseline case: f.cam6_3_105.FLTHIST_v0a.ne30.001 (1979-2002)</p>
-<p>Let’s pick a couple of years that are in common with these two datasets.
-NOTE: it is not necessary that the climo years match between cases, whcih is typical especially when comparing against obs or AMIP/CMIP cases.</p>
+<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p>baseline case: f.cam6_3_105.FLTHIST_v0a.ne30.001 (1979-2002)
+<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_105.FLTHIST_v0a.ne30.001</span></code></p>
+<p>Let’s pick a couple of years that are in common with these two datasets.</p>
+<p>NOTE: it is not necessary that the climo years match between cases, which is typical, especially when comparing against obs or AMIP/CMIP cases.</p>
+<div class="admonition">
+<p>config_cam_vs_cam_demo.yaml</p>
+  <div class="admonition error">
+  <div class="title">Oh jeez, I hope this worked...</div>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  </div>
+  <div class="admonition tip">
+  <div class="title">A *title*</div>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</div><p>#Change to your user name!
+user: ‘richling’</p>
+<p>#This first set of variables specify basic info used by all diagnostic runs:
+diag_basic_info:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Change this to a path on your machine!
+# This is just a suggestion
+diag_loc: /glade/scratch/${user}/ADF_output/TEST/
+
+climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/
+ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/
+
+#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)
+# Only affects timeseries as everything else uses timeseries 
+# Leave off trailing &#39;.&#39;
+#Default: cam.h0
+hist_str: cam.h0           
+
+#Is this a model vs observations comparison?
+#If &quot;false&quot; or missing, then a model-model comparison is assumed:
+compare_obs: false
+
+#Generate HTML website (assumed false if missing):
+#Note:  The website files themselves will be located in the path
+#specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory,
+#where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run
+#(usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).
+create_html: true
+
+#Location of observational datasets:
+#Note: this only matters if &quot;compare_obs&quot; is true and the path
+#isn&#39;t specified in the variable defaults file.
+obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
+
+#Location where re-gridded and interpolated CAM climatology files are stored:
+cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/
+
+#Overwrite CAM re-gridded files?
+#If false, or missing, then regridding will be skipped for regridded variables
+#that already exist in &quot;cam_regrid_loc&quot;:
+cam_overwrite_regrid: false
+
+#Location where diagnostic plots are stored:
+cam_diag_plot_loc: ${diag_loc}diag-plot/
+
+#Use default variable plot settings?
+#If &quot;true&quot;, then variable-specific plotting attributes as defined in
+#ADF/lib/adf_variable_defaults.yaml will be used:
+use_defaults: true
+
+#Location of ADF variable plotting defaults YAML file
+#if not using the one in ADF/lib:
+</pre></div>
+</div>
 </section>
 </section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="defaults-file-some-path-to-defaults-file">
+<h1>defaults_file: /some/path/to/defaults/file<a class="headerlink" href="#defaults-file-some-path-to-defaults-file" title="Permalink to this headline">#</a></h1>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#Vertical pressure levels (in hPa) on which to plot 3-D variables
+#when using horizontal (e.g. lat/lon) map projections.
+#If this config option is missing, then no 3-D variables will be plotted on
+#horizontal maps.  Please note too that pressure levels must currently match
+#what is available in the observations file in order to be plotted in a
+#model vs obs run:
+plot_press_levels: [200,850]
+
+#Longitude line on which to center all lat/lon maps.
+#If this config option is missing then the central
+#longitude will default to 180 degrees E.
+central_longitude: 180
+
+#Apply monthly weights to seasonal averages.
+#If False or missing, then all months are
+#given the same weight:
+weight_season: True
+
+#Number of processors on which to run the ADF.
+#If this config variable isn&#39;t present then
+#the ADF defaults to one processor.  Also, if
+#you set it to &quot;*&quot; then it will default
+#to all of the processors available on a
+#single node/machine:
+num_procs: 8
+
+#If set to true, then redo all plots even if they already exist.
+#If set to false, then if a plot is found it will be skipped:
+redo_plot: false
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
