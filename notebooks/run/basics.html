@@ -634,73 +634,73 @@ title="Print to PDF"
     </div>
 </div><div class="admonition">
 <h3><strong>config_cam_vs_cam_demo.yaml</strong></h3>
-<p>#Change to your user name!<br>user: 'richling'</p>
-<p>#This first set of variables specify basic info used by all diagnostic runs:<br>
+<p>#Change to your user name!<br>user: 'richling'<br>
+#This first set of variables specify basic info used by all diagnostic runs:<br>
 diag_basic_info:</p>
 <div class="admonition attention">CHANGE ME!
-<p>&ensp;diag_loc: /glade/scratch/${user}/ADF_output/TEST/</p>
+<p>&ensp;<strong>diag_loc:</strong> /glade/scratch/${user}/ADF_output/TEST/</p>
 </div>
-<p>climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/</p>
-<p>ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</p>
-<p>#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)</p>
-<p># Only affects timeseries as everything else uses timeseries </p>
-<p># Leave off trailing '.'</p>
-<p>#Default: cam.h0</p>
-<p>hist_str: cam.h0 </p>          
-<p>#Is this a model vs observations comparison?</p>
-<p>#If "false" or missing, then a model-model comparison is assumed:</p>
-<p>compare_obs: false</p>
-<p>#Generate HTML website (assumed false if missing):</p>
-<p>#Note:  The website files themselves will be located in the path</p>
-<p>#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,</p>
-<p>#where "diag_run" is the subdirectory created for this particular diagnostics run</p>
-<p>#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p>
-<p>create_html: true</p>
-<p>#Location of observational datasets:</p>
-<p>#Note: this only matters if "compare_obs" is true and the path</p>
-<p>#isn't specified in the variable defaults file.</p>
-<p>obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
+<p>climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/<br>
+ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</p>
+<p>#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
+# Only affects timeseries as everything else uses timeseries <br>
+# Leave off trailing '.'<br>
+#Default: cam.h0<br>
+hist_str: cam.h0 </p>          
+<p>#Is this a model vs observations comparison?<br>
+#If "false" or missing, then a model-model comparison is assumed:<br>
+compare_obs: false</p>
+<p>#Generate HTML website (assumed false if missing):<br>
+#Note:  The website files themselves will be located in the path<br>
+#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
+#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
+#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
+create_html: true</p>
+<p>#Location of observational datasets:<br>
+#Note: this only matters if "compare_obs" is true and the path<br>
+#isn't specified in the variable defaults file.<br>
+obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
 <p>#Location where re-gridded and interpolated CAM climatology files are stored:
 <div class="admonition attention">CHANGE ME!
-    <p>&ensp;cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/</p>
+    <p>&ensp;<strong>cam_regrid_loc:</strong> /glade/scratch/richling/ADF/tutorials/data/output/regrid/</p>
 </div>
-<p>#Overwrite CAM re-gridded files?</p>
-<p>#If false, or missing, then regridding will be skipped for regridded variables</p>
-<p>#that already exist in "cam_regrid_loc":</p>
-<p>cam_overwrite_regrid: false</p>
+<p>#Overwrite CAM re-gridded files?<br>
+#If false, or missing, then regridding will be skipped for regridded variables<br>
+#that already exist in "cam_regrid_loc":<br>
+cam_overwrite_regrid: false</p>
 <p>#Location where diagnostic plots are stored:
 <div class="admonition attention">CHANGE ME!
-    <p>&ensp;cam_diag_plot_loc: ${diag_loc}diag-plot/</p>
+    <p>&ensp;<strong>cam_diag_plot_loc:</strong> ${diag_loc}diag-plot/</p>
 </div>
-<p>#Use default variable plot settings?</p>
-<p>#If "true", then variable-specific plotting attributes as defined in</p>
-<p>#ADF/lib/adf_variable_defaults.yaml will be used:</p>
-<p>use_defaults: true</p>
-<p>#Location of ADF variable plotting defaults YAML file</p>
-<p>#if not using the one in ADF/lib:</p>
-<p>#defaults_file: /some/path/to/defaults/file</p>
-<p>#Vertical pressure levels (in hPa) on which to plot 3-D variables</p>
-<p>#when using horizontal (e.g. lat/lon) map projections.</p>
-<p>#If this config option is missing, then no 3-D variables will be plotted on</p>
-<p>#horizontal maps.  Please note too that pressure levels must currently match</p>
-<p>#what is available in the observations file in order to be plotted in a</p>
-<p>#model vs obs run:</p>
-<p>plot_press_levels: [200,850]</p>
-<p>#Longitude line on which to center all lat/lon maps.</p>
-<p>#If this config option is missing then the central</p>
-<p>#longitude will default to 180 degrees E.</p>
-<p>central_longitude: 180</p>
-<p>#Apply monthly weights to seasonal averages.</p>
-<p>#If False or missing, then all months are</p>
-<p>#given the same weight:</p>
-<p>weight_season: True</p>
-<p>#Number of processors on which to run the ADF.</p>
-<p>#If this config variable isn't present then</p>
-<p>#the ADF defaults to one processor.  Also, if</p>
-<p>#you set it to "*" then it will default</p>
-<p>#to all of the processors available on a</p>
-<p>#single node/machine:</p>
-<p>num_procs: 8</p>
+<p>#Use default variable plot settings?<br>
+#If "true", then variable-specific plotting attributes as defined in<br>
+#ADF/lib/adf_variable_defaults.yaml will be used:<br>
+use_defaults: true</p>
+<p>#Location of ADF variable plotting defaults YAML file<br>
+#if not using the one in ADF/lib:<br>
+#defaults_file: /some/path/to/defaults/file</p>
+<p>#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
+#when using horizontal (e.g. lat/lon) map projections.<br>
+#If this config option is missing, then no 3-D variables will be plotted on<br>
+#horizontal maps.  Please note too that pressure levels must currently match<br>
+#what is available in the observations file in order to be plotted in a<br>
+#model vs obs run:<br>
+>plot_press_levels: [200,850]</p>
+<p>#Longitude line on which to center all lat/lon maps.<br>
+#If this config option is missing then the central<br>
+#longitude will default to 180 degrees E.<br>
+central_longitude: 180</p>
+<p>#Apply monthly weights to seasonal averages.<br>
+#If False or missing, then all months are<br>
+#given the same weight:<br>
+weight_season: True</p>
+<p>#Number of processors on which to run the ADF.<br>
+#If this config variable isn't present then<br>
+#the ADF defaults to one processor.  Also, if<br>
+#you set it to "*" then it will default<br>
+#to all of the processors available on a<br>
+#single node/machine:<br>
+num_procs: 8</p>
 <p>#If set to true, then redo all plots even if they already exist.</p>
 <p>#If set to false, then if a plot is found it will be skipped:</p>
 <p>redo_plot: false</p>
