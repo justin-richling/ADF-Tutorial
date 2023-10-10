@@ -505,6 +505,11 @@ title="Print to PDF"
    defaults_file: /some/path/to/defaults/file
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   defaults_file: /some/path/to/defaults/file
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -562,6 +567,11 @@ title="Print to PDF"
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
+   defaults_file: /some/path/to/defaults/file
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
    defaults_file: /some/path/to/defaults/file
   </a>
  </li>
@@ -634,9 +644,7 @@ title="Print to PDF"
     </div>
 </div><div class="admonition">
 <p>config_cam_vs_cam_demo.yaml</p>
-<div class="admonition tip">    
 <p>#Change to your user name!<br>user: 'richling'</p>
-</div>
 <div>
 <p>#This first set of variables specify basic info used by all diagnostic runs:</p>
 <p>diag_basic_info:</p>
@@ -694,6 +702,98 @@ use_defaults: true
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="defaults-file-some-path-to-defaults-file">
 <h1>defaults_file: /some/path/to/defaults/file<a class="headerlink" href="#defaults-file-some-path-to-defaults-file" title="Permalink to this headline">#</a></h1>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#Vertical pressure levels (in hPa) on which to plot 3-D variables
+#when using horizontal (e.g. lat/lon) map projections.
+#If this config option is missing, then no 3-D variables will be plotted on
+#horizontal maps.  Please note too that pressure levels must currently match
+#what is available in the observations file in order to be plotted in a
+#model vs obs run:
+plot_press_levels: [200,850]
+
+#Longitude line on which to center all lat/lon maps.
+#If this config option is missing then the central
+#longitude will default to 180 degrees E.
+central_longitude: 180
+
+#Apply monthly weights to seasonal averages.
+#If False or missing, then all months are
+#given the same weight:
+weight_season: True
+
+#Number of processors on which to run the ADF.
+#If this config variable isn&#39;t present then
+#the ADF defaults to one processor.  Also, if
+#you set it to &quot;*&quot; then it will default
+#to all of the processors available on a
+#single node/machine:
+num_procs: 8
+
+#If set to true, then redo all plots even if they already exist.
+#If set to false, then if a plot is found it will be skipped:
+redo_plot: false
+
+&lt;/div&gt;
+</pre></div>
+</div>
+</div><div class="admonition">
+<p>config_cam_vs_cam_demo.yaml</p>
+<div class="admonition tip">    
+<p>#Change to your user name!<br>user: 'richling'</p>
+</div>
+<div>
+<p>#This first set of variables specify basic info used by all diagnostic runs:</p>
+<p>diag_basic_info:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;admonition error&quot;&gt;
+    &lt;p&gt;&amp;ensp;diag_loc: /glade/scratch/${user}/ADF_output/TEST/&lt;/p&gt;
+&lt;/div&gt;
+climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/
+ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/
+
+#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)
+# Only affects timeseries as everything else uses timeseries 
+# Leave off trailing &#39;.&#39;
+#Default: cam.h0
+hist_str: cam.h0           
+
+#Is this a model vs observations comparison?
+#If &quot;false&quot; or missing, then a model-model comparison is assumed:
+compare_obs: false
+
+#Generate HTML website (assumed false if missing):
+#Note:  The website files themselves will be located in the path
+#specified by &quot;cam_diag_plot_loc&quot;, under the &quot;diag_run/website&quot; subdirectory,
+#where &quot;diag_run&quot; is the subdirectory created for this particular diagnostics run
+#(usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).
+create_html: true
+
+#Location of observational datasets:
+#Note: this only matters if &quot;compare_obs&quot; is true and the path
+#isn&#39;t specified in the variable defaults file.
+obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs
+
+#Location where re-gridded and interpolated CAM climatology files are stored:
+&lt;div class=&quot;admonition error&quot;&gt;cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/
+&lt;/div&gt;
+#Overwrite CAM re-gridded files?
+#If false, or missing, then regridding will be skipped for regridded variables
+#that already exist in &quot;cam_regrid_loc&quot;:
+cam_overwrite_regrid: false
+
+#Location where diagnostic plots are stored:
+&lt;div class=&quot;admonition error&quot;&gt;cam_diag_plot_loc: ${diag_loc}diag-plot/
+&lt;/div&gt;
+#Use default variable plot settings?
+#If &quot;true&quot;, then variable-specific plotting attributes as defined in
+#ADF/lib/adf_variable_defaults.yaml will be used:
+use_defaults: true
+
+#Location of ADF variable plotting defaults YAML file
+#if not using the one in ADF/lib:
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>defaults_file: /some/path/to/defaults/file<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#Vertical pressure levels (in hPa) on which to plot 3-D variables
 #when using horizontal (e.g. lat/lon) map projections.
 #If this config option is missing, then no 3-D variables will be plotted on
