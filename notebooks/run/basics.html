@@ -637,6 +637,7 @@ title="Print to PDF"
 <div class="admonition tip">    
 <p>#Change to your user name!</p>
 <p>user: 'richling'</p>
+</div>
 <p>#This first set of variables specify basic info used by all diagnostic runs:</p>
 <p>diag_basic_info:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Change this to a path on your machine!
@@ -679,7 +680,7 @@ cam_overwrite_regrid: false
 
 #Location where diagnostic plots are stored:
 &lt;div class=&quot;admonition error&quot;&gt;cam_diag_plot_loc: ${diag_loc}diag-plot/
-
+&lt;/div&gt;
 #Use default variable plot settings?
 #If &quot;true&quot;, then variable-specific plotting attributes as defined in
 #ADF/lib/adf_variable_defaults.yaml will be used:
@@ -724,8 +725,6 @@ num_procs: 8
 #If set to true, then redo all plots even if they already exist.
 #If set to false, then if a plot is found it will be skipped:
 redo_plot: false
-
-&lt;/div&gt;
 </pre></div>
 </div>
 </div></section>
