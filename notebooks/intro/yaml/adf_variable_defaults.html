@@ -656,16 +656,17 @@ title="Print to PDF"
 <p>This admonition was styled…
 If only the file name is given, then the file is assumed to exist in the path specified by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code> in the config file.</p>
 </div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>If only the file name is given, then the file is assumed to exist in the path specified by `obs_data_loc` in the <a class="reference internal" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/config_cam_baseline_example.html#obs_data_loc"><span class="std std-ref">config file</span></a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If only the file name is given (ERA5.nc), then the file is assumed to exist in the path specified by `obs_data_loc` in the <a class="reference internal" href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/config_cam_baseline_example.html#obs_data_loc"><span class="std std-ref">config file</span></a>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;Otherwise, if a path is supllied with a file name (/path/to/some_OBS.nc), the ADF will search that instead of what is supplied in the `obs_data_loc` location&lt;/p&gt;
+</pre></div>
 </div>
-<li><p>If only the file name is given, then the file is assumed to exist in the path specified by "obs_data_loc" in the config file.</p></li>
-</ul>
+</div>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_name</span></code></h4>
 <ul>
 <li><p>Name of the observational dataset (mostly used for plotting and generated file naming).</p></li>
-<li><p>If this isn't present then the obs_file name is used.</p></li>
+<li><p>If this isn't present then the `obs_file` file name is used.</p></li>
 </ul>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_var_name</span></code></h4>
 <ul>
