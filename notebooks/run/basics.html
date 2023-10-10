@@ -501,16 +501,6 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#only-affects-timeseries-as-everything-else-uses-timeseries">
-   Only affects timeseries as everything else uses timeseries
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#leave-off-trailing">
-   Leave off trailing ‘.’
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
    defaults_file: /some/path/to/defaults/file
   </a>
@@ -569,16 +559,6 @@ title="Print to PDF"
     </ul>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#only-affects-timeseries-as-everything-else-uses-timeseries">
-   Only affects timeseries as everything else uses timeseries
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#leave-off-trailing">
-   Leave off trailing ‘.’
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defaults-file-some-path-to-defaults-file">
@@ -660,77 +640,70 @@ diag_basic_info:</p>
 <div class="admonition attention">CHANGE ME!
 <p>&ensp;diag_loc: /glade/scratch/${user}/ADF_output/TEST/</p>
 </div>
-<p>climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/
-ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</p>
+<p>climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/</p>
+<p>ts_loc: /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</p>
 <p>#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)</p>
-</section>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="only-affects-timeseries-as-everything-else-uses-timeseries">
-<h1>Only affects timeseries as everything else uses timeseries<a class="headerlink" href="#only-affects-timeseries-as-everything-else-uses-timeseries" title="Permalink to this headline">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="leave-off-trailing">
-<h1>Leave off trailing ‘.’<a class="headerlink" href="#leave-off-trailing" title="Permalink to this headline">#</a></h1>
-<p>#Default: cam.h0
-hist_str: cam.h0</p>
-<p>#Is this a model vs observations comparison?
-#If “false” or missing, then a model-model comparison is assumed:
-compare_obs: false</p>
-<p>#Generate HTML website (assumed false if missing):
-#Note:  The website files themselves will be located in the path
-#specified by “cam_diag_plot_loc”, under the “diag_run/website” subdirectory,
-#where “diag_run” is the subdirectory created for this particular diagnostics run
-#(usually “case_vs_obs_XXX” or “case_vs_baseline_XXX”).
-create_html: true</p>
-<p>#Location of observational datasets:
-#Note: this only matters if “compare_obs” is true and the path
-#isn’t specified in the variable defaults file.
-obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
-<p>#Location where re-gridded and interpolated CAM climatology files are stored:</p>
+<p># Only affects timeseries as everything else uses timeseries </p>
+<p># Leave off trailing '.'</p>
+<p>#Default: cam.h0</p>
+<p>hist_str: cam.h0 </p>          
+<p>#Is this a model vs observations comparison?</p>
+<p>#If "false" or missing, then a model-model comparison is assumed:</p>
+<p>compare_obs: false</p>
+<p>#Generate HTML website (assumed false if missing):</p>
+<p>#Note:  The website files themselves will be located in the path</p>
+<p>#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,</p>
+<p>#where "diag_run" is the subdirectory created for this particular diagnostics run</p>
+<p>#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").</p>
+<p>create_html: true</p>
+<p>#Location of observational datasets:</p>
+<p>#Note: this only matters if "compare_obs" is true and the path</p>
+<p>#isn't specified in the variable defaults file.</p>
+<p>obs_data_loc: /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
+<p>#Location where re-gridded and interpolated CAM climatology files are stored:
 <div class="admonition attention">CHANGE ME!
     <p>&ensp;cam_regrid_loc: /glade/scratch/richling/ADF/tutorials/data/output/regrid/</p>
 </div>
-#Overwrite CAM re-gridded files?
-#If false, or missing, then regridding will be skipped for regridded variables
-#that already exist in "cam_regrid_loc":
-cam_overwrite_regrid: false
-<p>#Location where diagnostic plots are stored:</p>
+<p>#Overwrite CAM re-gridded files?</p>
+<p>#If false, or missing, then regridding will be skipped for regridded variables</p>
+<p>#that already exist in "cam_regrid_loc":</p>
+<p>cam_overwrite_regrid: false</p>
+<p>#Location where diagnostic plots are stored:
 <div class="admonition attention">CHANGE ME!
     <p>&ensp;cam_diag_plot_loc: ${diag_loc}diag-plot/</p>
 </div>
-#Use default variable plot settings?
-#If "true", then variable-specific plotting attributes as defined in
-#ADF/lib/adf_variable_defaults.yaml will be used:
-use_defaults: true
-<p>#Location of ADF variable plotting defaults YAML file
-#if not using the one in ADF/lib:
-#defaults_file: /some/path/to/defaults/file</p>
-<p>#Vertical pressure levels (in hPa) on which to plot 3-D variables
-#when using horizontal (e.g. lat/lon) map projections.
-#If this config option is missing, then no 3-D variables will be plotted on
-#horizontal maps.  Please note too that pressure levels must currently match
-#what is available in the observations file in order to be plotted in a
-#model vs obs run:
-plot_press_levels: [200,850]</p>
-<p>#Longitude line on which to center all lat/lon maps.
-#If this config option is missing then the central
-#longitude will default to 180 degrees E.
-central_longitude: 180</p>
-<p>#Apply monthly weights to seasonal averages.
-#If False or missing, then all months are
-#given the same weight:
-weight_season: True</p>
-<p>#Number of processors on which to run the ADF.
-#If this config variable isn’t present then
-#the ADF defaults to one processor.  Also, if
-#you set it to “*” then it will default
-#to all of the processors available on a
-#single node/machine:
-num_procs: 8</p>
-<p>#If set to true, then redo all plots even if they already exist.
-#If set to false, then if a plot is found it will be skipped:
-redo_plot: false</p>
+<p>#Use default variable plot settings?</p>
+<p>#If "true", then variable-specific plotting attributes as defined in</p>
+<p>#ADF/lib/adf_variable_defaults.yaml will be used:</p>
+<p>use_defaults: true</p>
+<p>#Location of ADF variable plotting defaults YAML file</p>
+<p>#if not using the one in ADF/lib:</p>
+<p>#defaults_file: /some/path/to/defaults/file</p>
+<p>#Vertical pressure levels (in hPa) on which to plot 3-D variables</p>
+<p>#when using horizontal (e.g. lat/lon) map projections.</p>
+<p>#If this config option is missing, then no 3-D variables will be plotted on</p>
+<p>#horizontal maps.  Please note too that pressure levels must currently match</p>
+<p>#what is available in the observations file in order to be plotted in a</p>
+<p>#model vs obs run:</p>
+<p>plot_press_levels: [200,850]</p>
+<p>#Longitude line on which to center all lat/lon maps.</p>
+<p>#If this config option is missing then the central</p>
+<p>#longitude will default to 180 degrees E.</p>
+<p>central_longitude: 180</p>
+<p>#Apply monthly weights to seasonal averages.</p>
+<p>#If False or missing, then all months are</p>
+<p>#given the same weight:</p>
+<p>weight_season: True</p>
+<p>#Number of processors on which to run the ADF.</p>
+<p>#If this config variable isn't present then</p>
+<p>#the ADF defaults to one processor.  Also, if</p>
+<p>#you set it to "*" then it will default</p>
+<p>#to all of the processors available on a</p>
+<p>#single node/machine:</p>
+<p>num_procs: 8</p>
+<p>#If set to true, then redo all plots even if they already exist.</p>
+<p>#If set to false, then if a plot is found it will be skipped:</p>
+<p>redo_plot: false</p>
 </div><div class="admonition">
 <p>config_cam_vs_cam_demo.yaml</p>
 <div class="admonition tip">    
@@ -787,6 +760,9 @@ use_defaults: true
 #if not using the one in ADF/lib:
 </pre></div>
 </div>
+</section>
+</section>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="defaults-file-some-path-to-defaults-file">
 <h1>defaults_file: /some/path/to/defaults/file<a class="headerlink" href="#defaults-file-some-path-to-defaults-file" title="Permalink to this headline">#</a></h1>
