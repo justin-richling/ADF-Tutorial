@@ -631,8 +631,12 @@ title="Print to PDF"
   <div class="title">A *title*</div>
   <p>Paragraph 1</p>
   <p>Paragraph 2</p>
-</div><p>#Change to your user name!
-user: ‘richling’</p>
+    </div>
+</div><div class="admonition">
+<p>config_cam_vs_cam_demo.yaml</p>
+<div class="admonition tip">    
+#Change to your user name!
+user: 'richling'
 <p>#This first set of variables specify basic info used by all diagnostic runs:
 diag_basic_info:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Change this to a path on your machine!
@@ -654,8 +658,8 @@ compare_obs: false
 
 #Generate HTML website (assumed false if missing):
 #Note:  The website files themselves will be located in the path
-#specified by &quot;cam_diag_plot_loc&quot;, under the &quot;&lt;diag_run&gt;/website&quot; subdirectory,
-#where &quot;&lt;diag_run&gt;&quot; is the subdirectory created for this particular diagnostics run
+#specified by &quot;cam_diag_plot_loc&quot;, under the &quot;diag_run/website&quot; subdirectory,
+#where &quot;diag_run&quot; is the subdirectory created for this particular diagnostics run
 #(usually &quot;case_vs_obs_XXX&quot; or &quot;case_vs_baseline_XXX&quot;).
 create_html: true
 
@@ -719,9 +723,11 @@ num_procs: 8
 #If set to true, then redo all plots even if they already exist.
 #If set to false, then if a plot is found it will be skipped:
 redo_plot: false
+
+&lt;/div&gt;
 </pre></div>
 </div>
-</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
