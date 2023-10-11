@@ -6,9 +6,9 @@ img[src*='#center'] {
     margin: auto;
 }
 
-@media (min-width: 768px) 
+@media (min-width: 968px) 
 #main-content {     
-    max-width: 70%; 
+    max-width: 100%; 
 }
 
 :root {
