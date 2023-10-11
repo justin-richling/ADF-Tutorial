@@ -473,17 +473,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#types-of-adf-comparisons">
    Types of ADF Comparisons
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#available-comparison-cases">
+   Available Comparison Cases
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-case-comparison">
      Single Case Comparison
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#available-comparison-cases">
-       Available Comparison Cases
-      </a>
-     </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cam-vs-cam">
        CAM vs CAM
@@ -521,17 +521,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#types-of-adf-comparisons">
    Types of ADF Comparisons
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#available-comparison-cases">
+   Available Comparison Cases
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-case-comparison">
      Single Case Comparison
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#available-comparison-cases">
-       Available Comparison Cases
-      </a>
-     </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cam-vs-cam">
        CAM vs CAM
@@ -557,7 +557,7 @@ title="Print to PDF"
 <section id="how-to-run-the-adf">
 <h2>How to run the ADF<a class="headerlink" href="#how-to-run-the-adf" title="Permalink to this headline">#</a></h2>
 <p>There are two ways to run the ADF, the first and most stright forward is runnning the ADF in the terminal and the second is via Jupyter.</p>
-<p>The first steps are to set the desired (and required) variables in the config yaml file(s). In this demo, we will run the ADF standard variable defaults file (‘adf_variable_defaults.yaml’), but feel free to explore making your own, please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html" target="_blank">Variable Defaults</a> yaml section</p>
+<p>The first steps are to set the desired (and required) variables in the config yaml file(s). In this demo, we will run the ADF standard variable defaults file (<code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code>), but feel free to explore making your own, please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html" target="_blank">Variable Defaults</a> yaml section.</p>
 </section>
 <section id="types-of-adf-comparisons">
 <h2>Types of ADF Comparisons<a class="headerlink" href="#types-of-adf-comparisons" title="Permalink to this headline">#</a></h2>
@@ -565,23 +565,23 @@ title="Print to PDF"
 <p>Single Case Comparison</p>
 <p>Multiple Case Comparison**</p>
 <p style="margin-top: -15px;">&ensp; ** In progress, will not be part of this tutorial currently :(</p>
-<section id="single-case-comparison">
-<h3>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h3>
-<p>By default the ADF will run a single CAM test simulation (experiment) case vs baseline (control) case.</p>
+</section>
 <section id="available-comparison-cases">
-<h4>Available Comparison Cases<a class="headerlink" href="#available-comparison-cases" title="Permalink to this headline">#</a></h4>
+<h2>Available Comparison Cases<a class="headerlink" href="#available-comparison-cases" title="Permalink to this headline">#</a></h2>
 <p>There are essentially 3 types of comparisons:</p>
 <ul class="simple">
 <li><p>CAM vs CAM</p></li>
 <li><p>CAM vs Observations/Reanalysis</p></li>
 <li><p>CAM vs CMIP</p></li>
 </ul>
-<p>And each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
+<p>Each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
+<section id="single-case-comparison">
+<h3>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h3>
+<p>By default the ADF will run a single CAM test simulation (experiment) case vs baseline (control) case.</p>
 <hr class="docutils" />
 <p>First step: Setup the Run-time config file</p>
 <p>Navigate to the ADF root directory if you’re not already there.</p>
 <p>ADF/</p>
-</section>
 <section id="cam-vs-cam">
 <h4>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h4>
 <p>Make a copy of the <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> file</p>
@@ -611,62 +611,62 @@ title="Print to PDF"
 </div>
 <p>#This first set of variables specify basic info used by all diagnostic runs:<br>
 <strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-basic-info-strong" target="_blank">diag_basic_info:</a></strong></p>
-<p>&ensp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
-&ensp;# Only affects timeseries as everything else uses timeseries <br>
-&ensp;# Leave off trailing '.'<br>
-&ensp;#Default: cam.h0<br>
-&ensp;<strong>hist_str:</strong> cam.h0 </p>          
-<p>&ensp;#Is this a model vs observations comparison?<br>
-&ensp;#If "false" or missing, then a model-model comparison is assumed:<br>
-&ensp;<strong>compare_obs:</strong> false</p>
-<p>&ensp;#Generate HTML website (assumed false if missing):<br>
-&ensp;#Note:  The website files themselves will be located in the path<br>
-&ensp;#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
-&ensp;#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
-&ensp;#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
-&ensp;<strong>create_html:</strong> true</p>
-<p>&ensp;#Location of observational datasets:<br>
-&ensp;#Note: this only matters if "compare_obs" is true and the path<br>
-&ensp;#isn't specified in the variable defaults file.<br>
-&ensp;<strong>obs_data_loc:</strong> /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
+<p>&emsp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
+&emsp;# Only affects timeseries as everything else uses timeseries <br>
+&emsp;# Leave off trailing '.'<br>
+&emsp;#Default: cam.h0<br>
+&emsp;<strong>hist_str:</strong> cam.h0 </p>          
+<p>&emsp;#Is this a model vs observations comparison?<br>
+&emsp;#If "false" or missing, then a model-model comparison is assumed:<br>
+&emsp;<strong>compare_obs:</strong> false</p>
+<p>&emsp;#Generate HTML website (assumed false if missing):<br>
+&emsp;#Note:  The website files themselves will be located in the path<br>
+&emsp;#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
+&emsp;#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
+&emsp;#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
+&emsp;<strong>create_html:</strong> true</p>
+<p>&emsp;#Location of observational datasets:<br>
+&emsp;#Note: this only matters if "compare_obs" is true and the path<br>
+&emsp;#isn't specified in the variable defaults file.<br>
+&emsp;<strong>obs_data_loc:</strong> /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
 <div class="admonition attention">
-    <p>&ensp;#Location where re-gridded and interpolated CAM climatology files are stored:<br>
-    &ensp;<strong>cam_regrid_loc:</strong> /glade/scratch/${user}/ADF/regrid -> <span style="color:red">Change if desired!</span></p>
+    <p>&emsp;#Location where re-gridded and interpolated CAM climatology files are stored:<br>
+    &emsp;<strong>cam_regrid_loc:</strong> /glade/scratch/${user}/ADF/regrid -> <span style="color:red">Change if desired!</span></p>
 </div>
-<p>&ensp;#Overwrite CAM re-gridded files?<br>
-&ensp;<strong>cam_overwrite_regrid</strong>: false</p>
+<p>&emsp;#Overwrite CAM re-gridded files?<br>
+&emsp;<strong>cam_overwrite_regrid</strong>: false</p>
 <div class="admonition attention">
-    <p>&ensp;#Location where diagnostic plots are stored:<br>
-        &ensp;<strong>cam_diag_plot_loc:</strong> /glade/scratch/${user}/ADF/plots -> <span style="color:red">Change if desired!</span></p>
+    <p>&emsp;#Location where diagnostic plots are stored:<br>
+        &emsp;<strong>cam_diag_plot_loc:</strong> /glade/scratch/${user}/ADF/plots -> <span style="color:red">Change if desired!</span></p>
 </div>
-<p>&ensp;#Use default variable plot settings?<br>
-&ensp;#If "true", then variable-specific plotting attributes as defined in<br>
-&ensp;#ADF/lib/adf_variable_defaults.yaml will be used:<br>
-&ensp;<strong>use_defaults:</strong> true</p>
-<p>&ensp;#Location of ADF variable plotting defaults YAML file<br>
-&ensp;#if not using the one in ADF/lib:<br>
-&ensp;<strong>#defaults_file:</strong> /some/path/to/defaults/file</p>
-<p>&ensp;#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
-&ensp;#when using horizontal (e.g. lat/lon) map projections.<br>
-&ensp;#If this config option is missing, then no 3-D variables will be plotted on<br>
-&ensp;#horizontal maps.  Please note too that pressure levels must currently match<br>
-&ensp;#what is available in the observations file in order to be plotted in a<br>
-&ensp;#model vs obs run:<br>
-&ensp;<strong>plot_press_levels:</strong> [200,850]</p>
-<p>&ensp;#Longitude line on which to center all lat/lon maps.<br>
-&ensp;#If this config option is missing then the central<br>
-&ensp;#longitude will default to 180 degrees E.<br>
-&ensp;<strong>central_longitude:</strong> 180</p>
-<p>&ensp;#Number of processors on which to run the ADF.<br>
-&ensp;#If this config variable isn't present then<br>
-&ensp;#the ADF defaults to one processor.  Also, if<br>
-&ensp;#you set it to "*" then it will default<br>
-&ensp;#to all of the processors available on a<br>
-&ensp;#single node/machine:<br>
-&ensp;<strong>num_procs:</strong> 8</p>
-<p>&ensp;#If set to true, then redo all plots even if they already exist.<br>
-&ensp;#If set to false, then if a plot is found it will be skipped:<br>
-&ensp;<strong>redo_plot:</strong> false</p>
+<p>&emsp;#Use default variable plot settings?<br>
+&emsp;#If "true", then variable-specific plotting attributes as defined in<br>
+&emsp;#ADF/lib/adf_variable_defaults.yaml will be used:<br>
+&emsp;<strong>use_defaults:</strong> true</p>
+<p>&emsp;#Location of ADF variable plotting defaults YAML file<br>
+&emsp;#if not using the one in ADF/lib:<br>
+&emsp;<strong>#defaults_file:</strong> /some/path/to/defaults/file</p>
+<p>&emsp;#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
+&emsp;#when using horizontal (e.g. lat/lon) map projections.<br>
+&emsp;#If this config option is missing, then no 3-D variables will be plotted on<br>
+&emsp;#horizontal maps.  Please note too that pressure levels must currently match<br>
+&emsp;#what is available in the observations file in order to be plotted in a<br>
+&emsp;#model vs obs run:<br>
+&emsp;<strong>plot_press_levels:</strong> [200,850]</p>
+<p>&emsp;#Longitude line on which to center all lat/lon maps.<br>
+&emsp;#If this config option is missing then the central<br>
+&emsp;#longitude will default to 180 degrees E.<br>
+&emsp;<strong>central_longitude:</strong> 180</p>
+<p>&emsp;#Number of processors on which to run the ADF.<br>
+&emsp;#If this config variable isn't present then<br>
+&emsp;#the ADF defaults to one processor.  Also, if<br>
+&emsp;#you set it to "*" then it will default<br>
+&emsp;#to all of the processors available on a<br>
+&emsp;#single node/machine:<br>
+&emsp;<strong>num_procs:</strong> 8</p>
+<p>&emsp;#If set to true, then redo all plots even if they already exist.<br>
+&emsp;#If set to false, then if a plot is found it will be skipped:<br>
+&emsp;<strong>redo_plot:</strong> false</p>
 </div></section>
 </section>
 </section>
