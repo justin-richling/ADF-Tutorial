@@ -667,59 +667,62 @@ title="Print to PDF"
 <p>&emsp;#If set to true, then redo all plots even if they already exist.<br>
 &emsp;#If set to false, then if a plot is found it will be skipped:<br>
 &emsp;<strong>redo_plot:</strong> false</p>
-<p>#This second set of variables provides info for the CAM simulation(s) being diagnosed:
-diag_cam_climo:</p>
-<p> #Calculate climatologies?
- #If false, the climatology files will not be created:
- <strong>calc_cam_climo:</strong> true</p>
-<p> #Overwrite CAM climatology files?
- #If false, or not prsent, then already existing climatology files will be skipped:
- <strong>cam_overwrite_climo:</strong> false</p>
+<p>#This second set of variables provides info for the CAM simulation(s) being diagnosed:<br>
+<strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-cam-climo-strong" target="_blank">diag_cam_climo:</a></strong></p>
+<p>&emsp;#Calculate climatologies?<br>
+&emsp;#If false, the climatology files will not be created:<br>
+&emsp;<strong>calc_cam_climo:</strong> true</p>
+<p>&emsp;#Overwrite CAM climatology files?<br>
+&emsp;#If false, or not prsent, then already existing climatology files will be skipped:<br>
+&emsp;<strong>cam_overwrite_climo:</strong> false</p>
 <div class="admonition attention">
-&emsp;#Name of CAM case (or CAM run name):
-&emsp;<strong>cam_case_name:</strong> b.e20.BHIST.f09_g17.20thC.297_05
+<p>&emsp;#Name of CAM case (or CAM run name):<br>
+&emsp;<strong>cam_case_name:</strong> b.e20.BHIST.f09_g17.20thC.297_05</p>
 </div>
-<p> #Case nickname
- #NOTE: if nickname starts with ‘0’ - nickname must be in quotes!
- # ie ‘026a’ as opposed to 026a
- #If missing or left blank, will default to cam_case_name
- <strong>case_nickname:</strong> #cool nickname</p>
-<div class="admonition attention">
-&emsp;#Location of CAM history (h0) files:
-&emsp;#Example test files
-&emsp;<strong>cam_hist_loc:</strong> /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}
-    </div>
-<div class="admonition attention">
-&emsp;#Location of CAM climatologies (to be created and then used by this script)
-&emsp;<strong>cam_climo_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo
-    </div>
-<div class="admonition attention">
-&emsp;#model year when time series files should start:
-&emsp;#Note:  Leaving this entry blank will make time series
-&emsp;#       start at earliest available year.
-&emsp;<strong>start_year:</strong> 1990
+<p>&emsp;#Case nickname
+&emsp;#NOTE: if nickname starts with '0' - nickname must be in quotes!<br>
+&emsp;# ie '026a' as opposed to 026a<br>
+&emsp;#If missing or left blank, will default to cam_case_name<br>
+&emsp;<strong>case_nickname:</strong> #cool nickname</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;admonition attention&quot;&gt;
+    &lt;p&gt;&amp;emsp;#Location of CAM history (h0) files:&lt;br&gt;
+    &amp;emsp;#Example test files&lt;br&gt;
+    &amp;emsp;&lt;strong&gt;cam_hist_loc:&lt;/strong&gt; /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;admonition attention&quot;&gt;
+    &lt;p&gt;&amp;emsp;#Location of CAM climatologies (to be created and then used by this script)&lt;br&gt;
+    &amp;emsp;&lt;strong&gt;cam_climo_loc:&lt;/strong&gt; /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo&lt;/p&gt;
+&lt;/div&gt;
+</pre></div>
 </div>
 <div class="admonition attention">
-&emsp;#model year when time series files should end:
-&emsp;#Note:  Leaving this entry blank will make time series
-&emsp;#       end at latest available year.
-&emsp;<strong>end_year:</strong> 1999
+<p>&emsp;#model year when time series files should start:<br>
+&emsp;#Note:  Leaving this entry blank will make time series<br>
+&emsp;#       start at earliest available year.<br>
+&emsp;<strong>start_year:</strong> 1990</p>
 </div>
-<p> #Do time series files exist?
- #If True, then diagnostics assumes that model files are already time series.
- #If False, or if simply not present, then diagnostics will attempt to create
- #time series files from history (time-slice) files:
- <strong>cam_ts_done:</strong> false</p>
-<p> #Save interim time series files?
- #WARNING:  This can take up a significant amount of space,
- #          but will save processing time the next time
- <strong>cam_ts_save:</strong> true</p>
-<p> #Overwrite time series files, if found?
- #If set to false, then time series creation will be skipped if files are found:
- <strong>cam_overwrite_ts:</strong> false</p>
 <div class="admonition attention">
-&emsp;#Location where time series files are (or will be) stored:
-&emsp;<strong>cam_ts_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts
+<p>&emsp;#model year when time series files should end:<br>
+&emsp;#Note:  Leaving this entry blank will make time series<br>
+&emsp;#       end at latest available year.<br>
+&emsp;<strong>end_year:</strong> 1999</p>
+</div>
+<p>&emsp;#Do time series files exist?<br>
+&emsp;#If True, then diagnostics assumes that model files are already time series.<br>
+&emsp;#If False, or if simply not present, then diagnostics will attempt to create<br>
+&emsp;#time series files from history (time-slice) files:<br>
+&emsp;<strong>cam_ts_done:</strong> false</p>
+<p>&emsp;#Save interim time series files?<br>
+&emsp;#WARNING:  This can take up a significant amount of space,<br>
+&emsp;#          but will save processing time the next time<br>
+&emsp;<strong>cam_ts_save:</strong> true</p>
+<p>&emsp;#Overwrite time series files, if found?<br>
+&emsp;#If set to false, then time series creation will be skipped if files are found:<br>
+&emsp;<strong>cam_overwrite_ts:</strong> false</p>
+<div class="admonition attention">
+<p>&emsp;#Location where time series files are (or will be) stored:<br>
+&emsp;<strong>cam_ts_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p>
 </div>
 </div></section>
 </section>
