@@ -6,6 +6,11 @@ img[src*='#center'] {
     margin: auto;
 }
 
+@media (min-width: 768px) 
+#main-content {     
+    max-width: 70%; 
+}
+
 :root {
   /*****************************************************************************
   * Theme config
