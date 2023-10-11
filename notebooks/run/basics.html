@@ -622,9 +622,6 @@ title="Print to PDF"
 </div>
 <p>#This first set of variables specify basic info used by all diagnostic runs:<br>
 <strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-basic-info-strong" target="_blank">diag_basic_info:</a></strong></p>
-<div class="admonition attention">
-<p>&ensp;<strong>diag_loc:</strong> /glade/scratch/${user}/ADF_output/TEST/ -> <font color="red">CHANGE ME!</font></p>
-</div>
 <p>&ensp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
 &ensp;# Only affects timeseries as everything else uses timeseries <br>
 &ensp;# Leave off trailing '.'<br>
@@ -671,76 +668,6 @@ title="Print to PDF"
 &ensp;#If this config option is missing then the central<br>
 &ensp;#longitude will default to 180 degrees E.<br>
 &ensp;<strong>central_longitude:</strong> 180</p>
-<p>&ensp;#Number of processors on which to run the ADF.<br>
-&ensp;#If this config variable isn't present then<br>
-&ensp;#the ADF defaults to one processor.  Also, if<br>
-&ensp;#you set it to "*" then it will default<br>
-&ensp;#to all of the processors available on a<br>
-&ensp;#single node/machine:<br>
-&ensp;<strong>num_procs:</strong> 8</p>
-<p>&ensp;#If set to true, then redo all plots even if they already exist.<br>
-&ensp;#If set to false, then if a plot is found it will be skipped:<br>
-&ensp;<strong>redo_plot:</strong> false</p>
-</div><h3><strong>config_cam_vs_cam_demo.yaml</strong></h3>
-<div class="admonition">
-<p>#Change to your user name!<br>user: 'richling'<br>
-#This first set of variables specify basic info used by all diagnostic runs:<br>
-<strong>diag_basic_info:</strong></p>
-<div class="admonition attention">
-<p>&ensp;<strong>diag_loc:</strong> /glade/scratch/${user}/ADF_output/TEST/ -> <font color="red">CHANGE ME!</font></p>
-</div>
-<p>&ensp;climo_loc: /glade/scratch/richling/ADF/tutorials/data/output/climos/<br>
-&ensp;<strong>ts_loc:</strong> /glade/scratch/richling/ADF/tutorials/data/output/timeseries/</p>
-<p>&ensp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
-&ensp;# Only affects timeseries as everything else uses timeseries <br>
-&ensp;# Leave off trailing '.'<br>
-&ensp;#Default: cam.h0<br>
-&ensp;<strong>hist_str:</strong> cam.h0 </p>          
-<p>&ensp;#Is this a model vs observations comparison?<br>
-&ensp;#If "false" or missing, then a model-model comparison is assumed:<br>
-&ensp;<strong>compare_obs:</strong> false</p>
-<p>&ensp;#Generate HTML website (assumed false if missing):<br>
-&ensp;#Note:  The website files themselves will be located in the path<br>
-&ensp;#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
-&ensp;#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
-&ensp;#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
-&ensp;<strong>create_html:</strong> true</p>
-<p>&ensp;#Location of observational datasets:<br>
-&ensp;#Note: this only matters if "compare_obs" is true and the path<br>
-&ensp;#isn't specified in the variable defaults file.<br>
-&ensp;<strong>obs_data_loc:</strong> /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
-<div class="admonition attention">
-    <p>&ensp;#Location where re-gridded and interpolated CAM climatology files are stored:<br>
-    &ensp;<strong>cam_regrid_loc:</strong> /glade/scratch/richling/ADF/tutorials/data/output/regrid/ -> <span style="color:red">CHANGE ME!</span></p>
-</div>
-<p>&ensp;#Overwrite CAM re-gridded files?<br>
-&ensp;<strong>cam_overwrite_regrid</strong>: false</p>
-<div style="padding-top: -30px" class="admonition attention">
-    <p>&ensp;#Location where diagnostic plots are stored:<br>
-        &ensp;<strong>cam_diag_plot_loc:</strong> ${diag_loc}diag-plot/ -> <span style="color:red">CHANGE ME!</span></p>
-</div>
-<p>&ensp;#Use default variable plot settings?<br>
-&ensp;#If "true", then variable-specific plotting attributes as defined in<br>
-&ensp;#ADF/lib/adf_variable_defaults.yaml will be used:<br>
-&ensp;<strong>use_defaults:</strong> true</p>
-<p>&ensp;#Location of ADF variable plotting defaults YAML file<br>
-&ensp;#if not using the one in ADF/lib:<br>
-&ensp;<strong>#defaults_file:</strong> /some/path/to/defaults/file</p>
-<p>&ensp;#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
-&ensp;#when using horizontal (e.g. lat/lon) map projections.<br>
-&ensp;#If this config option is missing, then no 3-D variables will be plotted on<br>
-&ensp;#horizontal maps.  Please note too that pressure levels must currently match<br>
-&ensp;#what is available in the observations file in order to be plotted in a<br>
-&ensp;#model vs obs run:<br>
-&ensp;<strong>plot_press_levels:</strong> [200,850]</p>
-<p>&ensp;#Longitude line on which to center all lat/lon maps.<br>
-&ensp;#If this config option is missing then the central<br>
-&ensp;#longitude will default to 180 degrees E.<br>
-&ensp;<strong>central_longitude:</strong> 180</p>
-<p>&ensp;#Apply monthly weights to seasonal averages.<br>
-&ensp;#If False or missing, then all months are<br>
-&ensp;#given the same weight:<br>
-&ensp;<strong>weight_season:</strong> True</p>
 <p>&ensp;#Number of processors on which to run the ADF.<br>
 &ensp;#If this config variable isn't present then<br>
 &ensp;#the ADF defaults to one processor.  Also, if<br>
