@@ -356,7 +356,7 @@ p.topic-title {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.admonition {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     padding: 7px;
 }
@@ -613,6 +613,12 @@ ul.simple > li:not(:first-child) > p {
 ol.simple p,
 ul.simple p {
     margin-bottom: 0;
+}
+
+ul.adom {
+  list-style-type: none;
+  margin: 0;
+  padding: -10px;
 }
 
 dl.footnote > dt,
