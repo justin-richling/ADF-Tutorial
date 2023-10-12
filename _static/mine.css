@@ -6,6 +6,12 @@ img[src*='#center'] {
     margin: auto;
 }
 
+ul-2 {
+  list-style-type: none;
+  margin: 0;
+  padding: -10px;
+}
+
 @media (min-width: 1268px) 
 #main-content {     
     max-width: 100%; 
