@@ -356,7 +356,7 @@ p.topic-title {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.admonition {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 10px;
     padding: 7px;
 }
@@ -615,12 +615,6 @@ ul.simple p {
     margin-bottom: 0;
 }
 
-ul.adom {
-  list-style-type: none;
-  margin: 0;
-  padding: -10px;
-}
-
 dl.footnote > dt,
 dl.citation > dt {
     float: left;
@@ -750,7 +744,7 @@ abbr, acronym {
 /* -- code displays --------------------------------------------------------- */
 
 pre {
-    overflow: auto;
+    /*overflow: auto;*/
     overflow-y: hidden;  /* fixes display issues on Chrome browsers */
 }
 
@@ -763,7 +757,7 @@ span.pre {
     -ms-hyphens: none;
     -webkit-hyphens: none;
     hyphens: none;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 div[class*="highlight-"] {
@@ -910,3 +904,10 @@ div.math:hover a.headerlink {
         display: none;
     }
 }
+
+
+
+
+
+
+pre
