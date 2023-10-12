@@ -6,9 +6,17 @@ img[src*='#center'] {
     margin: auto;
 }
 
-@media (min-width: 968px) 
+@media (min-width: 1268px) 
 #main-content {     
     max-width: 100%; 
+}
+
+.rst-content .myownstyle .admonition-title {
+   background: #b99976
+}
+
+.rst-content .myownstyle {
+   background: #e5d3b3
 }
 
 :root {
