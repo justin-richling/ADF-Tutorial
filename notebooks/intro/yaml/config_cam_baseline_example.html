@@ -579,15 +579,6 @@ title="Print to PDF"
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-use-defaults-span-code">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         use_defaults
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-defaults-file-span-code">
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -1039,15 +1030,6 @@ title="Print to PDF"
        <code class="docutils literal notranslate">
         <span class="pre">
          hist_num
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-use-defaults-span-code">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         use_defaults
         </span>
        </code>
       </a>
@@ -1590,16 +1572,8 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&emsp;&ensp; CAM history file number to use (h0, h1, h2, etc)</p>
 <ul>
 <li><p>Currently only affects timeseries generation, as everything else uses the timeseries files themselves.</p></li>
-<li><p>If this variable is not present then it will default to "h0"</p></li>
-<li><p>example: h0</p></li>
-</ul>
-</section>
-<section id="code-class-docutils-literal-notranslate-span-class-pre-use-defaults-span-code">
-<h3>  <code class="docutils literal notranslate"><span class="pre">use_defaults</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-use-defaults-span-code" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&emsp;&ensp; Use default variable plot settings? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
-<ul>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then variable-specific plotting attributes will be defined in <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code></p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, then variable-specific plotting attributes will be defined in supplied <code class="docutils literal notranslate"><span class="pre">yaml</span></code> file in <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file">defaults_file</a></span></code> (see below)</p></li>
+<li><p>If this variable is not present then it will default to "cam.h0"</p></li>
+<li><p>example: cam.h4</p></li>
 </ul>
 </section>
 <section id="code-class-docutils-literal-notranslate-span-class-pre-defaults-file-span-code">
@@ -1649,7 +1623,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&emsp;&ensp; Generate HTML website - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
 <ul>
     <li><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code> or missing, no html pages will be made</p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code> The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_vs_{baseline}_YYYY</span></code>)</p>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code> The website files themselves will be located in the path specified by <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#cam-diag-plot-loc"><code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code></a>, under the <code class="docutils literal notranslate"><span class="pre">{diag_run}/website</span></code> subdirectory, where <code class="docutils literal notranslate"><span class="pre">{diag_run}</span></code> is the subdirectory created for this particular diagnostics run (usually <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_YYYY_vs_obs</span></code> or <code class="docutils literal notranslate"><span class="pre">{case}_YYYY_YYYY_vs_{baseline}_YYYY_YYYY</span></code>)</p>
     </li>
 </ul></section>
 </section>
