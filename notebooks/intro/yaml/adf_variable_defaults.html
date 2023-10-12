@@ -179,10 +179,44 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../run/basics.html">
    Running ADF Basics
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../run/basics/single_case.html">
+     Single Case
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/basics/single_case/cam_vs_cam.html">
+       CAM vs CAM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/basics/single_case/cam_vs_obs.html">
+       CAM vs Obs/Reanalysis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/basics/single_case/cam_vs_mip.html">
+       CAM vs CMIP
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../run/terminal.html">
@@ -193,8 +227,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../run/Jupyter.html">
    ADF in Jupyter
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -570,12 +604,12 @@ title="Print to PDF"
 <h2>Variable Default Settings<a class="headerlink" href="#variable-default-settings" title="Permalink to this headline">#</a></h2>
 <section id="custom-set-p-p">
 <h3>Custom Set <p>*</p><a class="headerlink" href="#custom-set-p-p" title="Permalink to this headline">#</a></h3>
-<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
+<p>If you plan on using a modified file for your custom values you need to set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#code-class-docutils-literal-notranslate-span-class-pre-defaults-file-span-code"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
-<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
+<p>If you would like to use a custom file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Example</p>
 <p>From the ADF root directory</p>
@@ -584,12 +618,11 @@ title="Print to PDF"
 </div>
 <p>In <code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code>:</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
-<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your_variable_defaults.yaml</span></code></p>
 </div>
 </div>
-<p>If you want to use default obs files from a set location, you do this through config_cam_baseline_example.yaml. You can also change any individual path on the adf_variable_defaults file. Please see the documentation if you’re confused.</p>
-<p>These are the values that can be set for each variable. Non are required.</p>
+<p>If you want to use observation files that are not in the same location as the ones set in <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#code-class-docutils-literal-notranslate-span-class-pre-obs-data-loc-span-code"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a> file, you can set them on a variable by variable basis here.</p>
+<p>These are the values that can be set for each variable. None are required.</p>
 </section>
 <section id="plotting">
 <h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
