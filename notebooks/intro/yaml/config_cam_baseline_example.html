@@ -1721,10 +1721,11 @@ title="Print to PDF"
 <section id="code-class-docutils-literal-notranslate-span-class-pre-cam-ts-save-span-code">
 <h3>  <code class="docutils literal notranslate"><span class="pre">cam_ts_save</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cam-ts-save-span-code" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp;&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
-</div>
+<ul>
+```{warning}
+If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time
+```
+</ul>
 <ul>
     <li><p>default: true</p></li>
 </ul>
@@ -1743,11 +1744,11 @@ title="Print to PDF"
 <ul>
 <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</span></code></p></li>
 </ul>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<ul>
+```{attention}
 <p>If this is a CMIP-like case, this should be set to the same location as `cam_hist_loc`</p>
-</div>
-</section>
+```
+</ul></section>
 </section>
 <section id="strong-diag-cam-baseline-climo-strong">
 <h2><strong>diag_cam_baseline_climo</strong><a class="headerlink" href="#strong-diag-cam-baseline-climo-strong" title="Permalink to this headline">#</a></h2>
