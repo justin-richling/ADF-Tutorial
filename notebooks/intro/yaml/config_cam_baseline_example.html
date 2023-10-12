@@ -1721,15 +1721,10 @@ title="Print to PDF"
 <section id="code-class-docutils-literal-notranslate-span-class-pre-cam-ts-save-span-code">
 <h3>  <code class="docutils literal notranslate"><span class="pre">cam_ts_save</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cam-ts-save-span-code" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp;&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
-<ul>
-```{warning}
-If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time
-```
-</ul>
 <ul class="adom">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time
+If <code class="docutils literal notranslate"><span class="pre">//true//</span></code>, this can take up a significant amount of space, but will save processing time the next time
 </div>
 </ul>   
 <ul>
@@ -1842,10 +1837,12 @@ If this is a CMIP-like case, this should be set to the same location as <code cl
 <section id="id9">
 <h3>  <code class="docutils literal notranslate"><span class="pre">cam_ts_save</span></code><a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp;&ensp; Save interim time series files? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
+<ul class="adom">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this can take up a significant amount of space, but will save processing time the next time</p>
+If <code class="docutils literal notranslate"><span class="pre">//true//</span></code>, this can take up a significant amount of space, but will save processing time the next time
 </div>
+</ul>   
 <ul>
     <li><p>default: true</p></li>
 </ul>
@@ -1863,6 +1860,12 @@ If this is a CMIP-like case, this should be set to the same location as <code cl
 <p style="margin-top: -5px;">&emsp;&ensp; Location where time series files are (or will be) stored</p>
 <ul>
     <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</span></code></p></li>
+</ul>
+<ul class="adom">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+If this is a CMIP-like case, this should be set to the same location as <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>
+</div>
 </ul>
 <p>The ADF will create a directory for the plots in a directory in the ADF root in the form of <code class="docutils literal notranslate"><span class="pre">{cam_case_name}_{YYYY}_{YYYY}_vs_{baseline_name}_{YYYY}_{YYYY}</span></code></p>
 </section>
