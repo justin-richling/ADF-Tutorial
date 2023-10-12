@@ -504,6 +504,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
     </a>
@@ -551,6 +556,11 @@ title="Print to PDF"
    config_cam_baseline_example.yaml
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-cam-climo">
      diag_cam_climo
@@ -610,8 +620,15 @@ title="Print to PDF"
 </li>
 </ul>
 <hr class="docutils" />
-<p>If you use the ADF default observation files, there is only one thing to change:</p>
-<p>Change to compare against observations</p>
+<section id="diag-basic-info">
+<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
+<p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
+<p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
+<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
+<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
+<p>Now we can change the paths for the regridded data and plot locations</p>
+<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
+<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
 <p style="margin-top: -5px;">&ensp; compare_obs: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">/glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</span></code></p>
 <p>If you want to provide a location for a different set of observations than the ADF default ones, one further step is required:</p>
@@ -633,6 +650,7 @@ title="Print to PDF"
 <p>For PBLH, the ADF will use <code class="docutils literal notranslate"><span class="pre">/path/to/my/ADF_obs/Some_PBLH_climo.nc</span></code> instead of default</p>
 <p>It will override the location given by <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code></p>
 </div>
+</section>
 <section id="diag-cam-climo">
 <h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
