@@ -209,11 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
        CAM vs Obs/Reanalysis
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="basics/single_case/cam_vs_mip.html">
-       CAM vs CMIP
-      </a>
-     </li>
     </ul>
    </li>
   </ul>
@@ -514,16 +509,9 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-case-comparison">
-     Single Case Comparison
+    <a class="reference internal nav-link" href="#cam-vs-cam">
+     CAM vs CAM
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-vs-cam">
-       CAM vs CAM
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -562,16 +550,9 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-case-comparison">
-     Single Case Comparison
+    <a class="reference internal nav-link" href="#cam-vs-cam">
+     CAM vs CAM
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cam-vs-cam">
-       CAM vs CAM
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -609,15 +590,8 @@ title="Print to PDF"
 <li><p>CAM vs CMIP</p></li>
 </ul>
 <p>Each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
-<section id="single-case-comparison">
-<h3>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h3>
-<p>By default the ADF will run a single CAM test simulation (experiment) case vs baseline (control) case.</p>
-<hr class="docutils" />
-<p>First step: Setup the Run-time config file</p>
-<p>Navigate to the ADF root directory if you’re not already there.</p>
-<p>ADF/</p>
 <section id="cam-vs-cam">
-<h4>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h4>
+<h3>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h3>
 <p>Make a copy of the <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">config_cam_baseline_example</span><span class="o">.</span><span class="n">yaml</span> <span class="n">config_cam_vs_cam_demo</span><span class="o">.</span><span class="n">yaml</span>
 
@@ -756,7 +730,6 @@ title="Print to PDF"
 &emsp;<strong>cam_ts_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p>
 </div>
 </div></section>
-</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>

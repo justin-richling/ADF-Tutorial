@@ -209,11 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
        CAM vs Obs/Reanalysis
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="cam_vs_mip.html">
-       CAM vs CMIP
-      </a>
-     </li>
     </ul>
    </li>
   </ul>
@@ -504,6 +499,11 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-variables">
+     Global Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-basic-info">
      diag_basic_info
     </a>
@@ -561,6 +561,11 @@ title="Print to PDF"
    config_cam_baseline_example.yaml
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-variables">
+     Global Variables
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#diag-basic-info">
      diag_basic_info
@@ -620,7 +625,7 @@ title="Print to PDF"
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_baseline_example.yaml config_cam_vs_cam.yaml
 </pre></div>
 </div>
-<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> file with your favorite editor again</p>
+<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam.yaml</span></code> file with your favorite editor</p>
 <p>The following subsections have variables that will be changed:</p>
 <ul>
 <li><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-basic-info">diag_basic_info</a></p>
@@ -630,10 +635,21 @@ title="Print to PDF"
 <li><p style="margin-top: -5px;"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/model_vs_model.html#diag-cam-baseline-climo">diag_cam_baseline_climo</a></p></li>
 </ul>
 <hr class="docutils" />
-<section id="diag-basic-info">
-<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h3>
+<p>In the yaml file, let’s set two global variables:</p>
+<p><code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_path</span></code></p>
+<p>Set the user name that will be help set all paths later in the yaml file</p>
+<p style="margin-top: -5px;">&ensp; `user`: <code class="docutils literal notranslate"><span class="pre">YOUR-USER-NAME</span></code></p>
 <p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
 <p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
+<p>These variables will be set above all the subsections so that they can be called in any subsection.</p>
+<div class="admonition attention">Note
+    <p>If `yaml` files are new to you, variables set in <strong>subsections</strong> are only accessable via the subsection name</p>
+</div>
+</section>
+<section id="diag-basic-info">
+<h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
 <p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
 <p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
 <p>Now we can change the paths for the regridded data and plot locations</p>
