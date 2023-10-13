@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Running ADF Basics &#8212; ADF Demo</title>
+    <title>Multi-Case &#8212; ADF Demo</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ADF in the Terminal" href="terminal.html" />
-    <link rel="prev" title="Variable Defaults - adf_variable_defaults.yaml" href="../intro/yaml/adf_variable_defaults.html" />
+    <link rel="next" title="Jupyter Notebooks" href="jupyter.html" />
+    <link rel="prev" title="CAM vs Obs/Reanalysis" href="single_case/cam_vs_obs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -178,19 +178,19 @@ const thebe_selector_output = ".output, .cell_output"
   Running the ADF
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../run/basics.html">
    Running ADF Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="terminal.html">
+  <a class="reference internal" href="../run/terminal.html">
    ADF in the Terminal
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Jupyter.html">
+  <a class="reference internal" href="../run/Jupyter.html">
    ADF in Jupyter
   </a>
  </li>
@@ -200,9 +200,9 @@ const thebe_selector_output = ".output, .cell_output"
   Examples
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../examples/single_case.html">
+  <a class="reference internal" href="single_case.html">
    Single Case
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -212,24 +212,24 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../examples/single_case/cam_vs_cam.html">
+    <a class="reference internal" href="single_case/cam_vs_cam.html">
      CAM vs CAM
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../examples/single_case/cam_vs_obs.html">
+    <a class="reference internal" href="single_case/cam_vs_obs.html">
      CAM vs Obs/Reanalysis
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../examples/multi_case.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Multi-Case
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../examples/jupyter.html">
+  <a class="reference internal" href="jupyter.html">
    Jupyter Notebooks
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -239,12 +239,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Jupyter/jupyter_adf_analysis.html">
+    <a class="reference internal" href="../run/Jupyter/jupyter_adf_analysis.html">
      Analysing ADF Output via Jupyter
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Jupyter/jupyter_adf_run.html">
+    <a class="reference internal" href="../run/Jupyter/jupyter_adf_run.html">
      Exercise - Run ADF via Jupyter
     </a>
    </li>
@@ -356,7 +356,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Demo/main?urlpath=tree/docs/notebooks/run/basics.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Demo/main?urlpath=tree/docs/notebooks/examples/multi_case.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -416,7 +416,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Demo/issues/new?title=Issue%20on%20page%20%2Fnotebooks/run/basics.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Demo/issues/new?title=Issue%20on%20page%20%2Fnotebooks/examples/multi_case.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -444,7 +444,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/notebooks/run/basics.ipynb"
+        <a href="../../_sources/notebooks/examples/multi_case.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -481,94 +481,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run-the-adf">
-   How to run the ADF
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
-   Types of ADF Comparisons
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#available-comparison-cases">
-   Available Comparison Cases
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cam-vs-cam">
-     CAM vs CAM
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Running ADF Basics</h1>
+                <h1>Multi-Case</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-run-the-adf">
-   How to run the ADF
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
-   Types of ADF Comparisons
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#available-comparison-cases">
-   Available Comparison Cases
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cam-vs-cam">
-     CAM vs CAM
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -576,171 +505,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="running-adf-basics">
-<h1>Running ADF Basics<a class="headerlink" href="#running-adf-basics" title="Permalink to this headline">#</a></h1>
-<p>Now that the environment is setup with the required modules loaded and the ADF cloned let’s put it all together and do a CAM vs CAM comparison!</p>
-<section id="how-to-run-the-adf">
-<h2>How to run the ADF<a class="headerlink" href="#how-to-run-the-adf" title="Permalink to this headline">#</a></h2>
-<p>There are two ways to run the ADF, the first and most stright forward is runnning the ADF in the terminal and the second is via Jupyter.</p>
-<p>The first steps are to set the desired (and required) variables in the config yaml file(s). In this demo, we will run the ADF standard variable defaults file (<code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code>), but feel free to explore making your own, please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/adf_variable_defaults.html" target="_blank">Variable Defaults</a> yaml section.</p>
-</section>
-<section id="types-of-adf-comparisons">
-<h2>Types of ADF Comparisons<a class="headerlink" href="#types-of-adf-comparisons" title="Permalink to this headline">#</a></h2>
-<p>There are a couple different ADF runs one can do:</p>
-<p>Single Case Comparison</p>
-<p>Multiple Case Comparison**</p>
-<p style="margin-top: -15px;">&ensp; ** In progress, will not be part of this tutorial currently :(</p>
-</section>
-<section id="available-comparison-cases">
-<h2>Available Comparison Cases<a class="headerlink" href="#available-comparison-cases" title="Permalink to this headline">#</a></h2>
-<p>There are essentially 3 types of comparisons:</p>
-<ul class="simple">
-<li><p>CAM vs CAM</p></li>
-<li><p>CAM vs Observations/Reanalysis</p></li>
-<li><p>CAM vs CMIP</p></li>
-</ul>
-<p>Each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
-<section id="cam-vs-cam">
-<h3>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h3>
-<p>Make a copy of the <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">config_cam_baseline_example</span><span class="o">.</span><span class="n">yaml</span> <span class="n">config_cam_vs_cam_demo</span><span class="o">.</span><span class="n">yaml</span>
-
-</pre></div>
-</div>
-<p>Then, open <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam_demo.yaml</span></code> in your favorite editor.</p>
-<p>We will do a simple run of two CAM siumulations, with the sample data living at:</p>
-<p>test case: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 (1995-2012)
-<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p>baseline case: f.cam6_3_105.FLTHIST_v0a.ne30.001 (1979-2002)
-<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_105.FLTHIST_v0a.ne30.001</span></code></p>
-<p>Let’s pick a couple of years that are in common with these two datasets.</p>
-<p>NOTE: it is not necessary that the climo years match between cases, which is typical, especially when comparing against obs or AMIP/CMIP cases.</p>
-<h3><strong>config_cam_vs_cam_demo.yaml</strong></h3>
-<div class="admonition">
-<p># This file doesn't (yet) read environment variables, so the user must<br>
-# set this themselves. It is also a good idea to search the doc for 'user'<br>
-# to see what default paths are being set for output/working files.<br>
-#<br>
-# Note that the string 'USER-NAME-NOT-SET' is used in the jupyter script<br>
-# to check for a failure to customize<br>
-#</p>
-<div class="admonition attention">
-<p><strong>user:</strong> 'USER-NAME-NOT-SET' -> <font color="red">CHANGE ME!</font></p>
-</div>
-<p>#This first set of variables specify basic info used by all diagnostic runs:<br>
-<strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-basic-info-strong" target="_blank">diag_basic_info:</a></strong></p>
-<p>&emsp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
-&emsp;# Only affects timeseries as everything else uses timeseries <br>
-&emsp;# Leave off trailing '.'<br>
-&emsp;#Default: cam.h0<br>
-&emsp;<strong>hist_str:</strong> cam.h0 </p>          
-<p>&emsp;#Is this a model vs observations comparison?<br>
-&emsp;#If "false" or missing, then a model-model comparison is assumed:<br>
-&emsp;<strong>compare_obs:</strong> false</p>
-<p>&emsp;#Generate HTML website (assumed false if missing):<br>
-&emsp;#Note:  The website files themselves will be located in the path<br>
-&emsp;#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
-&emsp;#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
-&emsp;#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
-&emsp;<strong>create_html:</strong> true</p>
-<p>&emsp;#Location of observational datasets:<br>
-&emsp;#Note: this only matters if "compare_obs" is true and the path<br>
-&emsp;#isn't specified in the variable defaults file.<br>
-&emsp;<strong>obs_data_loc:</strong> /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
-<div class="admonition attention">
-<p>&emsp;#Location where re-gridded and interpolated CAM climatology files are stored:<br>
-&emsp;<strong>cam_regrid_loc:</strong> /glade/scratch/${user}/ADF/regrid -> <span style="color:red">Change if desired!</span></p>
-</div>
-<p>&emsp;#Overwrite CAM re-gridded files?<br>
-&emsp;<strong>cam_overwrite_regrid</strong>: false</p>
-<div class="admonition attention">
-<p>&emsp;#Location where diagnostic plots are stored:<br>
-&emsp;<strong>cam_diag_plot_loc:</strong> /glade/scratch/${user}/ADF/plots -> <span style="color:red">Change if desired!</span></p>
-</div>
-<p>&emsp;#Use default variable plot settings?<br>
-&emsp;#If "true", then variable-specific plotting attributes as defined in<br>
-&emsp;#ADF/lib/adf_variable_defaults.yaml will be used:<br>
-&emsp;<strong>use_defaults:</strong> true</p>
-<p>&emsp;#Location of ADF variable plotting defaults YAML file<br>
-&emsp;#if not using the one in ADF/lib:<br>
-&emsp;<strong>#defaults_file:</strong> /some/path/to/defaults/file</p>
-<p>&emsp;#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
-&emsp;#when using horizontal (e.g. lat/lon) map projections.<br>
-&emsp;#If this config option is missing, then no 3-D variables will be plotted on<br>
-&emsp;#horizontal maps.  Please note too that pressure levels must currently match<br>
-&emsp;#what is available in the observations file in order to be plotted in a<br>
-&emsp;#model vs obs run:<br>
-&emsp;<strong>plot_press_levels:</strong> [200,850]</p>
-<p>&emsp;#Longitude line on which to center all lat/lon maps.<br>
-&emsp;#If this config option is missing then the central<br>
-&emsp;#longitude will default to 180 degrees E.<br>
-&emsp;<strong>central_longitude:</strong> 180</p>
-<p>&emsp;#Number of processors on which to run the ADF.<br>
-&emsp;#If this config variable isn't present then<br>
-&emsp;#the ADF defaults to one processor.  Also, if<br>
-&emsp;#you set it to "*" then it will default<br>
-&emsp;#to all of the processors available on a<br>
-&emsp;#single node/machine:<br>
-&emsp;<strong>num_procs:</strong> 8</p>
-<p>&emsp;#If set to true, then redo all plots even if they already exist.<br>
-&emsp;#If set to false, then if a plot is found it will be skipped:<br>
-&emsp;<strong>redo_plot:</strong> false</p>
-<p>#This second set of variables provides info for the CAM simulation(s) being diagnosed:<br>
-<strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-cam-climo-strong" target="_blank">diag_cam_climo:</a></strong></p>
-<p>&emsp;#Calculate climatologies?<br>
-&emsp;#If false, the climatology files will not be created:<br>
-&emsp;<strong>calc_cam_climo:</strong> true</p>
-<p>&emsp;#Overwrite CAM climatology files?<br>
-&emsp;#If false, or not prsent, then already existing climatology files will be skipped:<br>
-&emsp;<strong>cam_overwrite_climo:</strong> false</p>
-<div class="admonition attention">
-<p>&emsp;#Name of CAM case (or CAM run name):<br>
-&emsp;<strong>cam_case_name:</strong> b.e20.BHIST.f09_g17.20thC.297_05</p>
-</div>
-<p>&emsp;#Case nickname<br>
-&emsp;#NOTE: if nickname starts with '0' - nickname must be in quotes!<br>
-&emsp;# ie '026a' as opposed to 026a<br>
-&emsp;#If missing or left blank, will default to cam_case_name<br>
-&emsp;<strong>case_nickname:</strong> #cool nickname</p>
-<div class="admonition attention">
-<p>&emsp;#Location of CAM history (h0) files:<br>
-&emsp;#Example test files<br>
-&emsp;<strong>cam_hist_loc:</strong> /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#Location of CAM climatologies (to be created and then used by this script)<br>
-&emsp;<strong>cam_climo_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#model year when time series files should start:<br>
-&emsp;#Note:  Leaving this entry blank will make time series<br>
-&emsp;#       start at earliest available year.<br>
-&emsp;<strong>start_year:</strong> 1990</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#model year when time series files should end:<br>
-&emsp;#Note:  Leaving this entry blank will make time series<br>
-&emsp;#       end at latest available year.<br>
-&emsp;<strong>end_year:</strong> 1999</p>
-</div>
-<p>&emsp;#Do time series files exist?<br>
-&emsp;#If True, then diagnostics assumes that model files are already time series.<br>
-&emsp;#If False, or if simply not present, then diagnostics will attempt to create<br>
-&emsp;#time series files from history (time-slice) files:<br>
-&emsp;<strong>cam_ts_done:</strong> false</p>
-<p>&emsp;#Save interim time series files?<br>
-&emsp;#WARNING:  This can take up a significant amount of space,<br>
-&emsp;#          but will save processing time the next time<br>
-&emsp;<strong>cam_ts_save:</strong> true</p>
-<p>&emsp;#Overwrite time series files, if found?<br>
-&emsp;#If set to false, then time series creation will be skipped if files are found:<br>
-&emsp;<strong>cam_overwrite_ts:</strong> false</p>
-<div class="admonition attention">
-<p>&emsp;#Location where time series files are (or will be) stored:<br>
-&emsp;<strong>cam_ts_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p>
-</div>
-</div></section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="multi-case">
+<h1>Multi-Case<a class="headerlink" href="#multi-case" title="Permalink to this headline">#</a></h1>
+<p>It’s broken!</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -752,16 +519,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "npl-3.7.9"
+            mode: "python"
         },
         kernelOptions: {
-            name: "npl-3.7.9",
-            path: "./notebooks/run"
+            name: "python3",
+            path: "./notebooks/examples"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'npl-3.7.9'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -770,17 +537,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro/yaml/adf_variable_defaults.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="single_case/cam_vs_obs.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Variable Defaults - adf_variable_defaults.yaml</p>
+            <p class="prev-next-title">CAM vs Obs/Reanalysis</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="terminal.html" title="next page">
+    <a class='right-next' id="next-link" href="jupyter.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ADF in the Terminal</p>
+        <p class="prev-next-title">Jupyter Notebooks</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
