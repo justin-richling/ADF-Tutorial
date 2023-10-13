@@ -637,23 +637,23 @@ title="Print to PDF"
 <hr class="docutils" />
 <section id="global-variables">
 <h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h3>
-<p>In the yaml file, let’s set two global variables:</p>
-<p><code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_path</span></code></p>
+<p>In the yaml file, let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist_path</span></code></p>
 <p>Set the user name that will be help set all paths later in the yaml file</p>
 <p style="margin-top: -5px;">&ensp; `user`: <code class="docutils literal notranslate"><span class="pre">YOUR-USER-NAME</span></code></p>
 <p>Create a new variable for the root ADF path <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
 <p style="margin-top: -5px;">&ensp; adf_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF</span></code></p>
-<p>These variables will be set above all the subsections so that they can be called in any subsection.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This is meerly a suggestion of how to configure the locations of all the files and diagnostic plots. We will stick to this convention for this tutorial, but please feel free to setup your ADF diagnsotics paths/hieracrhy in anyway that makes sense for your actual needs!</p>    
 </div>
+<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the sample history files</p>
+<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
 </section>
 <section id="diag-basic-info">
 <h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
-<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the history files</p>
-<p style="margin-top: -5px;">&ensp; hist_path: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
-<p>Now we can change the paths for the regridded data and plot locations</p>
+<p>This subsection defines necessary variables for the overall ADF run</p>
+<p>We can change the paths for the regridded data and plot locations</p>
 <p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
 <p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
 </section>
