@@ -223,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../examples/single_case/cam_vs_cmip.html">
-     CAM vs CAM
+     CAM vs CMIP
     </a>
    </li>
   </ul>
@@ -522,13 +522,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#available-comparison-cases">
    Available Comparison Cases
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cam-vs-cam">
-     CAM vs CAM
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -563,13 +556,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#available-comparison-cases">
    Available Comparison Cases
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cam-vs-cam">
-     CAM vs CAM
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -605,146 +591,6 @@ title="Print to PDF"
 <li><p>CAM vs CMIP</p></li>
 </ul>
 <p>Each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
-<section id="cam-vs-cam">
-<h3>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h3>
-<p>Make a copy of the <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">config_cam_baseline_example</span><span class="o">.</span><span class="n">yaml</span> <span class="n">config_cam_vs_cam_demo</span><span class="o">.</span><span class="n">yaml</span>
-
-</pre></div>
-</div>
-<p>Then, open <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam_demo.yaml</span></code> in your favorite editor.</p>
-<p>We will do a simple run of two CAM siumulations, with the sample data living at:</p>
-<p>test case: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 (1995-2012)
-<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p>baseline case: f.cam6_3_105.FLTHIST_v0a.ne30.001 (1979-2002)
-<code class="docutils literal notranslate"><span class="pre">/glade/work/richling/ADF/adf-tutorials/data/f.cam6_3_105.FLTHIST_v0a.ne30.001</span></code></p>
-<p>Let’s pick a couple of years that are in common with these two datasets.</p>
-<p>NOTE: it is not necessary that the climo years match between cases, which is typical, especially when comparing against obs or AMIP/CMIP cases.</p>
-<h3><strong>config_cam_vs_cam_demo.yaml</strong></h3>
-<div class="admonition">
-<p># This file doesn't (yet) read environment variables, so the user must<br>
-# set this themselves. It is also a good idea to search the doc for 'user'<br>
-# to see what default paths are being set for output/working files.<br>
-#<br>
-# Note that the string 'USER-NAME-NOT-SET' is used in the jupyter script<br>
-# to check for a failure to customize<br>
-#</p>
-<div class="admonition attention">
-<p><strong>user:</strong> 'USER-NAME-NOT-SET' -> <font color="red">CHANGE ME!</font></p>
-</div>
-<p>#This first set of variables specify basic info used by all diagnostic runs:<br>
-<strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-basic-info-strong" target="_blank">diag_basic_info:</a></strong></p>
-<p>&emsp;#History file string to match (eg. cam.h0 or ocn.pop.h.ecosys.nday1)<br>
-&emsp;# Only affects timeseries as everything else uses timeseries <br>
-&emsp;# Leave off trailing '.'<br>
-&emsp;#Default: cam.h0<br>
-&emsp;<strong>hist_str:</strong> cam.h0 </p>          
-<p>&emsp;#Is this a model vs observations comparison?<br>
-&emsp;#If "false" or missing, then a model-model comparison is assumed:<br>
-&emsp;<strong>compare_obs:</strong> false</p>
-<p>&emsp;#Generate HTML website (assumed false if missing):<br>
-&emsp;#Note:  The website files themselves will be located in the path<br>
-&emsp;#specified by "cam_diag_plot_loc", under the "diag_run/website" subdirectory,<br>
-&emsp;#where "diag_run" is the subdirectory created for this particular diagnostics run<br>
-&emsp;#(usually "case_vs_obs_XXX" or "case_vs_baseline_XXX").<br>
-&emsp;<strong>create_html:</strong> true</p>
-<p>&emsp;#Location of observational datasets:<br>
-&emsp;#Note: this only matters if "compare_obs" is true and the path<br>
-&emsp;#isn't specified in the variable defaults file.<br>
-&emsp;<strong>obs_data_loc:</strong> /glade/work/nusbaume/SE_projects/model_diagnostics/ADF_obs</p>
-<div class="admonition attention">
-<p>&emsp;#Location where re-gridded and interpolated CAM climatology files are stored:<br>
-&emsp;<strong>cam_regrid_loc:</strong> /glade/scratch/${user}/ADF/regrid -> <span style="color:red">Change if desired!</span></p>
-</div>
-<p>&emsp;#Overwrite CAM re-gridded files?<br>
-&emsp;<strong>cam_overwrite_regrid</strong>: false</p>
-<div class="admonition attention">
-<p>&emsp;#Location where diagnostic plots are stored:<br>
-&emsp;<strong>cam_diag_plot_loc:</strong> /glade/scratch/${user}/ADF/plots -> <span style="color:red">Change if desired!</span></p>
-</div>
-<p>&emsp;#Use default variable plot settings?<br>
-&emsp;#If "true", then variable-specific plotting attributes as defined in<br>
-&emsp;#ADF/lib/adf_variable_defaults.yaml will be used:<br>
-&emsp;<strong>use_defaults:</strong> true</p>
-<p>&emsp;#Location of ADF variable plotting defaults YAML file<br>
-&emsp;#if not using the one in ADF/lib:<br>
-&emsp;<strong>#defaults_file:</strong> /some/path/to/defaults/file</p>
-<p>&emsp;#Vertical pressure levels (in hPa) on which to plot 3-D variables<br>
-&emsp;#when using horizontal (e.g. lat/lon) map projections.<br>
-&emsp;#If this config option is missing, then no 3-D variables will be plotted on<br>
-&emsp;#horizontal maps.  Please note too that pressure levels must currently match<br>
-&emsp;#what is available in the observations file in order to be plotted in a<br>
-&emsp;#model vs obs run:<br>
-&emsp;<strong>plot_press_levels:</strong> [200,850]</p>
-<p>&emsp;#Longitude line on which to center all lat/lon maps.<br>
-&emsp;#If this config option is missing then the central<br>
-&emsp;#longitude will default to 180 degrees E.<br>
-&emsp;<strong>central_longitude:</strong> 180</p>
-<p>&emsp;#Number of processors on which to run the ADF.<br>
-&emsp;#If this config variable isn't present then<br>
-&emsp;#the ADF defaults to one processor.  Also, if<br>
-&emsp;#you set it to "*" then it will default<br>
-&emsp;#to all of the processors available on a<br>
-&emsp;#single node/machine:<br>
-&emsp;<strong>num_procs:</strong> 8</p>
-<p>&emsp;#If set to true, then redo all plots even if they already exist.<br>
-&emsp;#If set to false, then if a plot is found it will be skipped:<br>
-&emsp;<strong>redo_plot:</strong> false</p>
-<p>#This second set of variables provides info for the CAM simulation(s) being diagnosed:<br>
-<strong><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-diag-cam-climo-strong" target="_blank">diag_cam_climo:</a></strong></p>
-<p>&emsp;#Calculate climatologies?<br>
-&emsp;#If false, the climatology files will not be created:<br>
-&emsp;<strong>calc_cam_climo:</strong> true</p>
-<p>&emsp;#Overwrite CAM climatology files?<br>
-&emsp;#If false, or not prsent, then already existing climatology files will be skipped:<br>
-&emsp;<strong>cam_overwrite_climo:</strong> false</p>
-<div class="admonition attention">
-<p>&emsp;#Name of CAM case (or CAM run name):<br>
-&emsp;<strong>cam_case_name:</strong> b.e20.BHIST.f09_g17.20thC.297_05</p>
-</div>
-<p>&emsp;#Case nickname<br>
-&emsp;#NOTE: if nickname starts with '0' - nickname must be in quotes!<br>
-&emsp;# ie '026a' as opposed to 026a<br>
-&emsp;#If missing or left blank, will default to cam_case_name<br>
-&emsp;<strong>case_nickname:</strong> #cool nickname</p>
-<div class="admonition attention">
-<p>&emsp;#Location of CAM history (h0) files:<br>
-&emsp;#Example test files<br>
-&emsp;<strong>cam_hist_loc:</strong> /glade/p/cesm/ADF/${diag_cam_climo.cam_case_name}</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#Location of CAM climatologies (to be created and then used by this script)<br>
-&emsp;<strong>cam_climo_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/climo</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#model year when time series files should start:<br>
-&emsp;#Note:  Leaving this entry blank will make time series<br>
-&emsp;#       start at earliest available year.<br>
-&emsp;<strong>start_year:</strong> 1990</p>
-</div>
-<div class="admonition attention">
-<p>&emsp;#model year when time series files should end:<br>
-&emsp;#Note:  Leaving this entry blank will make time series<br>
-&emsp;#       end at latest available year.<br>
-&emsp;<strong>end_year:</strong> 1999</p>
-</div>
-<p>&emsp;#Do time series files exist?<br>
-&emsp;#If True, then diagnostics assumes that model files are already time series.<br>
-&emsp;#If False, or if simply not present, then diagnostics will attempt to create<br>
-&emsp;#time series files from history (time-slice) files:<br>
-&emsp;<strong>cam_ts_done:</strong> false</p>
-<p>&emsp;#Save interim time series files?<br>
-&emsp;#WARNING:  This can take up a significant amount of space,<br>
-&emsp;#          but will save processing time the next time<br>
-&emsp;<strong>cam_ts_save:</strong> true</p>
-<p>&emsp;#Overwrite time series files, if found?<br>
-&emsp;#If set to false, then time series creation will be skipped if files are found:<br>
-&emsp;<strong>cam_overwrite_ts:</strong> false</p>
-<div class="admonition attention">
-<p>&emsp;#Location where time series files are (or will be) stored:<br>
-&emsp;<strong>cam_ts_loc:</strong> /glade/scratch/${user}/ADF/${diag_cam_climo.cam_case_name}/ts</p>
-</div>
-</div></section>
 </section>
 </section>
 
