@@ -638,7 +638,7 @@ title="Print to PDF"
 <p>In the yaml file, let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file.</p>
 <p><code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist_path</span></code></p>
 <p>Set the user name that will be help set all paths later in the yaml file</p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">user</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">/richling (YOUR-USER-NAME)</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">user</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">richling (YOUR-USER-NAME)</span></code></p>
 <p>Create a new variable <code class="docutils literal notranslate"><span class="pre">adf_path</span></code> for the root ADF path. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">/glade/scratch/${user}/ADF</span></code></p>
 <p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the sample history files</p>
@@ -709,7 +709,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>NOTE: the <code class="docutils literal notranslate"><span class="pre">time</span></code> command will give us a readout of the wall and user time for the ADF to run this configuration</p>
+<div class="admonition-attention admonition">
+<p class="admonition-title">Attention!</p>
 <p>This will take a while, why don’t you stretch your legs and get a snack :)</p>
+</div>
 <div class="full-width docutils">
 <div class="admonition-did-the-adf-finish admonition">
 <p class="admonition-title">Did the ADF finish?</p>
