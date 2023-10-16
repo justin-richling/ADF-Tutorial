@@ -184,16 +184,6 @@ const thebe_selector_output = ".output, .cell_output"
    Running ADF Basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../run/terminal.html">
-   ADF in the Terminal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../run/Jupyter.html">
-   ADF in Jupyter
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -223,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="cam_vs_cmip.html">
-     CAM vs CAM
+     CAM vs CMIP
     </a>
    </li>
   </ul>
@@ -627,6 +617,9 @@ title="Print to PDF"
                 
   <section id="cam-vs-cam">
 <h1>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h1>
+<p>For this example we will run the ADF diagnostics for two different coupled b-case CAM simulations.</p>
+<p>Recall the steps we will take are to first set variables a copy we will make from the run-time config yaml file (<code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>). Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables. For this example the default ADF variable defaults yaml file will be used, so we won’t be editing it here.</p>
+<p>Next, we run the ADF!</p>
 <p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 1995-2000</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p><section id="config-cam-baseline-example-yaml">
