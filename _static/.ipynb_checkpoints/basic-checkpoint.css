@@ -758,6 +758,7 @@ span.pre {
     -webkit-hyphens: none;
     hyphens: none;
     white-space: nowrap;
+    color: #000000
 }
 
 div[class*="highlight-"] {
