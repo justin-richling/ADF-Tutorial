@@ -184,16 +184,6 @@ const thebe_selector_output = ".output, .cell_output"
    Running ADF Basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../run/terminal.html">
-   ADF in the Terminal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../run/Jupyter.html">
-   ADF in Jupyter
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -223,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../examples/single_case/cam_vs_cmip.html">
-     CAM vs CAM
+     CAM vs CMIP
     </a>
    </li>
   </ul>
@@ -1477,7 +1467,6 @@ title="Print to PDF"
 <p>Then do your editing in <code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code></p>
 </div>
 </div>
-<p>The ADF will create a directory for the plots in a directory in the ADF root in the form of <code class="docutils literal notranslate"><span class="pre">{cam_case_name}_{YYYY}_{YYYY}_vs_{baseline_name}_{YYYY}_{YYYY}</span></code></p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="u-subsections-u">
@@ -1575,7 +1564,8 @@ title="Print to PDF"
 </section>
 <section id="code-class-docutils-literal-notranslate-span-class-pre-cam-diag-plot-loc-span-code">
 <h3>  <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cam-diag-plot-loc-span-code" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&emsp;&ensp; Location where diagnostic plots are stored</p>
+<p style="margin-top: -5px;">&emsp;&ensp; Location where diagnostic plots are stored<br>The ADF will create a directory for the plots in this directory in the form of {cam_case_name}_{YYYY}_{YYYY}_vs_{baseline_name}_{YYYY}_{YYYY}
+</p>
 <ul>
 <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/plots</span></code></p></li>
 </ul>

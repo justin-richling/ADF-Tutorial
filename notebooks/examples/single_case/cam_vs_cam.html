@@ -617,14 +617,27 @@ title="Print to PDF"
                 
   <section id="cam-vs-cam">
 <h1>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h1>
-<p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for a 5 years, 1995-2000:</p>
+<p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for 5 years, 1995-2000:</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p>for a 5 years, 1995-2000.</p>
-<p>Recall the steps we will take are to first set variables a copy we will make from the run-time config yaml file (<code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>). Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables. For this example the default ADF variable defaults yaml file will be used, so we won’t be editing it here.</p>
-<p>Next, we run the ADF!</p>
-<p>For this example we will run the ADF diagnostics for two different CAM simulations for a 5 years, 1995-2000</p>
-<section id="config-cam-baseline-example-yaml">
+<p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/intro.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
+<ol>
+<li><p>Run CAM simulation to get history ( h0* ) file(s)
+*or other history files</p></li>
+<li><p>Configure yaml file(s) for the history files</p>
+<p>NOTE:  Make copies of these files and modify/customize the copies!</p>
+<p>config_cam_baseline_example.yaml  (necessary, must copy and change!)</p>
+<p>lib/adf_variable_defaults.yaml   (necessary, but optional to copy and change)</p>
+</li>
+<li><p>Run the ADF</p></li>
+</ol>
+<ul>
+1. set variables in a copy we'll make from the run-time config yaml file (`config_cam_baseline_example.yaml`). Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables. 
+<p>NOTE: For this example we <strong>will not</strong> be using a custom variable defaults yaml file, so this will be the only config file we edit.</p>
+<ol class="simple">
+<li><p>Next, we run the ADF!</p></li>
+</ol>
+</ul><section id="config-cam-baseline-example-yaml">
 <h2>config_cam_baseline_example.yaml<a class="headerlink" href="#config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
