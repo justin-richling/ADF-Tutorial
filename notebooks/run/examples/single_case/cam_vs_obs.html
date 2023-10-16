@@ -559,11 +559,6 @@ title="Print to PDF"
      diag_cam_climo
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -610,11 +605,6 @@ title="Print to PDF"
      diag_cam_climo
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
-     diag_cam_baseline_climo
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -636,7 +626,7 @@ title="Print to PDF"
 <h1>CAM vs Obs<a class="headerlink" href="#cam-vs-obs" title="Permalink to this headline">#</a></h1>
 <p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for 5 years, 1995-2000:</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -15px;">The baseline (control) case will be a designated set of observations/reanalysis</p>
 <p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/intro.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
 <p><s>  0. Run CAM simulation to get history ( h0* ) file(s)
 *or other history files</s></p>
@@ -656,10 +646,10 @@ title="Print to PDF"
 <p>It is recommended to make a copy of this file, make modifications in that copy, and then run that with the ADF.</p>
 </div>
 <p>From the ADF root directory as set in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/install/setup.html#cloning-the-adf" target="_blank">cloning section</a> (/glade/work/&lt;user&gt;/ADF/), let’s make a copy of the run-time config file:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_baseline_example.yaml config_cam_vs_cam.yaml
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_baseline_example.yaml config_cam_vs_obs.yaml
 </pre></div>
 </div>
-<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam.yaml</span></code> file with your favorite editor</p>
+<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_obs.yaml</span></code> file with your favorite editor</p>
 <p>The global variables will be set above the subsections.</p>
 <section id="sidebar-content">
 <aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 60%; float: right; clear: right; overflow-x: auto;">
@@ -712,15 +702,7 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
-</section>
-<section id="diag-cam-baseline-climo">
-<h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><hr class="docutils" />
+<hr class="docutils" />
 <style>
     #box {
     word-wrap:normal;
