@@ -331,6 +331,19 @@ aside.sidebar {
     overflow-x: auto;
 }
 
+div.sidebar,
+aside.sidebar_cam {
+    margin: 0 0 0.5em 1em;
+    /*border: 1px solid #ddb;*/
+    padding: 7px;
+    background-color: #ffe;
+    width: 40%;
+    float: right;
+    clear: right;
+    overflow-x: auto;
+}
+
+
 p.sidebar-title {
     font-weight: bold;
 }
@@ -758,7 +771,6 @@ span.pre {
     -webkit-hyphens: none;
     hyphens: none;
     white-space: nowrap;
-    color: #000000
 }
 
 div[class*="highlight-"] {
