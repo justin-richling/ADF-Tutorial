@@ -624,7 +624,7 @@ title="Print to PDF"
                 
   <section id="cam-vs-obs">
 <h1>CAM vs Obs<a class="headerlink" href="#cam-vs-obs" title="Permalink to this headline">#</a></h1>
-<p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for 5 years, 1995-2000:</p>
+<p>For this example we will run the ADF diagnostics for an f-case CAM simulations for 5 years, 1995-2000 vs Observations/Reanalysis:</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case will be a designated set of observations/reanalysis</p>
 <p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/intro.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
@@ -667,8 +667,6 @@ title="Print to PDF"
 <li><p style="margin-top: -5px;">diag_basic_info</p>
 </li>
 <li><p style="margin-top: -5px;">diag_cam_climo</p>
-</li>
-<li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
 </li>
 </ul>
 </section><hr class="docutils" />
@@ -717,13 +715,11 @@ title="Print to PDF"
 <p>Diagnostic plot location:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
 <p>&emsp; &ensp;The ADF will output a new directory in the above location named:</p>
-<p style="margin-top: -20px;"><code class="docutils literal notranslate"><span class="pre">&emsp; &ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+<p style="margin-top: -20px;"><code class="docutils literal notranslate"><span class="pre">&emsp; &ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_Obs</span></code></p>
 <p>Climatology file locations:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>Timeseries locations:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 </div>
 </div>
 </section>
@@ -735,8 +731,8 @@ title="Print to PDF"
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd /glade/work/&lt;user&gt;/ADF/ 
 </pre></div>
 </div>
-<p>Now we can run the ADF with our new config file `config_cam_vs_cam.yaml`<a class="headerlink" href="#adf-run" title="Permalink to this heading">#</a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>time ./run_adf_diag config_cam_vs_cam.yaml
+<p>Now we can run the ADF with our new config file `config_cam_vs_obs.yaml`<a class="headerlink" href="#adf-run" title="Permalink to this heading">#</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>time ./run_adf_diag config_cam_vs_obs.yaml
 </pre></div>
 </div>
 <p>NOTE: the <code class="docutils literal notranslate"><span class="pre">time</span></code> command will give us a readout of the wall and user time for the ADF to run this configuration</p>
@@ -744,7 +740,7 @@ title="Print to PDF"
 <p class="admonition-title">Attention</p>
 <p>This will take a while, why don’t you stretch your legs and get a snack :)</p>
 </div>
-<p><br><br><br><h4>End single CAM vs CAM case</h4></p>
+<p><br><br><br><h4>End single CAM vs Obs case</h4></p>
 <h6>Hope everything went well...</h6>
 <div class="full-width docutils">
 <div class="admonition-did-the-adf-finish admonition">
@@ -752,7 +748,7 @@ title="Print to PDF"
 <div>
 <p>Check output data/images:</p>
 <p style="margin-top: -5px;">Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_Obs/</span></code></p>
 </div>
 </div>
 </div>
