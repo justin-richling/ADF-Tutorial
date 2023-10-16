@@ -25,6 +25,18 @@ ul-2 {
    background: #e5d3b3
 }
 
+div.sidebar,
+aside.sidebar_cam {
+    margin: 0 0 0.5em 1em;
+    /*border: 1px solid #ddb;*/
+    padding: 7px;
+    background-color: #ffe;
+    width: 40%;
+    float: right;
+    clear: right;
+    overflow-x: auto;
+}
+
 :root {
   /*****************************************************************************
   * Theme config
