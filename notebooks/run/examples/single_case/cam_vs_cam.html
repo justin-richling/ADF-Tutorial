@@ -221,6 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../multi_case.html">
+     Multi-Case
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../Jupyter.html">
+     ADF in Jupyter
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Jupyter/jupyter_adf_analysis.html">
+       Analysing ADF Output via Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Jupyter/jupyter_adf_run.html">
+       Exercise - Run ADF via Jupyter
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
 </ul>
@@ -251,6 +285,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../../customize/add.html">
    Add Custom Script
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../exercises/single_case.html">
+   Exercises On Your Own!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../exercises/multi_case.html">
+   Multi Case Comparsion Exercise
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -592,7 +655,7 @@ title="Print to PDF"
 <p><strong>Please do not modify this file!</strong></p>
 <p>It is recommended to make a copy of this file, make modifications in that copy, and then run that with the ADF.</p>
 </div>
-<p>From the ADF root directory as set in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/install/setup.html#cloning-the-adf" target="_blank">cloning section</a> (/glade/work/&lt;user&gt;/ADF/)</p>
+<p>From the ADF root directory as set in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/install/setup.html#cloning-the-adf" target="_blank">cloning section</a> (/glade/work/&lt;user&gt;/ADF/), let’s make a copy of the run-time config file:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_baseline_example.yaml config_cam_vs_cam.yaml
 </pre></div>
 </div>
@@ -614,7 +677,6 @@ title="Print to PDF"
 <section id="global-variables">
 <h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h3>
 <p>In the yaml file, let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file.</p>
-<p><code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>, and <code class="docutils literal notranslate"><span class="pre">hist_path</span></code></p>
 <p>Set the user name that will be help set all paths later in the yaml file</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">user</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">richling (YOUR-USER-NAME)</span></code></p>
 <p>Create a new variable <code class="docutils literal notranslate"><span class="pre">adf_path</span></code> for the root ADF path. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
@@ -690,22 +752,22 @@ title="Print to PDF"
 <div class="highlight-{admonition notranslate"><div class="highlight"><pre><span></span>This will take a while, why don&#39;t you stretch your legs and get a snack :)
 </pre></div>
 </div>
+<div class="error admonition">
+<p class="admonition-title">Did the ADF fail?</p>
+<p>Check config files   Check error/logs   Check data/paths</p>
+</div>
+<h4>End single CAM vs CAM case</h4>
+<h6>Hope everything went well...</h6>
 <div class="full-width docutils">
 <div class="admonition-did-the-adf-finish admonition">
 <p class="admonition-title">Did the ADF finish?</p>
 <div>
 <p>Check output data/images:</p>
 <p style="margin-top: -5px;">Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">Then go to <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
 </div>
 </div>
 </div>
-<div class="error admonition">
-<p class="admonition-title">Did the ADF fail?</p>
-<p>Check config files   Check error/logs   Check data/paths</p>
-</div>
-<h4>End single CAM vs CAM case</h4>
-<p>Hope everything went well…</p>
 <p>If you want to explore the ADF in a Jupyter environment, you can skip to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/Jupyter.html">ADF in Jupyter</a> chapter at the end of this section</p>
 <hr class="docutils" />
 </section>
