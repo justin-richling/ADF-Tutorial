@@ -597,16 +597,15 @@ title="Print to PDF"
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/intro.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
-<p><s>0. Run CAM simulation to get history ( h0* ) file(s)
+<p><s>  0. Run CAM simulation to get history ( h0* ) file(s)
 *or other history files</s></p>
-<p>1. Configure yaml file(s) for the history files<br>
-<p>  <strong>NOTE:</strong> Make copies of these files and modify/customize the copies!<br></p>
-<p>  <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
-  set variables in a copy we’ll make from the run-time config yaml file (<code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>). Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
-<p>  <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code>   (necessary, but optional to copy and change)<br>
+<p>&emsp; 1. Configure yaml file(s) for the history files<br>
+<p>    <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
+       Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
+<p>    <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code>   (necessary, but optional to copy and change)<br>
 For this example we <strong>will not</strong> be using a custom variable defaults yaml file, so this will be the only config file we edit.<br></p>
 </p>
-<p>2. Run the ADF!</p>
+<p>&emsp; 2. Run the ADF!</p>
 <section id="config-cam-baseline-example-yaml">
 <h2>config_cam_baseline_example.yaml<a class="headerlink" href="#config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
 <div class="admonition warning">
