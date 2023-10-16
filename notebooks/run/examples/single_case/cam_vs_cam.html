@@ -659,7 +659,49 @@ title="Print to PDF"
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_baseline_example.yaml config_cam_vs_cam.yaml
 </pre></div>
 </div>
-<p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam.yaml</span></code> file with your favorite editor</p>
+<section id="sidebar-content">
+<span id="layout-sidebar"></span><h2>Sidebar content<a class="headerlink" href="#sidebar-content" title="Permalink to this heading">#</a></h2>
+<p>Adding sidebar elements allow you to provide contextual information that doesn’t break
+up the flow of your main content. It is one of the main patterns recommended in the
+<a class="reference external" href="https://edwardtufte.github.io/tufte-css/">Tufte style guide</a>.</p>
+<p>There are two kinds of sidebars supported by Jupyter Book. We’ll
+describe them below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some sidebar content behaves differently depending on the screen size. If the screen is narrow
+enough, the sidebar content will exist in-line with your content. Make the screen
+wider and it’ll pop out to the right.</p>
+</div>
+<section id="sidebars-within-content">
+<h3>Sidebars within content<a class="headerlink" href="#sidebars-within-content" title="Permalink to this heading">#</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Here is some sidebar content</p>
+<p>It spans a bit of your main content, as well as the margin, as seen by the
+note block below:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s a note block within the sidebar!</p>
+</div>
+</aside>
+<p>If you use a sidebar within your content, the sidebar will stay in-line with your page’s content. However, it will be
+placed to the right, allowing your content to wrap around it. This prevents
+the sidebar from breaking up the flow of your content. This is particularly
+useful if you’ve got tall-and-long blocks of content or images that you would
+like to provide context to throughout your content.</p>
+<p>To add a sidebar to your content, use the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre id="codecell1"><span></span>```{sidebar} My sidebar title
+My sidebar content
+```
+</pre><button class="copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#codecell1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>Copy to clipboard</title>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+</svg>
+    </button></div>
+</div>
+</section><p>Open the new <code class="docutils literal notranslate"><span class="pre">config_cam_vs_cam.yaml</span></code> file with your favorite editor</p>
 <p>The global variables will be set above the subsections.</p>
 <ul>
 <li><p style="margin-top: -5px;">Global Variables</p>
