@@ -652,26 +652,26 @@ title="Print to PDF"
 <h3>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h3>
 <p>This subsection defines necessary variables for the overall ADF run</p>
 <p>We can change the paths for the regridded data and plot locations</p>
-<p style="margin-top: -5px;">&ensp; cam_regrid_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/regrid</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_diag_plot_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/plots</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_regrid_loc</span></code>: ${adf_path}/regrid</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>: ${adf_path}/plots</p>
 </section>
 <section id="diag-cam-climo">
 <h3>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/climo/{diag_cam_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: ${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: ${adf_path}/climo/{diag_cam_climo.cam_case_name}</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: 1995</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: 2000</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: ${adf_path}/ts/{diag_cam_climo.cam_case_name}</p>
 </section>
 <section id="diag-cam-baseline-climo">
 <h3>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&ensp; cam_case_name: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_hist_loc: <code class="docutils literal notranslate"><span class="pre">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_climo_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
-<p style="margin-top: -5px;">&ensp; start_year: <code class="docutils literal notranslate"><span class="pre">1995</span></code></p>
-<p style="margin-top: -5px;">&ensp; end_year: <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
-<p style="margin-top: -5px;">&ensp; cam_ts_loc: <code class="docutils literal notranslate"><span class="pre">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p><hr class="docutils" />
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: ${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: ${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: 1995</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: 2000</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: ${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</p><hr class="docutils" />
 <style>
     #box {
     word-wrap:normal;
