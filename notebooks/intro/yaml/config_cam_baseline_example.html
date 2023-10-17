@@ -954,13 +954,15 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
      Diagnostic Scripts “Subsections”
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-time-averaging-scripts-strong">
-     <strong>
-      time_averaging_scripts
-     </strong>
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-time-averaging-scripts-strong">
+       <strong>
+        time_averaging_scripts
+       </strong>
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
@@ -1433,13 +1435,15 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#diagnostic-scripts-subsections">
      Diagnostic Scripts “Subsections”
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-time-averaging-scripts-strong">
-     <strong>
-      time_averaging_scripts
-     </strong>
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-time-averaging-scripts-strong">
+       <strong>
+        time_averaging_scripts
+       </strong>
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
@@ -1980,9 +1984,8 @@ In this particular yaml file, we have built subsections in which variables set i
 </section>
 <section id="diagnostic-scripts-subsections">
 <h2>Diagnostic Scripts “Subsections”<a class="headerlink" href="#diagnostic-scripts-subsections" title="Permalink to this headline">#</a></h2>
-<p>Each of the following sets are also considered subsections. These are all components of the actual diagnostics workflow of the ADF.</p></section>
-<section id="strong-time-averaging-scripts-strong">
-<h2><strong>time_averaging_scripts</strong><a class="headerlink" href="#strong-time-averaging-scripts-strong" title="Permalink to this headline">#</a></h2>
+<p>Each of the following sets are also considered subsections. These are all components of the actual diagnostics workflow of the ADF.</p><section id="strong-time-averaging-scripts-strong">
+<h3><strong>time_averaging_scripts</strong><a class="headerlink" href="#strong-time-averaging-scripts-strong" title="Permalink to this headline">#</a></h3>
 <p>This section allows for any time averaging scripts</p>
 <ul>
 <li><p>Must be located in scripts/averaging within the ADF root directory:</p>
@@ -1996,6 +1999,7 @@ scripts/averaging/create_TEM_files.py
 <p>time_averaging_scripts:<br>
   - create_climo_files<br>
   - create_TEM_files</p>
+</section>
 </section>
 <section id="strong-regridding-scripts-strong">
 <h2><strong>regridding_scripts</strong><a class="headerlink" href="#strong-regridding-scripts-strong" title="Permalink to this headline">#</a></h2>
