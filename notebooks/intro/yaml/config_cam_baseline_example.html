@@ -1920,9 +1920,9 @@ In this particular yaml file, we have built subsections in which variables set i
 <h2><strong>diag_cvdp_info</strong><a class="headerlink" href="#strong-diag-cvdp-info-strong" title="Permalink to this headline">#</a></h2>
 <section id="id12">
 <h3>  <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
-<p style="margin-top: -5px;">&emsp;&ensp; Location where time series files are (or will be) stored</p>
+<p style="margin-top: -5px;">&emsp;&ensp; Location where the CVDP files will be stored</p>
 <ul>
-    <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/ADF/${diag_cam_baseline_climo.cam_case_name}/ts</span></code></p></li>
+    <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/cvdp/</span></code></p></li>
 </ul></section>
 </section>
 <section id="diagnostic-scripts-subsections">
@@ -1934,17 +1934,22 @@ In this particular yaml file, we have built subsections in which variables set i
 <ul>
 <li><p>Must be located in scripts/averaging!</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/averaging/create_climo_files.py
+- scripts/averaging/create_TEM_files.py
 </pre></div>
 </div>
 </li>
+<li><p>In this yaml file they would be listed as:</p></li>
 </ul>
+<p>time_averaging_scripts:<br></p>
+<p>  - create_climo_files<br>
+  - create_TEM_files</p>
 </section>
 <section id="strong-regridding-scripts-strong">
 <h2><strong>regridding_scripts</strong><a class="headerlink" href="#strong-regridding-scripts-strong" title="Permalink to this headline">#</a></h2>
 <p>This section allows for any regridding scripts</p>
 <ul>
 <li><p>Must be located in scripts/regridding!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/regridding /regrid_and_vert_interp.py
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/regridding/regrid_and_vert_interp.py
 </pre></div>
 </div>
 </li>
