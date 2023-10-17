@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Variable Defaults - adf_variable_defaults.yaml" href="adf_variable_defaults.html" />
@@ -1499,21 +1501,13 @@ title="Print to PDF"
 <p>BIG CAVEAT:<br>
 In this particular yaml file, we have build subsections in which variables set in a subsection is only callable by referencing the subsection first with a <code class="docutils literal notranslate"><span class="pre">.</span></code> then variable name.</p>
 <p>IE: Say we want to set the climo years in the test case subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and call them in the baseline subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_baseline_climo</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diag_cam_climo</span><span class="p">:</span>
-
-<span class="o">&amp;</span><span class="n">emsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">ensp</span><span class="p">;</span> <span class="n">start_year</span><span class="p">:</span> <span class="mi">1995</span>  <span class="o">-&gt;</span> <span class="n">we</span> <span class="n">would</span> <span class="n">reference</span> <span class="n">this</span> <span class="k">with</span> <span class="n">diag_cam_climo</span><span class="o">.</span><span class="n">start_year</span>
-<span class="o">&amp;</span><span class="n">emsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">ensp</span><span class="p">;</span> <span class="n">end_year</span><span class="p">:</span> <span class="mi">2000</span>  <span class="o">-&gt;</span> <span class="n">we</span> <span class="n">would</span> <span class="n">reference</span> <span class="n">this</span> <span class="k">with</span> <span class="n">diag_cam_climo</span><span class="o">.</span><span class="n">end_year</span>
-
-</pre></div>
-</div>
+<p>diag_cam_climo:</p>
+<p>   start_year: 1995  -&gt; we would reference this with diag_cam_climo.start_year
+   end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year</p>
 <p>Now if we wanted to reference these climo years in the baseline subsection:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>diag_cam_baseline_climo:
-
-&amp;emsp;&amp;ensp; start_year: ${diag_cam_climo.start_year}
-&amp;emsp;&amp;ensp; end_year: ${diag_cam_climo.end_year}
-
-</pre></div>
-</div>
+<p>diag_cam_baseline_climo:</p>
+<p>   start_year: <span class="math notranslate nohighlight">\({diag_cam_climo.start_year}
+&amp;emsp;&amp;ensp; end_year: \)</span>{diag_cam_climo.end_year}</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file!</strong></p>
