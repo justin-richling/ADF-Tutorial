@@ -922,10 +922,28 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-run-span-code">
        <code class="docutils literal notranslate">
         <span class="pre">
-         cam_ts_loc
+         cvdp_run
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-codebase-loc-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cvdp_codebase_loc
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-loc-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cvdp_loc
         </span>
        </code>
       </a>
@@ -1383,10 +1401,28 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-run-span-code">
        <code class="docutils literal notranslate">
         <span class="pre">
-         cam_ts_loc
+         cvdp_run
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-codebase-loc-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cvdp_codebase_loc
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-loc-span-code">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cvdp_loc
         </span>
        </code>
       </a>
@@ -1918,8 +1954,25 @@ In this particular yaml file, we have built subsections in which variables set i
 <hr class="docutils" />
 <section id="strong-diag-cvdp-info-strong">
 <h2><strong>diag_cvdp_info</strong><a class="headerlink" href="#strong-diag-cvdp-info-strong" title="Permalink to this headline">#</a></h2>
-<section id="id12">
-<h3>  <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<section id="code-class-docutils-literal-notranslate-span-class-pre-cvdp-run-span-code">
+<h3>  <code class="docutils literal notranslate"><span class="pre">cvdp_run</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-run-span-code" title="Permalink to this headline">#</a></h3>
+<p style="margin-top: -5px;">&emsp;&ensp; Run the CVDP in the background? - <code class="docutils literal notranslate"><span class="pre">true/false</span></code></p>
+<ul>
+    <li><p>default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+</ul>
+</section>
+<section id="code-class-docutils-literal-notranslate-span-class-pre-cvdp-codebase-loc-span-code">
+<h3>  <code class="docutils literal notranslate"><span class="pre">cvdp_codebase_loc</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-codebase-loc-span-code" title="Permalink to this headline">#</a></h3>
+<p style="margin-top: -5px;">&emsp;&ensp; Set location of CVDP codebase</p>
+<ul>
+    <li><p>CGD systems path = /home/asphilli/CESM-diagnostics/CVDP/Release/v5.2.0/</p></li>
+    <li><p>CISL systems path = /glade/u/home/asphilli/CESM-diagnostics/CVDP/Release/v5.2.0/</p></li>
+    <li><p>github location = https://github.com/NCAR/CVDP-ncl</p></li>
+    <li><p>default: <code class="docutils literal notranslate"><span class="pre">/glade/u/home/asphilli/CESM-diagnostics/CVDP/Release/v5.2.0/</span></code></p></li>
+</ul>
+</section>
+<section id="code-class-docutils-literal-notranslate-span-class-pre-cvdp-loc-span-code">
+<h3>  <code class="docutils literal notranslate"><span class="pre">cvdp_loc</span></code><a class="headerlink" href="#code-class-docutils-literal-notranslate-span-class-pre-cvdp-loc-span-code" title="Permalink to this headline">#</a></h3>
 <p style="margin-top: -5px;">&emsp;&ensp; Location where the CVDP files will be stored</p>
 <ul>
     <li><p>example: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/${user}/cvdp/</span></code></p></li>
