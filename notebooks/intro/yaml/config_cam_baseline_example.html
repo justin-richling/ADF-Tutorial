@@ -1500,11 +1500,11 @@ title="Print to PDF"
 <p>IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.</p>
 <p>BIG CAVEAT:<br>
 In this particular yaml file, we have build subsections in which variables set in a subsection is only callable by referencing the subsection first with a <code class="docutils literal notranslate"><span class="pre">.</span></code> then variable name.</p>
-<p>IE: Say we want to set the climo years in the test case subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and call them in the baseline subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_baseline_climo</span></code></p>
-<p>diag_cam_climo:
+<p>IE: Say we want to set the climo years in the test <strong>case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline</strong> subsection `diag_cam_baseline_climo` 
+<p>diag_cam_climo:<br></p>
 <p>   start_year: 1995  -&gt; we would reference this with diag_cam_climo.start_year<br>
    end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year<br></p>
-<p>Now if we wanted to reference these climo years in the baseline subsection:<br></p>
+<p>Now if we wanted to reference these climo years in the <strong>baseline</strong> subsection:<br></p>
 <p>diag_cam_baseline_climo:<br></p>
 <p>   start_year: <span class="math notranslate nohighlight">\({diag_cam_climo.start_year}&lt;br&gt;
 &amp;emsp;&amp;ensp; end_year: \)</span>{diag_cam_climo.end_year}</p>
