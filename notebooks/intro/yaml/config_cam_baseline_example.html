@@ -1504,8 +1504,8 @@ In this particular yaml file, we have built subsections in which variables set i
    end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year<br></p>
 <p>Now if we wanted to reference these climo years in the <strong>baseline</strong> subsection:<br></p>
 <p>diag_cam_baseline_climo:<br></p>
-<p>   start_year:  %{diag_cam_climo.start_year}<br>
-   end_year:  %{diag_cam_climo.end_year}</p>
+<p>   start_year:  ${diag_cam_climo.start_year}<br>
+   end_year:  ${diag_cam_climo.end_year}</p>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1932,16 +1932,16 @@ In this particular yaml file, we have built subsections in which variables set i
 <h2><strong>time_averaging_scripts</strong><a class="headerlink" href="#strong-time-averaging-scripts-strong" title="Permalink to this headline">#</a></h2>
 <p>This section allows for any time averaging scripts</p>
 <ul>
-<li><p>Must be located in scripts/averaging!</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- scripts/averaging/create_climo_files.py
-- scripts/averaging/create_TEM_files.py
+<li><p>Must be located in scripts/averaging within the ADF root directory:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>scripts/averaging/create_climo_files.py
+scripts/averaging/create_TEM_files.py
 </pre></div>
 </div>
 </li>
 <li><p>In this yaml file they would be listed as:</p></li>
 </ul>
-<p>time_averaging_scripts:<br></p>
-<p>  - create_climo_files<br>
+<p>time_averaging_scripts:<br>
+  - create_climo_files<br>
   - create_TEM_files</p>
 </section>
 <section id="strong-regridding-scripts-strong">
