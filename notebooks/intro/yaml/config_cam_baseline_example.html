@@ -2009,8 +2009,8 @@ scripts/averaging/create_TEM_files.py
 </pre></div>
 </div>
 </li>
-<li><p>In this yaml file they would be listed as:</p></li>
 </ul>
+<p>In this yaml file they would be listed as:</p>
 <p>regridding_scripts:<br>
   - create_climo_files<br></p>
 </section>
@@ -2028,6 +2028,12 @@ Possible addition examples:
 </div>
 </li>
 </ul>
+<p>In this yaml file they would be listed as:</p>
+<p>analysis_scripts:<br>
+  - amwg_table<br>
+Possible addition examples:<br>
+  - amwg_chem_table<br>
+  - amwg_aerosol_table</p>
 </section>
 <section id="strong-plotting-scripts-strong">
 <h3><strong>plotting_scripts</strong><a class="headerlink" href="#strong-plotting-scripts-strong" title="Permalink to this headline">#</a></h3>
@@ -2035,17 +2041,26 @@ Possible addition examples:
 <ul>
 <li><p>Must be located in scripts/plotting!</p>
 <ul class="simple">
-<li><p>scripts/averaging/cam_taylor_diagram.py</p></li>
-<li><p>scripts/averaging/global_latlon_map.py</p></li>
-<li><p>scripts/averaging/…</p></li>
+<li><p>scripts/plotting/cam_taylor_diagram.py</p></li>
+<li><p>scripts/plotting/global_latlon_map.py</p></li>
+<li><p>scripts/plotting/…</p></li>
 </ul>
 <p>Possible addition examples:</p>
 <ul class="simple">
-<li><p>scripts/averaging/tem.py</p></li>
-<li><p>scripts/averaging/time_series.py</p></li>
+<li><p>scripts/plotting/time_series.py</p></li>
 </ul>
 </li>
 </ul>
+<p>In this yaml file they would be listed as:</p>
+<p>plotting_scripts:<br>
+  - global_latlon_map<br>
+  - zonal_mean<br>
+  - meridional_mean<br>
+  - polar_map<br>
+  - global_latlon_vect_map<br>
+  - cam_taylor_diagram<br>
+  - qbo<br>
+  - tem</p>
 </section>
 <section id="strong-diag-var-list-strong">
 <h3><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h3>
