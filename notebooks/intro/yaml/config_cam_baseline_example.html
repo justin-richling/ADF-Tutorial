@@ -1501,13 +1501,14 @@ title="Print to PDF"
 <p>BIG CAVEAT:<br>
 In this particular yaml file, we have build subsections in which variables set in a subsection is only callable by referencing the subsection first with a <code class="docutils literal notranslate"><span class="pre">.</span></code> then variable name.</p>
 <p>IE: Say we want to set the climo years in the test case subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and call them in the baseline subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_baseline_climo</span></code></p>
-<p>diag_cam_climo:</p>
-<p>   start_year: 1995  -&gt; we would reference this with diag_cam_climo.start_year
-   end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year</p>
-<p>Now if we wanted to reference these climo years in the baseline subsection:</p>
-<p>diag_cam_baseline_climo:</p>
-<p>   start_year: <span class="math notranslate nohighlight">\({diag_cam_climo.start_year}
+<p>diag_cam_climo:
+<p>   start_year: 1995  -&gt; we would reference this with diag_cam_climo.start_year<br>
+   end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year<br></p>
+<p>Now if we wanted to reference these climo years in the baseline subsection:<br></p>
+<p>diag_cam_baseline_climo:<br></p>
+<p>   start_year: <span class="math notranslate nohighlight">\({diag_cam_climo.start_year}&lt;br&gt;
 &amp;emsp;&amp;ensp; end_year: \)</span>{diag_cam_climo.end_year}</p>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file!</strong></p>
