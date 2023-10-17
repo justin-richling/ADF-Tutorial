@@ -962,42 +962,42 @@ title="Print to PDF"
        </strong>
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
+       <strong>
+        regridding_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-analysis-scripts-strong">
+       <strong>
+        analysis_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-plotting-scripts-strong">
+       <strong>
+        plotting_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-diag-var-list-strong">
+       <strong>
+        diag_var_list
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-region-multicase-strong">
+       <strong>
+        region_multicase
+       </strong>
+      </a>
+     </li>
     </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
-     <strong>
-      regridding_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-analysis-scripts-strong">
-     <strong>
-      analysis_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-plotting-scripts-strong">
-     <strong>
-      plotting_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-diag-var-list-strong">
-     <strong>
-      diag_var_list
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-region-multicase-strong">
-     <strong>
-      region_multicase
-     </strong>
-    </a>
    </li>
   </ul>
  </li>
@@ -1443,42 +1443,42 @@ title="Print to PDF"
        </strong>
       </a>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
+       <strong>
+        regridding_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-analysis-scripts-strong">
+       <strong>
+        analysis_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-plotting-scripts-strong">
+       <strong>
+        plotting_scripts
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-diag-var-list-strong">
+       <strong>
+        diag_var_list
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-region-multicase-strong">
+       <strong>
+        region_multicase
+       </strong>
+      </a>
+     </li>
     </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-regridding-scripts-strong">
-     <strong>
-      regridding_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-analysis-scripts-strong">
-     <strong>
-      analysis_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-plotting-scripts-strong">
-     <strong>
-      plotting_scripts
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-diag-var-list-strong">
-     <strong>
-      diag_var_list
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strong-region-multicase-strong">
-     <strong>
-      region_multicase
-     </strong>
-    </a>
    </li>
   </ul>
  </li>
@@ -2000,9 +2000,8 @@ scripts/averaging/create_TEM_files.py
   - create_climo_files<br>
   - create_TEM_files</p>
 </section>
-</section>
 <section id="strong-regridding-scripts-strong">
-<h2><strong>regridding_scripts</strong><a class="headerlink" href="#strong-regridding-scripts-strong" title="Permalink to this headline">#</a></h2>
+<h3><strong>regridding_scripts</strong><a class="headerlink" href="#strong-regridding-scripts-strong" title="Permalink to this headline">#</a></h3>
 <p>This section allows for any regridding scripts</p>
 <ul>
 <li><p>Must be located in scripts/regridding!</p>
@@ -2010,10 +2009,13 @@ scripts/averaging/create_TEM_files.py
 </pre></div>
 </div>
 </li>
+<li><p>In this yaml file they would be listed as:</p></li>
 </ul>
+<p>regridding_scripts:<br>
+  - create_climo_files<br></p>
 </section>
 <section id="strong-analysis-scripts-strong">
-<h2><strong>analysis_scripts</strong><a class="headerlink" href="#strong-analysis-scripts-strong" title="Permalink to this headline">#</a></h2>
+<h3><strong>analysis_scripts</strong><a class="headerlink" href="#strong-analysis-scripts-strong" title="Permalink to this headline">#</a></h3>
 <p>This section allows for a broad spectra of data analysis scripts</p>
 <ul>
 <li><p>Must be located in scripts/analysis!</p>
@@ -2028,7 +2030,7 @@ Possible addition examples:
 </ul>
 </section>
 <section id="strong-plotting-scripts-strong">
-<h2><strong>plotting_scripts</strong><a class="headerlink" href="#strong-plotting-scripts-strong" title="Permalink to this headline">#</a></h2>
+<h3><strong>plotting_scripts</strong><a class="headerlink" href="#strong-plotting-scripts-strong" title="Permalink to this headline">#</a></h3>
 <p>Set of plotting scripts, both ADF default as well as any custom scripts</p>
 <ul>
 <li><p>Must be located in scripts/plotting!</p>
@@ -2046,13 +2048,14 @@ Possible addition examples:
 </ul>
 </section>
 <section id="strong-diag-var-list-strong">
-<h2><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h2>
+<h3><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h3>
 <p>List of variables to be executed in the ADF</p>
 <p>These usually are the CAM variables, but nocesessarily the only ones, ie RESTOM can be added to this list and the ADF will attempt to calculate based off constituents.</p>
 <p>If the ADF searches for time series/climo/regridded/tem, etc. files for a given variable from this list and does not find one in the data files, it will skip that variable with an explaination in most cases. The ADF will not crash, but continue on to the next variable in the list.</p>
 </section>
 <section id="strong-region-multicase-strong">
-<h2><strong>region_multicase</strong><a class="headerlink" href="#strong-region-multicase-strong" title="Permalink to this headline">#</a></h2>
+<h3><strong>region_multicase</strong><a class="headerlink" href="#strong-region-multicase-strong" title="Permalink to this headline">#</a></h3>
+</section>
 </section>
 </section>
 
