@@ -2074,7 +2074,7 @@ Possible addition examples:<br>
   - global_latlon_vect_map<br>
   - cam_taylor_diagram<br>
   - qbo<br>
-  - tem -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre">tem_info</span></code></p>
+  - tem -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-tem-info-strong">tem_info</a></span></code></p>
 </section>
 <section id="strong-diag-var-list-strong">
 <h3><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h3>
@@ -2086,25 +2086,18 @@ Possible addition examples:<br>
 <h3><strong>tem_info</strong><a class="headerlink" href="#strong-tem-info-strong" title="Permalink to this headline">#</a></h3>
 <p>Options for TEM diagnostics (./averaging/create_TEM_files.py and ./plotting/temp.py)
 tem_info:
-#Location where TEM files are stored:
-#If path not specified or commented out, skip TEM calculation
-tem_loc: /glade/scratch/richling/adf-output/ADF-data/TEM/TEST/</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#TEM history file number
-hist_num: h4
-
-#Overwrite time series files, if found?
-#If set to false, then time series creation will be skipped if files are found:
-#overwrite_tem_case: false
-
-#For multi-case
-#overwrite_tem_case
-#    - false
-#    - true
-
-# f.cam6_3_119.FMTHIST_ne30.r328_gamma0.33_soae.001
-overwrite_tem_base: false
-</pre></div>
-</div>
+  #Location where TEM files are stored:
+  #If path not specified or commented out, skip TEM calculation
+  tem_loc: /glade/scratch/richling/adf-output/ADF-data/TEM/TEST/</p>
+<p>  #TEM history file number
+  hist_num: h4</p>
+<p>  #Overwrite TEM files, if found?
+  #overwrite_tem_case: false</p>
+<p>  #For multiple test cases
+  #overwrite_tem_case
+  #    - false
+  #    - true</p>
+<p>  overwrite_tem_base: false</p>
 </section>
 <section id="strong-region-multicase-strong">
 <h3><strong>region_multicase</strong><a class="headerlink" href="#strong-region-multicase-strong" title="Permalink to this headline">#</a></h3>
