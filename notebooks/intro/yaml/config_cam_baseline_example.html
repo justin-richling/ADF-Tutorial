@@ -2074,7 +2074,8 @@ Possible addition examples:<br>
   - global_latlon_vect_map<br>
   - cam_taylor_diagram<br>
   - qbo<br>
-  - tem -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-tem-info-strong">tem_info</a></span></code></p>
+  - tem -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-tem-info-strong">tem_info</a></span></code>
+  - regional_map_multicase -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre"><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#strong-region-multicase-strong">region_multicase</a></span></code></p>
 </section>
 <section id="strong-diag-var-list-strong">
 <h3><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h3>
@@ -2084,19 +2085,19 @@ Possible addition examples:<br>
 </section>
 <section id="strong-tem-info-strong">
 <h3><strong>tem_info</strong><a class="headerlink" href="#strong-tem-info-strong" title="Permalink to this headline">#</a></h3>
-<p>Options for TEM diagnostics (./averaging/create_TEM_files.py and ./plotting/temp.py)
-tem_info:
-  #Location where TEM files are stored:
-  #If path not specified or commented out, skip TEM calculation
-  tem_loc: /glade/scratch/richling/adf-output/ADF-data/TEM/TEST/</p>
-<p>  #TEM history file number
-  hist_num: h4</p>
-<p>  #Overwrite TEM files, if found?
-  #overwrite_tem_case: false</p>
-<p>  #For multiple test cases
-  #overwrite_tem_case
-  #    - false
-  #    - true</p>
+<p>Options for TEM diagnostics (./averaging/create_TEM_files.py and ./plotting/temp.py)<br>
+tem_info:<br>
+&emsp; #Location where TEM files are stored:<br>
+&emsp; #If path not specified or commented out, skip TEM calculation<br>
+&emsp; tem_loc: /glade/scratch/richling/adf-output/ADF-data/TEM/TEST/<br>
+&emsp; #TEM history file number<br>
+&emsp; hist_num: h4<br>
+<p>  #Overwrite TEM files, if found?<br>
+  overwrite_tem_case: false<br></p>
+<p>  #For multiple test cases<br>
+  #overwrite_tem_case<br>
+  #    - false<br>
+  #    - true<br></p>
 <p>  overwrite_tem_base: false</p>
 </section>
 <section id="strong-region-multicase-strong">
