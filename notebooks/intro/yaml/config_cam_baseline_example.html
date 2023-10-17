@@ -991,6 +991,13 @@ title="Print to PDF"
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-tem-info-strong">
+       <strong>
+        tem_info
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#strong-region-multicase-strong">
        <strong>
         region_multicase
@@ -1468,6 +1475,13 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#strong-diag-var-list-strong">
        <strong>
         diag_var_list
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strong-tem-info-strong">
+       <strong>
+        tem_info
        </strong>
       </a>
      </li>
@@ -2060,13 +2074,37 @@ Possible addition examples:<br>
   - global_latlon_vect_map<br>
   - cam_taylor_diagram<br>
   - qbo<br>
-  - tem</p>
+  - tem -&gt; requires more setup info with <code class="docutils literal notranslate"><span class="pre">tem_info</span></code></p>
 </section>
 <section id="strong-diag-var-list-strong">
 <h3><strong>diag_var_list</strong><a class="headerlink" href="#strong-diag-var-list-strong" title="Permalink to this headline">#</a></h3>
 <p>List of variables to be executed in the ADF</p>
 <p>These usually are the CAM variables, but nocesessarily the only ones, ie RESTOM can be added to this list and the ADF will attempt to calculate based off constituents.</p>
 <p>If the ADF searches for time series/climo/regridded/tem, etc. files for a given variable from this list and does not find one in the data files, it will skip that variable with an explaination in most cases. The ADF will not crash, but continue on to the next variable in the list.</p>
+</section>
+<section id="strong-tem-info-strong">
+<h3><strong>tem_info</strong><a class="headerlink" href="#strong-tem-info-strong" title="Permalink to this headline">#</a></h3>
+<p>Options for TEM diagnostics (./averaging/create_TEM_files.py and ./plotting/temp.py)
+tem_info:
+#Location where TEM files are stored:
+#If path not specified or commented out, skip TEM calculation
+tem_loc: /glade/scratch/richling/adf-output/ADF-data/TEM/TEST/</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#TEM history file number
+hist_num: h4
+
+#Overwrite time series files, if found?
+#If set to false, then time series creation will be skipped if files are found:
+#overwrite_tem_case: false
+
+#For multi-case
+#overwrite_tem_case
+#    - false
+#    - true
+
+# f.cam6_3_119.FMTHIST_ne30.r328_gamma0.33_soae.001
+overwrite_tem_base: false
+</pre></div>
+</div>
 </section>
 <section id="strong-region-multicase-strong">
 <h3><strong>region_multicase</strong><a class="headerlink" href="#strong-region-multicase-strong" title="Permalink to this headline">#</a></h3>
