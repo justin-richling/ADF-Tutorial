@@ -184,16 +184,9 @@ const thebe_selector_output = ".output, .cell_output"
    Running ADF Basics
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Examples
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../examples/single_case.html">
-   Single Case
+  <a class="reference internal" href="../../run/examples.html">
+   Examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -201,47 +194,66 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../examples/single_case/cam_vs_cam.html">
-     CAM vs CAM
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../run/examples/single_case.html">
+     Single Case
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/examples/single_case/cam_vs_cam.html">
+       CAM vs CAM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/examples/single_case/cam_vs_obs.html">
+       CAM vs Obs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/examples/single_case/cam_vs_cmip.html">
+       CAM vs CMIP
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../examples/single_case/cam_vs_obs.html">
-     CAM vs Obs/Reanalysis
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../run/examples/multi_case.html">
+     Multi-Case
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../examples/single_case/cam_vs_cmip.html">
-     CAM vs CMIP
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../run/Jupyter.html">
+     ADF in Jupyter
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/multi_case.html">
-   Multi-Case
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../examples/jupyter.html">
-   Jupyter Notebooks
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../run/Jupyter/jupyter_adf_analysis.html">
-     Analysing ADF Output via Jupyter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../run/Jupyter/jupyter_adf_run.html">
-     Exercise - Run ADF via Jupyter
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/Jupyter/jupyter_adf_analysis.html">
+       Analysing ADF Output via Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../run/Jupyter/jupyter_adf_run.html">
+       Exercise - Run ADF via Jupyter
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -273,6 +285,35 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../customize/add.html">
    Add Custom Script
   </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../exercises/single_case.html">
+   Exercises On Your Own!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../exercises/multi_case.html">
+   Multi Case Comparsion Exercise
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -1453,7 +1494,26 @@ title="Print to PDF"
 }
 </style>
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
-<p>Each section of the yaml file represent distinct subsections of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.</p>
+<p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion. In this yaml file variables can be set and called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.</p>
+<p>IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.</p>
+<p>BIG CAVEAT:<br>
+In this particular yaml file, we have build subsections in which variables set in a subsection is only callable by referencing the subsection first with a <code class="docutils literal notranslate"><span class="pre">.</span></code> then variable name.</p>
+<p>IE: Say we want to set the climo years in the test case subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and call them in the baseline subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_baseline_climo</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diag_cam_climo</span><span class="p">:</span>
+
+<span class="o">&amp;</span><span class="n">emsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">ensp</span><span class="p">;</span> <span class="n">start_year</span><span class="p">:</span> <span class="mi">1995</span>  <span class="o">-&gt;</span> <span class="n">we</span> <span class="n">would</span> <span class="n">reference</span> <span class="n">this</span> <span class="k">with</span> <span class="n">diag_cam_climo</span><span class="o">.</span><span class="n">start_year</span>
+<span class="o">&amp;</span><span class="n">emsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">ensp</span><span class="p">;</span> <span class="n">end_year</span><span class="p">:</span> <span class="mi">2000</span>  <span class="o">-&gt;</span> <span class="n">we</span> <span class="n">would</span> <span class="n">reference</span> <span class="n">this</span> <span class="k">with</span> <span class="n">diag_cam_climo</span><span class="o">.</span><span class="n">end_year</span>
+
+</pre></div>
+</div>
+<p>Now if we wanted to reference these climo years in the baseline subsection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>diag_cam_baseline_climo:
+
+&amp;emsp;&amp;ensp; start_year: ${diag_cam_climo.start_year}
+&amp;emsp;&amp;ensp; end_year: ${diag_cam_climo.end_year}
+
+</pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file!</strong></p>
