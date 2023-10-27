@@ -556,33 +556,22 @@ title="Print to PDF"
   Variables can be referenced within the yaml file<br>
   Variables <strong>cannot</strong> be used in nested varaibles lists<br>
     ie:</p>
-<div class="admonition tip">
-<p>** works **</p>
-<p>user: richling<br>some_path: /glade/u/home/${user}</p>
+<div class="highlight-{admonition}** notranslate"><div class="highlight"><pre><span></span>class::error
+&lt;p&gt;user: richling&lt;br&gt;
+case: some_run&lt;br&gt;some_path:&lt;br&gt;
+&amp;ensp;&amp;ensp;&amp;ensp;- /glade/u/home/${user}&lt;br&gt;
+&amp;ensp;&amp;ensp;&amp;ensp;- /glade/u/home/${user}/${case}
+&lt;/p&gt;
+</pre></div>
 </div>
-<div class="admonition error">
-<p>** does not work **</p>
-<p>user: richling<br>
-case: some_run<br>some_path:<br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
-</p>
-  <div class="admonition tip">
-  <div class="title">** works **</div>
-  <p>some_path:<br>
+<div class="admonition-works admonition">
+<p class="admonition-title">** works **</p>
+<p>some_path:<br>
 &ensp;&ensp;&ensp;- /glade/u/home/richling<br>
 &ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
 </p>
-  </div>
 </div>
-<div class="admonition">
-<p>Some **content**</p>
-  <div class="admonition tip">
-  <div class="title">A *title*</div>
-  <p>Paragraph 1</p>
-  <p>Paragraph 2</p>
-  </div>
-</div><div class="toctree-wrapper compound">
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
