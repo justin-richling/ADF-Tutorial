@@ -166,6 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="yaml/basics.html">
+     YAML File Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="yaml/config_cam_baseline_example.html">
      Run Time - config_cam_baseline_example.yaml
     </a>
@@ -554,17 +559,19 @@ title="Print to PDF"
      ADF Flow
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-setup">
-     ADF Setup
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -595,17 +602,19 @@ title="Print to PDF"
      ADF Flow
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-setup">
-     ADF Setup
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -622,7 +631,7 @@ title="Print to PDF"
 <p>Now that the ADF and environment have been set up, let’s take just a quick look at what the ADF actually does and the flow of it. To run the ADF, there are just a couple of steps and then <abbr title="Famous last words"><strong>it’s good to go!</strong></abbr></p>
 <section id="adf-flow">
 <h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
-<p>A simple look at the flow of the ADF
+<p>A simple look at the flow of the ADF<br>
  ↳ Create time series files from monthly history files (if they don’t exist or are being overwritten)<br>
   ↳ Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)<br>
    ↳ Regrid Test case from Baseline case and vice-versa from climatology files<br>
@@ -638,10 +647,6 @@ title="Print to PDF"
 <li><p>If you don’t care about the statistics (AMWG) tables, turn off analysis part</p></li>
 </ul>
 <p>etc.</p>
-</section>
-<section id="adf-setup">
-<h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
-<p>A simple look at the flow of the ADF</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
@@ -703,6 +708,9 @@ title="Print to PDF"
         `-- regrid_and_vert_interp.py
 </pre></div>
 </div>
+<section id="adf-setup">
+<h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
+<p>A simple look at the steps for using the ADF</p>
 <p><a>0.</a> Run CAM simulation to get input files
    history files (ie: h0, h1, etc.)<br>
    time series files (ie: C/AMIP)</p>
@@ -715,6 +723,7 @@ title="Print to PDF"
    Locally<br>
    Jupyter/JupyterHub<br>
    Publish to website</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
