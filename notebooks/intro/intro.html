@@ -622,8 +622,8 @@ title="Print to PDF"
 <p>Now that the ADF and environment have been set up, let’s take just a quick look at what the ADF actually does and the flow of it. To run the ADF, there are just a couple of steps and then <abbr title="Famous last words"><strong>it’s good to go!</strong></abbr></p>
 <section id="adf-flow">
 <h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
-<p>A simple look at the flow of the ADF</p>
-<p> ↳ Create time series files from monthly history files (if they don’t exist or are being overwritten)<br>
+<p>A simple look at the flow of the ADF
+ ↳ Create time series files from monthly history files (if they don’t exist or are being overwritten)<br>
   ↳ Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)<br>
    ↳ Regrid Test case from Baseline case and vice-versa from climatology files<br>
     ↳ Run Analysis scripts<br>
@@ -638,42 +638,22 @@ title="Print to PDF"
 <li><p>If you don’t care about the statistics (AMWG) tables, turn off analysis part</p></li>
 </ul>
 <p>etc.</p>
-<html>
-<style>
-ul2 {
-    list-style: none;
-    padding: 0px;
-}
-<p>down-flow
-{
-content: ‘\2713’;
-margin: 0 1em;    /* any design */
-}
-</style></p>
-<ul>
-<li class="down-flow">&#x21B3; Time Series</li>
-<li class="down-flow">&#x21B3; Climotology</li>
-</ul>
-</html></section>
+</section>
 <section id="adf-setup">
 <h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the flow of the ADF</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">0.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Run</span> <span class="n">CAM</span> <span class="n">simulation</span> <span class="n">to</span> <span class="n">get</span> <span class="nb">input</span> <span class="n">files</span> 
-    
-    <span class="o">-</span> <span class="n">history</span> <span class="n">files</span> <span class="p">(</span><span class="n">ie</span><span class="p">:</span> <span class="n">h0</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span>
-    <span class="o">-</span> <span class="n">time</span> <span class="n">series</span> <span class="n">files</span> <span class="p">(</span><span class="n">ie</span><span class="p">:</span> <span class="n">C</span><span class="o">/</span><span class="n">AMIP</span><span class="p">)</span>
-                                   
-<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">1.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Configure</span> <span class="n">yaml</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">files</span>
-
-<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">2.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">ADF</span>
-
-<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">3.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">View</span> <span class="n">Diagnostics</span>
-
-    <span class="o">-</span> <span class="n">Locally</span>
-    <span class="o">-</span> <span class="n">Jupyter</span><span class="o">/</span><span class="n">JupyterHub</span>
-    <span class="o">-</span> <span class="n">Publish</span> <span class="n">to</span> <span class="n">website</span>
-</pre></div>
-</div>
+<p><a>0.</a> Run CAM simulation to get input files</p>
+<p>   history files (ie: h0, h1, etc.)
+   time series files (ie: C/AMIP)</p>
+<p><a>1.</a> Configure copies of yaml file(s) for the input files</p>
+<p>   config_cam_baseline_example.yaml
+   lib/adf_variable_defaults.yaml</p>
+<p><a>2.</a> Run the ADF</p>
+<p>   simple command line call</p>
+<p><a>3.</a> View Diagnostics</p>
+<p>   Locally
+   Jupyter/JupyterHub
+   Publish to website</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
