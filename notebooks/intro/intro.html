@@ -660,16 +660,22 @@ margin: 0 1em;    /* any design */
 <section id="adf-setup">
 <h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the flow of the ADF</p>
-<ol>
-<li><p>Run CAM simulation to get history ( h0* ) file(s)
-*or other history files</p></li>
-<li><p>Configure yaml file(s) for the history files</p>
-<p>NOTE:  Make copies of these files and modify/customize the copies!</p>
-<p>config_cam_baseline_example.yaml  (necessary, must copy and change!)</p>
-<p>lib/adf_variable_defaults.yaml   (necessary, but optional to copy and change)</p>
-</li>
-<li><p>Run the ADF</p></li>
-</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">0.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Run</span> <span class="n">CAM</span> <span class="n">simulation</span> <span class="n">to</span> <span class="n">get</span> <span class="nb">input</span> <span class="n">files</span> 
+    
+    <span class="o">-</span> <span class="n">history</span> <span class="n">files</span> <span class="p">(</span><span class="n">ie</span><span class="p">:</span> <span class="n">h0</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span>
+    <span class="o">-</span> <span class="n">time</span> <span class="n">series</span> <span class="n">files</span> <span class="p">(</span><span class="n">ie</span><span class="p">:</span> <span class="n">C</span><span class="o">/</span><span class="n">AMIP</span><span class="p">)</span>
+                                   
+<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">1.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Configure</span> <span class="n">yaml</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">files</span>
+
+<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">2.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">ADF</span>
+
+<span class="o">&lt;</span><span class="n">a</span><span class="o">&gt;</span><span class="mf">3.</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">View</span> <span class="n">Diagnostics</span>
+
+    <span class="o">-</span> <span class="n">Locally</span>
+    <span class="o">-</span> <span class="n">Jupyter</span><span class="o">/</span><span class="n">JupyterHub</span>
+    <span class="o">-</span> <span class="n">Publish</span> <span class="n">to</span> <span class="n">website</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
