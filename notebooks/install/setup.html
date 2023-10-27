@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ADF Basics" href="../intro/intro.html" />
+    <link rel="next" title="Non CISL Machines" href="non_cisl.html" />
     <link rel="prev" title="What is the ADF" href="../basics/adf.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -136,6 +136,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Setting up ADF
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="non_cisl.html">
+   Non CISL Machines
   </a>
  </li>
 </ul>
@@ -540,14 +545,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
-   Setting up
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     conda
-    </span>
-   </code>
-   environment
+  <a class="reference internal nav-link" href="#setting-up-adf-environment">
+   Setting up ADF environment
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -634,14 +633,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
-   Setting up
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     conda
-    </span>
-   </code>
-   environment
+  <a class="reference internal nav-link" href="#setting-up-adf-environment">
+   Setting up ADF environment
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -732,16 +725,10 @@ title="Print to PDF"
 <p><strong>For this tutorial you must be on a CISL machine</strong></p>
 <p>There are some instructions for non-CISL machines, but there can be many obstacles.</p>
 <p>For simplicity, this tutorial will only be geared towards users who have a CISL account and access to CISL machines, ie Casper/Cheyenne and JupyterHub</p>
+<p>If you are unable to work from a CISL machine, see <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/install/non_cisl.html">Non CISL section?</a></p>
 </div>
-<section id="setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment">
-<h2>Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment<a class="headerlink" href="#setting-up-code-class-docutils-literal-notranslate-span-class-pre-conda-span-code-environment" title="Permalink to this headline">#</a></h2>
-<p>If you are unfamiliar with <code class="docutils literal notranslate"><span class="pre">conda</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> is a great package manager that allows installing different python packages. Usually, there can be conflicts between certain python packages and even between packages of different versions. To avoid this, <code class="docutils literal notranslate"><span class="pre">conda</span></code> is an industry leading package manager that the ADF will use to avoid any required python packages interfering with the packages you have installed on your machine.</p>
-<p>You don’t need to be an expert with <code class="docutils literal notranslate"><span class="pre">conda</span></code> to follow along with this tutorial, but please visit <a href="https://conda.io/projects/conda/en/latest/index.html"><code class="docutils literal notranslate"><span class="pre">conda</span></code>’s website</a> for more information and basics of working with <code class="docutils literal notranslate"><span class="pre">conda</span></code> if you want to read more.</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Conda cheat sheet for reference</p>
-<p><span class="xref myst">conda</span></p>
-</div>
+<section id="setting-up-adf-environment">
+<h2>Setting up ADF environment<a class="headerlink" href="#setting-up-adf-environment" title="Permalink to this headline">#</a></h2>
 <section id="cisl-computers">
 <h3>CISL Computers<a class="headerlink" href="#cisl-computers" title="Permalink to this headline">#</a></h3>
 <p>Setting up the ADF environment if on CISL (Cheyenne/Casper) machines</p>
@@ -763,6 +750,10 @@ title="Print to PDF"
 <section id="load-conda">
 <h4>Load <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#load-conda" title="Permalink to this headline">#</a></h4>
 <p>To make the ADF as flexible as possible, it is recommended that you run in an NCAR precompiled <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment called <code class="docutils literal notranslate"><span class="pre">npl</span></code></p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Conda cheat sheet for reference</p>
+<p><span class="xref myst">conda</span></p>
+</div>
 <hr class="docutils" />
 <p>First load conda via <code class="docutils literal notranslate"><span class="pre">module</span></code> command</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre id="codecell0"><span></span>module load conda
@@ -882,10 +873,10 @@ title="Print to PDF"
             <p class="prev-next-title">What is the ADF</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../intro/intro.html" title="next page">
+    <a class='right-next' id="next-link" href="non_cisl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ADF Basics</p>
+        <p class="prev-next-title">Non CISL Machines</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
