@@ -556,13 +556,13 @@ title="Print to PDF"
   Variables can be referenced within the yaml file<br>
   Variables <strong>cannot</strong> be used in nested varaibles lists<br>
     ie:</p>
-<div class="highlight-{admonition}** notranslate"><div class="highlight"><pre><span></span>:class: error
-&lt;p&gt;user: richling&lt;br&gt;
-case: some_run&lt;br&gt;some_path:&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;- /glade/u/home/${user}&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;- /glade/u/home/${user}/${case}
-&lt;/p&gt;
-</pre></div>
+<div class="error admonition">
+<p class="admonition-title">** does not work **</p>
+<p>user: richling<br>
+case: some_run<br>some_path:<br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
+</p>
 </div>
 <div class="admonition-works admonition">
 <p class="admonition-title">** works **</p>
