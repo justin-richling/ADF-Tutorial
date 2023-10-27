@@ -138,6 +138,11 @@ const thebe_selector_output = ".output, .cell_output"
    Setting up ADF
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install/non_cisl.html">
+   Non CISL Machines
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -547,9 +552,37 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
 <p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
-<p>A couple of notes about using the ADF yaml files:</p>
-<p>V</p>
-<div class="toctree-wrapper compound">
+<p>A couple of notes about using the ADF yaml files:
+  Variables can be referenced within the yaml file<br>
+  Variables <strong>cannot</strong> be used in nested varaibles lists<br>
+    ie:</p>
+<div class="admonition tip">
+<p>** works **</p>
+<p>user: richling<br>some_path: /glade/u/home/${user}</p>
+</div>
+<div class="admonition error">
+<p>** does not work **</p>
+<p>user: richling<br>
+case: some_run<br>some_path:<br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
+</p>
+  <div class="admonition tip">
+  <div class="title">** works **</div>
+  <p>some_path:<br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
+</p>
+  </div>
+</div>
+<div class="admonition">
+<p>Some **content**</p>
+  <div class="admonition tip">
+  <div class="title">A *title*</div>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  </div>
+</div><div class="toctree-wrapper compound">
 </div>
 </section>
 
