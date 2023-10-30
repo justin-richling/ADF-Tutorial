@@ -241,19 +241,31 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises: yeah, it's homework
+  ADF Exercises
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises/custom_defaults/single_variable.html">
-   Customize Single Variable
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises/custom_defaults/custom_file.html">
-   Customized File
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -526,7 +538,16 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="adf-in-jupyter">
 <h1>ADF in Jupyter<a class="headerlink" href="#adf-in-jupyter" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
+<html>
+   <body>
+      <h3> Using the <em> download attribute of `<a>` tag </em> to create file download button using JavaScript. </h3>
+      <p> Click the below button to download the image file </p>
+      <a href = "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+      Download = "test_image">
+         <button type = "button"> Download </button>
+      </a>
+   </body>
+</html><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
