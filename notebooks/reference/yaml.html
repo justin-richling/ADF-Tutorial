@@ -469,22 +469,6 @@ title="Print to PDF"
   Variables can be referenced within the yaml file<br>
   Variables <strong>cannot</strong> be used in nested varaibles lists<br>
     ie:</p>
-<div class="error admonition">
-<p class="admonition-title">** does not work **</p>
-<p><strong>user:</strong> richling<br>
-<strong>case:</strong> some_run<br>
-<strong>some_path:</strong><br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
-</p>
-</div>
-<div class="admonition-works admonition">
-<p class="admonition-title">** works **</p>
-<p><strong>some_path:</strong><br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
-</p>
-</div>
 <section id="sidebar-content">
 <aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 40%; float: right; clear: right; overflow-x: auto;">
 <div class="admonition">
@@ -496,6 +480,8 @@ title="Print to PDF"
 &ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
 </p></div>
 </aside>
+</section>
+<section id="sidebar-content">
 <aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 40%; float: left; clear: right; overflow-x: auto;">
 <div class="admonition error">
 <p class="admonition-title">** works **</p>
