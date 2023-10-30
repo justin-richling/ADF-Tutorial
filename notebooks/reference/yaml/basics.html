@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises: yeah, it's &lt;strong&gt;homework&lt;/strong&gt;!!
+  ADF Exercises: yeah, it's homework
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -462,11 +462,26 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="yaml-file-basics">
 <h1>YAML File Basics<a class="headerlink" href="#yaml-file-basics" title="Permalink to this headline">#</a></h1>
 <p>Basic tips and tricks for using the yaml file in the ADF config files</p>
-<p>A couple of notes about using the ADF yaml files:
+<p>A couple of notes about using the ADF yaml files:<br>
   Variables can be referenced within the yaml file<br>
-  Variables <strong>cannot</strong> be used in nested varaibles lists<br>
-    ie:</p>
-<div class="error admonition">
+  Variables <strong>cannot</strong> be used in nested varaibles lists<br></p>
+<div style="margin-top: -2em;">
+<section id="sidebar-content">
+<div>
+<h4></h4>
+<aside style="margin: 0 0 0.5em 3em; padding: 1px; width: 46%; float: left; clear: left; overflow-x: auto;">
+<div class="admonition">
+<p class="admonition-title">** works **</p>
+<p><strong>some_path:</strong><br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
+</p>
+</div>
+</aside>
+</div>
+<div>
+<aside style="margin: 0 0 0.5em 0; padding: 1px; width: 46%; float: right; clear: right; overflow-x: auto;">
+<div class="admonition error">
 <p class="admonition-title">** does not work **</p>
 <p><strong>user:</strong> richling<br>
 <strong>case:</strong> some_run<br>
@@ -475,14 +490,11 @@ title="Print to PDF"
 &ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
 </p>
 </div>
-<div class="admonition-works admonition">
-<p class="admonition-title">** works **</p>
-<p><strong>some_path:</strong><br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
-</p>
+</aside>
 </div>
 </section>
+</div>
+<p>AHAHAHAHAHAHAH<br><br><br></p></section>
 
     <script type="text/x-thebe-config">
     {

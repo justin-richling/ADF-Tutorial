@@ -465,39 +465,6 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
 <p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
-<p>A couple of notes about using the ADF yaml files:<br>
-  Variables can be referenced within the yaml file<br>
-  Variables <strong>cannot</strong> be used in nested varaibles lists<br></p>
-<div style="margin-top: -2em;">
-<section id="sidebar-content">
-<div>
-<h4></h4>
-<aside style="margin: 0 0 0.5em 3em; padding: 1px; width: 46%; float: left; clear: left; overflow-x: auto;">
-<div class="admonition">
-<p class="admonition-title">** works **</p>
-<p><strong>some_path:</strong><br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
-&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
-</p>
-</div>
-</aside>
-</div>
-<div>
-<aside style="margin: 0 0 0.5em 0; padding: 1px; width: 46%; float: right; clear: right; overflow-x: auto;">
-<div class="admonition error">
-<p class="admonition-title">** does not work **</p>
-<p><strong>user:</strong> richling<br>
-<strong>case:</strong> some_run<br>
-<strong>some_path:</strong><br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
-&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
-</p>
-</div>
-</aside>
-</div>
-</section>
-</div>
-<p>AHAHAHAHAHAHAH<br><br><br></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
