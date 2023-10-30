@@ -470,23 +470,25 @@ title="Print to PDF"
   Variables <strong>cannot</strong> be used in nested varaibles lists<br>
     ie:</p>
 <section id="sidebar-content">
-<aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 50%; float: right; clear: right; overflow-x: auto;">
-<div class="admonition">
+<aside style="margin: 0 0 0.5em 0; padding: 1px; width: 48%; float: right; clear: right; overflow-x: auto;">
+<div class="admonition error">
 <p class="admonition-title">** does not work **</p>
 <p><strong>user:</strong> richling<br>
 <strong>case:</strong> some_run<br>
 <strong>some_path:</strong><br>
 &ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
 &ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
-</p></div>
+</p>
+</div>
 </aside>
-<aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 50%; float: left; clear: right; overflow-x: auto;">
-<div class="admonition error">
+<aside style="margin: 0 0 0.5em 0; padding: 1px; width: 48%; float: left; clear: left; overflow-x: auto;">
+<div class="admonition">
 <p class="admonition-title">** works **</p>
 <p><strong>some_path:</strong><br>
 &ensp;&ensp;&ensp;- /glade/u/home/richling<br>
 &ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
-</p></div>
+</p>
+</div>
 </aside>
 </section>
 <div class="toctree-wrapper compound">
