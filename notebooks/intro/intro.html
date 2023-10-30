@@ -150,17 +150,34 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    ADF Basics
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout/lib.html">
+     Libraries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout/scripts.html">
+     Scripts
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +215,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../run/examples.html">
    Examples
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -208,8 +225,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../run/examples/single_case.html">
      Single Case
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -235,8 +252,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../run/examples/multi_case.html">
      Multi-Case
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -247,8 +264,8 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal" href="../run/Jupyter.html">
      ADF in Jupyter
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -307,8 +324,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/single_case.html">
    Exercises On Your Own!
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -324,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/jupyter.html">
    More Exercise for Jupter
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -566,29 +583,20 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   ADF Basics
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-flow">
-     ADF Flow
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-setup">
-     ADF Setup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
+  </a>
  </li>
 </ul>
 
@@ -609,29 +617,20 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   ADF Basics
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-flow">
+   ADF Flow
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-flow">
-     ADF Flow
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adf-layout">
    ADF Layout
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adf-setup">
-     ADF Setup
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-setup">
+   ADF Setup
+  </a>
  </li>
 </ul>
 
@@ -646,6 +645,7 @@ title="Print to PDF"
   <section id="adf-basics">
 <h1>ADF Basics<a class="headerlink" href="#adf-basics" title="Permalink to this headline">#</a></h1>
 <p>Now that the ADF and environment have been set up, let’s take just a quick look at what the ADF actually does and the flow of it. To run the ADF, there are just a couple of steps and then <abbr title="Famous last words"><strong>it’s good to go!</strong></abbr></p>
+<hr class="docutils" />
 <section id="adf-flow">
 <h2>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the flow of the ADF<br>
@@ -665,9 +665,9 @@ title="Print to PDF"
 <li><p>etc.</p></li>
 </ul>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="adf-layout">
-<h1>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<section id="adf-layout">
+<h2>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the structure of the ADF directories</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 |-- config_amwg_default_plots.yaml
@@ -725,6 +725,7 @@ title="Print to PDF"
         `-- regrid_and_vert_interp.py
 </pre></div>
 </div>
+</section>
 <section id="adf-setup">
 <h2>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h2>
 <p>A simple look at the steps for using the ADF</p>
