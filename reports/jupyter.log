@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/glade/u/apps/opt/conda/envs/npl-2022b/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/glade/u/home/richling/.local/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#Initialize ADF object with config file
+adf = AdfDiag(config_file)
+adf
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[7], line 2[0m
+[1;32m      1[0m [38;5;66;03m#Initialize ADF object with config file[39;00m
+[0;32m----> 2[0m adf [38;5;241m=[39m [43mAdfDiag[49m[43m([49m[43mconfig_file[49m[43m)[49m
+[1;32m      3[0m adf
+
+File [0;32m/glade/work/richling/ADF/ADF/lib/adf_diag.py:163[0m, in [0;36mAdfDiag.__init__[0;34m(self, config_file, debug)[0m
+[1;32m    158[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m    159[0m [38;5;124;03mInitalize ADF diagnostics object.[39;00m
+[1;32m    160[0m [38;5;124;03m"""[39;00m
+[1;32m    162[0m [38;5;66;03m#Initialize Config/Base attributes:[39;00m
+[0;32m--> 163[0m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mconfig_file[49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[43mdebug[49m[43m)[49m
+[1;32m    165[0m [38;5;66;03m#Add CVDP info to object:[39;00m
+[1;32m    166[0m [38;5;28mself[39m[38;5;241m.[39m__cvdp_info [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mread_config_var([38;5;124m'[39m[38;5;124mdiag_cvdp_info[39m[38;5;124m'[39m)
+
+File [0;32m/glade/work/richling/ADF/ADF/lib/adf_web.py:99[0m, in [0;36mAdfWeb.__init__[0;34m(self, config_file, debug)[0m
+[1;32m     94[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m     95[0m [38;5;124;03mInitalize ADF Web object.[39;00m
+[1;32m     96[0m [38;5;124;03m"""[39;00m
+[1;32m     98[0m [38;5;66;03m#Initialize Obs attributes:[39;00m
+[0;32m---> 99[0m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mconfig_file[49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[43mdebug[49m[43m)[49m
+[1;32m    101[0m [38;5;66;03m#Initialize website mean plots dictionary:[39;00m
+[1;32m    102[0m [38;5;28mself[39m[38;5;241m.[39m__website_data [38;5;241m=[39m []
+
+File [0;32m/glade/work/richling/ADF/ADF/lib/adf_obs.py:64[0m, in [0;36mAdfObs.__init__[0;34m(self, config_file, debug)[0m
+[1;32m     59[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m     60[0m [38;5;124;03mInitalize ADF Obs object.[39;00m
+[1;32m     61[0m [38;5;124;03m"""[39;00m
+[1;32m     63[0m [38;5;66;03m#Initialize Config attributes:[39;00m
+[0;32m---> 64[0m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mconfig_file[49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[43mdebug[49m[43m)[49m
+[1;32m     66[0m [38;5;66;03m#Determine local directory:[39;00m
+[1;32m     67[0m _adf_lib_dir [38;5;241m=[39m Path([38;5;18m__file__[39m)[38;5;241m.[39mparent
+
+File [0;32m/glade/work/richling/ADF/ADF/lib/adf_info.py:64[0m, in [0;36mAdfInfo.__init__[0;34m(self, config_file, debug)[0m
+[1;32m     59[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m     60[0m [38;5;124;03mInitalize ADF Info object.[39;00m
+[1;32m     61[0m [38;5;124;03m"""[39;00m
+[1;32m     63[0m [38;5;66;03m#Initialize Config attributes:[39;00m
+[0;32m---> 64[0m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mconfig_file[49m[43m,[49m[43m [49m[43mdebug[49m[38;5;241;43m=[39;49m[43mdebug[49m[43m)[49m
+[1;32m     66[0m [38;5;66;03m#Add basic diagnostic info to object:[39;00m
+[1;32m     67[0m [38;5;28mself[39m[38;5;241m.[39m__basic_info [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mread_config_var([38;5;124m'[39m[38;5;124mdiag_basic_info[39m[38;5;124m'[39m, required[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+
+File [0;32m/glade/work/richling/ADF/ADF/lib/adf_config.py:58[0m, in [0;36mAdfConfig.__init__[0;34m(self, config_file, debug)[0m
+[1;32m     56[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m os[38;5;241m.[39mpath[38;5;241m.[39mexists(config_file):
+[1;32m     57[0m     emsg [38;5;241m=[39m [38;5;124mf[39m[38;5;124m"[39m[38;5;124mFile [39m[38;5;124m'[39m[38;5;132;01m{[39;00mconfig_file[38;5;132;01m}[39;00m[38;5;124m'[39m[38;5;124m not found. Please provide full path.[39m[38;5;124m"[39m
+[0;32m---> 58[0m     [38;5;28;01mraise[39;00m [38;5;167;01mFileNotFoundError[39;00m(emsg)
+[1;32m     60[0m [38;5;66;03m#Open YAML file:[39;00m
+[1;32m     61[0m [38;5;28;01mwith[39;00m [38;5;28mopen[39m(config_file, encoding[38;5;241m=[39m[38;5;124m'[39m[38;5;124mUTF-8[39m[38;5;124m'[39m) [38;5;28;01mas[39;00m nfil:
+[1;32m     62[0m     [38;5;66;03m#Load YAML file:[39;00m
+
+[0;31mFileNotFoundError[0m: File '/glade/work/richling/ADF/adf-demo/config_files/config_model_vs_model.yaml' not found. Please provide full path.
+FileNotFoundError: File '/glade/work/richling/ADF/adf-demo/config_files/config_model_vs_model.yaml' not found. Please provide full path.
+
