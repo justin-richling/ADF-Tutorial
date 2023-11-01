@@ -491,22 +491,36 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-run-time-yaml-file">
-   Configure Run-Time yaml file
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Setup
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-run-time-yaml-file">
+     Configure Run-Time yaml file
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modify-the-copy">
-     Modify the Copy
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modify-the-copy">
+       Modify the Copy
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
+  </a>
  </li>
 </ul>
 
@@ -527,22 +541,36 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-run-time-yaml-file">
-   Configure Run-Time yaml file
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Setup
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-run-time-yaml-file">
+     Configure Run-Time yaml file
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modify-the-copy">
-     Modify the Copy
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modify-the-copy">
+       Modify the Copy
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
+  </a>
  </li>
 </ul>
 
@@ -577,13 +605,108 @@ title="Print to PDF"
 </section>
 <section id="modify-the-copy">
 <h3>Modify the Copy<a class="headerlink" href="#modify-the-copy" title="Permalink to this headline">#</a></h3>
-<p>Next open this new copy in your favorite editor
+<p>Next open this new copy in your favorite editor:
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>emacs config_tutorial_example.yaml
 </pre></div>
 </div>
-</p></section>
+<p>Here we will do just a couple of changes for the output paths and cases/climo years</p>
+</p>
+<p>A quick reference to the different sections on the yaml file</p>
 </section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="u-subsections-u">
+<h1><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h1>
+<p>The subsections that may need to be customized for your run are:</p>
+<ul class="simple">
+<li><p>diag_basic_info</p>
+<ul>
+<li><p>Basic overall run variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_climo</p>
+<ul>
+<li><p>Test (experiment) case variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_baseline_climo</p>
+<ul>
+<li><p>Baseline (control) case variables</p></li>
+<li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
+</ul>
+</li>
+<li><p>diag_cvdp_info</p>
+<ul>
+<li><p>For running the Climate Variability Diagnostics Package <a class="reference external" href="https://www.cesm.ucar.edu/projects/cvdp">https://www.cesm.ucar.edu/projects/cvdp</a></p></li>
+<li><p>This will run in the background of the ADF</p></li>
+</ul>
+</li>
+<li><p>time_averaging_scripts</p>
+<ul>
+<li><p>Climotology file creation</p></li>
+</ul>
+</li>
+<li><p>regridding_scripts</p>
+<ul>
+<li><p>Regridding of climo files</p></li>
+</ul>
+</li>
+<li><p>analysis_scripts</p>
+<ul>
+<li><p>AMWG statisics tables</p></li>
+</ul>
+</li>
+<li><p>plotting_scripts</p>
+<ul>
+<li><p>Various plotting scripts</p></li>
+</ul>
+</li>
+<li><p>diag_var_list</p>
+<ul>
+<li><p>List of CAM variables for ADF to run</p></li>
+</ul>
+</li>
+</ul>
+<p>We will only be editing:</p>
+<ul class="simple">
+<li><p>diag_basic_info</p>
+<ul>
+<li><p>Basic overall run variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_climo</p>
+<ul>
+<li><p>Test (experiment) case variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_baseline_climo</p>
+<ul>
+<li><p>Baseline (control) case variables</p></li>
+<li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
+</ul>
+</li>
+</ul>
+<section id="sidebar-content">
+<aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 60%; float: right; clear: right; overflow-x: auto;">
+<div class="admonition note">
+<p class="admonition-title">Notezies</p>
+<p>Change only the ones listed in each subsection below and leave all the other variables in the conifg file as they are by default</p>
+</div>
+</aside>
+<ul>
+<li><p style="margin-top: -5px;">Global Variables</p>
+</li>
+</ul>
+<p>The following subsections have variables that will be changed for this example:</p>
+<ul>
+<li><p style="margin-top: -5px;">diag_basic_info</p>
+</li>
+<li><p style="margin-top: -5px;">diag_cam_climo</p>
+</li>
+<li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
+</li>
+</ul>
+</section></section>
 
     <script type="text/x-thebe-config">
     {
