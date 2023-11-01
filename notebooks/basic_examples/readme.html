@@ -521,6 +521,28 @@ title="Print to PDF"
     Subsections
    </u>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-variables">
+     Global Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
+     diag_cam_climo
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+     diag_cam_baseline_climo
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -571,6 +593,28 @@ title="Print to PDF"
     Subsections
    </u>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-variables">
+     Global Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-basic-info">
+     diag_basic_info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-climo">
+     diag_cam_climo
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+     diag_cam_baseline_climo
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -667,38 +711,17 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-<p>We will only be editing:</p>
-<ul class="simple">
-<li><p>diag_basic_info</p>
-<ul>
-<li><p>Basic overall run variables</p></li>
-</ul>
-</li>
-<li><p>diag_cam_climo</p>
-<ul>
-<li><p>Test (experiment) case variables</p></li>
-</ul>
-</li>
-<li><p>diag_cam_baseline_climo</p>
-<ul>
-<li><p>Baseline (control) case variables</p></li>
-<li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
-</ul>
-</li>
-</ul>
 <section id="sidebar-content">
 <aside style="margin: 0 0 0.5em 1em; padding: 7px; width: 60%; float: right; clear: right; overflow-x: auto;">
-<div class="admonition note">
-<p class="admonition-title">Notezies</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
 <p>Change only the ones listed in each subsection below and leave all the other variables in the conifg file as they are by default</p>
 </div>
 </aside>
-<ul>
-<li><p style="margin-top: -5px;">Global Variables</p>
-</li>
-</ul>
 <p>The following subsections have variables that will be changed for this example:</p>
 <ul>
+<li><p style="margin-top: -5px;">Global Variables (variables above all subsections)</p>
+</li>
 <li><p style="margin-top: -5px;">diag_basic_info</p>
 </li>
 <li><p style="margin-top: -5px;">diag_cam_climo</p>
@@ -706,7 +729,70 @@ title="Print to PDF"
 <li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
 </li>
 </ul>
-</section></section>
+</section>
+<section id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h2>
+<p>In the yaml file, let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file.</p>
+<p>Set the user name that will be help set all paths later in the yaml file</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">user</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">richling (YOUR-USER-NAME)</span></code></p>
+<p>Create a new variable <code class="docutils literal notranslate"><span class="pre">adf_path</span></code> for the root ADF path. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">adf_path</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">/glade/scratch/${user}/ADF</span></code></p>
+<p>Also create a variable <code class="docutils literal notranslate"><span class="pre">hist_path</span></code> for the path to the sample history files</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">hist_path</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">/glade/scratch/richling/ADF/tutorials/data</span></code></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This is meerly a suggestion of how to configure the locations of all the files and diagnostic plots. We will stick to this convention for this tutorial, but please feel free to setup your ADF diagnsotics paths/hieracrhy in anyway that makes sense for your actual needs!</p>    
+</div>
+</section>
+<section id="diag-basic-info">
+<h2>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h2>
+<p>This subsection defines necessary variables for the overall ADF run</p>
+<p>We can change the paths for the regridded data and plot locations</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_regrid_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/regrid</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/plots</span></code></p>
+</section>
+<section id="diag-cam-climo">
+<h2>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h2>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/climo/{diag_cam_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
+</section>
+<section id="diag-cam-baseline-climo">
+<h2>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<style>
+    #box {
+    word-wrap:normal;
+    overflow:scroll;
+}
+</style>
+<div class="full-width docutils">
+<h5>With all these variables now set, let's take a quick catalogue of the different paths:</h5>
+<p>Regridded file location:</p>
+<div>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/regrid</span></code></p>
+<p>Diagnostic plot location:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
+<p>&emsp; &ensp;The ADF will output a new directory in the above location named:</p>
+<p style="margin-top: -20px;"><code class="docutils literal notranslate"><span class="pre">&emsp; &ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+<p>Climatology file locations:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p>Timeseries locations:</p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+</div>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
