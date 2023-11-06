@@ -845,7 +845,31 @@ Check data/paths<br></p>
 </section>
 <section id="check-the-outputs">
 <h2>Check the outputs!<a class="headerlink" href="#check-the-outputs" title="Permalink to this headline">#</a></h2>
-<p>If the ADF ran successfully, n</p>
+<p>If the ADF ran successfully, we can check the diagnostics a couple ways:</p>
+<ul>
+<li>Locally</li>
+<li>JupyterHub</li>
+<li>Website</li>
+</ul>
+<h3></h3>
+<h3></h3>
+<h3>Website</h3>
+<p>If you choose to create <a>INSERT HOVER TOOL FOR html stuff… HTML files</a> you can publish those to a web server.</p>
+<p>Example: If you are on a CGD machine like Tungsten:</p>
+<ul>
+<li><p>Navigate to the root ADF directory</p></li>
+<li><p>Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
+<ul class="simple">
+<li><p>ie /glade/work/user/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p></li>
+</ul>
+</li>
+<li><p>Finally, copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address.</p>
+<ul class="simple">
+<li><p>For Tungsten:</p></li>
+</ul>
+<p>scp -r website/* <a class="reference external" href="http://tungsten.cgd.ucar.edu">tungsten.cgd.ucar.edu</a>:/path/to/your/project/page/</p>
+</li>
+</ul>
 </section>
 </section>
 
