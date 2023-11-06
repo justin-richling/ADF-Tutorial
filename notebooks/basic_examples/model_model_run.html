@@ -143,11 +143,6 @@ const thebe_selector_output = ".output, .cell_output"
    Setting up ADF
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../install/non_cisl.html">
-   Non NCAR Machines
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -535,6 +530,16 @@ title="Print to PDF"
    Run the ADF via terminal
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
+   End single CAM vs CAM case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-the-outputs">
+   Check the outputs!
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -603,6 +608,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#run-the-adf-via-terminal">
    Run the ADF via terminal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-single-cam-vs-cam-case">
+   End single CAM vs CAM case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-the-outputs">
+   Check the outputs!
   </a>
  </li>
 </ul>
@@ -806,6 +821,31 @@ title="Print to PDF"
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./run_adf_diag config_model_vs_model_example.yaml
 </pre></div>
 </div>
+</section>
+<section id="end-single-cam-vs-cam-case">
+<h2>End single CAM vs CAM case<a class="headerlink" href="#end-single-cam-vs-cam-case" title="Permalink to this headline">#</a></h2>
+<h6>Hope everything went well...</h6>
+<div class="full-width docutils">
+<div class="admonition-did-the-adf-finish admonition">
+<p class="admonition-title">Did the ADF finish?</p>
+<div>
+<p>Check output data/images:</p>
+<p style="margin-top: -5px;">Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
+<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+</div>
+</div>
+</div>
+<div class="error admonition">
+<p class="admonition-title">Did the ADF fail?</p>
+<p>Check config files<br>
+Check error/logs<br>
+Check data/paths<br></p>
+</div>
+<p>If you want to explore the ADF in a Jupyter environment, you can skip to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/Jupyter.html">ADF in Jupyter</a> chapter at the end of this section</p>
+</section>
+<section id="check-the-outputs">
+<h2>Check the outputs!<a class="headerlink" href="#check-the-outputs" title="Permalink to this headline">#</a></h2>
+<p>If the ADF ran successfully, n</p>
 </section>
 </section>
 

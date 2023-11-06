@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Setting up ADF" href="../install/setup.html" />
@@ -141,11 +143,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../install/setup.html">
    Setting up ADF
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../install/non_cisl.html">
-   Non NCAR Machines
   </a>
  </li>
 </ul>
@@ -488,6 +485,16 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#">
    What is the ADF
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+     Third set in yaml file:
+     <span class="math notranslate nohighlight">
+      \(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-case-comparison">
@@ -517,6 +524,16 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#">
    What is the ADF
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+     Third set in yaml file:
+     <span class="math notranslate nohighlight">
+      \(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-case-comparison">
@@ -625,11 +642,63 @@ title="Print to PDF"
 <p>This is an active area of development; there are potential ways of cutting time/processes</p>
 </div>
 </div>
+<section id="third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo">
+<h2>Third set in yaml file:  <span class="math notranslate nohighlight">\(\color{#117284}{\textit{diag\_cam\_baseline\_climo}}\)</span><a class="headerlink" href="#third-set-in-yaml-file-color-117284-textit-diag-cam-baseline-climo" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Header</p></td>
+<td><p>Title</p></td>
+</tr>
+<tr class="row-odd"><td><p>Paragraph</p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:right head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Header</p></td>
+<td class="text-align:center"><p>Title</p></td>
+<td class="text-align:right"><p>Here’s this</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Paragraph</p></td>
+<td class="text-align:center"><p>Text</p></td>
+<td class="text-align:right"><p>And more</p></td>
+</tr>
+</tbody>
+</table>
+<div class="error admonition">
+<p class="admonition-title">** does not work **</p>
+<p><strong>user:</strong> richling<br>
+<strong>case:</strong> some_run<br>
+<strong>some_path:</strong><br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}<br>
+&ensp;&ensp;&ensp;- /glade/u/home/${user}/${case}
+</p>
+</div>
+<div class="admonition-works admonition">
+<p class="admonition-title">** works **</p>
+<p><strong>some_path:</strong><br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling<br>
+&ensp;&ensp;&ensp;- /glade/u/home/richling/some_run
+</p>
+</div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Conda cheat sheet for reference</p>
 <p><span class="xref myst">conda</span></p>
 </div>
 <div><p style="font-size: 25px; font-weight: bold; color: #076E85;">Alright here we go</p></div></section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="single-case-comparison">
 <h1>Single Case Comparison<a class="headerlink" href="#single-case-comparison" title="Permalink to this headline">#</a></h1>
 <p>Let's now put it all together and do a CAM vs CAM comparison.</p>
