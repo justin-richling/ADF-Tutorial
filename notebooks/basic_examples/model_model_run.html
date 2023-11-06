@@ -618,6 +618,20 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="cam-vs-cam">
 <h1>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h1>
 <p>This will be a simple guided demo of running the ADF with sample data for CAM vs CAM comparison. For an example of CAM simulation vs observations/reanalysis, navigate to <a href="">this demo</a></p>
+<p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for 5 years, 1995-2000:</p>
+<p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basics/adf.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
+<p><s>  0. Run CAM simulation to get history ( h0* ) file(s)
+*or other history files</s></p>
+<p>&emsp; 1. Configure yaml file(s) for the history files<br>
+<p>    <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
+       Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
+<p>    <code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code>   (necessary, but optional to copy and change)<br>
+       For this example we <strong>will not</strong> be editing the variable defaults yaml file<br></p>
+</p>
+<p>&emsp; 2. Run the ADF!</p>
+<hr class="docutils" />
 <p>Use this as a follow along as you work locally for this example ADF run.</p>
 <p>Navigate to where you cloned the ADF:</p>
 <ul class="simple">
