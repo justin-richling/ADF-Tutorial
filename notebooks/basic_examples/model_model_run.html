@@ -544,6 +544,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-adf-via-terminal">
+   Run the ADF via terminal
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -609,6 +614,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-adf-via-terminal">
+   Run the ADF via terminal
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -636,7 +646,7 @@ title="Print to PDF"
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p></p>
 <p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.</p>
 <p>We will copy the provided configuration yaml file <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code> and will do small edits to run an example ADF with sample data.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_baseline_example.yaml config_tutorial_example.yaml
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_baseline_example.yaml config_model_vs_model_example.yaml
 </pre></div>
 </div>
 </p>
@@ -644,7 +654,7 @@ title="Print to PDF"
 <section id="modify-the-copy">
 <h3>Modify the Copy<a class="headerlink" href="#modify-the-copy" title="Permalink to this headline">#</a></h3>
 <p>Next open this new copy in your favorite editor:
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>emacs config_tutorial_example.yaml
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>emacs config_model_vs_model_example.yaml
 </pre></div>
 </div>
 <p>Here we will do just a couple of changes for the output paths and cases/climo years</p>
@@ -787,6 +797,15 @@ title="Print to PDF"
 </div>
 </section>
 </section>
+</section>
+<section id="run-the-adf-via-terminal">
+<h2>Run the ADF via terminal<a class="headerlink" href="#run-the-adf-via-terminal" title="Permalink to this headline">#</a></h2>
+<p>With the run-time config file setup, the next step is to actaully run the ADF, oh boy! The most basic ADF run is through tthe terminal (although it can be run via Jupyter too, please see the next section).</p>
+<p>Make sure you are still in the root directory of the ADF .</p>
+<p>From here, you just need to call the command line script <code class="docutils literal notranslate"><span class="pre">run_adf_diag</span></code> follwed by the run-time config file we just editied <code class="docutils literal notranslate"><span class="pre">config_model_vs_model_example.yaml</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./run_adf_diag config_model_vs_model_example.yaml
+</pre></div>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
