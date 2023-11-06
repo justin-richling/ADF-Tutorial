@@ -748,33 +748,6 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
-	 Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-	 - time series for FLNT
-	 - time series for FSNT
-	 - time series for LWCF
-	 - time series for PBLH
-	 - time series for PS
-	 - time series for PSL
-	 - time series for Q
-Adding PS to file
-	 - time series for RELHUM
-Adding PS to file
-	 - time series for SST
-	 - time series for SWCF
-	 - time series for T
-Adding PS to file
-	 - time series for TS
-	 - time series for U
-Adding PS to file
-	 - time series for OCNFRAC
-  ...CAM time series file generation has finished successfully.
-CPU times: user 1.03 s, sys: 192 ms, total: 1.22 s
-Wall time: 15.6 s
-</pre></div>
-</div>
-</div>
 </div>
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
@@ -810,33 +783,6 @@ Wall time: 15.6 s
 <span class="c1"># Since we are doing model vs model</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">adf</span><span class="o">.</span><span class="n">compare_obs</span><span class="p">:</span>
     <span class="n">adf</span><span class="o">.</span><span class="n">create_time_series</span><span class="p">(</span><span class="n">baseline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
-	 Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
-	 - time series for FLNT
-	 - time series for FSNT
-	 - time series for LWCF
-	 - time series for PBLH
-	 - time series for PS
-	 - time series for PSL
-	 - time series for Q
-Adding PS to file
-	 - time series for RELHUM
-Adding PS to file
-	 - time series for SST
-	 - time series for SWCF
-	 - time series for T
-Adding PS to file
-	 - time series for TS
-	 - time series for U
-Adding PS to file
-	 - time series for OCNFRAC
-  ...CAM time series file generation has finished successfully.
-CPU times: user 103 ms, sys: 82.2 ms, total: 185 ms
-Wall time: 14.6 s
 </pre></div>
 </div>
 </div>
@@ -877,17 +823,6 @@ Wall time: 14.6 s
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
-	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
-	    /glade/scratch/richling/ADF/output/climos/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001 not found, making new directory
-  ...CAM climatologies have been calculated successfully.
-CPU times: user 217 ms, sys: 113 ms, total: 330 ms
-Wall time: 2min 3s
-</pre></div>
-</div>
-</div>
 </div>
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
@@ -906,85 +841,6 @@ Wall time: 2min 3s
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="n">adf</span><span class="o">.</span><span class="n">regrid_climo</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Regridding CAM climatologies...
-	 Regridding case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-	 - regridding PS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding OCNFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding FLNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding FSNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding LWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding PBLH (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding PSL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding Q (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding RELHUM (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding SST (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding SWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding T (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - regridding TS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-	 - regridding U (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
-Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Please ignore the interpolation warnings that follow!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ...CAM climatologies have been regridded successfully.
-CPU times: user 58 s, sys: 6.6 s, total: 1min 4s
-Wall time: 1min 11s
 </pre></div>
 </div>
 </div>
@@ -1041,54 +897,6 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">perform_analyses</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Calculating AMWG variable table...
-	    /glade/scratch/richling/ADF_output/TEST/diag-plot/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000 not found, making new directory
-	 - Variable &#39;OCNFRAC&#39; being added to table
-	 - Variable &#39;FLNT&#39; being added to table
-	 - Variable &#39;FSNT&#39; being added to table
-	 - Variable &#39;LWCF&#39; being added to table
-	 - Variable &#39;PBLH&#39; being added to table
-	 - Variable &#39;PS&#39; being added to table
-	 - Variable &#39;PSL&#39; being added to table
-	 - Variable &#39;Q&#39; being added to table
-	   Variable &#39;Q&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;RELHUM&#39; being added to table
-	   Variable &#39;RELHUM&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;SST&#39; being added to table
-	 - Variable &#39;SWCF&#39; being added to table
-	 - Variable &#39;T&#39; being added to table
-	   Variable &#39;T&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;TS&#39; being added to table
-	 - Variable &#39;U&#39; being added to table
-	   Variable &#39;U&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;RESTOM&#39; being added to table
-	 - Variable &#39;OCNFRAC&#39; being added to table
-	 - Variable &#39;FLNT&#39; being added to table
-	 - Variable &#39;FSNT&#39; being added to table
-	 - Variable &#39;LWCF&#39; being added to table
-	 - Variable &#39;PBLH&#39; being added to table
-	 - Variable &#39;PS&#39; being added to table
-	 - Variable &#39;PSL&#39; being added to table
-	 - Variable &#39;Q&#39; being added to table
-	   Variable &#39;Q&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;RELHUM&#39; being added to table
-	   Variable &#39;RELHUM&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;SST&#39; being added to table
-	 - Variable &#39;SWCF&#39; being added to table
-	 - Variable &#39;T&#39; being added to table
-	   Variable &#39;T&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;TS&#39; being added to table
-	 - Variable &#39;U&#39; being added to table
-	   Variable &#39;U&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
-	 - Variable &#39;RESTOM&#39; being added to table
-  ...AMWG variable table has been generated successfully.
-
-  Making comparison table...
-  ... Comparison table has been generated successfully
 </pre></div>
 </div>
 </div>
@@ -1149,51 +957,6 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - lat/lon maps for FLNT
-	 - lat/lon maps for FSNT
-	 - lat/lon maps for LWCF
-	 - lat/lon maps for PBLH
-	 - lat/lon maps for PS
-	 - lat/lon maps for PSL
-	 - lat/lon maps for Q
-	 - lat/lon maps for RELHUM
-	 - lat/lon maps for SST
-	 - lat/lon maps for SWCF
-	 - lat/lon maps for T
-	 - lat/lon maps for TS
-	 - lat/lon maps for U
-	 - lat/lon maps for OCNFRAC
-  ...lat/lon maps have been generated successfully.
-
-  Generating zonal mean plots...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - zonal mean plots for FLNT
-	 - zonal mean plots for FSNT
-	 - zonal mean plots for LWCF
-	 - zonal mean plots for PBLH
-	 - zonal mean plots for PS
-	 - zonal mean plots for PSL
-	 - zonal mean plots for Q
-	   Q has lev dimension.
-	 - zonal mean plots for RELHUM
-	   RELHUM has lev dimension.
-	 - zonal mean plots for SST
-	 - zonal mean plots for SWCF
-	 - zonal mean plots for T
-	   T has lev dimension.
-	 - zonal mean plots for TS
-	 - zonal mean plots for U
-	   U has lev dimension.
-	 - zonal mean plots for OCNFRAC
-  ...Zonal mean plots have been generated successfully.
-</pre></div>
-</div>
-</div>
 </div>
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
@@ -1245,12 +1008,6 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">adf</span><span class="o">.</span><span class="n">create_html</span><span class="p">:</span>
     <span class="n">adf</span><span class="o">.</span><span class="n">create_website</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating Diagnostics webpages...
-  ...Webpages have been generated successfully.
 </pre></div>
 </div>
 </div>
