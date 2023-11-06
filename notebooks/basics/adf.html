@@ -476,12 +476,63 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-it-for">
+   Who is it for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-you-get">
+   What do you get?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-basics">
+   ADF Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-flow">
+     ADF Flow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-layout">
+     ADF Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -493,6 +544,46 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-it-for">
+   Who is it for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-you-get">
+   What do you get?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-basics">
+   ADF Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-flow">
+     ADF Flow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-layout">
+     ADF Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adf-setup">
+     ADF Setup
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -506,13 +597,20 @@ title="Print to PDF"
 <p>This package is meant to be an update/upgrade to the much used and beloved AMWG diagnostics package used by the atmospheric/chemistry CESM community. It is still under active development and is near it’s first major version.</p>
 <p>The ADF is a collection of analysis plots and data derived from CAM history output files.</p>
 <p>It is a multipurpose tool that has been built to be somewhat flexible.</p>
-<p>What do you get?</p>
+<section id="who-is-it-for">
+<h2>Who is it for?<a class="headerlink" href="#who-is-it-for" title="Permalink to this headline">#</a></h2>
+<p>The ADF is geared towards users who are running CAM (or CAM-like) simulations that are looking to compare their runs agains other CAM simulations, observations/reanalysis or model comparison sets (like CMIP/AMIP).</p>
+</section>
+<section id="what-do-you-get">
+<h2>What do you get?<a class="headerlink" href="#what-do-you-get" title="Permalink to this headline">#</a></h2>
+<p>Available Data Files</p>
 <ul class="simple">
 <li><p>Time series</p></li>
 <li><p>Climotology files</p></li>
 <li><p>Regridded (Climo) files</p></li>
+<li><p>Transformed Eulerian Mean (TEM) files</p></li>
 </ul>
-<p>Plots:</p>
+<p>Available Plots:</p>
 <ul class="simple">
 <li><p>AMWG statistics tables</p></li>
 <li><p>Global lat/lon plots</p></li>
@@ -520,9 +618,11 @@ title="Print to PDF"
 <li><p>Zonal plots</p></li>
 <li><p>Meridional plots</p></li>
 <li><p>SH and NH polar plots</p></li>
-<li><p>Quasi-Biaennial O… (QBO) plots</p></li>
+<li><p>Quasi-Biaennial Oscillation (QBO) plots</p></li>
 <li><p>Taylor diagrams</p></li>
 <li><p>Transformed Eulerian Mean (TEM) plots</p></li>
+<li><p>Time Series plots (under development)</p></li>
+<li><p>Tape Recorder plots of Q (under development)</p></li>
 <li><p>Your custom plots!</p></li>
 </ul>
 <div class="admonition attention">
@@ -537,98 +637,109 @@ title="Print to PDF"
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-
-## ADF Basics
-
-Now that the ADF and environment have been set up, let&#39;s take just a quick look at what the ADF actually does and the flow of it. To run the ADF, there are just a couple of steps and then &lt;abbr title=&quot;Famous last words&quot;&gt;&lt;strong&gt;it&#39;s good to go!&lt;/strong&gt;&lt;/abbr&gt;
-
-
-
-
-
-
-### ADF Flow
-
-A simple look at the flow of the ADF&lt;br&gt;
-&amp;ensp;&amp;#x21B3; Create time series files from monthly history files (if they don’t exist or are being overwritten)&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;#x21B3; Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;&amp;#x21B3; Regrid Test case from Baseline case and vice-versa from climatology files&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;#x21B3; Run Analysis scripts&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;#x21B3; Run Plotting scripts&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;#x21B3; Generate Website pages
-
-
-** Most parts of the ADF are optional and can be turned off for your desired need:
-
-Potential Examples:
-           
-- If you only want regridded data, turn off plotting, analysis, website parts
-    
-- If you want plotting and only need a few plot images, you can turn off the website part
-    
-- If you only want time series files, you can turn off all other parts
-    
-- If you don’t care about the statistics (AMWG) tables, turn off analysis part
-    
-- etc.
-
----
-
-
-
-
-### ADF Layout
-
-A simple look at the structure of the ADF directories
-
-
-
 </pre></div>
 </div>
-<p>.
-|– config_amwg_default_plots.yaml
-|– config_cam_baseline_example.yaml
-|– env
-|   <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">conda_environment.yaml</span> <span class="pre">|--</span> <span class="pre">jupyter_sample.ipynb</span> <span class="pre">|--</span> <span class="pre">lib</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_base.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_config.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_diag.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_info.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_obs.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_variable_defaults.yaml</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_web.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">plotting_functions.py</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">test</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">pylintrc</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160; </code>– unit_tests
-|   |       |– pytest.ini
-|   |       |– test_adf_base.py
-|   |       |– test_adf_config.py
-|   |       <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">test_files</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">config_cam_double_nested.yaml</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">config_cam_keywords.yaml</span> <span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </code>– config_cam_unset_var.yaml
-|   <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">website_templates</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">adf_diag.css</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">NCAR.gif</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template_index.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template_mean_diag.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template_mean_tables.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template_multi_case_index.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">template_table.html</span> <span class="pre">|</span>&#160;&#160;&#160;&#160;&#160;&#160; </code>– template_var.html
-|– LICENSE
-|– <a class="reference external" href="http://README.md">README.md</a>
-|– run_adf_diag
-<code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">scripts</span>&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">analysis</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; </code>– amwg_table.py
-|– averaging
-|   <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">create_climo_files.py</span>&#160;&#160;&#160;&#160; <span class="pre">|--</span> <span class="pre">plotting</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">cam_taylor_diagram.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">global_latlon_map.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">global_latlon_vect_map.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">meridional_mean.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">polar_map.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">qbo.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|--</span> <span class="pre">regional_map_multicase.py</span>&#160;&#160;&#160;&#160; <span class="pre">|</span>&#160;&#160; </code>– zonal_mean.py
-<code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">regridding</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </code>– regrid_and_vert_interp.py</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-
-
-
-### ADF Setup
-
-A simple look at the steps for using the ADF
-
-&lt;a&gt;0.&lt;/a&gt; Run CAM/other simulation to get ADF input files &lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;history files (ie: h0, h1, etc.)&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;time series files (ie: C/AMIP)
-
-&lt;a&gt;1.&lt;/a&gt; Configure copies of yaml file(s) for the input files&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;config_cam_baseline_example.yaml&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;lib/adf_variable_defaults.yaml 
-
-&lt;a&gt;2.&lt;/a&gt; Run the ADF&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;simple command line call: `./run_adf_diag config_myadf.yaml`
-
-&lt;a&gt;3.&lt;/a&gt; View Diagnostics&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;Locally&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;Jupyter/JupyterHub&lt;br&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;Publish to website
+</section>
+<section id="adf-basics">
+<h2>ADF Basics<a class="headerlink" href="#adf-basics" title="Permalink to this headline">#</a></h2>
+<p>Now that the ADF and environment have been set up, let’s take just a quick look at what the ADF actually does and the flow of it. To run the ADF, there are just a couple of steps and then <abbr title="Famous last words"><strong>it’s good to go!</strong></abbr></p>
+<section id="adf-flow">
+<h3>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h3>
+<p>A simple look at the flow of the ADF<br>
+ ↳ Create time series files from monthly history files (if they don’t exist or are being overwritten)<br>
+  ↳ Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)<br>
+   ↳ Regrid Test case from Baseline case and vice-versa from climatology files<br>
+    ↳ Run Analysis scripts<br>
+     ↳ Run Plotting scripts<br>
+      ↳ Generate Website pages</p>
+<p>** Most parts of the ADF are optional and can be turned off for your desired need:</p>
+<p>Potential Examples:</p>
+<ul class="simple">
+<li><p>If you only want regridded data, turn off plotting, analysis, website parts</p></li>
+<li><p>If you want plotting and only need a few plot images, you can turn off the website part</p></li>
+<li><p>If you only want time series files, you can turn off all other parts</p></li>
+<li><p>If you don’t care about the statistics (AMWG) tables, turn off analysis part</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="adf-layout">
+<h3>ADF Layout<a class="headerlink" href="#adf-layout" title="Permalink to this headline">#</a></h3>
+<p>A simple look at the structure of the ADF directories</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+|-- config_amwg_default_plots.yaml
+|-- config_cam_baseline_example.yaml
+|-- env
+|   `-- conda_environment.yaml
+|-- jupyter_sample.ipynb
+|-- lib
+|   |-- adf_base.py
+|   |-- adf_config.py
+|   |-- adf_diag.py
+|   |-- adf_info.py
+|   |-- adf_obs.py
+|   |-- adf_variable_defaults.yaml
+|   |-- adf_web.py
+|   |-- plotting_functions.py
+|   |-- test
+|   |   |-- pylintrc
+|   |   `-- unit_tests
+|   |       |-- pytest.ini
+|   |       |-- test_adf_base.py
+|   |       |-- test_adf_config.py
+|   |       `-- test_files
+|   |           |-- config_cam_double_nested.yaml
+|   |           |-- config_cam_keywords.yaml
+|   |           `-- config_cam_unset_var.yaml
+|   `-- website_templates
+|       |-- adf_diag.css
+|       |-- NCAR.gif
+|       |-- template.html
+|       |-- template_index.html
+|       |-- template_mean_diag.html
+|       |-- template_mean_tables.html
+|       |-- template_multi_case_index.html
+|       |-- template_table.html
+|       `-- template_var.html
+|-- LICENSE
+|-- README.md
+|-- run_adf_diag
+`-- scripts
+    |-- analysis
+    |   `-- amwg_table.py
+    |-- averaging
+    |   `-- create_climo_files.py
+    |-- plotting
+    |   |-- cam_taylor_diagram.py
+    |   |-- global_latlon_map.py
+    |   |-- global_latlon_vect_map.py
+    |   |-- meridional_mean.py
+    |   |-- polar_map.py
+    |   |-- qbo.py
+    |   |-- regional_map_multicase.py
+    |   `-- zonal_mean.py
+    `-- regridding
+        `-- regrid_and_vert_interp.py
 </pre></div>
 </div>
+</section>
+<section id="adf-setup">
+<h3>ADF Setup<a class="headerlink" href="#adf-setup" title="Permalink to this headline">#</a></h3>
+<p>A simple look at the steps for using the ADF</p>
+<p><a>0.</a> Run CAM/other simulation to get ADF input files <br>
+   history files (ie: h0, h1, etc.)<br>
+   time series files (ie: C/AMIP)</p>
+<p><a>1.</a> Configure copies of yaml file(s) for the input files<br>
+   config_cam_baseline_example.yaml<br>
+   lib/adf_variable_defaults.yaml</p>
+<p><a>2.</a> Run the ADF<br>
+   simple command line call: <code class="docutils literal notranslate"><span class="pre">./run_adf_diag</span> <span class="pre">config_myadf.yaml</span></code></p>
+<p><a>3.</a> View Diagnostics<br>
+   Locally<br>
+   Jupyter/JupyterHub<br>
+   Publish to website</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
