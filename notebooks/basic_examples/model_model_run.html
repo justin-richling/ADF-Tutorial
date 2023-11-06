@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>CAM vs Obs ADF Setup &#8212; ADF Tutorial</title>
+    <title>CAM vs CAM ADF Setup &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -162,7 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   CAM vs Obs ADF Setup
+   CAM vs CAM ADF Setup
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -184,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="model_obs_run.html">
-   CAM vs CAM ADF Setup
+   CAM vs Obs ADF Setup
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -540,6 +540,11 @@ title="Print to PDF"
        diag_cam_climo
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -553,7 +558,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CAM vs Obs ADF Setup</h1>
+                <h1>CAM vs CAM ADF Setup</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -600,6 +605,11 @@ title="Print to PDF"
        diag_cam_climo
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diag-cam-baseline-climo">
+       diag_cam_baseline_climo
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -614,8 +624,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="cam-vs-obs-adf-setup">
-<h1>CAM vs Obs ADF Setup<a class="headerlink" href="#cam-vs-obs-adf-setup" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cam-vs-cam-adf-setup">
+<h1>CAM vs CAM ADF Setup<a class="headerlink" href="#cam-vs-cam-adf-setup" title="Permalink to this headline">#</a></h1>
 <p>This will be a simple guided demo of running the ADF with sample data for CAM vs CAM comparison. For an example of CAM simulation vs observations/reanalysis, navigate to <a href="">this demo</a></p>
 <p>Use this as a follow along as you work locally for this example ADF run.</p>
 <p>Navigate to where you cloned the ADF:</p>
@@ -712,6 +722,8 @@ title="Print to PDF"
 </li>
 <li><p style="margin-top: -5px;">diag_cam_climo</p>
 </li>
+<li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
+</li>
 </ul>
 </section>
 <p><br><br><br></p>
@@ -744,6 +756,15 @@ title="Print to PDF"
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_climo.cam_case_name}</span></code></p>
+</section>
+<section id="diag-cam-baseline-climo">
+<h4>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h4>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">start_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">1995</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">2000</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_ts_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${adf_path}/ts/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
 <hr class="docutils" />
 <p><br><br></p>
 <style>
@@ -760,11 +781,13 @@ title="Print to PDF"
 <p>Diagnostic plot location:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
 <p>&emsp; &ensp;The ADF will output a new directory in the above location named:</p>
-<p style="margin-top: -20px;"><code class="docutils literal notranslate"><span class="pre">&emsp; &ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_Obs/</span></code></p>
+<p style="margin-top: -20px;"><code class="docutils literal notranslate"><span class="pre">&emsp; &ensp; f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
 <p>Climatology file locations:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>Timeseries locations:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
+<p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 </div>
 </div>
 </section>
