@@ -143,11 +143,6 @@ const thebe_selector_output = ".output, .cell_output"
    Setting up ADF
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../install/non_cisl.html">
-   Non NCAR Machines
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -883,10 +878,12 @@ Adding PS to file
 <section id="id1">
 <h2>Step 2: Analyze ADF Output<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Once the ADF has completed (either here in Jupyter or preiously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">adf</span></code> object can be searched for any quantity of interest. Using the dot, <code class="docutils literal notranslate"><span class="pre">.</span></code> and tab function in Jupyter, we can get a list of all the available instances, classes, functions, etc:</p>
+<p><img alt="adf objects" src="../../_images/adf_dir.png" /></p>
+<p>Grab the case names info:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grab the case names</span>
-<span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
 <span class="n">case_names</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">case_names</span><span class="p">)</span>
@@ -900,6 +897,7 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 </div>
 </div>
 </div>
+<p>Grab the case climo years:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">climo_yrs</span>
@@ -915,6 +913,7 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 </div>
 </div>
 </div>
+<p>Grab the listed CAM variables from the config file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_list</span> <span class="o">=</span> <span class="n">adf</span><span class="o">.</span><span class="n">diag_var_list</span>
