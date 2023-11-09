@@ -270,6 +270,11 @@ const thebe_selector_output = ".output, .cell_output"
      Variable Defaults - adf_variable_defaults.yaml
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../run/basics-tutorial.html">
+     Running ADF Basics
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -492,8 +497,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-it">
+   What is it?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#who-is-it-for">
    Who is it for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-features">
+   Key Features:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,8 +558,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-it">
+   What is it?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#who-is-it-for">
    Who is it for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-features">
+   Key Features:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -588,11 +613,26 @@ title="Print to PDF"
 <h1>Intro to the ADF<a class="headerlink" href="#intro-to-the-adf" title="Permalink to this headline">#</a></h1>
 <p><strong><u>AMWG</u></strong> (Atmospheric Model Working Group) <u><strong>D</strong></u>iagnostics <u><strong>F</strong></u>ramework</p>
 <p>This package is meant to be an update/upgrade to the much used and beloved AMWG diagnostics package used by the atmospheric/chemistry CESM community. It is still under active development and is near it’s first major version.</p>
-<p>The ADF is a collection of analysis plots and data derived from CAM history output files.</p>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">#</a></h2>
+<p>Open source, community developed Python-based set of diagnostics tools aimed at replacing the old AMWG Diagnostics package (NCL-based)</p>
+<p>The ADF is a collection of analysis (averaging), re-gridding, and plotting scripts.</p>
 <p>It is a multipurpose tool that has been built to be somewhat flexible.</p>
+</section>
 <section id="who-is-it-for">
 <h2>Who is it for?<a class="headerlink" href="#who-is-it-for" title="Permalink to this headline">#</a></h2>
-<p>The ADF is geared towards users who are running CAM (or CAM-like) simulations that are looking to compare their runs agains other CAM simulations, observations/reanalysis or model comparison sets (like CMIP/AMIP).</p>
+<p>The ADF is geared towards users who are running CAM or CAM-like (MPAS) simulations that are looking to compare their runs agains other CAM simulations, observations/reanalysis or model comparison sets (like CMIP/AMIP).</p>
+</section>
+<section id="key-features">
+<h2>Key Features:<a class="headerlink" href="#key-features" title="Permalink to this headline">#</a></h2>
+<p><strong>Centralize vertical interpolation</strong></p>
+<p>-&gt; Regridding and vertical interpolation script which interpolates all model variables with a vertical component onto a standard set of pressure levels</p>
+<p>-&gt; Allows 3D model variable comparison against 3D observations</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Assuming the observations are also on the same set of pressure levels
+</pre></div>
+</div>
+<p><strong>Enable interpolation on MPAS vertical coordinate</strong></p>
+<p>-&gt; Checks for the MPAS height-based vertical coordinate, and if present it will enable pressure-to-pressure vertical interpolation required to get MPAS data onto the standard pressure levels used by the ADF</p>
 </section>
 <section id="what-do-you-get">
 <h2>What do you get?<a class="headerlink" href="#what-do-you-get" title="Permalink to this headline">#</a></h2>
@@ -636,7 +676,7 @@ title="Print to PDF"
 <section id="adf-flow">
 <h3>ADF Flow<a class="headerlink" href="#adf-flow" title="Permalink to this headline">#</a></h3>
 <p>A simple look at the flow of the ADF<br>
- ↳ Create time series files from monthly history files (if they don’t exist or are being overwritten)<br>
+ ↳ Create time series files from monthly history files<br>
   ↳ Create climatology files from either ADF generated or pre-existing time series files (ie CMIP)<br>
    ↳ Regrid Test case from Baseline case and vice-versa from climatology files<br>
     ↳ Run Analysis scripts<br>
