@@ -719,42 +719,6 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Here is my figure caption!</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<style>
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-</style>
-<div class="row">
-  <div class="column">
-    ```{figure} ./QBOts.png
-    ---
-    width: 650px
-    name: directive-fig
-    ---
-    Here is my figure caption!
-    ```
-  </div>
-  <div class="column">
-    ```{figure} ./QBOamp.png
-    ---
-    height: 450px
-    name: directive-fig
-    ---
-    Here is my figure caption!
-    ```
-  </div>
-</div>
 <ul class="simple">
 <li><p>Taylor diagrams</p></li>
 </ul>
@@ -786,7 +750,7 @@ title="Print to PDF"
 <li><p>Tape Recorder plots of Q (under development)</p></li>
 </ul>
 <figure class="align-default" id="id11">
-<a class="reference internal image-reference" href="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png"><img alt="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png" src="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png" style="height: 450px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png"><img alt="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png" src="../../_images/Q_tape_recorder_FCLTHIST_vs_FLTHIST_2000_2011.png" style="width: 650px; height: 450px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 12 </span><span class="caption-text">Here is my figure caption!</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -799,6 +763,29 @@ title="Print to PDF"
 <li><p>Host your diagnostics to a webpage!</p></li>
 </ul>
 <style>
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+<div class="row">
+  <div class="column">
+    <img src="./QBOts.png"/>
+  </div>
+  <div class="column">
+    <img src="./QBOamp.png"/>
+  </div>
+</div><style>
     table, tr, th, td{
         border: 2px solid black;
         border-collapse: collapse;
