@@ -837,21 +837,30 @@ title="Print to PDF"
 <section id="end-single-cam-vs-cam-case">
 <h2>End single CAM vs CAM case<a class="headerlink" href="#end-single-cam-vs-cam-case" title="Permalink to this headline">#</a></h2>
 <h6>Hope everything went well...</h6>
-<div class="full-width docutils">
-<div class="admonition-did-the-adf-finish admonition">
-<p class="admonition-title">Did the ADF finish?</p>
-<div>
-<p>Check output data/images:</p>
-<p style="margin-top: -5px;">Navigate to the diagnostic plots directory: <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
-<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
-</div>
-</div>
-</div>
 <div class="error admonition">
 <p class="admonition-title">Did the ADF fail?</p>
 <p>Check config files<br>
 Check error/logs<br>
 Check data/paths<br></p>
+</div>
+<section id="sidebar-content">
+<aside style="margin: 0 0 0 1em; padding: 7px; width: 60%; float: right; clear: right; overflow-x: auto;">
+<div class="admonition error">
+<p class="admonition-title">Did the ADF fail?</p>
+Check config files<br>
+Check error/logs<br>
+Check data/paths<br>
+</div>
+</aside>
+<div class="full-width docutils">
+<div class="admonition-did-the-adf-finish admonition">
+<p class="admonition-title">Did the ADF finish?</p>
+<div>
+<p>Check output data/images:</p>
+<p style="margin-top: -5px;">Navigate to the diagnostic plots directory (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>): <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code></p>
+<p style="margin-top: -5px;">Check to see if this directory exists: <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+</div>
+</div>
 </div>
 <p>If you want to explore the ADF in a Jupyter environment, you can skip to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/run/Jupyter.html">ADF in Jupyter</a> chapter at the end of this section</p>
 </section>
@@ -865,9 +874,16 @@ Check data/paths<br></p>
 </ul>
 <h3>Locally</h3>
 - On a CISL machine, navigate to the root ADF directory
-    - ie /glade/work/user/ADF/
-- Then go to where you assigned the `diag_loc` location in the run-time config file
-    - ie /glade/work/user/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- ie /glade/work/user/ADF/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
+<ul>
+<li><p>ie /glade/work/user/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p></li>
+</ul>
+</li>
+</ul>
 <h3>JupyterHub</h3>
 <h3>Website</h3>
 <p>If you choose to create <a>INSERT HOVER TOOL FOR html stuff… HTML files</a> you can publish those to a web server.</p>
