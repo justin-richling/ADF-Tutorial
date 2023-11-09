@@ -1,4 +1,4 @@
-# Welcome to the [ADF Tutorial](https://justin-richling.github.io/ADF-Tutorial/README.html)
+# Welcome to the ADF Tutorial
 
 
 <br><br>
