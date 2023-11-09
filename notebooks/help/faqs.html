@@ -491,6 +491,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-on-compute-or-login-nodes">
+   ADF on compute or login nodes?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#re-running-the-adf">
    Re-Running the ADF
   </a>
@@ -503,6 +508,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#temporal-frequency">
    Temporal Frequency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-with-se-or-fv-cam-output">
+   ADF with SE or FV CAM output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing-to-the-adf">
+   Contributing to the ADF
   </a>
  </li>
 </ul>
@@ -525,6 +540,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-on-compute-or-login-nodes">
+   ADF on compute or login nodes?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#re-running-the-adf">
    Re-Running the ADF
   </a>
@@ -537,6 +557,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#temporal-frequency">
    Temporal Frequency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-with-se-or-fv-cam-output">
+   ADF with SE or FV CAM output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing-to-the-adf">
+   Contributing to the ADF
   </a>
  </li>
 </ul>
@@ -552,6 +582,10 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="faqs">
 <h1>FAQS<a class="headerlink" href="#faqs" title="Permalink to this headline">#</a></h1>
 <p>Frequently Asked Qestions</p>
+<section id="adf-on-compute-or-login-nodes">
+<h2>ADF on compute or login nodes?<a class="headerlink" href="#adf-on-compute-or-login-nodes" title="Permalink to this headline">#</a></h2>
+<p>It is generally a good idea to run the ADF on compute nodes. If the ADF runs are relatively small, climo years &lt; 20 years and/or non-coupled cases can be run on login nodes, but please be considerate of others on login nodes. It is preferred to run a model vs obs ADF run on compute nodes as some of the ADF features can be quite resource intensive when comparing to observations.</p>
+</section>
 <section id="re-running-the-adf">
 <h2>Re-Running the ADF<a class="headerlink" href="#re-running-the-adf" title="Permalink to this headline">#</a></h2>
 <p>What happens if I re-run the ADF after I change something?</p>
@@ -564,7 +598,7 @@ title="Print to PDF"
 </section>
 <section id="adf-freezing-performance-issues">
 <h2>ADF freezing/performance issues<a class="headerlink" href="#adf-freezing-performance-issues" title="Permalink to this headline">#</a></h2>
-<p>It is well known there are current beat version bottle necks. We are aware of this and are taking the next step of the ADF to focus on performance issues</p>
+<p>It is well known there are bottle necks in the current version of the ADF. We are aware of this and are taking the next step of the ADF to focus on performance issues</p>
 <ul class="simple">
 <li><p>Regridded CAM vs Obs seems to freeze/takes forever
 -&gt; this will definitely happen and is suggested to run on a compute node if on NCAR/CISL machines. Depending on the simulation case, it can take several hours, so beware!</p></li>
@@ -574,6 +608,14 @@ title="Print to PDF"
 <h2>Temporal Frequency<a class="headerlink" href="#temporal-frequency" title="Permalink to this headline">#</a></h2>
 <p>Can the ADF handle different temporal files other than monthly?</p>
 <p>-&gt; Currently the ADF can only compute files for monthly time steps, but we are considering expanding this to others: daily, 3/6-hourly, etc.</p>
+</section>
+<section id="adf-with-se-or-fv-cam-output">
+<h2>ADF with SE or FV CAM output<a class="headerlink" href="#adf-with-se-or-fv-cam-output" title="Permalink to this headline">#</a></h2>
+<p>The ADF will run without issue on finite volume (FV) output, but in order to run the ADF diagnositcs on spectral element (SE) output, the output data must be flagged to produce gridded data.</p>
+</section>
+<section id="contributing-to-the-adf">
+<h2>Contributing to the ADF<a class="headerlink" href="#contributing-to-the-adf" title="Permalink to this headline">#</a></h2>
+<p>If you have some diagnostics that would fit well in the ADF, please reach out to us and we can help get your script(s) integrated in. In that case, it would be best to <strong>fork</strong> the ADF. If your diagnsotics are better suited as a useful but not something we decide to go into the main branch of the ADF, we have a <a href="https://github.com/NCAR/AMP_toolbox">AMP “toolbox”</a> GitHub repo for scientists to drop scripts/diagnostics to share with others in the community. NOTE: this repo is not consitently monitored, but we will check it occassionally.</p>
 </section>
 </section>
 
