@@ -7,7 +7,7 @@
 
 <br>
 
-<img src="adf_stats_image.jpeg"/>
+<img src="images/adf_stats_image.jpeg"/>
 
 <div>
 
