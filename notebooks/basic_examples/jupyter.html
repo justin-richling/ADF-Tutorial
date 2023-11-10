@@ -737,7 +737,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;adf_diag.AdfDiag at 0x1495064caef0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;adf_diag.AdfDiag at 0x151c326fc7c0&gt;
 </pre></div>
 </div>
 </div>
@@ -932,6 +932,16 @@ Wall time: 5min 13s
 </div>
 </div>
 <p>Output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
+     Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
+        /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 not found, making new directory
+     Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
+        /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001 not found, making new directory
+  ...CAM climatologies have been calculated successfully.
+CPU times: user 226 ms, sys: 307 ms, total: 533 ms
+Wall time: 5min 13s
+</pre></div>
+</div>
 <h4>Regrdding Climo Files</h4>
 <p>Regrid model climatology files to match either observations or CAM baseline climatologies.</p>
 <p>This call uses the <code class="docutils literal notranslate"><span class="pre">regridding_scripts</span></code> specified in the run-time config file</p>
@@ -945,48 +955,84 @@ Wall time: 5min 13s
 </div>
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Regridding CAM climatologies...
+    /glade/scratch/richling/ADF/adf_tutorial/data/regrid not found, making new directory
      Regridding case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
      - regridding PS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding LANDFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding OCNFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding CLDHGH (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding CLDICE (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+     - regridding CLDLIQ (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+     - regridding CLDLOW (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding CLDMED (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding CLDTOT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding CLOUD (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+Please ignore the interpolation warnings that follow!
+Interpolation point out of data bounds encountered
+     - regridding FLNS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding FLNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding FLNTC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding FSNS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding FSNT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding FSNTC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding LHFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding LWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding OMEGA500 (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding PBLH (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding PRECL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding PRECT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding PRECSL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding PRECSC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding PRECSC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     Regridded file already exists, so skipping...
+     - regridding PRECC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding PSL (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding QFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding Q (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
 Please ignore the interpolation warnings that follow!
-Interpolation point out of data bounds encountered
 Interpolation point out of data bounds encountered
      - regridding RELHUM (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
+     - regridding SHFLX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding SST (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding SWCF (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding T (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
+     - regridding TAUX (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding TAUY (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding TGCLDIWP (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding TGCLDLWP (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding TMQ (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding TREFHT (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding TS (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
      - regridding U (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
 Please ignore the interpolation warnings that follow!
 Interpolation point out of data bounds encountered
-Interpolation point out of data bounds encountered
+     - regridding U10 (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
+     - regridding ICEFRAC (known targets: [&#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39;])
   ...CAM climatologies have been regridded successfully.
-CPU times: user 58 s, sys: 6.6 s, total: 1min 4s
-Wall time: 1min 11s
+CPU times: user 1min 42s, sys: 9.85 s, total: 1min 52s
+Wall time: 2min 11s
 </pre></div>
 </div>
 <h4>Run Analysis Scripts</h4>
@@ -1001,44 +1047,110 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 </div>
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Calculating AMWG variable table...
-        /glade/scratch/richling/ADF_output/TEST/diag-plot/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000 not found, making new directory
+        /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000 not found, making new directory
+     - Variable &#39;LANDFRAC&#39; being added to table
      - Variable &#39;OCNFRAC&#39; being added to table
+     - Variable &#39;CLDHGH&#39; being added to table
+     - Variable &#39;CLDICE&#39; being added to table
+       Variable &#39;CLDICE&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;CLDLIQ&#39; being added to table
+       Variable &#39;CLDLIQ&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;CLDLOW&#39; being added to table
+     - Variable &#39;CLDMED&#39; being added to table
+     - Variable &#39;CLDTOT&#39; being added to table
+     - Variable &#39;CLOUD&#39; being added to table
+       Variable &#39;CLOUD&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;FLNS&#39; being added to table
      - Variable &#39;FLNT&#39; being added to table
+     - Variable &#39;FLNTC&#39; being added to table
+     - Variable &#39;FSNS&#39; being added to table
      - Variable &#39;FSNT&#39; being added to table
+     - Variable &#39;FSNTC&#39; being added to table
+     - Variable &#39;LHFLX&#39; being added to table
      - Variable &#39;LWCF&#39; being added to table
+     - Variable &#39;OMEGA500&#39; being added to table
      - Variable &#39;PBLH&#39; being added to table
+     - Variable &#39;PRECL&#39; being added to table
+     - Variable &#39;PRECT&#39; being added to table
+     - Variable &#39;PRECSL&#39; being added to table
+     - Variable &#39;PRECSC&#39; being added to table
+     - Variable &#39;PRECSC&#39; being added to table
+     - Variable &#39;PRECC&#39; being added to table
      - Variable &#39;PS&#39; being added to table
      - Variable &#39;PSL&#39; being added to table
+     - Variable &#39;QFLX&#39; being added to table
      - Variable &#39;Q&#39; being added to table
        Variable &#39;Q&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
      - Variable &#39;RELHUM&#39; being added to table
        Variable &#39;RELHUM&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;SHFLX&#39; being added to table
      - Variable &#39;SST&#39; being added to table
      - Variable &#39;SWCF&#39; being added to table
      - Variable &#39;T&#39; being added to table
        Variable &#39;T&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;TAUX&#39; being added to table
+     - Variable &#39;TAUY&#39; being added to table
+     - Variable &#39;TGCLDIWP&#39; being added to table
+     - Variable &#39;TGCLDLWP&#39; being added to table
+     - Variable &#39;TMQ&#39; being added to table
+     - Variable &#39;TREFHT&#39; being added to table
      - Variable &#39;TS&#39; being added to table
      - Variable &#39;U&#39; being added to table
        Variable &#39;U&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;U10&#39; being added to table
+     - Variable &#39;ICEFRAC&#39; being added to table
      - Variable &#39;RESTOM&#39; being added to table
+     - Variable &#39;LANDFRAC&#39; being added to table
      - Variable &#39;OCNFRAC&#39; being added to table
+     - Variable &#39;CLDHGH&#39; being added to table
+     - Variable &#39;CLDICE&#39; being added to table
+       Variable &#39;CLDICE&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;CLDLIQ&#39; being added to table
+       Variable &#39;CLDLIQ&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;CLDLOW&#39; being added to table
+     - Variable &#39;CLDMED&#39; being added to table
+     - Variable &#39;CLDTOT&#39; being added to table
+     - Variable &#39;CLOUD&#39; being added to table
+       Variable &#39;CLOUD&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;FLNS&#39; being added to table
      - Variable &#39;FLNT&#39; being added to table
+     - Variable &#39;FLNTC&#39; being added to table
+     - Variable &#39;FSNS&#39; being added to table
      - Variable &#39;FSNT&#39; being added to table
+     - Variable &#39;FSNTC&#39; being added to table
+     - Variable &#39;LHFLX&#39; being added to table
      - Variable &#39;LWCF&#39; being added to table
+     - Variable &#39;OMEGA500&#39; being added to table
      - Variable &#39;PBLH&#39; being added to table
+     - Variable &#39;PRECL&#39; being added to table
+     - Variable &#39;PRECT&#39; being added to table
+     - Variable &#39;PRECSL&#39; being added to table
+     - Variable &#39;PRECSC&#39; being added to table
+     - Variable &#39;PRECSC&#39; being added to table
+     - Variable &#39;PRECC&#39; being added to table
      - Variable &#39;PS&#39; being added to table
      - Variable &#39;PSL&#39; being added to table
+     - Variable &#39;QFLX&#39; being added to table
      - Variable &#39;Q&#39; being added to table
        Variable &#39;Q&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
      - Variable &#39;RELHUM&#39; being added to table
        Variable &#39;RELHUM&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;SHFLX&#39; being added to table
      - Variable &#39;SST&#39; being added to table
      - Variable &#39;SWCF&#39; being added to table
      - Variable &#39;T&#39; being added to table
        Variable &#39;T&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;TAUX&#39; being added to table
+     - Variable &#39;TAUY&#39; being added to table
+     - Variable &#39;TGCLDIWP&#39; being added to table
+     - Variable &#39;TGCLDLWP&#39; being added to table
+     - Variable &#39;TMQ&#39; being added to table
+     - Variable &#39;TREFHT&#39; being added to table
      - Variable &#39;TS&#39; being added to table
      - Variable &#39;U&#39; being added to table
        Variable &#39;U&#39; has a vertical dimension, which is currently not supported for the AMWG Table. Skipping...
+     - Variable &#39;U10&#39; being added to table
+     - Variable &#39;ICEFRAC&#39; being added to table
      - Variable &#39;RESTOM&#39; being added to table
   ...AMWG variable table has been generated successfully.
 
@@ -1051,55 +1163,48 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 This call uses the <code class="docutils literal notranslate"><span class="pre">plotting_scripts</span></code> specified in the run-time config file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">create_plots</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">adf</span><span class="o">.</span><span class="n">create_plots</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
+	 NOTE: Plot type is set to png
+	 NOTE: redo_plot is set to False
+	 - lat/lon maps for CLDHGH
+	 - lat/lon maps for CLDICE
+	 - lat/lon maps for CLDLIQ
+	 - lat/lon maps for CLDLOW
+	 - lat/lon maps for CLDMED
+	 - lat/lon maps for CLDTOT
+	 - lat/lon maps for CLOUD
+	 - lat/lon maps for FLNS
+	 - lat/lon maps for FLNT
+	 - lat/lon maps for FLNTC
+	 - lat/lon maps for FSNS
+	 - lat/lon maps for FSNT
+	 - lat/lon maps for FSNTC
+	 - lat/lon maps for LHFLX
+	 - lat/lon maps for LWCF
+	 - lat/lon maps for OMEGA500
+	 - lat/lon maps for PBLH
+	 - lat/lon maps for PRECL
+	 - lat/lon maps for PRECT
+	 - lat/lon maps for PRECSL
+	 - lat/lon maps for PRECSC
+	 - lat/lon maps for PRECSC
+	 - lat/lon maps for PRECC
+	 - lat/lon maps for PS
+	 - lat/lon maps for PSL
+	 - lat/lon maps for QFLX
+	 - lat/lon maps for Q
+	 - lat/lon maps for RELHUM
 </pre></div>
 </div>
 </div>
 </div>
 <p>Output:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
-     NOTE: Plot type is set to png
-     NOTE: redo_plot is set to False
-     - lat/lon maps for FLNT
-     - lat/lon maps for FSNT
-     - lat/lon maps for LWCF
-     - lat/lon maps for PBLH
-     - lat/lon maps for PS
-     - lat/lon maps for PSL
-     - lat/lon maps for Q
-     - lat/lon maps for RELHUM
-     - lat/lon maps for SST
-     - lat/lon maps for SWCF
-     - lat/lon maps for T
-     - lat/lon maps for TS
-     - lat/lon maps for U
-     - lat/lon maps for OCNFRAC
-  ...lat/lon maps have been generated successfully.
-
-  Generating zonal mean plots...
-     NOTE: Plot type is set to png
-     NOTE: redo_plot is set to False
-     - zonal mean plots for FLNT
-     - zonal mean plots for FSNT
-     - zonal mean plots for LWCF
-     - zonal mean plots for PBLH
-     - zonal mean plots for PS
-     - zonal mean plots for PSL
-     - zonal mean plots for Q
-       Q has lev dimension.
-     - zonal mean plots for RELHUM
-       RELHUM has lev dimension.
-     - zonal mean plots for SST
-     - zonal mean plots for SWCF
-     - zonal mean plots for T
-       T has lev dimension.
-     - zonal mean plots for TS
-     - zonal mean plots for U
-       U has lev dimension.
-     - zonal mean plots for OCNFRAC
-  ...Zonal mean plots have been generated successfully.
-</pre></div>
-</div>
 <h4>Run Website Generation Scripts</h4>
 <p>Create website if requested in the run-time config file</p>
 <div class="cell docutils container">
@@ -1195,16 +1300,16 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "npl-2023b"
+            mode: "npl-2023a"
         },
         kernelOptions: {
-            name: "npl-2023b",
+            name: "npl-2023a",
             path: "./notebooks/basic_examples"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'npl-2023b'</script>
+    <script>kernelName = 'npl-2023a'</script>
 
               </div>
               
