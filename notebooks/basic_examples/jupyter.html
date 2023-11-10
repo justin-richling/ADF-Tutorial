@@ -737,7 +737,7 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;adf_diag.AdfDiag at 0x1495065f6a10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;adf_diag.AdfDiag at 0x1495064caef0&gt;
 </pre></div>
 </div>
 </div>
@@ -753,6 +753,25 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 <p>Create model time series</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">richling</span><span class="o">/</span><span class="n">ADF</span><span class="o">/</span><span class="n">adf_tutorial</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">f</span><span class="o">.</span><span class="n">cam6_3_106</span><span class="o">.</span><span class="n">FLTHIST_v0a</span><span class="o">.</span><span class="n">ne30</span><span class="o">.</span><span class="n">dcs_effgw_rdg</span><span class="mf">.001</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_ts_loc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/scratch/richling/ADF/adf_tutorial/data/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001/&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="n">adf</span><span class="o">.</span><span class="n">create_time_series</span><span class="p">()</span>
 </pre></div>
@@ -762,27 +781,60 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
      Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
+     - time series for CLDHGH
+     - time series for CLDICE
+Adding PS to file
+     - time series for CLDLIQ
+Adding PS to file
+     - time series for CLDLOW
+     - time series for CLDMED
+     - time series for CLDTOT
+     - time series for CLOUD
+Adding PS to file
+     - time series for FLNS
      - time series for FLNT
+     - time series for FLNTC
+     - time series for FSNS
      - time series for FSNT
+     - time series for FSNTC
+     - time series for LHFLX
      - time series for LWCF
+     - time series for OMEGA500
      - time series for PBLH
+     - time series for PRECL
+     - time series for PRECT
+     - time series for PRECSL
+     - time series for PRECSC
+     - time series for PRECSC
+     - time series for PRECC
      - time series for PS
      - time series for PSL
+     - time series for QFLX
      - time series for Q
 Adding PS to file
      - time series for RELHUM
 Adding PS to file
+     - time series for SHFLX
      - time series for SST
      - time series for SWCF
      - time series for T
 Adding PS to file
+     - time series for TAUX
+     - time series for TAUY
+     - time series for TGCLDIWP
+     - time series for TGCLDLWP
+     - time series for TMQ
+     - time series for TREFHT
      - time series for TS
      - time series for U
 Adding PS to file
+     - time series for U10
+     - time series for ICEFRAC
      - time series for OCNFRAC
+     - time series for LANDFRAC
   ...CAM time series file generation has finished successfully.
-CPU times: user 1.03 s, sys: 192 ms, total: 1.22 s
-Wall time: 15.6 s
+CPU times: user 256 ms, sys: 40.5 ms, total: 297 ms
+Wall time: 1min 5s
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -800,27 +852,60 @@ Wall time: 15.6 s
 <p>Output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating CAM time series files...
      Processing time series for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
+     - time series for CLDHGH
+     - time series for CLDICE
+Adding PS to file
+     - time series for CLDLIQ
+Adding PS to file
+     - time series for CLDLOW
+     - time series for CLDMED
+     - time series for CLDTOT
+     - time series for CLOUD
+Adding PS to file
+     - time series for FLNS
      - time series for FLNT
+     - time series for FLNTC
+     - time series for FSNS
      - time series for FSNT
+     - time series for FSNTC
+     - time series for LHFLX
      - time series for LWCF
+     - time series for OMEGA500
      - time series for PBLH
+     - time series for PRECL
+     - time series for PRECT
+     - time series for PRECSL
+     - time series for PRECSC
+     - time series for PRECSC
+     - time series for PRECC
      - time series for PS
      - time series for PSL
+     - time series for QFLX
      - time series for Q
 Adding PS to file
      - time series for RELHUM
 Adding PS to file
+     - time series for SHFLX
      - time series for SST
      - time series for SWCF
      - time series for T
 Adding PS to file
+     - time series for TAUX
+     - time series for TAUY
+     - time series for TGCLDIWP
+     - time series for TGCLDLWP
+     - time series for TMQ
+     - time series for TREFHT
      - time series for TS
      - time series for U
 Adding PS to file
+     - time series for U10
+     - time series for ICEFRAC
      - time series for OCNFRAC
+     - time series for LANDFRAC
   ...CAM time series file generation has finished successfully.
-CPU times: user 103 ms, sys: 82.2 ms, total: 185 ms
-Wall time: 14.6 s
+CPU times: user 180 ms, sys: 141 ms, total: 321 ms
+Wall time: 1min 6s
 </pre></div>
 </div>
 <h4>Create Climo Files</h4>
@@ -833,17 +918,17 @@ Wall time: 14.6 s
 </pre></div>
 </div>
 </div>
-</div>
-<p>Output:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
-     Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-     Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
-        /glade/scratch/richling/ADF/output/climos/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001 not found, making new directory
-  ...CAM climatologies have been calculated successfully.
-CPU times: user 217 ms, sys: 113 ms, total: 330 ms
-Wall time: 2min 3s
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
+	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
+	    /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 not found, making new directory
+	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
+	    /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001 not found, making new directory
 </pre></div>
 </div>
+</div>
+</div>
+<p>Output:</p>
 <h4>Regrdding Climo Files</h4>
 <p>Regrid model climatology files to match either observations or CAM baseline climatologies.</p>
 <p>This call uses the <code class="docutils literal notranslate"><span class="pre">regridding_scripts</span></code> specified in the run-time config file</p>
