@@ -864,7 +864,7 @@ Check data/paths<br></p>
 <section id="check-the-outputs">
 <h2>Check the outputs!<a class="headerlink" href="#check-the-outputs" title="Permalink to this headline">#</a></h2>
 <p>If the ADF ran successfully, we can check the diagnostics a couple ways:</p>
-<h5>Locally</h5>
+<h4>Locally</h4>
 <ul class="simple">
 <li><p>On a CISL machine, navigate to the root ADF directory</p>
 <ul>
@@ -877,8 +877,8 @@ Check data/paths<br></p>
 </ul>
 </li>
 </ul>
-<h5>JupyterHub</h5>
-<h5>Website</h5>
+<h4>JupyterHub</h4>
+<h4>Website</h4>
 <p>If you choose to create HTML files you can publish those to a web server.</p>
 <p>Example: If you have a project page on a CGD machine like Tungsten:</p>
 <style>
@@ -889,16 +889,16 @@ Check data/paths<br></p>
 </style>
 <div class="full-width docutils">
 <p> On a CISL machine, navigate to the root ADF directory</p>
-<p> ie <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&lt;user&gt;/ADF/plots/</span></code></p>
+<p> <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&lt;user&gt;/ADF/plots/</span></code></p>
 <p> Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
-<p> ie <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
+<p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
 <p> Finally, copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
 <p> For Tungsten:
      scp -r website/* tungsten.cgd.ucar.edu:/path/to/your/project/page/</p>
 </div>
-<div class="admonition tip">
+<div class="admonition tip" style="padding-right: 7px">
 <div><h6><p>A sample website:</p></h6></div>
-<p>https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/</p>
+<p><a href="https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/"> target="_blank"https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/</a></p>
 </div>
 </section>
 </section>
