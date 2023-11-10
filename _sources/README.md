@@ -5,18 +5,13 @@
 
 <u>**AMWG**</u> <u>**D**</u>iagnostic <u>**F**</u>ramework
 
-<br>
 
-
-
-
-<div><img src="images/adf_stats_image.jpeg"/></div>
 
 ```{image} images/adf_stats_image.jpeg
 :height: 450px
 :align: center
 ```
-
+<br>
 <div></div>
 
 
