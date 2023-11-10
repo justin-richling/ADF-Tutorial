@@ -7,7 +7,14 @@
 
 <br>
 
-<img src="images/adf_stats_image.jpeg"/>
+
+```{figure} images/adf_stats_image.jpeg
+---
+
+name: directive-fig
+---
+Here is my figure caption!
+```
 
 <div>
 
