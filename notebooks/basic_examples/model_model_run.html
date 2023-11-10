@@ -864,12 +864,7 @@ Check data/paths<br></p>
 <section id="check-the-outputs">
 <h2>Check the outputs!<a class="headerlink" href="#check-the-outputs" title="Permalink to this headline">#</a></h2>
 <p>If the ADF ran successfully, we can check the diagnostics a couple ways:</p>
-<ul>
-<li>Locally</li>
-<li>JupyterHub</li>
-<li>Website</li>
-</ul>
-<h3>Locally</h3>
+<h5>Locally</h5>
 <ul class="simple">
 <li><p>On a CISL machine, navigate to the root ADF directory</p>
 <ul>
@@ -882,9 +877,9 @@ Check data/paths<br></p>
 </ul>
 </li>
 </ul>
-<h3>JupyterHub</h3>
-<h3>Website</h3>
-<p>If you choose to create <a>INSERT HOVER TOOL FOR html stuff… HTML files</a> you can publish those to a web server.</p>
+<h5>JupyterHub</h5>
+<h5>Website</h5>
+<p>If you choose to create HTML files you can publish those to a web server.</p>
 <p>Example: If you have a project page on a CGD machine like Tungsten:</p>
 <style>
     #box {
@@ -893,23 +888,13 @@ Check data/paths<br></p>
 }
 </style>
 <div class="full-width docutils">
-<ul class="simple">
-<li><p>On a CISL machine, navigate to the root ADF directory</p>
-<ul>
-<li><p>ie /glade/work/user/ADF/</p></li>
-</ul>
-</li>
-<li><p>Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
-<ul>
-<li><p>ie /glade/work/user/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p></li>
-</ul>
-</li>
-<li><p>Finally, copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
-<ul>
-<li><p>For Tungsten:</p></li>
-</ul>
-</li>
-</ul>
+<h6>On a CISL machine, navigate to the root ADF directory</h6>
+&ensp;ie <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plots</span></code>
+<h6>Then go to where you assigned the `diag_loc` location in the run-time config file</h6>
+&ensp;ie <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&#60;user&#62;/ADF/plotsf.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/
+<h6>Finally, copy files from the `website` directory to the server address</h6>
+<p>For Tungsten:
+     scp -r website/* tungsten.cgd.ucar.edu:/path/to/your/project/page/</p>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>scp -r website/* tungsten.cgd.ucar.edu:/path/to/your/project/page/
 </pre></div>
