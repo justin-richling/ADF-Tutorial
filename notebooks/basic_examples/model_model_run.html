@@ -873,9 +873,9 @@ Check data/paths<br></p>
 <p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
 </div>
 <h4>JupyterHub</h4><h4>Website</h4>
-<p>If you choose to create HTML files you can publish those to a web server, make sure you’re in the diagnostics plotting location. Within that directory lives the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory where all the html and css files are saved. The main page of the diagsnotics website is the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.</p>
-<p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/website/</p>
-<p>Example: If you have a project page on a CGD machine like Tungsten:</p>
+<p>If you choose to create HTML files you can publish those to a web server, make sure you’re in the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file. Within that directory lives the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory where all the html and css files are saved. The main page of the diagsnotics website is the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.</p>
+<p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/website/</span></code></p>
+<p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
 <style>
     #box {
     word-wrap:normal;
@@ -883,11 +883,9 @@ Check data/paths<br></p>
 }
 </style>
 <div class="full-width docutils">
-<p> On a CISL machine, navigate to the root ADF directory</p>
-<p> <code class="docutils literal notranslate"><span class="pre">/glade/scratch/&lt;user&gt;/ADF/plots/</span></code></p>
-<p> Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
+<p> Navigate to the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location</p>
 <p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
-<p> Finally, copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
+<p> Copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
 <p> For Tungsten:
      scp -r website/* tungsten.cgd.ucar.edu:/path/to/your/project/page/</p>
 </div>
