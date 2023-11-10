@@ -517,16 +517,29 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
-     First part of ADF is to create time series files
+    <a class="reference internal nav-link" href="#create-time-series-files">
+     Create Time Series Files
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-       This is under the hood when the ADF is run via terminal
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-climo-files">
+     Create Climo Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regrdding-climo-files">
+     Regrdding Climo Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-analysis-scripts">
+     Run Analysis Scripts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-plotting-scripts">
+     Run Plotting Scripts
+    </a>
    </li>
   </ul>
  </li>
@@ -575,16 +588,29 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#first-part-of-adf-is-to-create-time-series-files">
-     First part of ADF is to create time series files
+    <a class="reference internal nav-link" href="#create-time-series-files">
+     Create Time Series Files
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-       This is under the hood when the ADF is run via terminal
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-climo-files">
+     Create Climo Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regrdding-climo-files">
+     Regrdding Climo Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-analysis-scripts">
+     Run Analysis Scripts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-plotting-scripts">
+     Run Plotting Scripts
+    </a>
    </li>
   </ul>
  </li>
@@ -742,34 +768,10 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
 </div>
 </div>
 </div>
-<section id="first-part-of-adf-is-to-create-time-series-files">
-<h3>First part of ADF is to create time series files<a class="headerlink" href="#first-part-of-adf-is-to-create-time-series-files" title="Permalink to this headline">#</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* if they don&#39;t already exist or input files are in time series format already
-</pre></div>
-</div>
-<section id="this-is-under-the-hood-when-the-adf-is-run-via-terminal">
-<h4>This is under the hood when the ADF is run via terminal<a class="headerlink" href="#this-is-under-the-hood-when-the-adf-is-run-via-terminal" title="Permalink to this headline">#</a></h4>
-<h4>Create Time Series Files</h4>
+<p>The following functions are what get called under the hood when the ADF is run through the terminal</p>
+<section id="create-time-series-files">
+<h3>Create Time Series Files<a class="headerlink" href="#create-time-series-files" title="Permalink to this headline">#</a></h3>
 <p>Create model time series</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">richling</span><span class="o">/</span><span class="n">ADF</span><span class="o">/</span><span class="n">adf_tutorial</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">f</span><span class="o">.</span><span class="n">cam6_3_106</span><span class="o">.</span><span class="n">FLTHIST_v0a</span><span class="o">.</span><span class="n">ne30</span><span class="o">.</span><span class="n">dcs_effgw_rdg</span><span class="mf">.001</span><span class="o">/</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adf</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_ts_loc&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/scratch/richling/ADF/adf_tutorial/data/ts/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001/&#39;]
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -908,7 +910,9 @@ CPU times: user 180 ms, sys: 141 ms, total: 321 ms
 Wall time: 1min 6s
 </pre></div>
 </div>
-<h4>Create Climo Files</h4>
+</section>
+<section id="create-climo-files">
+<h3>Create Climo Files<a class="headerlink" href="#create-climo-files" title="Permalink to this headline">#</a></h3>
 <p>This will run the creation of both test and baseline cases</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -942,7 +946,9 @@ CPU times: user 226 ms, sys: 307 ms, total: 533 ms
 Wall time: 5min 13s
 </pre></div>
 </div>
-<h4>Regrdding Climo Files</h4>
+</section>
+<section id="regrdding-climo-files">
+<h3>Regrdding Climo Files<a class="headerlink" href="#regrdding-climo-files" title="Permalink to this headline">#</a></h3>
 <p>Regrid model climatology files to match either observations or CAM baseline climatologies.</p>
 <p>This call uses the <code class="docutils literal notranslate"><span class="pre">regridding_scripts</span></code> specified in the run-time config file</p>
 <div class="cell docutils container">
@@ -1035,7 +1041,9 @@ CPU times: user 1min 42s, sys: 9.85 s, total: 1min 52s
 Wall time: 2min 11s
 </pre></div>
 </div>
-<h4>Run Analysis Scripts</h4>
+</section>
+<section id="run-analysis-scripts">
+<h3>Run Analysis Scripts<a class="headerlink" href="#run-analysis-scripts" title="Permalink to this headline">#</a></h3>
 <p>Perform analyses on the simulation(s).
 This call uses the <code class="docutils literal notranslate"><span class="pre">analysis_scripts</span></code> specified in the run-time config file</p>
 <div class="cell docutils container">
@@ -1158,7 +1166,9 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
   ... Comparison table has been generated successfully
 </pre></div>
 </div>
-<h4>Run Plotting Scripts</h4>
+</section>
+<section id="run-plotting-scripts">
+<h3>Run Plotting Scripts<a class="headerlink" href="#run-plotting-scripts" title="Permalink to this headline">#</a></h3>
 <p>Create plots.
 This call uses the <code class="docutils literal notranslate"><span class="pre">plotting_scripts</span></code> specified in the run-time config file</p>
 <p>This iwll take some time so please be patient!</p>
@@ -1169,264 +1179,258 @@ This call uses the <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - lat/lon maps for CLDHGH
-	 - lat/lon maps for CLDICE
-	 - lat/lon maps for CLDLIQ
-	 - lat/lon maps for CLDLOW
-	 - lat/lon maps for CLDMED
-	 - lat/lon maps for CLDTOT
-	 - lat/lon maps for CLOUD
-	 - lat/lon maps for FLNS
-	 - lat/lon maps for FLNT
-	 - lat/lon maps for FLNTC
-	 - lat/lon maps for FSNS
-	 - lat/lon maps for FSNT
-	 - lat/lon maps for FSNTC
-	 - lat/lon maps for LHFLX
-	 - lat/lon maps for LWCF
-	 - lat/lon maps for OMEGA500
-	 - lat/lon maps for PBLH
-	 - lat/lon maps for PRECL
-	 - lat/lon maps for PRECT
-	 - lat/lon maps for PRECSL
-	 - lat/lon maps for PRECSC
-	 - lat/lon maps for PRECSC
-	 - lat/lon maps for PRECC
-	 - lat/lon maps for PS
-	 - lat/lon maps for PSL
-	 - lat/lon maps for QFLX
-	 - lat/lon maps for Q
-	 - lat/lon maps for RELHUM
-	 - lat/lon maps for SHFLX
-	 - lat/lon maps for SST
-	 - lat/lon maps for SWCF
-	 - lat/lon maps for T
-	 - lat/lon maps for TAUX
-	 - lat/lon maps for TAUY
-	 - lat/lon maps for TGCLDIWP
-	 - lat/lon maps for TGCLDLWP
-	 - lat/lon maps for TMQ
-	 - lat/lon maps for TREFHT
-	 - lat/lon maps for TS
-	 - lat/lon maps for U
-	 - lat/lon maps for U10
-	 - lat/lon maps for ICEFRAC
-	 - lat/lon maps for OCNFRAC
-	 - lat/lon maps for LANDFRAC
+</div>
+<p>Output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Generating lat/lon maps...
+     NOTE: Plot type is set to png
+     NOTE: redo_plot is set to False
+     - lat/lon maps for CLDHGH
+     - lat/lon maps for CLDICE
+     - lat/lon maps for CLDLIQ
+     - lat/lon maps for CLDLOW
+     - lat/lon maps for CLDMED
+     - lat/lon maps for CLDTOT
+     - lat/lon maps for CLOUD
+     - lat/lon maps for FLNS
+     - lat/lon maps for FLNT
+     - lat/lon maps for FLNTC
+     - lat/lon maps for FSNS
+     - lat/lon maps for FSNT
+     - lat/lon maps for FSNTC
+     - lat/lon maps for LHFLX
+     - lat/lon maps for LWCF
+     - lat/lon maps for OMEGA500
+     - lat/lon maps for PBLH
+     - lat/lon maps for PRECL
+     - lat/lon maps for PRECT
+     - lat/lon maps for PRECSL
+     - lat/lon maps for PRECSC
+     - lat/lon maps for PRECSC
+     - lat/lon maps for PRECC
+     - lat/lon maps for PS
+     - lat/lon maps for PSL
+     - lat/lon maps for QFLX
+     - lat/lon maps for Q
+     - lat/lon maps for RELHUM
+     - lat/lon maps for SHFLX
+     - lat/lon maps for SST
+     - lat/lon maps for SWCF
+     - lat/lon maps for T
+     - lat/lon maps for TAUX
+     - lat/lon maps for TAUY
+     - lat/lon maps for TGCLDIWP
+     - lat/lon maps for TGCLDLWP
+     - lat/lon maps for TMQ
+     - lat/lon maps for TREFHT
+     - lat/lon maps for TS
+     - lat/lon maps for U
+     - lat/lon maps for U10
+     - lat/lon maps for ICEFRAC
+     - lat/lon maps for OCNFRAC
+     - lat/lon maps for LANDFRAC
   ...lat/lon maps have been generated successfully.
 
   Generating lat/lon vector maps...
-	 NOTE: redo_plot is set to False
-	 - lat/lon vector maps for TAUX,TAUY
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Some vectors at source domain corners may not have been transformed correctly
+     NOTE: redo_plot is set to False
+     - lat/lon vector maps for TAUX,TAUY
 Some vectors at source domain corners may not have been transformed correctly
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 - lat/lon vector maps for U,V
-	 ERROR: Did not find any oclim_fils. Will try to skip.
-	 INFO: Data Location, dclimo_loc is /glade/scratch/richling/ADF/adf_tutorial/data/regrid
-	 INFO: The glob is: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_V_*.nc
+Some vectors at source domain corners may not have been transformed correctly
+     - lat/lon vector maps for U,V
+     ERROR: Did not find any oclim_fils. Will try to skip.
+     INFO: Data Location, dclimo_loc is /glade/scratch/richling/ADF/adf_tutorial/data/regrid
+     INFO: The glob is: f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_V_*.nc
   ...lat/lon vector maps have been generated successfully.
 
   Generating zonal mean plots...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - zonal mean plots for CLDHGH
-	 - zonal mean plots for CLDICE
-	   CLDICE has lev dimension.
-	 - zonal mean plots for CLDLIQ
-	   CLDLIQ has lev dimension.
-	 - zonal mean plots for CLDLOW
-	 - zonal mean plots for CLDMED
-	 - zonal mean plots for CLDTOT
-	 - zonal mean plots for CLOUD
-	   CLOUD has lev dimension.
-	 - zonal mean plots for FLNS
-	 - zonal mean plots for FLNT
-	 - zonal mean plots for FLNTC
-	 - zonal mean plots for FSNS
-	 - zonal mean plots for FSNT
-	 - zonal mean plots for FSNTC
-	 - zonal mean plots for LHFLX
-	 - zonal mean plots for LWCF
-	 - zonal mean plots for OMEGA500
-	 - zonal mean plots for PBLH
-	 - zonal mean plots for PRECL
-	 - zonal mean plots for PRECT
-	 - zonal mean plots for PRECSL
-	 - zonal mean plots for PRECSC
-	 - zonal mean plots for PRECSC
-	 - zonal mean plots for PRECC
-	 - zonal mean plots for PS
-	 - zonal mean plots for PSL
-	 - zonal mean plots for QFLX
-	 - zonal mean plots for Q
-	   Q has lev dimension.
-	 - zonal mean plots for RELHUM
-	   RELHUM has lev dimension.
-	 - zonal mean plots for SHFLX
-	 - zonal mean plots for SST
-	 - zonal mean plots for SWCF
-	 - zonal mean plots for T
-	   T has lev dimension.
-	 - zonal mean plots for TAUX
-	 - zonal mean plots for TAUY
-	 - zonal mean plots for TGCLDIWP
-	 - zonal mean plots for TGCLDLWP
-	 - zonal mean plots for TMQ
-	 - zonal mean plots for TREFHT
-	 - zonal mean plots for TS
-	 - zonal mean plots for U
-	   U has lev dimension.
-	 - zonal mean plots for U10
-	 - zonal mean plots for ICEFRAC
-	 - zonal mean plots for OCNFRAC
-	 - zonal mean plots for LANDFRAC
+     NOTE: Plot type is set to png
+     NOTE: redo_plot is set to False
+     - zonal mean plots for CLDHGH
+     - zonal mean plots for CLDICE
+       CLDICE has lev dimension.
+     - zonal mean plots for CLDLIQ
+       CLDLIQ has lev dimension.
+     - zonal mean plots for CLDLOW
+     - zonal mean plots for CLDMED
+     - zonal mean plots for CLDTOT
+     - zonal mean plots for CLOUD
+       CLOUD has lev dimension.
+     - zonal mean plots for FLNS
+     - zonal mean plots for FLNT
+     - zonal mean plots for FLNTC
+     - zonal mean plots for FSNS
+     - zonal mean plots for FSNT
+     - zonal mean plots for FSNTC
+     - zonal mean plots for LHFLX
+     - zonal mean plots for LWCF
+     - zonal mean plots for OMEGA500
+     - zonal mean plots for PBLH
+     - zonal mean plots for PRECL
+     - zonal mean plots for PRECT
+     - zonal mean plots for PRECSL
+     - zonal mean plots for PRECSC
+     - zonal mean plots for PRECSC
+     - zonal mean plots for PRECC
+     - zonal mean plots for PS
+     - zonal mean plots for PSL
+     - zonal mean plots for QFLX
+     - zonal mean plots for Q
+       Q has lev dimension.
+     - zonal mean plots for RELHUM
+       RELHUM has lev dimension.
+     - zonal mean plots for SHFLX
+     - zonal mean plots for SST
+     - zonal mean plots for SWCF
+     - zonal mean plots for T
+       T has lev dimension.
+     - zonal mean plots for TAUX
+     - zonal mean plots for TAUY
+     - zonal mean plots for TGCLDIWP
+     - zonal mean plots for TGCLDLWP
+     - zonal mean plots for TMQ
+     - zonal mean plots for TREFHT
+     - zonal mean plots for TS
+     - zonal mean plots for U
+       U has lev dimension.
+     - zonal mean plots for U10
+     - zonal mean plots for ICEFRAC
+     - zonal mean plots for OCNFRAC
+     - zonal mean plots for LANDFRAC
   ...Zonal mean plots have been generated successfully.
 
   Generating meridional mean plots...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - meridional mean plots for CLDHGH
-	 - meridional mean plots for CLDICE
-	   CLDICE has lev dimension.
-	 - meridional mean plots for CLDLIQ
-	   CLDLIQ has lev dimension.
-	 - meridional mean plots for CLDLOW
-	 - meridional mean plots for CLDMED
-	 - meridional mean plots for CLDTOT
-	 - meridional mean plots for CLOUD
-	   CLOUD has lev dimension.
-	 - meridional mean plots for FLNS
-	 - meridional mean plots for FLNT
-	 - meridional mean plots for FLNTC
-	 - meridional mean plots for FSNS
-	 - meridional mean plots for FSNT
-	 - meridional mean plots for FSNTC
-	 - meridional mean plots for LHFLX
-	 - meridional mean plots for LWCF
-	 - meridional mean plots for OMEGA500
-	 - meridional mean plots for PBLH
-	 - meridional mean plots for PRECL
-	 - meridional mean plots for PRECT
-	 - meridional mean plots for PRECSL
-	 - meridional mean plots for PRECSC
-	 - meridional mean plots for PRECSC
-	 - meridional mean plots for PRECC
-	 - meridional mean plots for PS
-	 - meridional mean plots for PSL
-	 - meridional mean plots for QFLX
-	 - meridional mean plots for Q
-	   Q has lev dimension.
-	 - meridional mean plots for RELHUM
-	   RELHUM has lev dimension.
-	 - meridional mean plots for SHFLX
-	 - meridional mean plots for SST
-	 - meridional mean plots for SWCF
-	 - meridional mean plots for T
-	   T has lev dimension.
-	 - meridional mean plots for TAUX
-	 - meridional mean plots for TAUY
-	 - meridional mean plots for TGCLDIWP
-	 - meridional mean plots for TGCLDLWP
-	 - meridional mean plots for TMQ
-	 - meridional mean plots for TREFHT
-	 - meridional mean plots for TS
-	 - meridional mean plots for U
-	   U has lev dimension.
-	 - meridional mean plots for U10
-	 - meridional mean plots for ICEFRAC
-	 - meridional mean plots for OCNFRAC
-	 - meridional mean plots for LANDFRAC
+     NOTE: Plot type is set to png
+     NOTE: redo_plot is set to False
+     - meridional mean plots for CLDHGH
+     - meridional mean plots for CLDICE
+       CLDICE has lev dimension.
+     - meridional mean plots for CLDLIQ
+       CLDLIQ has lev dimension.
+     - meridional mean plots for CLDLOW
+     - meridional mean plots for CLDMED
+     - meridional mean plots for CLDTOT
+     - meridional mean plots for CLOUD
+       CLOUD has lev dimension.
+     - meridional mean plots for FLNS
+     - meridional mean plots for FLNT
+     - meridional mean plots for FLNTC
+     - meridional mean plots for FSNS
+     - meridional mean plots for FSNT
+     - meridional mean plots for FSNTC
+     - meridional mean plots for LHFLX
+     - meridional mean plots for LWCF
+     - meridional mean plots for OMEGA500
+     - meridional mean plots for PBLH
+     - meridional mean plots for PRECL
+     - meridional mean plots for PRECT
+     - meridional mean plots for PRECSL
+     - meridional mean plots for PRECSC
+     - meridional mean plots for PRECSC
+     - meridional mean plots for PRECC
+     - meridional mean plots for PS
+     - meridional mean plots for PSL
+     - meridional mean plots for QFLX
+     - meridional mean plots for Q
+       Q has lev dimension.
+     - meridional mean plots for RELHUM
+       RELHUM has lev dimension.
+     - meridional mean plots for SHFLX
+     - meridional mean plots for SST
+     - meridional mean plots for SWCF
+     - meridional mean plots for T
+       T has lev dimension.
+     - meridional mean plots for TAUX
+     - meridional mean plots for TAUY
+     - meridional mean plots for TGCLDIWP
+     - meridional mean plots for TGCLDLWP
+     - meridional mean plots for TMQ
+     - meridional mean plots for TREFHT
+     - meridional mean plots for TS
+     - meridional mean plots for U
+       U has lev dimension.
+     - meridional mean plots for U10
+     - meridional mean plots for ICEFRAC
+     - meridional mean plots for OCNFRAC
+     - meridional mean plots for LANDFRAC
   ...Meridional mean plots have been generated successfully.
 
   Generating polar maps...
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - polar maps for CLDHGH
-	 - polar maps for CLDICE
-	 - polar maps for CLDLIQ
-	 - polar maps for CLDLOW
-	 - polar maps for CLDMED
-	 - polar maps for CLDTOT
-	 - polar maps for CLOUD
-	 - polar maps for FLNS
-	 - polar maps for FLNT
-	 - polar maps for FLNTC
-	 - polar maps for FSNS
-	 - polar maps for FSNT
-	 - polar maps for FSNTC
-	 - polar maps for LHFLX
-	 - polar maps for LWCF
-	 - polar maps for OMEGA500
-	 - polar maps for PBLH
-	 - polar maps for PRECL
-	 - polar maps for PRECT
-	 - polar maps for PRECSL
-	 - polar maps for PRECSC
-	 - polar maps for PRECSC
-	 - polar maps for PRECC
-	 - polar maps for PS
-	 - polar maps for PSL
-	 - polar maps for QFLX
-	 - polar maps for Q
-	 - polar maps for RELHUM
-	 - polar maps for SHFLX
-	 - polar maps for SST
-	 - polar maps for SWCF
-	 - polar maps for T
-	 - polar maps for TAUX
-	 - polar maps for TAUY
-	 - polar maps for TGCLDIWP
-	 - polar maps for TGCLDLWP
-	 - polar maps for TMQ
-	 - polar maps for TREFHT
-	 - polar maps for TS
-	 - polar maps for U
-	 - polar maps for U10
-	 - polar maps for ICEFRAC
-	 - polar maps for OCNFRAC
-	 - polar maps for LANDFRAC
+     NOTE: Plot type is set to png
+     NOTE: redo_plot is set to False
+     - polar maps for CLDHGH
+     - polar maps for CLDICE
+     - polar maps for CLDLIQ
+     - polar maps for CLDLOW
+     - polar maps for CLDMED
+     - polar maps for CLDTOT
+     - polar maps for CLOUD
+     - polar maps for FLNS
+     - polar maps for FLNT
+     - polar maps for FLNTC
+     - polar maps for FSNS
+     - polar maps for FSNT
+     - polar maps for FSNTC
+     - polar maps for LHFLX
+     - polar maps for LWCF
+     - polar maps for OMEGA500
+     - polar maps for PBLH
+     - polar maps for PRECL
+     - polar maps for PRECT
+     - polar maps for PRECSL
+     - polar maps for PRECSC
+     - polar maps for PRECSC
+     - polar maps for PRECC
+     - polar maps for PS
+     - polar maps for PSL
+     - polar maps for QFLX
+     - polar maps for Q
+     - polar maps for RELHUM
+     - polar maps for SHFLX
+     - polar maps for SST
+     - polar maps for SWCF
+     - polar maps for T
+     - polar maps for TAUX
+     - polar maps for TAUY
+     - polar maps for TGCLDIWP
+     - polar maps for TGCLDLWP
+     - polar maps for TMQ
+     - polar maps for TREFHT
+     - polar maps for TS
+     - polar maps for U
+     - polar maps for U10
+     - polar maps for ICEFRAC
+     - polar maps for OCNFRAC
+     - polar maps for LANDFRAC
   ...polar maps have been generated successfully.
 
   Generating Taylor Diagrams...
 Ambiguous plotting location since all cases go on same plot. Will put them in first location: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000
-	 NOTE: Plot type is set to png
-	 NOTE: redo_plot is set to False
-	 - Plotting Taylor Diagram, ANN
-	 Taylor Diagram: completed ANN. 
-	 File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_ANN_Special_Mean.png
-	 - Plotting Taylor Diagram, DJF
-	 Taylor Diagram: completed DJF. 
-	 File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_DJF_Special_Mean.png
-	 - Plotting Taylor Diagram, JJA
-	 Taylor Diagram: completed JJA. 
-	 File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_JJA_Special_Mean.png
-	 - Plotting Taylor Diagram, MAM
-	 Taylor Diagram: completed MAM. 
-	 File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_MAM_Special_Mean.png
-	 - Plotting Taylor Diagram, SON
-	 Taylor Diagram: completed SON. 
-	 File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_SON_Special_Mean.png
+     NOTE: Plot type is set to png
+     NOTE: redo_plot is set to False
+     - Plotting Taylor Diagram, ANN
+     Taylor Diagram: completed ANN. 
+     File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_ANN_Special_Mean.png
+     - Plotting Taylor Diagram, DJF
+     Taylor Diagram: completed DJF. 
+     File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_DJF_Special_Mean.png
+     - Plotting Taylor Diagram, JJA
+     Taylor Diagram: completed JJA. 
+     File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_JJA_Special_Mean.png
+     - Plotting Taylor Diagram, MAM
+     Taylor Diagram: completed MAM. 
+     File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_MAM_Special_Mean.png
+     - Plotting Taylor Diagram, SON
+     Taylor Diagram: completed SON. 
+     File: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000/TaylorDiag_SON_Special_Mean.png
   ...Taylor Diagrams have been generated successfully.
 
   Generating qbo plots...
-	 NOTE: redo_plot is set to False
-	 QBO plots will be saved here: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000
+     NOTE: redo_plot is set to False
+     QBO plots will be saved here: /glade/scratch/richling/ADF/adf_tutorial/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000
   ...QBO plots have been generated successfully.
 CPU times: user 30min 24s, sys: 30.9 s, total: 30min 55s
 Wall time: 33min 22s
 </pre></div>
 </div>
-</div>
-</div>
-<p>Output:</p>
 <h4>Run Website Generation Scripts</h4>
 <p>Create website if requested in the run-time config file</p>
 <div class="cell docutils container">
@@ -1442,7 +1446,6 @@ Wall time: 33min 22s
 </pre></div>
 </div>
 <hr class="docutils" />
-</section>
 </section>
 </section>
 <section id="id1">
