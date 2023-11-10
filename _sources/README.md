@@ -1,9 +1,9 @@
-# Welcome to the AMWG Diagnostics Framework Tutorial
+# Welcome to the AMWG Diagnostics Framework Tutorial (ADF)
 
 
-<br><br>
+<br>
 
-<h3><u>**AMWG**</u> <u>**D**</u>iagnostic <u>**F**</u>ramework</h3>
+<u>**AMWG**</u> <u>**D**</u>iagnostic <u>**F**</u>ramework
 
 <br>
 
