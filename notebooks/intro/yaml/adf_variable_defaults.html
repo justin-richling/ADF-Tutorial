@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../README.html">
-                    Welcome to the ADF Tutorial
+                    Welcome to the AMWG Diagnostics Framework Tutorial (ADF)
                 </a>
             </li>
         </ul>
@@ -602,22 +602,20 @@ title="Print to PDF"
 <h3>Custom Set <p>*</p><a class="headerlink" href="#custom-set-p-p" title="Permalink to this headline">#</a></h3>
 <p>If you plan on using a modified file for your custom values you need to set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#code-class-docutils-literal-notranslate-span-class-pre-defaults-file-span-code"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<p>::::{Warning}
+<strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
 <p>If you would like to use a custom file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Example</p>
-<p>From the ADF root directory</p>
+<p>:::{admonition} Example
+:class: seealso
+From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
 <p>In <code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code>:</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your_variable_defaults.yaml</span></code></p>
-</div>
-</div>
-<p>These are the values that can be set for each variable. None are required.</p>
+:::
+::::<p>These are the values that can be set for each variable. None are required.</p>
 </section>
 <section id="plotting">
 <h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
