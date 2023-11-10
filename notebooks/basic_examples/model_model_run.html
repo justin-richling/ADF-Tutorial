@@ -654,8 +654,8 @@ title="Print to PDF"
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basics/adf.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
-<p><s>  0. Run CAM simulation to get history ( h0* ) file(s)
-*or other history files</s></p>
+<p>&emsp; <s>0. Run CAM simulation to get history ( h0* ) file(s) 
+           *or other history files</s></p>
 <p>&emsp; 1. Configure yaml file(s) for the history files<br>
 <p>    <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
        Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
@@ -849,12 +849,6 @@ title="Print to PDF"
 Check error/logs<br>
 Check data/paths<br></p>
 </div>
-<div class="admonition error" style="width: 60%;">
-<p class="admonition-title">Did the ADF fail?</p>
-Check config files<br>
-Check error/logs<br>
-Check data/paths<br>
-</div>
 <div class="full-width docutils">
 <div class="admonition-did-the-adf-finish admonition">
 <p class="admonition-title">Did the ADF finish?</p>
@@ -876,11 +870,12 @@ Check data/paths<br>
 <li>Website</li>
 </ul>
 <h3>Locally</h3>
-- On a CISL machine, navigate to the root ADF directory
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- ie /glade/work/user/ADF/
-</pre></div>
-</div>
 <ul class="simple">
+<li><p>On a CISL machine, navigate to the root ADF directory</p>
+<ul>
+<li><p>ie /glade/work/user/ADF/</p></li>
+</ul>
+</li>
 <li><p>Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
 <ul>
 <li><p>ie /glade/work/user/ADF/plots/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p></li>
