@@ -8,20 +8,13 @@
 <br>
 
 
-<style>
-  div {
-    text-align: center;
-  }
-</style>
+
 
 <div><img src="images/adf_stats_image.jpeg"/></div>
 
-```{figure} images/adf_stats_image.jpeg
----
-height: 450px
-name: directive-fig
----
-Here is my figure caption!
+```{image} images/adf_stats_image.jpeg
+:height: 450px
+:align: center
 ```
 
 <div></div>
