@@ -797,16 +797,21 @@ img[alt=polar] { width: 400px; }
 <ul class="simple">
 <li><p>Host your diagnostics to a webpage!</p></li>
 </ul>
-<p>.img-hover-zoom {
-height: 300px;
-overflow: hidden;
-}</p>
-<p>.img-hover-zoom img {
-transition: transform .5s ease;
-}</p>
-<p>.img-hover-zoom:hover img {
-transform: scale(1.5);
-}</p>
+<style>
+.img-hover-zoom {
+  height: 300px;
+  overflow: hidden;
+}
+
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+</style>
 <div class="img-hover-zoom">
 ![image](amwg_table_subset.png)
 </div><div class="admonition attention">
