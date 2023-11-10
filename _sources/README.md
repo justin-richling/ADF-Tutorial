@@ -7,6 +7,8 @@
 
 <br>
 
+<img src="adf_stats_image.jpeg"/>
+
 <div>
 
 
