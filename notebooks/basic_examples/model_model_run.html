@@ -876,15 +876,15 @@ Check data/paths<br></p>
 <h4>JupyterHub</h4><h4>Website</h4>
 <p>If you choose to create HTML files you can publish those to a web server, make sure you’re in the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file.</p>
 <p>Within that directory lives the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory where all the html and css files are saved.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+<div class="full-width docutils">
+<p>.
 ├── plots
 │   └── f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000
 │       └── website
 │           ├── assets
 │           ├── html_img
 │           ├── html_table
-│           └── templates
-</pre></div>
+│           └── templates</p>
 </div>
 <p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
 <style>
@@ -893,13 +893,10 @@ Check data/paths<br></p>
     overflow:scroll;
 }
 </style>
-<div class="full-width docutils">
 <p> Navigate to the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location</p>
-<p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
 <p> Copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
 <p> For Tungsten:
      scp -r website/* tungsten.cgd.ucar.edu:/path/to/your/project/page/</p>
-</div>
 <div class="admonition tip" style="padding-right: 7px">
 <div><h6>A sample website:</h6></div>
 <p><a href="https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/" target="_blank">https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/</a></p>
