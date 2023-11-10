@@ -797,7 +797,22 @@ img[alt=polar] { width: 400px; }
 <ul class="simple">
 <li><p>Host your diagnostics to a webpage!</p></li>
 </ul>
-<div class="admonition attention">
+<p>/* [1] The container <em>/
+.img-hover-zoom {
+height: 300px; /</em> [1.1] Set it as per your need <em>/
+overflow: hidden; /</em> [1.2] Hide the overflowing of child elements */
+}</p>
+<p>/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+transition: transform .5s ease;
+}</p>
+<p>/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+transform: scale(1.5);
+}</p>
+<div class="img-hover-zoom">
+  <img src="amwg_table_subset.png" alt="This zooms-in really well and smooth">
+</div><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Depending on how many years, plot types and variables you configure, the more time it takes</p>
 <ul class="simple">
