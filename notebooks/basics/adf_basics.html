@@ -651,11 +651,9 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </ul>
 </li>
 </ul>
-<p>In this yaml file variables can be set and called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.</p>
-<p>IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.</p>
 <p>CAVEAT:<br>
 In this particular yaml file, we have built subsections in which variables set in a subsection are only callable by referencing the subsection first with a “<code class="docutils literal notranslate"><span class="pre">.</span></code>” then variable name.</p>
-<p>IE: Say we want to set the climo years in the <strong>test case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline case</strong> subsection `diag_cam_baseline_climo`<br> 
+<p>IE: Say we want to set the climo years in the <strong>test case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline case</strong> subsection `diag_cam_baseline_climo`</p> 
 <p><strong>diag_cam_climo:</strong><br></p>
 <p>   start_year: 1995  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.start_year</span></code><br>
    end_year: 2000  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.end_year</span></code><br></p>
