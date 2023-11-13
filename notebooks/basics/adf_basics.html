@@ -509,28 +509,35 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml">
-   Run-time yaml
+  <a class="reference internal nav-link" href="#yaml-files">
+   YAML Files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#u-subsections-u">
-     <u>
-      Subsections
-     </u>
+    <a class="reference internal nav-link" href="#run-time-yaml">
+     Run-time yaml
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subsections-u">
+       <u>
+        Subsections
+       </u>
+      </a>
+     </li>
+    </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-default-yaml">
-   Variable Default yaml
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
+    <a class="reference internal nav-link" href="#variable-default-yaml">
+     Variable Default yaml
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-set">
+       Custom Set
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -554,28 +561,35 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml">
-   Run-time yaml
+  <a class="reference internal nav-link" href="#yaml-files">
+   YAML Files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#u-subsections-u">
-     <u>
-      Subsections
-     </u>
+    <a class="reference internal nav-link" href="#run-time-yaml">
+     Run-time yaml
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#u-subsections-u">
+       <u>
+        Subsections
+       </u>
+      </a>
+     </li>
+    </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-default-yaml">
-   Variable Default yaml
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set">
-     Custom Set
+    <a class="reference internal nav-link" href="#variable-default-yaml">
+     Variable Default yaml
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-set">
+       Custom Set
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -594,8 +608,9 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>ADF Runs</p></li>
 <li><p>yaml basics</p></li>
-<li></li>
 </ul>
+<section id="yaml-files">
+<h2>YAML Files<a class="headerlink" href="#yaml-files" title="Permalink to this headline">#</a></h2>
 <p>The ADF requires 2 different yaml configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>NOTE: Throughout this tutorial we will reference these as the <strong>run-time</strong> and <strong>variable default</strong> yaml files respectively.</p>
@@ -642,12 +657,12 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 }
 </style>
 <section id="run-time-yaml">
-<h2>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h2>
+<h3>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h3>
 <h4>config_cam_baseline_example.yaml</h4>
 <p>This is the most important file for the ADF, it stores all the necessary information that the ADF needs to run including all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>It is also broken up into <strong>subsections</strong> with each subsection of the yaml file representing grouped sets of information sent to the ADF each having their own variable names.</p>
 <section id="u-subsections-u">
-<h3><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h3>
+<h4><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>diag_basic_info</p>
 <ul>
@@ -667,7 +682,7 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </li>
 <li><p>diag_cvdp_info</p>
 <ul>
-<li><p>For running the Climate Variability Diagnostics Package https://www.cesm.ucar.edu/projects/cvdp</p></li>
+<li><p>For running the Climate Variability Diagnostics Package <a class="reference external" href="https://www.cesm.ucar.edu/projects/cvdp">https://www.cesm.ucar.edu/projects/cvdp</a></p></li>
 <li><p>This will run in the background of the ADF</p></li>
 </ul>
 </li>
@@ -715,21 +730,22 @@ In this particular yaml file, we have built subsections in which variables set i
 </section>
 </section>
 <section id="variable-default-yaml">
-<h2>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h2>
+<h3>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h3>
 <h4>adf_variable_defaults.yaml</h4>
 <p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
 <p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <section id="custom-set">
-<h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
+<h4>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h4>
 <p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
-<p>::::{Warning}
-<strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
 <p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
-<p>:::{admonition} Example
-:class: seealso
-From the ADF root directory</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
@@ -737,8 +753,8 @@ From the ADF root directory</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code></p>
-:::
-::::
+</div>
+</div>
 <p>After the new file <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code> has been created, open the file with your favorite editor</p>
 <p>Example of <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
@@ -760,22 +776,7 @@ From the ADF root directory</p>
   <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
 </pre></div>
 </div>
-<p>Example of custom variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR</span><span class="p">:</span>
-  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;rainbow&quot;</span>
-  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;RdBu&quot;</span>
-  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;some_unit&quot;</span>
-  <span class="n">mpl</span><span class="p">:</span>
-    <span class="n">colorbar</span><span class="p">:</span>
-      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;some_unit&quot;</span>
-  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;var_obs_file.nc&quot;</span>
-  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;VAR&quot;</span>
-  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;descriptive_var_name&quot;</span>
-  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
-</pre></div>
-</div>
+</section>
 </section>
 </section>
 </section>
