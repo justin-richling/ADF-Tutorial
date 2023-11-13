@@ -882,8 +882,7 @@ Check data/paths<br></p>
 <h4>JupyterHub</h4>
 <p>apidfjwd</p>
 <h4>Website</h4>
-<p>If you choose to create HTML files you can publish those to a web server, make sure you’re in the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file.</p>
-<p>Within that directory lives the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory where all the html and css files are saved.</p>
+<p>If you choose to create HTML files you can publish those to a web server, in the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file, a <code class="docutils literal notranslate"><span class="pre">website</span></code> directory exists where all the html and css files are saved.</p>
 <p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
 <style>
     #box {
@@ -891,8 +890,7 @@ Check data/paths<br></p>
     overflow:scroll;
 }
 </style>
-<p> Navigate to the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location</p>
-<p> Copy files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address</p>
+<p> In the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location and copy all the files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address:</p>
 <p> For Tungsten:
      scp -r website/* <a class="reference external" href="http://tungsten.cgd.ucar.edu">tungsten.cgd.ucar.edu</a>:/path/to/your/project/page/</p>
 <div class="admonition tip" style="padding-right: 7px">
