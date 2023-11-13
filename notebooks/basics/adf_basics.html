@@ -486,12 +486,42 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -503,6 +533,25 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-subsections-u">
+   <u>
+    Subsections
+   </u>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -520,7 +569,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
 <p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
-<p>A couple of notes about using the ADF yaml files:
+<p>A couple of notes about using the ADF yaml files:<br>
   Variables can be referenced within the yaml file<br>
   Variables <strong>cannot</strong> be used in nested varaibles lists<br>
     ie:</p>
@@ -561,20 +610,80 @@ title="Print to PDF"
   visibility: visible;
 }
 </style>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
-<p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion. In this yaml file variables can be set and called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.</p>
+<p>It is also broken up into <strong>subsections</strong></p> with each subsection of the yaml file representing grouped sets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.
+</section>
+<section id="u-subsections-u">
+<h2><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>diag_basic_info</p>
+<ul>
+<li><p>Basic overall run variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_climo</p>
+<ul>
+<li><p>Test (experiment) case variables</p></li>
+</ul>
+</li>
+<li><p>diag_cam_baseline_climo</p>
+<ul>
+<li><p>Baseline (control) case variables</p></li>
+<li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
+</ul>
+</li>
+<li><p>diag_cvdp_info</p>
+<ul>
+<li><p>For running the Climate Variability Diagnostics Package https://www.cesm.ucar.edu/projects/cvdp</p></li>
+<li><p>This will run in the background of the ADF</p></li>
+</ul>
+</li>
+<li><p>time_averaging_scripts</p>
+<ul>
+<li><p>Climotology file creation</p></li>
+</ul>
+</li>
+<li><p>regridding_scripts</p>
+<ul>
+<li><p>Regridding of climo files</p></li>
+</ul>
+</li>
+<li><p>analysis_scripts</p>
+<ul>
+<li><p>AMWG statisics tables</p></li>
+</ul>
+</li>
+<li><p>plotting_scripts</p>
+<ul>
+<li><p>Various plotting scripts</p></li>
+</ul>
+</li>
+<li><p>diag_var_list</p>
+<ul>
+<li><p>List of CAM variables for ADF to run</p></li>
+</ul>
+</li>
+</ul>
+<p>In this yaml file variables can be set and called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.</p>
 <p>IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.</p>
 <p>CAVEAT:<br>
 In this particular yaml file, we have built subsections in which variables set in a subsection are only callable by referencing the subsection first with a “<code class="docutils literal notranslate"><span class="pre">.</span></code>” then variable name.</p>
 <p>IE: Say we want to set the climo years in the <strong>test case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline case</strong> subsection `diag_cam_baseline_climo`<br> 
-<p>diag_cam_climo:<br></p>
+<p><strong>diag_cam_climo:</strong><br></p>
 <p>   start_year: 1995  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.start_year</span></code><br>
    end_year: 2000  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.end_year</span></code><br></p>
 <p>Now if we wanted to reference these climo years in the <strong>baseline</strong> subsection:<br></p>
-<p>diag_cam_baseline_climo:<br></p>
-<p>   start_year:  <code class="docutils literal notranslate"><span class="pre">&amp;dollar;{diag_cam_climo.start_year}</span></code><br>
-   end_year:  <code class="docutils literal notranslate"><span class="pre">&amp;dollar;{diag_cam_climo.end_year}</span></code></p>
+<p><strong>diag_cam_baseline_climo:</strong><br></p>
+<p>   start_year:  ${<code class="docutils literal notranslate"><span class="pre">diag_cam_climo.start_year</span></code>}<br>
+   end_year:  ${<code class="docutils literal notranslate"><span class="pre">diag_cam_climo.end_year</span></code>}</p>
 </p>
+<p>We can also set global variables (like the <code class="docutils literal notranslate"><span class="pre">user</span></code> example) that can be called in any subsections without the ‘.’ notation.</p>
+<p>IE: Say we want to reference the user variable in the <strong>test case</strong> subsection `diag_cam_climo`<br>
+<p><strong>diag_cam_climo:</strong><br></p>
+<p>   cam_climo_loc: /glade/work/${user}/ADF/data/climos/  -&gt; /glade/work/richling/ADF/data/climos/ <br></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
