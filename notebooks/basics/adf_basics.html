@@ -726,7 +726,7 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>We can also set global variables (like the <code class="docutils literal notranslate"><span class="pre">user</span></code> example) that can be called in any subsections without the ‘.’ notation.</p>
 <p>IE: Say we want to reference the user variable in the <strong>test case</strong> subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code></p>
 <p><strong>diag_cam_climo:</strong><br></p>
-<p>   cam_climo_loc: /glade/work/${user}/ADF/data/climos/  -&gt; /glade/work/richling/ADF/data/climos/ <br></p>
+<p>   cam_climo_loc: <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/${user}/ADF/data/climos/</span></code>  -&gt; <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/richling/ADF/data/climos/</span></code><br><br><br></p>
 </section>
 </section>
 <section id="variable-default-yaml">
@@ -762,7 +762,8 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the run-time yaml file (config_cam_baseline_example.yaml).<br></p>
 <p>Please see the reference section for the variable defaults file for further assistance. Also see the exercise example for customization</p>
 </div>
-</section>
+<hr class="docutils" />
+<h3>Now let's put it all together and run a quick demo fo the ADF!</h3></section>
 </section>
 </section>
 </section>
