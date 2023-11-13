@@ -509,14 +509,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#u-subsections-u">
-   <u>
-    Subsections
-   </u>
+  <a class="reference internal nav-link" href="#run-time-config-cam-baseline-example-yaml">
+   Run-time (config_cam_baseline_example.yaml)
   </a>
  </li>
 </ul>
@@ -539,14 +533,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#u-subsections-u">
-   <u>
-    Subsections
-   </u>
+  <a class="reference internal nav-link" href="#run-time-config-cam-baseline-example-yaml">
+   Run-time (config_cam_baseline_example.yaml)
   </a>
  </li>
 </ul>
@@ -570,9 +558,8 @@ title="Print to PDF"
 <p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
 <p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
 <p>A couple of notes about using the ADF yaml files:<br>
-  Variables can be referenced within the yaml file<br>
-  Variables <strong>cannot</strong> be used in nested varaibles lists<br>
-    ie:</p>
+  Variables can be referenced within the yaml file called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.<br>
+IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.<br></p>
 <style>
 .tooltip {
   position: relative;
@@ -610,13 +597,11 @@ title="Print to PDF"
   visibility: visible;
 }
 </style>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="run-time-config-cam-baseline-example-yaml">
+<h2>Run-time (config_cam_baseline_example.yaml)<a class="headerlink" href="#run-time-config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
-<p>It is also broken up into <strong>subsections</strong></p> with each subsection of the yaml file representing grouped sets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.
-</section>
-<section id="u-subsections-u">
-<h2><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h2>
+<p>It is also broken up into <strong>subsections</strong> with each subsection of the yaml file representing grouped sets of information sent to the ADF with each having variable names.</p>
+<h5> <u>Subsections</u></h5>
 <ul class="simple">
 <li><p>diag_basic_info</p>
 <ul>
