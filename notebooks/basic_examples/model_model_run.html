@@ -216,6 +216,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/custom_observations.html">
+   Custom Set of Observations For the ADF
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../exercises/jupyter.html">
    More Exercise for Jupter
@@ -681,14 +686,12 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>If you followed our instructions earlier, you should have the ADF root directory at: <code class="docutils literal notranslate"><span class="pre">/glade/work/&lt;user&gt;/ADF/</span></code></p></li>
 </ul>
-<p>For this guided demo we will first make a copy of the run-time config file and make some changes in that copy.</p>
 <section id="configure-run-time-yaml-file">
 <h2>Configure Run-Time yaml file<a class="headerlink" href="#configure-run-time-yaml-file" title="Permalink to this headline">#</a></h2>
 <section id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
 <p>Look for the conifuration yaml file that will be used to run the ADF, <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code></p>
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
-<p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.</p>
 <p>As a quick refresher from the intro to yaml section, we can utilize the <code class="docutils literal notranslate"><span class="pre">${}</span></code> notation to reference already declared variables elsewhere in the yaml files.</p>
 <p>We will copy the provided configuration yaml file <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code> and will do small edits to run an example ADF with sample data.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_baseline_example.yaml config_model_vs_model_example.yaml
@@ -706,65 +709,65 @@ title="Print to PDF"
 </section>
 <section id="u-subsections-u">
 <h3><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h3>
-<p>A quick refresher of the different sections in this yaml file</p>
-<ul class="simple">
-<li><p>diag_basic_info</p>
+<style>
+mark { 
+  background-color: yellow;
+  color: black;
+}
+</style>
+<p>A quick refresher of the different sections in this yaml file. The highlighted scetions will be ones we will change variables in for this example.</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>Change only the variables listed in each highlighted subsection below and leave all the other variables in the conifg file as they are by default</p>
+</div>
 <ul>
+<li><p><mark>diag_basic_info</mark></p>
+<ul class="simple">
 <li><p>Basic overall run variables</p></li>
 </ul>
 </li>
-<li><p>diag_cam_climo</p>
-<ul>
+<li><p><mark>diag_cam_climo</mark></p>
+<ul class="simple">
 <li><p>Test (experiment) case variables</p></li>
 </ul>
 </li>
-<li><p>diag_cam_baseline_climo</p>
-<ul>
+<li><p><mark>diag_cam_baseline_climo</mark></p>
+<ul class="simple">
 <li><p>Baseline (control) case variables</p></li>
 <li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
 </ul>
 </li>
 <li><p>diag_cvdp_info</p>
-<ul>
+<ul class="simple">
 <li><p>For running the Climate Variability Diagnostics Package <a class="reference external" href="https://www.cesm.ucar.edu/projects/cvdp">https://www.cesm.ucar.edu/projects/cvdp</a></p></li>
 <li><p>This will run in the background of the ADF</p></li>
 </ul>
 </li>
 <li><p>time_averaging_scripts</p>
-<ul>
+<ul class="simple">
 <li><p>Climotology file creation</p></li>
 </ul>
 </li>
 <li><p>regridding_scripts</p>
-<ul>
+<ul class="simple">
 <li><p>Regridding of climo files</p></li>
 </ul>
 </li>
 <li><p>analysis_scripts</p>
-<ul>
+<ul class="simple">
 <li><p>AMWG statisics tables</p></li>
 </ul>
 </li>
 <li><p>plotting_scripts</p>
-<ul>
+<ul class="simple">
 <li><p>Various plotting scripts</p></li>
 </ul>
 </li>
 <li><p>diag_var_list</p>
-<ul>
+<ul class="simple">
 <li><p>List of CAM variables for ADF to run</p></li>
 </ul>
 </li>
-</ul>
-<section id="sidebar-content">
-<aside style="margin: 0 0 0 1em; padding: 7px; width: 60%; float: right; clear: right; overflow-x: auto;">
-<div class="admonition warning">
-<p class="admonition-title">Note</p>
-<p>Change only the variables listed in each subsection below and leave all the other variables in the conifg file as they are by default</p>
-</div>
-</aside>
-<h4>We will be editing the following sections:</h4>
-<ul>
 <li><p style="margin-top: -5px;">Global Variables</p>
 </li>
 <li><p style="margin-top: -5px;">diag_basic_info</p>
@@ -774,7 +777,6 @@ title="Print to PDF"
 <li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
 </li>
 </ul>
-</section>
 <br>
 <section id="global-variables">
 <h4>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h4>
