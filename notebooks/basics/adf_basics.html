@@ -509,8 +509,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml-config-cam-baseline-example-yaml">
-   Run-time yaml (config_cam_baseline_example.yaml)
+  <a class="reference internal nav-link" href="#run-time-yaml">
+   Run-time yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -523,8 +523,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-defaults-yaml-adf-variable-defaults-yaml">
-   Variable defaults yaml (adf_variable_defaults.yaml)
+  <a class="reference internal nav-link" href="#variable-default-yaml">
+   Variable Default yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -554,8 +554,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-time-yaml-config-cam-baseline-example-yaml">
-   Run-time yaml (config_cam_baseline_example.yaml)
+  <a class="reference internal nav-link" href="#run-time-yaml">
+   Run-time yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -568,8 +568,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-defaults-yaml-adf-variable-defaults-yaml">
-   Variable defaults yaml (adf_variable_defaults.yaml)
+  <a class="reference internal nav-link" href="#variable-default-yaml">
+   Variable Default yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -597,6 +597,7 @@ title="Print to PDF"
 </ul>
 <p>The ADF requires 2 different yaml configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
+<p>NOTE: Throughout this tutorial we will reference these as the <strong>run-time</strong> and <strong>variable default</strong> yaml files respectively.</p>
 <p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
 <p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
 <p>A couple of notes about using the ADF yaml files:<br>
@@ -639,8 +640,9 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
   visibility: visible;
 }
 </style>
-<section id="run-time-yaml-config-cam-baseline-example-yaml">
-<h2>Run-time yaml (config_cam_baseline_example.yaml)<a class="headerlink" href="#run-time-yaml-config-cam-baseline-example-yaml" title="Permalink to this headline">#</a></h2>
+<section id="run-time-yaml">
+<h2>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h2>
+<h6>config_cam_baseline_example.yaml</h6>
 <p>This is the most important file for the ADF, it stores all the necessary information that the ADF needs to run including all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>It is also broken up into <strong>subsections</strong> with each subsection of the yaml file representing grouped sets of information sent to the ADF each having their own variable names.</p>
 <section id="u-subsections-u">
@@ -711,12 +713,14 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>   cam_climo_loc: /glade/work/${user}/ADF/data/climos/  -&gt; /glade/work/richling/ADF/data/climos/ <br></p>
 </section>
 </section>
-<section id="variable-defaults-yaml-adf-variable-defaults-yaml">
-<h2>Variable defaults yaml (adf_variable_defaults.yaml)<a class="headerlink" href="#variable-defaults-yaml-adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h2>
+<section id="variable-default-yaml">
+<h2>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h2>
+<h6>adf_variable_defaults.yaml</h6>
 <p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
 <p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <section id="custom-set">
 <h3>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h3>
+<p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
 <p>::::{Warning}
