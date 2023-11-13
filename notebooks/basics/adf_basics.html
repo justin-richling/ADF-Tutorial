@@ -564,16 +564,16 @@ title="Print to PDF"
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion. In this yaml file variables can be set and called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.</p>
 <p>IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.</p>
-<p>BIG CAVEAT:<br>
+<p>CAVEAT:<br>
 In this particular yaml file, we have built subsections in which variables set in a subsection are only callable by referencing the subsection first with a “<code class="docutils literal notranslate"><span class="pre">.</span></code>” then variable name.</p>
-<p>IE: Say we want to set the climo years in the test <strong>case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline</strong> subsection `diag_cam_baseline_climo`<br> 
+<p>IE: Say we want to set the climo years in the <strong>test case</strong> subsection `diag_cam_climo` and call them in the <strong>baseline case</strong> subsection `diag_cam_baseline_climo`<br> 
 <p>diag_cam_climo:<br></p>
-<p>   start_year: 1995  -&gt; we would reference this with diag_cam_climo.start_year<br>
-   end_year: 2000  -&gt; we would reference this with diag_cam_climo.end_year<br></p>
+<p>   start_year: 1995  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.start_year</span></code><br>
+   end_year: 2000  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.end_year</span></code><br></p>
 <p>Now if we wanted to reference these climo years in the <strong>baseline</strong> subsection:<br></p>
 <p>diag_cam_baseline_climo:<br></p>
-<p>   start_year:  ${diag_cam_climo.start_year}<br>
-   end_year:  ${diag_cam_climo.end_year}</p>
+<p>   start_year:  <code class="docutils literal notranslate"><span class="pre">&amp;dollar;{diag_cam_climo.start_year}</span></code><br>
+   end_year:  <code class="docutils literal notranslate"><span class="pre">&amp;dollar;{diag_cam_climo.end_year}</span></code></p>
 </p>
 </section>
 
