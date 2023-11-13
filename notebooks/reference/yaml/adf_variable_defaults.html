@@ -540,6 +540,20 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#website">
      Website
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variable-default-yaml">
+       Variable Default yaml
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#custom-set">
+         Custom Set
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -594,6 +608,20 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#website">
      Website
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variable-default-yaml">
+       Variable Default yaml
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#custom-set">
+         Custom Set
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -723,7 +751,71 @@ From the ADF root directory</p>
 <h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
 <ul>
 <li><p>The website category the variable will be placed under.</p>
-</ul></section>
+</ul><section id="variable-default-yaml">
+<h4>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h4>
+<h4>adf_variable_defaults.yaml</h4>
+<p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
+<p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
+<section id="custom-set">
+<h5>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h5>
+<p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
+<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
+</p>
+<p>::::{Warning}
+<strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
+<p>:::{admonition} Example
+:class: seealso
+From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml):</p>
+<p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
+<p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code></p>
+:::
+::::
+<p>After the new file <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code> has been created, open the file with your favorite editor</p>
+<p>Example of <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;BrBG&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+  <span class="n">scale_factor</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">add_offset</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;ms$^{-1}$&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;U_ERA5_monthly_climo_197901-202112.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;ERA5&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span>
+  <span class="n">vector_pair</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span>
+  <span class="n">vector_name</span><span class="p">:</span> <span class="s2">&quot;Wind&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
+</div>
+<p>Example of custom variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR</span><span class="p">:</span>
+  <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;rainbow&quot;</span>
+  <span class="n">contour_levels_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="n">diff_colormap</span><span class="p">:</span> <span class="s2">&quot;RdBu&quot;</span>
+  <span class="n">diff_contour_range</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="n">new_unit</span><span class="p">:</span> <span class="s2">&quot;some_unit&quot;</span>
+  <span class="n">mpl</span><span class="p">:</span>
+    <span class="n">colorbar</span><span class="p">:</span>
+      <span class="n">label</span> <span class="p">:</span> <span class="s2">&quot;some_unit&quot;</span>
+  <span class="n">obs_file</span><span class="p">:</span> <span class="s2">&quot;var_obs_file.nc&quot;</span>
+  <span class="n">obs_name</span><span class="p">:</span> <span class="s2">&quot;VAR&quot;</span>
+  <span class="n">obs_var_name</span><span class="p">:</span> <span class="s2">&quot;descriptive_var_name&quot;</span>
+  <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
 </section>
 </section>
 
