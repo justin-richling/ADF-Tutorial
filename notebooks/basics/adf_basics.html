@@ -667,7 +667,7 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </li>
 <li><p>diag_cvdp_info</p>
 <ul>
-<li><p>For running the Climate Variability Diagnostics Package https://www.cesm.ucar.edu/projects/cvdp</p></li>
+<li><p>For running the Climate Variability Diagnostics Package <a class="reference external" href="https://www.cesm.ucar.edu/projects/cvdp">https://www.cesm.ucar.edu/projects/cvdp</a></p></li>
 <li><p>This will run in the background of the ADF</p></li>
 </ul>
 </li>
@@ -724,12 +724,13 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
-<p>::::{Warning}
-<strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
 <p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_adf_tutorial.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
-<p>:::{admonition} Example
-:class: seealso
-From the ADF root directory</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
 </pre></div>
 </div>
@@ -737,8 +738,8 @@ From the ADF root directory</p>
 <p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
 <p style="margin-top: -5px;">&ensp; use_defaults: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code></p>
-:::
-::::
+</div>
+</div>
 <p>After the new file <code class="docutils literal notranslate"><span class="pre">lib/your_variable_defaults.yaml</span></code> has been created, open the file with your favorite editor</p>
 <p>Example of <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>

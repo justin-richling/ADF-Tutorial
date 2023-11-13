@@ -862,7 +862,7 @@ title="Print to PDF"
 <h3>Available Plots:<a class="headerlink" href="#available-plots" title="Permalink to this headline">#</a></h3>
 <section id="amwg-statistics-tables">
 <h4>AMWG statistics tables<a class="headerlink" href="#amwg-statistics-tables" title="Permalink to this headline">#</a></h4>
-<p><a href="./amwg_table_subset.png" ><img alt="../../_images/amwg_table_subset.png" src="../../_images/amwg_table_subset.png" /></a></p>
+<p><a href="./amwg_table_subset.png" ><img src="amwg_table_subset.png"/></a></p>
 </section>
 <section id="global-lat-lon-plots">
 <h4>Global lat/lon plots<a class="headerlink" href="#global-lat-lon-plots" title="Permalink to this headline">#</a></h4>
@@ -1028,9 +1028,8 @@ img[alt=polar] { width: 400px; }
 </style>
 <div class="img-hover-zoom">
 <img src="amwg_table_subset.png" alt="tables">
-</div><img alt="This zooms-in really well and smooth" src="../../_images/amwg_table_subset.png" />
-<img alt="../../_images/AODVISdn_ANN_LatLon_Mean.png" src="../../_images/AODVISdn_ANN_LatLon_Mean.png" />
-<div class="admonition attention">
+</div><img src="amwg_table_subset.png" alt="This zooms-in really well and smooth">
+<img src='AODVISdn_ANN_LatLon_Mean.png' onclick='this.src="full_size.gif"' /><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Depending on how many years, plot types and variables you configure, the more time it takes</p>
 <div class="admonition note">
@@ -1038,15 +1037,17 @@ img[alt=polar] { width: 400px; }
 <p>This is an active area of development; there are potential ways of cutting time/processes</p>
 </div>
 </div>
-<p>::::{attention}
-Depending on how many years, plot types and variables you configure, the more time it takes</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Depending on how many years, plot types and variables you configure, the more time it takes</p>
 <ul class="simple">
 <li><p>Rough average for all default plots, 10-20 years for 30 variables is ~45 minutes</p></li>
 </ul>
-<p>:::{note}
-This is an active area of development; there are potential ways of cutting time/processes
-:::
-::::</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an active area of development; there are potential ways of cutting time/processes</p>
+</div>
+</div>
 </section>
 </section>
 <section id="adf-basics">
