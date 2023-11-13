@@ -686,15 +686,14 @@ title="Print to PDF"
 <h2>Configure Run-Time yaml file<a class="headerlink" href="#configure-run-time-yaml-file" title="Permalink to this headline">#</a></h2>
 <section id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
-<p>Look for the conifuration yaml file that will be used to run the ADF, `config_baseline_example.yaml`
-<p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p></p>
+<p>Look for the conifuration yaml file that will be used to run the ADF, <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code></p>
+<p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>Each section of the yaml file represent grouped subsets of information sent to the ADF and each have variable names that get fed into the ADF in a specific fashion.</p>
 <p>As a quick refresher from the intro to yaml section, we can utilize the <code class="docutils literal notranslate"><span class="pre">${}</span></code> notation to reference already declared variables elsewhere in the yaml files.</p>
 <p>We will copy the provided configuration yaml file <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code> and will do small edits to run an example ADF with sample data.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_baseline_example.yaml config_model_vs_model_example.yaml
 </pre></div>
 </div>
-</p>
 </section>
 <section id="modify-the-copy">
 <h3>Modify the Copy<a class="headerlink" href="#modify-the-copy" title="Permalink to this headline">#</a></h3>
