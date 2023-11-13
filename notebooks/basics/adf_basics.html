@@ -658,7 +658,7 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </style>
 <section id="run-time-yaml">
 <h3>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h3>
-<h4><code class="docutils literal notranslate"><span class="pre" style="color: black;">config_cam_baseline_example.yaml</span></code></h4>
+<p> <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">config_cam_baseline_example.yaml</span></code></h5></p>
 <p>This is the most important file for the ADF, it stores all the necessary information that the ADF needs to run including all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>It is also broken up into <strong>subsections</strong> with each subsection of the yaml file representing grouped sets of information sent to the ADF each having their own variable names.</p>
 <section id="u-subsections-u">
@@ -731,14 +731,11 @@ In this particular yaml file, we have built subsections in which variables set i
 </section>
 <section id="variable-default-yaml">
 <h3>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h3>
-<h4><code class="docutils literal notranslate"><span class="pre" style="color: black;">lib/adf_variable_defaults.yaml</span></code></h4>
+<p> <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">lib/adf_variable_defaults.yaml</span></code></h5></p>
 <p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
 <p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <section id="custom-set">
 <h4>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h4>
-<p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
-<p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
