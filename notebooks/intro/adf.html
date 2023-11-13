@@ -524,6 +524,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
+   Types of ADF Comparisons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#available-comparison-cases">
+   Available Comparison Cases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-do-you-get">
    What do you get?
   </a>
@@ -661,6 +671,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-features">
    Key Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-adf-comparisons">
+   Types of ADF Comparisons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#available-comparison-cases">
+   Available Comparison Cases
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -811,6 +831,23 @@ title="Print to PDF"
 <p>  - Assuming the observations are also on the same set of pressure levels</p>
 <p><strong>Enable interpolation on <a href="https://www.mmm.ucar.edu/models/mpas/" target="_blank"><u>MPAS</u></a> vertical coordinate</strong></p>
 <p>-&gt; Checks for the MPAS height-based vertical coordinate, and if present it will enable pressure-to-pressure vertical interpolation required to get MPAS data onto the standard pressure levels used by the ADF</p>
+</section>
+<section id="types-of-adf-comparisons">
+<h2>Types of ADF Comparisons<a class="headerlink" href="#types-of-adf-comparisons" title="Permalink to this headline">#</a></h2>
+<p>There are a couple different ADF runs one can do:</p>
+<p>Single Case Comparison</p>
+<p>Multiple Case Comparison**</p>
+<p style="margin-top: -15px;">&ensp; ** In progress, will not be part of this tutorial currently :(</p>
+</section>
+<section id="available-comparison-cases">
+<h2>Available Comparison Cases<a class="headerlink" href="#available-comparison-cases" title="Permalink to this headline">#</a></h2>
+<p>There are essentially 3 types of comparisons:</p>
+<ul class="simple">
+<li><p>CAM vs CAM</p></li>
+<li><p>CAM vs Observations/Reanalysis</p></li>
+<li><p>CAM vs CMIP</p></li>
+</ul>
+<p>Each have their own requirements for the run-time config file (eg <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example</span></code>). The requirements for each type of comparison will be addressed in their respective sections of this tutorial.</p>
 </section>
 <section id="what-do-you-get">
 <h2>What do you get?<a class="headerlink" href="#what-do-you-get" title="Permalink to this headline">#</a></h2>
