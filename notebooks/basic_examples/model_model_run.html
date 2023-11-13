@@ -792,13 +792,13 @@ title="Print to PDF"
 </section>
 <section id="diag-basic-info">
 <h4>diag_basic_info<a class="headerlink" href="#diag-basic-info" title="Permalink to this headline">#</a></h4>
-<p>This subsection  defines necessary variables for the overall ADF run.</p>
+<p>This subsection defines necessary variables for the overall ADF run. Change these variables:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_regrid_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${diag_loc}/regrid</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${diag_loc}/plots</span></code></p>
 </section>
 <section id="diag-cam-climo">
 <h4>diag_cam_climo<a class="headerlink" href="#diag-cam-climo" title="Permalink to this headline">#</a></h4>
-<p>This subsection follows the <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code> and is ueds for the test (experiment) case run and diagnostics details.</p>
+<p>This subsection follows the <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code> and is used for the test (experiment) case run and diagnostics details. Change these variables:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${diag_loc}/climo/{diag_cam_climo.cam_case_name}</span></code></p>
@@ -808,7 +808,7 @@ title="Print to PDF"
 </section>
 <section id="diag-cam-baseline-climo">
 <h4>diag_cam_baseline_climo<a class="headerlink" href="#diag-cam-baseline-climo" title="Permalink to this headline">#</a></h4>
-<p>This subsection follows the <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and is used for the baseline (control/target) case run and diagnostics details.</p>
+<p>This subsection follows the <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and is used for the baseline (control/target) case run and diagnostics details. Change these variables:</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_case_name</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_hist_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${hist_path}/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">cam_climo_loc</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">${diag_loc}/climo/{diag_cam_baseline_climo.cam_case_name}</span></code></p>
