@@ -509,6 +509,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-runs">
+   ADF Runs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#yaml-files">
    YAML Files
   </a>
@@ -561,6 +566,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adf-runs">
+   ADF Runs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#yaml-files">
    YAML Files
   </a>
@@ -609,6 +619,10 @@ title="Print to PDF"
 <li><p>ADF Runs</p></li>
 <li><p>yaml basics</p></li>
 </ul>
+<section id="adf-runs">
+<h2>ADF Runs<a class="headerlink" href="#adf-runs" title="Permalink to this headline">#</a></h2>
+<p>Blah blah blah</p>
+</section>
 <section id="yaml-files">
 <h2>YAML Files<a class="headerlink" href="#yaml-files" title="Permalink to this headline">#</a></h2>
 <p>The ADF requires 2 different yaml configuration files:</p>
@@ -732,8 +746,7 @@ In this particular yaml file, we have built subsections in which variables set i
 <section id="variable-default-yaml">
 <h3>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h3>
 <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">&emsp;lib/adf_variable_defaults.yaml</span></code></h5>
-<p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
-<p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
+<p>This yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF. One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <p>Example of options for <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="p">:</span>
   <span class="n">colormap</span><span class="p">:</span> <span class="s2">&quot;Blues&quot;</span>
@@ -759,11 +772,11 @@ In this particular yaml file, we have built subsections in which variables set i
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
-<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the run-time yaml file (config_cam_baseline_example.yaml).<br></p>
-<p>Please see the reference section for the variable defaults file for further assistance. Also see the exercise example for customization</p>
+<p>If you would like to modify this file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF.<br></p>
+<p>Please see the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/reference/yaml/adf_variable_defaults.html" target="_blank">reference section</a> for the variable defaults file for further assistance. Also see the exercise example for customization</p>
 </div>
 <hr class="docutils" />
-<h3>Now let's put it all together and run a quick demo fo the ADF!</h3></section>
+<h5>Now let's put it all together and run a quick demo fo the ADF!</h5></section>
 </section>
 </section>
 </section>
