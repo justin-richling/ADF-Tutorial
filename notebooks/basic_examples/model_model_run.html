@@ -720,67 +720,59 @@ mark {
 <p class="admonition-title">Note</p>
 <p>Change only the variables listed in each highlighted subsection below and leave all the other variables in the conifg file as they are by default</p>
 </div>
-<ul>
-<li><p><mark>diag_basic_info</mark></p>
 <ul class="simple">
+<li><p><mark>diag_basic_info</mark></p>
+<ul>
 <li><p>Basic overall run variables</p></li>
 </ul>
 </li>
 <li><p><mark>diag_cam_climo</mark></p>
-<ul class="simple">
+<ul>
 <li><p>Test (experiment) case variables</p></li>
 </ul>
 </li>
 <li><p><mark>diag_cam_baseline_climo</mark></p>
-<ul class="simple">
+<ul>
 <li><p>Baseline (control) case variables</p></li>
 <li><p>Note: these are the same variables as <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> just for the baseline case</p></li>
 </ul>
 </li>
 <li><p>diag_cvdp_info</p>
-<ul class="simple">
+<ul>
 <li><p>For running the Climate Variability Diagnostics Package <a class="reference external" href="https://www.cesm.ucar.edu/projects/cvdp">https://www.cesm.ucar.edu/projects/cvdp</a></p></li>
 <li><p>This will run in the background of the ADF</p></li>
 </ul>
 </li>
 <li><p>time_averaging_scripts</p>
-<ul class="simple">
+<ul>
 <li><p>Climotology file creation</p></li>
 </ul>
 </li>
 <li><p>regridding_scripts</p>
-<ul class="simple">
+<ul>
 <li><p>Regridding of climo files</p></li>
 </ul>
 </li>
 <li><p>analysis_scripts</p>
-<ul class="simple">
+<ul>
 <li><p>AMWG statisics tables</p></li>
 </ul>
 </li>
 <li><p>plotting_scripts</p>
-<ul class="simple">
+<ul>
 <li><p>Various plotting scripts</p></li>
 </ul>
 </li>
 <li><p>diag_var_list</p>
-<ul class="simple">
+<ul>
 <li><p>List of CAM variables for ADF to run</p></li>
 </ul>
-</li>
-<li><p style="margin-top: -5px;">Global Variables</p>
-</li>
-<li><p style="margin-top: -5px;">diag_basic_info</p>
-</li>
-<li><p style="margin-top: -5px;">diag_cam_climo</p>
-</li>
-<li><p style="margin-top: -5px;">diag_cam_baseline_climo</p>
 </li>
 </ul>
 <br>
 <section id="global-variables">
 <h4>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">#</a></h4>
-<p>In the yaml file, let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file.</p>
+<p>In the yaml file, above the <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code> subsections let’s set global variables. These variables will be set above all the subsections so that they can be easily called in anywhere in the file. Make sure there is no indentation between the variable name and the left margin of the file!</p>
 <p>Set the user name that will be help set all paths later in the yaml file</p>
 <p style="margin-top: -5px;">&ensp; <code class="docutils literal notranslate"><span class="pre">user</span></code>: <code class="docutils literal notranslate"><span class="pre" style="color: black">richling (YOUR-USER-NAME)</span></code></p>
 <p>Create a new variable <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> for the root ADF diagnostic data/plots paths. This will be used to house the different directories for the time series, climo, and regridded files as well as where the plots and websites will go</p>
@@ -887,21 +879,11 @@ Check data/paths<br></p>
 <p> Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">diag_loc</span></code> location in the run-time config file</p>
 <p> <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</p>
 </div>
-<h4>JupyterHub</h4><h4>Website</h4>
+<h4>JupyterHub</h4>
+<p>apidfjwd</p>
+<h4>Website</h4>
 <p>If you choose to create HTML files you can publish those to a web server, make sure you’re in the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file.</p>
 <p>Within that directory lives the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory where all the html and css files are saved.</p>
-<div class="full-width docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
-├── plots
-│   └── f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000
-│       └── website
-│           ├── assets
-│           ├── html_img
-│           ├── html_table
-│           └── templates
-</pre></div>
-</div>
-</div>
 <p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
 <style>
     #box {
