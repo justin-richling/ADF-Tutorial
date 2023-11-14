@@ -534,6 +534,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Step 1: Run ADF
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
    Single CAM vs CAM case
   </a>
@@ -566,7 +571,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#id2">
    Step 2: Analyze ADF Output
   </a>
   <ul class="nav section-nav flex-column">
@@ -612,6 +617,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Step 1: Run ADF
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-cam-vs-cam-case">
    Single CAM vs CAM case
   </a>
@@ -644,7 +654,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#id2">
    Step 2: Analyze ADF Output
   </a>
   <ul class="nav section-nav flex-column">
@@ -672,8 +682,8 @@ title="Print to PDF"
 <h2>Why Jupyter?<a class="headerlink" href="#why-jupyter" title="Permalink to this headline">#</a></h2>
 <p>If you are looking to use the ADF in a more developmental or interactive way, using Jupyter will offer a lot more flexibility than running through the terminal.</p>
 <p>One major advantage of this way fo running the ADF will allow the user to immediately have access to output data in a Jupyter notebook which can allow for further development or use of diagnostics that aren’t in the ADF by defualt.</p>
-<p>One scenario to highlight tthis flexibility could be for tuning specific parameters of your model run that need  a specifi diagnostics set of tools that maybe only good for this tune. Now the user can build custom diagnostics code within the same Jupyter notebook that the ADF was run in!</p>
-<p>Let’s take a quick look at an example:</p>
+<p>One scenario to highlight this flexibility could be for tuning specific parameters of your model run that need a specific diagnostics set of tools that maybe only good for this tune. Now the user can build custom diagnostics code within the same Jupyter notebook that the ADF was run in!</p>
+<p>Let’s take a quick look at  example:</p>
 </section>
 <section id="step-1-run-adf">
 <h2>Step 1: Run ADF<a class="headerlink" href="#step-1-run-adf" title="Permalink to this headline">#</a></h2>
@@ -686,7 +696,15 @@ NPL 2023b
 </section>
 <section id="step-2-analyze-adf-output">
 <h2>Step 2: Analyze ADF Output<a class="headerlink" href="#step-2-analyze-adf-output" title="Permalink to this headline">#</a></h2>
-<p>Once the ADF has completed (either here in Jupyter or previously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
+<p>Once the ADF has completed (either here in Jupyter or previously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook.</p>
+</section>
+<section id="id1">
+<h2>Step 1: Run ADF<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>This will simulate running the ADF in the terminal, so nothing will be different here. In order to run the ADF, any of the NPL conda environments will suffice in Jupyter. NCAR has a couple to choose from (as of this tutorial):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>NPL 2023a
+NPL 2023b
+</pre></div>
+</div>
 <html>
    <body>
       <h3> Using the <em> download attribute of a tag </em> to create file download button using JavaScript. </h3>
@@ -696,7 +714,8 @@ NPL 2023b
          <button type = "button"> Download </button>
       </a>
    </body>
-</html><div class="cell docutils container">
+</html>
+<br><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
@@ -1475,11 +1494,113 @@ Wall time: 33min 22s
 <hr class="docutils" />
 </section>
 </section>
-<section id="id1">
-<h2>Step 2: Analyze ADF Output<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Once the ADF has completed (either here in Jupyter or preiously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
+<section id="id2">
+<h2>Step 2: Analyze ADF Output<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Once the ADF has completed (either here in Jupyter or previously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">adf</span></code> object can be searched for any quantity of interest. Using the dot, <code class="docutils literal notranslate"><span class="pre">.</span></code> and tab function in Jupyter, we can get a list of all the available instances, classes, functions, etc:</p>
 <p><img alt="adf objects" src="../../_images/adf_dir.png" /></p>
+<p>Or calling the <code class="docutils literal notranslate"><span class="pre">dir</span></code> command on the ADF object will print a list of all available objects:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">adf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_AdfBase__debug_log&#39;,
+ &#39;_AdfConfig__config_dict&#39;,
+ &#39;_AdfConfig__create_search_dict&#39;,
+ &#39;_AdfConfig__expand_yaml_var_ref&#39;,
+ &#39;_AdfConfig__kword_pattern&#39;,
+ &#39;_AdfConfig__search_dict&#39;,
+ &#39;_AdfDiag__analysis_scripts&#39;,
+ &#39;_AdfDiag__cvdp_info&#39;,
+ &#39;_AdfDiag__diag_scripts_caller&#39;,
+ &#39;_AdfDiag__function_caller&#39;,
+ &#39;_AdfDiag__plotting_scripts&#39;,
+ &#39;_AdfDiag__regridding_scripts&#39;,
+ &#39;_AdfDiag__time_averaging_scripts&#39;,
+ &#39;_AdfInfo__base_nickname&#39;,
+ &#39;_AdfInfo__basic_info&#39;,
+ &#39;_AdfInfo__cam_bl_climo_info&#39;,
+ &#39;_AdfInfo__cam_climo_info&#39;,
+ &#39;_AdfInfo__compare_obs&#39;,
+ &#39;_AdfInfo__diag_var_list&#39;,
+ &#39;_AdfInfo__eyear_baseline&#39;,
+ &#39;_AdfInfo__eyears&#39;,
+ &#39;_AdfInfo__num_cases&#39;,
+ &#39;_AdfInfo__num_procs&#39;,
+ &#39;_AdfInfo__plot_location&#39;,
+ &#39;_AdfInfo__syear_baseline&#39;,
+ &#39;_AdfInfo__syears&#39;,
+ &#39;_AdfInfo__test_nicknames&#39;,
+ &#39;_AdfObs__var_obs_dict&#39;,
+ &#39;_AdfObs__variable_defaults&#39;,
+ &#39;_AdfWeb__case_web_paths&#39;,
+ &#39;_AdfWeb__plot_type_multi&#39;,
+ &#39;_AdfWeb__plot_type_order&#39;,
+ &#39;_AdfWeb__website_data&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;add_diag_var&#39;,
+ &#39;add_website_data&#39;,
+ &#39;baseline_climo_dict&#39;,
+ &#39;basic_info_dict&#39;,
+ &#39;cam_climo_dict&#39;,
+ &#39;case_nicknames&#39;,
+ &#39;climo_yrs&#39;,
+ &#39;compare_obs&#39;,
+ &#39;create_climo&#39;,
+ &#39;create_html&#39;,
+ &#39;create_plots&#39;,
+ &#39;create_time_series&#39;,
+ &#39;create_website&#39;,
+ &#39;debug_log&#39;,
+ &#39;diag_var_list&#39;,
+ &#39;end_diag_fail&#39;,
+ &#39;expand_references&#39;,
+ &#39;get_baseline_info&#39;,
+ &#39;get_basic_info&#39;,
+ &#39;get_cam_info&#39;,
+ &#39;get_cvdp_info&#39;,
+ &#39;num_cases&#39;,
+ &#39;num_procs&#39;,
+ &#39;perform_analyses&#39;,
+ &#39;plot_location&#39;,
+ &#39;plotting_scripts&#39;,
+ &#39;read_config_var&#39;,
+ &#39;regrid_climo&#39;,
+ &#39;setup_run_cvdp&#39;,
+ &#39;var_obs_dict&#39;,
+ &#39;variable_defaults&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 <p>Grab the case name instances:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1574,7 +1695,7 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 <h3>Stratocumulus Example<a class="headerlink" href="#stratocumulus-example" title="Permalink to this headline">#</a></h3>
 <p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a sample custom plotting routine to calculate and plot statocumulus cloud over California.</p>
 <p>The point of this example is to highlight using a script not contained in the ADF to simulate custom analysis (that may be a one off diagnsotics need), all within the same notebook as our ADF run.</p>
-<p>Again, this can be very helpful becasue the ADF object has all the paths and case information already saved for convienence.</p>
+<p>Again, this can be very helpful becasue the ADF object has all the paths for the input/output data and case information already saved for convienence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the location of the climo files</span>
