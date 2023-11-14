@@ -190,47 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/custom_defaults.html">
-   Custom Variable Defaults For the ADF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
-     Customize Single Variable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
-     Customized File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/jupyter.html">
-   More Exercise for Jupter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   ADF - Reference
  </span>
 </p>
@@ -239,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -285,6 +244,57 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../run/basics-tutorial.html">
      Running ADF Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/custom_observations.html">
+   Custom Set of Observations
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/jupyter/git_branch.html">
+     Choosing Different Git Branch
     </a>
    </li>
   </ul>
@@ -678,26 +688,23 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-adf">
 <h1>Setting up ADF<a class="headerlink" href="#setting-up-adf" title="Permalink to this headline">#</a></h1>
 <p>Instructions on how to build the necessary environment for running the ADF.</p>
-<p>Setting up the environment and getting the ADF will be done in the command line and with git/GitHub, this tutorial assumes working knowledge of both.</p>
+<p>Setting up the environment and getting the ADF will be done in the command line and with git/GitHub; this tutorial assumes basic working knowledge of both.</p>
 <p>There are two steps (in this tutorial) to get the ADF up and running on your CISL machine:</p>
 <ol class="simple">
-<li><p>Setting up NCAR’s conda environment for all ADF necessary libraries</p></li>
-<li><p>Using git to clone the main branch of the ADF</p></li>
+<li><p>Loading up NCAR’s necessary modules for the required ADF packages/environment</p></li>
+<li><p>Using git to clone the main branch of the ADF to your machine</p></li>
 </ol>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>For this tutorial you must be on an NCAR CISL machine</strong></p>
 <p>There are some instructions for non-CISL machines, but there can be many obstacles like not being able to have access to the data, the correct libraries, insufficient computer resources, etc.</p>
-<p>For simplicity, this tutorial will only be geared towards users who have a CISL account and access to CISL machines, ie Casper/Cheyenne and NCAR JupyterHub.</p>
+<p>For simplicity, this tutorial will only be geared towards users who have a CISL account and access to CISL machines, ie Derecho/Casper/Cheyenne and NCAR JupyterHub.</p>
 </div>
 <section id="setting-up-adf-environment">
 <h2>Setting up ADF environment<a class="headerlink" href="#setting-up-adf-environment" title="Permalink to this headline">#</a></h2>
 <section id="cisl-computers">
 <h3>CISL Computers<a class="headerlink" href="#cisl-computers" title="Permalink to this headline">#</a></h3>
-<p>Setting up the ADF environment if on CISL (Cheyenne/Casper) machines</p>
-<ul class="simple">
-<li><p>More info can be found in the README on the GitHub: <a class="reference external" href="https://github.com/NCAR/ADF#required-software-environment">https://github.com/NCAR/ADF#required-software-environment</a></p></li>
-</ul>
+<p>Setting up the ADF environment on CISL (Derecho/Cheyenne/Casper) machines</p>
 </section>
 <section id="loading-modules">
 <h3>Loading <code class="docutils literal notranslate"><span class="pre">modules</span></code><a class="headerlink" href="#loading-modules" title="Permalink to this headline">#</a></h3>
