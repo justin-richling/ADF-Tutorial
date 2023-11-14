@@ -190,52 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/custom_defaults.html">
-   Custom Variable Defaults For the ADF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
-     Customize Single Variable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
-     Customized File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../exercises/custom_observations.html">
-   Custom Set of Observations For the ADF
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/jupyter.html">
-   More Exercise for Jupter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   ADF - Reference
  </span>
 </p>
@@ -244,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -266,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -290,6 +244,57 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../run/basics-tutorial.html">
      Running ADF Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/custom_observations.html">
+   Custom Set of Observations
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/jupyter/git_branch.html">
+     Choosing Different Git Branch
     </a>
    </li>
   </ul>
@@ -619,8 +624,7 @@ title="Print to PDF"
 <p>The ADF requires 2 different yaml configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>NOTE: Throughout this tutorial we will reference these as the <strong>run-time</strong> and <strong>variable default</strong> yaml files respectively.</p>
-<p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files.</p>
-<p>In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
+<p>If yaml files are new to you, they are just specialized text files that python (and other languages) can read in and use as configuration files. In the case of the ADF, the variables set in the yaml files will be parsed into Python dictionaries and will accessable throughout the ADF workflow.</p>
 <p>A couple of notes about using the ADF yaml files:<br>
   Variables can be referenced within the yaml file called with the <code class="docutils literal notranslate"><span class="pre">${}</span></code> syntax.<br>
 IE if we set a <code class="docutils literal notranslate"><span class="pre">user</span></code> variable <code class="docutils literal notranslate"><span class="pre">user:</span> <span class="pre">richling</span></code> we can call this by <code class="docutils literal notranslate"><span class="pre">${user}</span></code> and <code class="docutils literal notranslate"><span class="pre">richling</span></code> wil be used where ever it is referenced.<br></p>
@@ -661,6 +665,19 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
   visibility: visible;
 }
 </style>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please do not modify either of these files!</strong></p>
+<p>It is recommended to make a copy of each file, make modifications in those copies, and then run them with the ADF.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Example</p>
+<p>From the ADF root directory</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_cam_example.yaml config_your_run.yaml
+</pre></div>
+</div>
+<p>Then do your editing in <code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code></p>
+</div>
+</div>
 <section id="run-time-yaml">
 <h3>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h3>
 <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">&emsp;config_cam_baseline_example.yaml</span></code></h5>
@@ -732,7 +749,7 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>IE: Say we want to reference the user variable in the <strong>test case</strong> subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code></p>
 <p><strong>diag_cam_climo:</strong><br></p>
 <p>   cam_climo_loc: <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/${user}/ADF/data/climos/</span></code>  -&gt; <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/richling/ADF/data/climos/</span></code><br><br><br></p>
-</section>
+<h5>If this is seems strange, we will touch more in the <strong>GUIDED EXAMPLES</strong> section where we will touch more on this.</h5></section>
 </section>
 <section id="variable-default-yaml">
 <h3>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h3>
