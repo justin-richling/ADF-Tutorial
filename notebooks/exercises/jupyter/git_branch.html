@@ -241,11 +241,6 @@ const thebe_selector_output = ".output, .cell_output"
      Variable Defaults - adf_variable_defaults.yaml
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../run/basics-tutorial.html">
-     Running ADF Basics
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -522,6 +517,97 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="choosing-different-git-branch">
 <h1>Choosing Different Git Branch<a class="headerlink" href="#choosing-different-git-branch" title="Permalink to this headline">#</a></h1>
+<p>If you plan on working with the ADF in Jupyter in. adevelopmental capacity, sometimes it is necessary to work in different branches. This can be problematic or a hassle but can be done for JupyterHub with a couple extra steps:</p>
+<ol class="simple">
+<li><p>Locally, navigate to where your ADF main/development branches exist</p></li>
+<li></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#adf_path = &quot;/glade/work/{user}/ADF&quot; # &lt;-- uncomment and use your username</span>
+<span class="n">adf_path</span> <span class="o">=</span> <span class="s2">&quot;/glade/work/richling/ADF/ADF/&quot;</span> <span class="c1"># &lt;-- then comment out</span>
+
+<span class="c1">#print(f&quot;current working directory = {local_path}&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ADF path                  = </span><span class="si">{</span><span class="n">adf_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ADF path                  = /glade/work/richling/ADF/ADF/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">adf_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/glade/work/richling/ADF/ADF&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git branch
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* <span class=" -Color -Color-Green">main</span>
+  plot-title
+  plot-title-fix
+  tem-diagnostics
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git checkout tem-diagnostics
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updating files: 100% (7/7), done.
+M	jupyter_sample.ipynb
+Switched to branch &#39;tem-diagnostics&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git branch
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  main
+  plot-title
+  plot-title-fix
+* <span class=" -Color -Color-Green">tem-diagnostics</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
