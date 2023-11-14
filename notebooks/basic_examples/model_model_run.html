@@ -152,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../basics/adf_basics.html">
-   Some basic info about the ADF and the setups
+   Some basic info about setting up an ADF run
   </a>
  </li>
 </ul>
@@ -190,57 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/custom_defaults.html">
-   Custom Variable Defaults For the ADF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
-     Customize Single Variable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
-     Customized File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../exercises/custom_observations.html">
-   Custom Set of Observations For the ADF
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/jupyter.html">
-   More Exercise for Jupter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/jupyter/git_branch.html">
-     Choosing Different Git Branch
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   ADF - Reference
  </span>
 </p>
@@ -249,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -271,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -295,6 +244,57 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../run/basics-tutorial.html">
      Running ADF Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/custom_observations.html">
+   Custom Set of Observations
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/jupyter/git_branch.html">
+     Choosing Different Git Branch
     </a>
    </li>
   </ul>
@@ -671,7 +671,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="cam-vs-cam">
 <h1>CAM vs CAM<a class="headerlink" href="#cam-vs-cam" title="Permalink to this headline">#</a></h1>
-<p>This will be a simple guided demo of running the ADF with sample data for CAM vs CAM comparison. For an example of CAM simulation vs observations/reanalysis, navigate to <a href="">this demo</a></p>
+<h5>This will be a simple guided demo of running the ADF with sample data for CAM vs CAM comparison.</h5>
 <p>For this example we will run the ADF diagnostics for two different f-case CAM simulations for 5 years, 1995-2000:</p>
 <p>The test (experiment) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001</span></code></p>
 <p style="margin-top: -15px;">The baseline (control) case is <code class="docutils literal notranslate"><span class="pre">f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001</span></code></p>
@@ -686,7 +686,7 @@ title="Print to PDF"
 </p>
 <p>&emsp; 2. Run the ADF!</p>
 <hr class="docutils" />
-<p>Use this as a follow along as you work locally for this example ADF run.</p>
+<h5>Use this as a follow along as you work locally for this example ADF run.</h5>
 <p>Navigate to where you cloned the ADF:</p>
 <ul class="simple">
 <li><p>If you followed our instructions earlier, you should have the ADF root directory at: <code class="docutils literal notranslate"><span class="pre">/glade/work/&lt;user&gt;/ADF/</span></code></p></li>
@@ -695,10 +695,10 @@ title="Print to PDF"
 <h2>Configure Run-Time yaml file<a class="headerlink" href="#configure-run-time-yaml-file" title="Permalink to this headline">#</a></h2>
 <section id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
-<p>Look for the conifuration yaml file that will be used to run the ADF, <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code></p>
+<p>Look for the conifuration yaml file that will be used to run the ADF: <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code></p>
 <p>This is probably the most important file for the ADF. This stores all the necessary information that the ADF needs to run as well as all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>As a quick refresher from the intro to yaml section, we can utilize the <code class="docutils literal notranslate"><span class="pre">${}</span></code> notation to reference already declared variables elsewhere in the yaml files.</p>
-<p>We will copy the provided configuration yaml file <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code> and will do small edits to run an example ADF with sample data.</p>
+<p>We will copy the provided configuration yaml file <code class="docutils literal notranslate"><span class="pre">config_baseline_example.yaml</span></code> and will do small edits to that copy and we will run an example ADF with some sample data.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp config_baseline_example.yaml config_model_vs_model_example.yaml
 </pre></div>
 </div>
