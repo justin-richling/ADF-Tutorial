@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Custom Variable Defaults For the ADF" href="../exercises/custom_defaults.html" />
+    <link rel="next" title="ADF Basics" href="../reference/intro.html" />
     <link rel="prev" title="CAM vs Model Intercomparison (ie CMIP)" href="model_cmip_run.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -128,7 +128,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../intro/jb_html_css_tips_tricks.html">
-   What is the ADF
+   Jupyter Book/HTML/CSS Tips and Tricks
   </a>
  </li>
 </ul>
@@ -152,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../basics/adf_basics.html">
-   Some basic info about the ADF and the setups
+   Some basic info about setting up an ADF run
   </a>
  </li>
 </ul>
@@ -190,47 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/custom_defaults.html">
-   Custom Variable Defaults For the ADF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
-     Customize Single Variable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
-     Customized File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../exercises/jupyter.html">
-   More Exercise for Jupter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   ADF - Reference
  </span>
 </p>
@@ -239,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -285,6 +244,57 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../run/basics-tutorial.html">
      Running ADF Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/custom_observations.html">
+   Custom Set of Observations
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/jupyter/git_branch.html">
+     Choosing Different Git Branch
     </a>
    </li>
   </ul>
@@ -676,7 +686,7 @@ NPL 2023b
 </section>
 <section id="step-2-analyze-adf-output">
 <h2>Step 2: Analyze ADF Output<a class="headerlink" href="#step-2-analyze-adf-output" title="Permalink to this headline">#</a></h2>
-<p>Once the ADF has completed (either here in Jupyter or preiously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
+<p>Once the ADF has completed (either here in Jupyter or previously from terminal run) we can use the <code class="docutils literal notranslate"><span class="pre">adf</span></code> object to gain access to everything available in the ADF. This could be very useful if you want to develop diagsnostics separate from the ADF in a Jupyter Notebook</p>
 <html>
    <body>
       <h3> Using the <em> download attribute of a tag </em> to create file download button using JavaScript. </h3>
@@ -945,18 +955,6 @@ Wall time: 1min 6s
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1">#Create model climatology (climo) files.</span>
 <span class="n">adf</span><span class="o">.</span><span class="n">create_climo</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Calculating CAM climatologies...
-	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001&#39; :
-	    /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001 not found, making new directory
-	 Calculating climatologies for case &#39;f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001&#39; :
-	    /glade/scratch/richling/ADF/adf_tutorial/data/climo/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001 not found, making new directory
-  ...CAM climatologies have been calculated successfully.
-CPU times: user 226 ms, sys: 307 ms, total: 533 ms
-Wall time: 5min 13s
 </pre></div>
 </div>
 </div>
@@ -1574,6 +1572,8 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 </div>
 <section id="stratocumulus-example">
 <h3>Stratocumulus Example<a class="headerlink" href="#stratocumulus-example" title="Permalink to this headline">#</a></h3>
+<p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a sample custom plotting routine to calculate and plot statocumulus cloud over California.</p>
+<p>The point of this example is to highlight using a script not contained in the ADF to simulate custom analysis (that may be a one off diagnsotics need), all within the same notebook as our ADF run.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the location of the climo files</span>
@@ -2798,10 +2798,10 @@ Attributes:
             <p class="prev-next-title">CAM vs Model Intercomparison (ie CMIP)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../exercises/custom_defaults.html" title="next page">
+    <a class='right-next' id="next-link" href="../reference/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Custom Variable Defaults For the ADF</p>
+        <p class="prev-next-title">ADF Basics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

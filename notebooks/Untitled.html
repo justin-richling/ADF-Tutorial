@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="intro/jb_html_css_tips_tricks.html">
-   What is the ADF
+   Jupyter Book/HTML/CSS Tips and Tricks
   </a>
  </li>
 </ul>
@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="basics/adf_basics.html">
-   Some basic info about the ADF and the setups
+   Some basic info about setting up an ADF run
   </a>
  </li>
 </ul>
@@ -188,47 +188,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  ADF Exercises
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exercises/custom_defaults.html">
-   Custom Variable Defaults For the ADF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/custom_defaults/single_variable.html">
-     Customize Single Variable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises/custom_defaults/custom_file.html">
-     Customized File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="exercises/jupyter.html">
-   More Exercise for Jupter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   ADF - Reference
  </span>
 </p>
@@ -237,8 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -259,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -283,6 +242,57 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="run/basics-tutorial.html">
      Running ADF Basics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADF Exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exercises/custom_defaults.html">
+   Custom Variable Defaults For the ADF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/custom_defaults/single_variable.html">
+     Customize Single Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/custom_defaults/custom_file.html">
+     Customized File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises/custom_observations.html">
+   Custom Set of Observations
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exercises/jupyter.html">
+   More Exercise for Jupter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/jupyter/git_branch.html">
+     Choosing Different Git Branch
     </a>
    </li>
   </ul>
@@ -791,6 +801,67 @@ The plotting scripts live here, right? /glade/work/richling/ADF/ADF/scripts/plot
     <span class="n">liq_aave</span> <span class="o">=</span> <span class="n">liq_plev</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span><span class="s2">&quot;lon&quot;</span><span class="p">))</span>
     <span class="n">ps_aave</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span><span class="s2">&quot;lon&quot;</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">theta_aave</span><span class="p">,</span> <span class="n">q_aave</span><span class="p">,</span> <span class="n">liq_aave</span><span class="p">,</span> <span class="n">ps_aave</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gc.interp_sigma_to_hybrid<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
+gc<span class=" -Color -Color-Blue">.</span>interp_sigma_to_hybrid<span class=" -Color -Color-Blue">(</span>
+    data<span class=" -Color -Color-Blue">:</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray<span class=" -Color -Color-Blue">,</span>
+    sig_coords<span class=" -Color -Color-Blue">:</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray<span class=" -Color -Color-Blue">,</span>
+    ps<span class=" -Color -Color-Blue">:</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray<span class=" -Color -Color-Blue">,</span>
+    hyam<span class=" -Color -Color-Blue">:</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray<span class=" -Color -Color-Blue">,</span>
+    hybm<span class=" -Color -Color-Blue">:</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray<span class=" -Color -Color-Blue">,</span>
+    p0<span class=" -Color -Color-Blue">:</span> float <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">100000.0</span><span class=" -Color -Color-Blue">,</span>
+    lev_dim<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    method<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;linear&#39;,</span>
+<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Blue">-&gt;</span> xarray<span class=" -Color -Color-Blue">.</span>core<span class=" -Color -Color-Blue">.</span>dataarray<span class=" -Color -Color-Blue">.</span>DataArray
+<span class=" -Color -Color-Red">Docstring:</span>
+Interpolate data from sigma to hybrid coordinates.  Keeps the attributes
+(i.e. meta information) of the input data in the output as default.
+
+Parameters
+----------
+data : :class:`xarray.DataArray`
+    Multidimensional data array, which holds sigma levels and has a ``lev_dim`` coordinate.
+
+sig_coords : :class:`xarray.DataArray`
+    A one-dimensional array of sigma coordinates of ``lev_dim`` of ``data``.
+
+ps : :class:`xarray.DataArray`
+    A multi-dimensional array of surface pressures (Pa), same time/space shape as data.
+
+hyam, hybm : :class:`xarray.DataArray`
+    One-dimensional arrays containing the hybrid A and B coefficients. Must have the same
+    dimension as the output hybrid levels.
+
+p0 : float, optional
+    Scalar numeric value equal to surface reference pressure (Pa). Defaults to 100000 Pa.
+
+lev_dim : str, optional
+    String that is the name of level dimension in data. Defaults to &quot;lev&quot;.
+
+method : str, optional
+    String that is the interpolation method; can be either &quot;linear&quot; or &quot;log&quot;. Defaults to &quot;linear&quot;.
+
+Returns
+-------
+output : :class:`xarray.DataArray`
+    Interpolated data with hybrid levels
+
+See Also
+--------
+Related NCL Function:
+`sigma2hybrid &lt;https://www.ncl.ucar.edu/Document/Functions/Built-in/sigma2hybrid.shtml&gt;`__
+<span class=" -Color -Color-Red">File:</span>      /glade/u/apps/opt/conda/envs/npl-2023a/lib/python3.9/site-packages/geocat/comp/interpolation.py
+<span class=" -Color -Color-Red">Type:</span>      function
 </pre></div>
 </div>
 </div>
