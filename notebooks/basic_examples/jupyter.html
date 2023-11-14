@@ -566,8 +566,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stratocumulus-example">
-     Stratocumulus Example
+    <a class="reference internal nav-link" href="#stratocumulus-over-california-example">
+     Stratocumulus Over California Example
     </a>
    </li>
   </ul>
@@ -639,8 +639,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stratocumulus-example">
-     Stratocumulus Example
+    <a class="reference internal nav-link" href="#stratocumulus-over-california-example">
+     Stratocumulus Over California Example
     </a>
    </li>
   </ul>
@@ -1655,9 +1655,9 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 </div>
 </div>
 </div>
-<h5>Let's build a custom diagnsotics plot!</h5><section id="stratocumulus-example">
-<h3>Stratocumulus Example<a class="headerlink" href="#stratocumulus-example" title="Permalink to this headline">#</a></h3>
-<p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a sample custom plotting routine to calculate and plot statocumulus cloud over California.</p>
+<h5>Let's build a custom diagnsotics plot!</h5><section id="stratocumulus-over-california-example">
+<h3>Stratocumulus Over California Example<a class="headerlink" href="#stratocumulus-over-california-example" title="Permalink to this headline">#</a></h3>
+<p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a custom routine to calculate and plot statocumulus clouds over California.</p>
 <p>The point of this example is to highlight using a script not contained in the ADF to simulate custom analysis (that may be a one off diagnsotics need), all within the same notebook as our ADF run.</p>
 <p>Again, this can be very helpful becasue the ADF object has all the paths for the input/output data and case information already saved for convienence.</p>
 <div class="cell docutils container">
@@ -1672,7 +1672,8 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="n">case_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">tab20</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">case</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">case_names</span><span class="p">)]</span> <span class="c1"># change color for each case</span>
+<span class="c1"># change color for each case</span>
+<span class="n">case_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">tab20</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">case</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">case_names</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
