@@ -1,4 +1,4 @@
-# Welcome to the AMWG Diagnostics Framework Tutorial (ADF)
+# Welcome to the AMWG Diagnostics Framework (ADF) Tutorial
 
 
 <br>
