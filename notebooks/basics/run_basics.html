@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ADF Demo Setup &#8212; ADF Tutorial</title>
+    <title>ADF Run &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CAM vs CAM" href="model_model_run.html" />
-    <link rel="prev" title="ADF Run" href="../basics/run_basics.html" />
+    <link rel="next" title="ADF Demo Setup" href="../basic_examples/readme.html" />
+    <link rel="prev" title="Some basic info about setting up an ADF run" href="adf_basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -154,14 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   ADF Basics
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../basics/adf_basics.html">
+  <a class="reference internal" href="adf_basics.html">
    Some basic info about setting up an ADF run
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../basics/run_basics.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    ADF Run
   </a>
  </li>
@@ -171,29 +171,29 @@ const thebe_selector_output = ".output, .cell_output"
   Guided Examples
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basic_examples/readme.html">
    ADF Demo Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="model_model_run.html">
+  <a class="reference internal" href="../basic_examples/model_model_run.html">
    CAM vs CAM
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="model_obs_run.html">
+  <a class="reference internal" href="../basic_examples/model_obs_run.html">
    CAM vs Obs
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="model_cmip_run.html">
+  <a class="reference internal" href="../basic_examples/model_cmip_run.html">
    CAM vs Model Intercomparison (ie CMIP)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="jupyter.html">
+  <a class="reference internal" href="../basic_examples/jupyter.html">
    ADF in Jupyter
   </a>
  </li>
@@ -376,7 +376,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/basic_examples/readme.ipynb"
+        <a href="https://mybinder.org/v2/gh/justin-richling/ADF-Tutorial/main?urlpath=tree/docs/notebooks/basics/run_basics.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -436,7 +436,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/basic_examples/readme.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/justin-richling/ADF-Tutorial/issues/new?title=Issue%20on%20page%20%2Fnotebooks/basics/run_basics.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -464,7 +464,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/notebooks/basic_examples/readme.ipynb"
+        <a href="../../_sources/notebooks/basics/run_basics.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -513,7 +513,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ADF Demo Setup</h1>
+                <h1>ADF Run</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -525,33 +525,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adf-demo-setup">
-<h1>ADF Demo Setup<a class="headerlink" href="#adf-demo-setup" title="Permalink to this headline">#</a></h1>
-<p>This section is meant to allow users to run the ADF if you want to have an ADF run that produces all the outputs.</p>
-<ul class="simple">
-<li><p>Variables needed for plots like the QBO or TEM diagnsotcis may not be in your actual run, so this will allow</p></li>
-</ul>
-<p>Now we will walk through two common ADF setups:</p>
-<ul>
-<li><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basic_examples/model_model_run.html">CAM simulation vs CAM simulation</a></li>
-<li><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basic_examples/model_obs_run.html">CAM simulation vs Observations/Reanalysis</a></li>
-<li><a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basic_examples/model_cmip_run.html">CAM simulation vs Model Intercomparisons</a> (CMIP, AMIP)</li>
-</ul>
-<p>These will be quick demos and are meant to show simple setups for running the ADF. For additional exercises see <strong>ADF EXERCISES</strong> section.</p>
-<div class="attention admonition">
-<p class="admonition-title">Note</p>
-<p>The setups will look almost identical, but pay attention to the small differences.</p>
-</div>
-<p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basics/adf.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
-<p>&emsp; <s>0. Run CAM simulation to get history ( h0* ) file(s) 
-           *or other history files</s></p>
-<p>&emsp; 1. Configure yaml file(s) for the history files<br>
-<p>    <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
-       Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
-<p>    <s><code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code>   (necessary, but optional to copy and change)</s><br>
-       For this example we <strong>will not</strong> be editing the variable defaults yaml file<br></p>
-</p>
-<p>&emsp; 2. Run the ADF!</p></section>
+  <section class="tex2jax_ignore mathjax_ignore" id="adf-run">
+<h1>ADF Run<a class="headerlink" href="#adf-run" title="Permalink to this headline">#</a></h1>
+<p>If you have a set of simulations you want to try the ADF out on, let’s get you set up!</p>
+<p>If you want to explore more guided and detailed examples skip to the <a href=""><strong>GUIDED EXAMPLES</strong></a> section for step by step setup for provided sample data.</p>
+<ol class="simple">
+<li><p>Make sure your ADF clone is the most up to date version</p></li>
+<li><p>make a copy of the config_cam_baseline_example.yaml file, I usually name it with explicit ‘case_vs_baseline’ format but feel free to name it something that makes sense to you. The yaml files are in the root folder of where you installed the ADF.</p></li>
+<li><p>open that copied file and the main sections you’ll want to change are:
+user - use your NCAR username
+diag_basic_info - this is where you’ll set some main run variables, the ones I usually change are:
+compare_obs - set true/false depending which run you want
+cam_regrid_loc - where the regridded files for the cases in this ADF run will be saved, you can change or use the default location, just take note
+cam_diag_loc - where the diagnostic plots will be saved, again, you can change or use default
+diag_cam_climo - for the experiment case (test), the ones I change are:
+cam_case_name - just the name of the case run
+cam_hist_loc - where the h# history files live
+case_nickname - anything that would be easier than the case name if you want, it will default to the case name if left blank
+start/end_years - climo years desired
+cam_climo_loc - where you want climo files saved
+cam_ts_loc  - where you want time series files saved
+diag_cam_baseline_climo - same exact variables as the diag_cam_climo above, just set for the control (baseline) case. If using Obs, just ignore this section
+Then at the end of the config file are the plots and variables, set these as you like!
+Then you can make a copy of this new yaml file and change the obs flag for your vs Obs run.</p></li>
+<li><p>To run the ADF, from the ADF root path, in a terminal just run: ./run_adf_diag your_new_yaml_file.yaml</p></li>
+</ol>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -566,7 +565,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/basic_examples"
+            path: "./notebooks/basics"
         },
         predefinedOutput: true
     }
@@ -580,17 +579,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../basics/run_basics.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="adf_basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ADF Run</p>
+            <p class="prev-next-title">Some basic info about setting up an ADF run</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="model_model_run.html" title="next page">
+    <a class='right-next' id="next-link" href="../basic_examples/readme.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CAM vs CAM</p>
+        <p class="prev-next-title">ADF Demo Setup</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
