@@ -628,17 +628,15 @@ Then you can make a copy of this new yaml file and change the obs flag for your 
 <section id="website">
 <h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
 <p>If you choose to create HTML files you can publish those to a web server. In the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file, a <code class="docutils literal notranslate"><span class="pre">website</span></code> directory exists where all the html and css files are saved.</p>
-<div class="full-width docutils">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
 ├── plots
-│   └── f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000
+│   └── &lt;test_case&gt;_&lt;start_year&gt;_&lt;end_year&gt;_vs_&lt;baseline_case&gt;_&lt;start_year&gt;_&lt;end_year&gt;
 │       └── website
 │           ├── assets
 │           ├── html_img
 │           ├── html_table
 │           └── templates
 </pre></div>
-</div>
 </div>
 <p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
 <style>
