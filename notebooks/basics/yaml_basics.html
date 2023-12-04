@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ADF YAML files &#8212; ADF Tutorial</title>
+    <title>YAML files &#8212; ADF Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -162,7 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   ADF YAML files
+   YAML files
   </a>
  </li>
  <li class="toctree-l1">
@@ -505,30 +505,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#yaml-files">
-   YAML Files
+  <a class="reference internal nav-link" href="#run-time-yaml">
+   Run-time yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-time-yaml">
-     Run-time yaml
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#u-subsections-u">
-       <u>
-        Subsections
-       </u>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variable-default-yaml">
-     Variable Default yaml
+    <a class="reference internal nav-link" href="#u-subsections-u">
+     <u>
+      Subsections
+     </u>
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-default-yaml">
+   Variable Default yaml
+  </a>
  </li>
 </ul>
 
@@ -539,7 +532,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ADF YAML files</h1>
+                <h1>YAML files</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -550,30 +543,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#yaml-files">
-   YAML Files
+  <a class="reference internal nav-link" href="#run-time-yaml">
+   Run-time yaml
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-time-yaml">
-     Run-time yaml
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#u-subsections-u">
-       <u>
-        Subsections
-       </u>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variable-default-yaml">
-     Variable Default yaml
+    <a class="reference internal nav-link" href="#u-subsections-u">
+     <u>
+      Subsections
+     </u>
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-default-yaml">
+   Variable Default yaml
+  </a>
  </li>
 </ul>
 
@@ -585,10 +571,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="adf-yaml-files">
-<h1>ADF YAML files<a class="headerlink" href="#adf-yaml-files" title="Permalink to this headline">#</a></h1>
-<section id="yaml-files">
-<h2>YAML Files<a class="headerlink" href="#yaml-files" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="yaml-files">
+<h1>YAML files<a class="headerlink" href="#yaml-files" title="Permalink to this headline">#</a></h1>
 <p>The ADF requires 2 different yaml configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">adf_variable_defaults.yaml</span></code></p>
 <p>NOTE: Throughout this tutorial we will reference these as the <strong>run-time</strong> and <strong>variable default</strong> yaml files respectively.</p>
@@ -647,12 +631,12 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </div>
 </div>
 <section id="run-time-yaml">
-<h3>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h3>
+<h2>Run-time yaml<a class="headerlink" href="#run-time-yaml" title="Permalink to this headline">#</a></h2>
 <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">&emsp;config_cam_baseline_example.yaml</span></code></h5>
 <p>This is the most important file for the ADF, it stores all the necessary information that the ADF needs to run including all the relevant information about the case and baseline/observation/cmip runs.</p>
 <p>It is also broken up into <strong>subsections</strong> with each subsection of the yaml file representing grouped sets of information sent to the ADF each having their own variable names.</p>
 <section id="u-subsections-u">
-<h4><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h4>
+<h3><u>Subsections</u><a class="headerlink" href="#u-subsections-u" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>diag_basic_info</p>
 <ul>
@@ -702,8 +686,8 @@ IE if we set a <code class="docutils literal notranslate"><span class="pre">user
 </ul>
 </li>
 </ul>
-<p>CAVEAT:<br>
-In this particular yaml file, we have built subsections in which variables set in a subsection are only callable by referencing the subsection first with a “<code class="docutils literal notranslate"><span class="pre">.</span></code>” then variable name.</p>
+<p>CAVEAT: using variables in this yaml file<br>
+In this file, we have built subsections in which variables set in a subsection are only callable by referencing the subsection first with a “<code class="docutils literal notranslate"><span class="pre">.</span></code>” then variable name.</p>
 <p>IE: Say we want to set the climo years in the <strong>test case</strong> subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code> and call them in the <strong>baseline case</strong> subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_baseline_climo</span></code></p>
 <p><strong>diag_cam_climo:</strong><br></p>
 <p>   start_year: 1995  -&gt; we would reference this with <code class="docutils literal notranslate"><span class="pre">diag_cam_climo.start_year</span></code><br>
@@ -717,10 +701,10 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>IE: Say we want to reference the user variable in the <strong>test case</strong> subsection <code class="docutils literal notranslate"><span class="pre">diag_cam_climo</span></code></p>
 <p><strong>diag_cam_climo:</strong><br></p>
 <p>   cam_climo_loc: <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/${user}/ADF/data/climos/</span></code>  -&gt; <code class="docutils literal notranslate"><span class="pre" style="color: black;">/glade/work/richling/ADF/data/climos/</span></code></p>
-<h6>If this is seems strange, we will touch more in the <strong>GUIDED EXAMPLES</strong> section where we will touch more on this.</h6></section>
+</section>
 </section>
 <section id="variable-default-yaml">
-<h3>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h3>
+<h2>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h2>
 <h5><code class="docutils literal notranslate"><span class="pre" style="color: #076E85;">&emsp;lib/adf_variable_defaults.yaml</span></code></h5>
 <p>This yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF. One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <p>Example of options for <code class="docutils literal notranslate"><span class="pre">U</span></code></p>
@@ -746,7 +730,6 @@ In this particular yaml file, we have built subsections in which variables set i
 <p>Please see the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/reference/yaml/adf_variable_defaults.html" target="_blank">reference section</a> for the variable defaults file for more details of the contents.</p>
 <p>Also see the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/exercises/custom_defaults.html" target="_blank">exercise example</a> for using a custom variable defaults file.</p>
 <hr class="docutils" />
-</section>
 </section>
 </section>
 
