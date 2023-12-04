@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Running ADF Basics" href="../../run/basics-tutorial.html" />
+    <link rel="next" title="Custom Variable Defaults For the ADF" href="../../exercises/custom_defaults.html" />
     <link rel="prev" title="Run Time - config_cam_baseline_example.yaml" href="config_cam_baseline_example.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -124,6 +124,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro/adf.html">
    Intro to the ADF
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro/output.html">
+   What do you get?
   </a>
  </li>
  <li class="toctree-l1">
@@ -239,11 +244,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Variable Defaults - adf_variable_defaults.yaml
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../run/basics-tutorial.html">
-     Running ADF Basics
     </a>
    </li>
   </ul>
@@ -519,53 +519,29 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-default-settings">
-   Variable Default Settings
+  <a class="reference internal nav-link" href="#plotting">
+   Plotting
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set-p-p">
-     Custom Set
-     <p>
-      *
-     </p>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting">
-     Plotting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observations">
-     Observations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vector">
-     Vector
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#website">
-     Website
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variable-default-yaml">
-       Variable Default yaml
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#custom-set">
-         Custom Set
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations">
+   Observations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector">
+   Vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#website">
+   Website
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-set">
+   Custom Set
+  </a>
  </li>
 </ul>
 
@@ -587,53 +563,29 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-default-settings">
-   Variable Default Settings
+  <a class="reference internal nav-link" href="#plotting">
+   Plotting
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#custom-set-p-p">
-     Custom Set
-     <p>
-      *
-     </p>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting">
-     Plotting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observations">
-     Observations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vector">
-     Vector
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#website">
-     Website
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variable-default-yaml">
-       Variable Default yaml
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#custom-set">
-         Custom Set
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations">
+   Observations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector">
+   Vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#website">
+   Website
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-set">
+   Custom Set
+  </a>
  </li>
 </ul>
 
@@ -647,32 +599,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="variable-defaults-adf-variable-defaults-yaml">
 <h1>Variable Defaults - adf_variable_defaults.yaml<a class="headerlink" href="#variable-defaults-adf-variable-defaults-yaml" title="Permalink to this headline">#</a></h1>
-<p>Location for many plotting, unit, etc defualts for any/all CAM output variables</p>
-<section id="variable-default-settings">
-<h2>Variable Default Settings<a class="headerlink" href="#variable-default-settings" title="Permalink to this headline">#</a></h2>
-<section id="custom-set-p-p">
-<h3>Custom Set <p>*</p><a class="headerlink" href="#custom-set-p-p" title="Permalink to this headline">#</a></h3>
-<p>If you plan on using a modified file for your custom values you need to set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#code-class-docutils-literal-notranslate-span-class-pre-defaults-file-span-code"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
-</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Please do not modify this file unless you plan to push your changes back to the ADF repo!</strong></p>
-<p>If you would like to use a custom file for your personal ADF runs then it is recommended to make a copy of this file, make modifications in that copy, and then point the ADF to it using the <code class="docutils literal notranslate"><span class="pre">defaults_file</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a>.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Example</p>
-<p>From the ADF root directory</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp lib/adf_variable_defaults.yaml lib/my_variable_defaults.yaml
-</pre></div>
-</div>
-<p>In <code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code>:</p>
-<p>Under the subset <code class="docutils literal notranslate"><span class="pre">diag_basic_info</span></code>:</p>
-<p style="margin-top: -5px;">&ensp; defaults_file: <code class="docutils literal notranslate"><span class="pre">/path/to/your_variable_defaults.yaml</span></code></p>
-</div>
-</div>
+<h4>adf_variable_defaults.yaml</h4>
+<p>Location for many plotting, unit, etc defaults for any/all CAM output variables</p>
+<p>This yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
+<p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
 <p>These are the values that can be set for each variable. None are required.</p>
-</section>
 <section id="plotting">
-<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h3>
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">colormap</span></code><a class="headerlink" href="#colormap" title="Permalink to this heading">#</a></h4>
 <ul>
 <li><p>The colormap that will be used for filled contour plots.</p></li>
@@ -724,7 +657,7 @@ title="Print to PDF"
 <li><p>Currently only accepts "ocean", which means the variable will be masked everywhere that isn't open ocean.</p></li>
 </ul></section>
 <section id="observations">
-<h3>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h3>
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h2>
 <p>If you want to use observation files that are not in the same location as the ones set in <code class="docutils literal notranslate"><span class="pre">obs_data_loc</span></code> config variable in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html#code-class-docutils-literal-notranslate-span-class-pre-obs-data-loc-span-code"><code class="docutils literal notranslate"><span class="pre">config_your_run.yaml</span></code> (copy of config_cam_baseline_example.yaml)</a> file, you can set them on a variable by variable basis here.</p>
 <h4><code class="docutils literal notranslate"><span class="pre">obs_file</span></code><a class="headerlink" href="#obs_file" title="Permalink to this heading">#</a></h4>
 <ul>
@@ -748,7 +681,7 @@ title="Print to PDF"
 <li><p>If this isn't present then the variable name is assumed to be the same as the model variable name.</p></li>
 </ul></section>
 <section id="vector">
-<h3>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h3>
+<h2>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">vector_pair</span></code></h4>
 <ul>
 <li><p>Another variable that when combined with the given variable makes up a vector pair.</p></li>
@@ -759,18 +692,14 @@ title="Print to PDF"
 <li><p>The name of the vector the variable is associated with, which will be used to title the respective vector plot(s).</p></li>
 </ul></section>
 <section id="website">
-<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
+<h2>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h2>
 <h4><code class="docutils literal notranslate"><span class="pre">category</span></code></h4>
 <ul>
 <li><p>The website category the variable will be placed under.</p>
-</ul><section id="variable-default-yaml">
-<h4>Variable Default yaml<a class="headerlink" href="#variable-default-yaml" title="Permalink to this headline">#</a></h4>
-<h4>adf_variable_defaults.yaml</h4>
-<p>Thsi yaml file is designed to host a myriad of information related to each of the variables that are being analyzed in the ADF.</p>
-<p>One of the main points to using this file is to customize plotting options on a variable by variable basis.</p>
+</ul></section>
 <section id="custom-set">
-<h5>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h5>
-<p>If you plan on modifying anything in the variable defaults file, please makea copy and yada yada yada</p>
+<h2>Custom Set<a class="headerlink" href="#custom-set" title="Permalink to this headline">#</a></h2>
+<p>If you plan on modifying anything in the variable defaults file, please make a copy and yada yada yada</p>
 <p>If you plan on using a modified file for your custom values you need to set <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#use-defaults"><code class="docutils literal notranslate"><span class="pre">use_defaults</span></code></a> in your copy of the config_yaml to false and set the path to the custom variable default file with <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/configs/yaml/runtime.html#defaults-file"><code class="docutils literal notranslate"><span class="pre">defaults_file</span></code></a>
 </p>
 <div class="admonition warning">
@@ -828,9 +757,6 @@ title="Print to PDF"
 </div>
 </section>
 </section>
-</section>
-</section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -866,10 +792,10 @@ title="Print to PDF"
             <p class="prev-next-title">Run Time - config_cam_baseline_example.yaml</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../run/basics-tutorial.html" title="next page">
+    <a class='right-next' id="next-link" href="../../exercises/custom_defaults.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Running ADF Basics</p>
+        <p class="prev-next-title">Custom Variable Defaults For the ADF</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
