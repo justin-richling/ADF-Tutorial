@@ -508,6 +508,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#check-the-adf-output">
    Check the ADF output
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locally">
+     Locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterhub">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -532,6 +549,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#check-the-adf-output">
    Check the ADF output
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locally">
+     Locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterhub">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -578,7 +612,8 @@ Then you can make a copy of this new yaml file and change the obs flag for your 
 <section id="check-the-adf-output">
 <h2>Check the ADF output<a class="headerlink" href="#check-the-adf-output" title="Permalink to this headline">#</a></h2>
 <p>If your ADF run completes there are a couple ways to explore the output plots</p>
-<h4>Locally</h4>
+<section id="locally">
+<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">#</a></h3>
 <p>If the ADF ran successfully, we can navigate to where we set the diagnostic plots output:</p>
 <div class="full-width docutils">
 <p> On a CISL machine, navigate to the root ADF directory</p>
@@ -586,9 +621,13 @@ Then you can make a copy of this new yaml file and change the obs flag for your 
 <p> Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location in the run-time config file</p>
 <p><code class="docutils literal notranslate"><span class="pre"> f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
 </div>
-<h4>JupyterHub</h4>
+</section>
+<section id="jupyterhub">
+<h3>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this headline">#</a></h3>
 <p>apidfjwd</p>
-<h4>Website</h4>
+</section>
+<section id="website">
+<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
 <p>If you choose to create HTML files you can publish those to a web server. In the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file, a <code class="docutils literal notranslate"><span class="pre">website</span></code> directory exists where all the html and css files are saved.</p>
 <div class="full-width docutils">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
@@ -614,8 +653,9 @@ Then you can make a copy of this new yaml file and change the obs flag for your 
      <code class="docutils literal notranslate"><span class="pre" style="color: black;">scp -r website/* <a class="reference external" href="http://tungsten.cgd.ucar.edu">tungsten.cgd.ucar.edu</a>:/path/to/your/project/page/</span></code>)</p>
 <div class="admonition tip" style="padding-right: 7px">
 <div><h6>A sample website:</h6></div>
-<p><a href="https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/" target="_blank">https://project.cgd.ucar.edu/projects/ADF/examples/single-case/cam_vs_cam/</a></p>
+<p><a href="https://webext.cgd.ucar.edu/FLTHIST/f.cam6_3_132.FLTHIST_ne30.001/atm/f.cam6_3_132.FLTHIST_ne30.001_1995_2011_vs_f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae.001_1995_2011/index.html" target="_blank">https://webext.cgd.ucar.edu/FLTHIST/f.cam6_3_132.FLTHIST_ne30.001/atm/f.cam6_3_132.FLTHIST_ne30.001_1995_2011_vs_f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae.001_1995_2011/index.html</a></p>
 </div>
+</section>
 </section>
 </section>
 
