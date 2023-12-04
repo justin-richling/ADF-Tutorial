@@ -127,6 +127,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../intro/output.html">
+   What do you get?
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../intro/jb_html_css_tips_tricks.html">
    Jupyter Book/HTML/CSS Tips and Tricks
   </a>
@@ -239,11 +244,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../reference/yaml/adf_variable_defaults.html">
      Variable Defaults - adf_variable_defaults.yaml
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../run/basics-tutorial.html">
-     Running ADF Basics
     </a>
    </li>
   </ul>
@@ -533,7 +533,16 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>The setups will look almost identical, but pay attention to the small differences.</p>
 </div>
-</section>
+<p>Recall <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basics/adf.html#adf-setup" target="_blank">the steps</a> we will take are to:</p>
+<p>&emsp; <s>0. Run CAM simulation to get history ( h0* ) file(s) 
+           *or other history files</s></p>
+<p>&emsp; 1. Configure yaml file(s) for the history files<br>
+<p>    <code class="docutils literal notranslate"><span class="pre">config_cam_baseline_example.yaml</span></code>  (necessary, must copy and change!)<br>
+       Please refer back to the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/intro/yaml/config_cam_baseline_example.html" target="_blank">run-time</a> section for any hints or descriptions of variables.<br></p>
+<p>    <s><code class="docutils literal notranslate"><span class="pre">lib/adf_variable_defaults.yaml</span></code>   (necessary, but optional to copy and change)</s><br>
+       For this example we <strong>will not</strong> be editing the variable defaults yaml file<br></p>
+</p>
+<p>&emsp; 2. Run the ADF!</p></section>
 
     <script type="text/x-thebe-config">
     {
