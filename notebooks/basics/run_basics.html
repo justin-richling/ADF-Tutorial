@@ -608,8 +608,7 @@ title="Print to PDF"
 <p>cam_climo_loc - where you want climo files saved
 <p>cam_ts_loc  - where you want time series files saved
 <p>diag_cam_baseline_climo - same exact variables as the diag_cam_climo above, just set for the control (baseline) case. If using Obs, just ignore this section</p>
-<p>Then at the end of the config file are the plots and variables, set these as you like!
-Then you can make a copy of this new yaml file and change the obs flag for your vs Obs run.</p>
+<p>Then at the end of the config file are the plots and variables, set these as you like!</p>
 <ol class="simple">
 <li><p>To run the ADF (from the ADF root path) in a terminal just run: ./run_adf_diag your_new_yaml_file.yaml</p></li>
 </ol>
@@ -635,7 +634,7 @@ Then you can make a copy of this new yaml file and change the obs flag for your 
 <p>If you choose to create HTML files you can publish those to a web server. In the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file, a <code class="docutils literal notranslate"><span class="pre">website</span></code> directory exists where all the html and css files are saved.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
 ├── plots
-│   └── &lt;test_case&gt;_&lt;start_year&gt;_&lt;end_year&gt;_vs_&lt;baseline_case&gt;_&lt;start_year&gt;_&lt;end_year&gt;
+│   └── &lt;test case&gt;_&lt;start year&gt;_&lt;end year&gt;_vs_&lt;baseline case&gt;_&lt;start_year&gt;_&lt;end_year&gt;
 │       └── website
 │           ├── assets
 │           ├── html_img
