@@ -509,6 +509,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-and-running-the-script">
+   Setting up and running the script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modifying-our-script-for-the-adf">
    Modifying our script for the ADF
   </a>
@@ -532,6 +537,11 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-and-running-the-script">
+   Setting up and running the script
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modifying-our-script-for-the-adf">
    Modifying our script for the ADF
@@ -604,7 +614,6 @@ title="Print to PDF"
     <span class="c1">#Annual global weighted</span>
     <span class="c1">#######################</span>
     <span class="n">season</span> <span class="o">=</span> <span class="s2">&quot;ANN&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  Generating time series for </span><span class="si">{</span><span class="n">season</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
 
     <span class="c1">#Loop over variables:</span>
     <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">var_list</span><span class="p">:</span>
@@ -612,7 +621,7 @@ title="Print to PDF"
         <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
         <span class="n">title_var</span> <span class="o">=</span> <span class="s2">&quot;Global&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2"> - time series for </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2"> - time series plot for </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
         <span class="c1">#Loop over test cases:</span>
         <span class="c1">#----------------------</span>
@@ -927,7 +936,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>TEM Plotting Script:</p>
+<section id="setting-up-and-running-the-script">
+<h2>Setting up and running the script<a class="headerlink" href="#setting-up-and-running-the-script" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot and case setup info</span>
@@ -946,24 +956,14 @@ title="Print to PDF"
 
 <span class="c1">#Set plot file type:</span>
 <span class="n">plot_type</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2"> NOTE: Plot type is set to </span><span class="si">{</span><span class="n">plot_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Run the time series function with inputs</span>
 <span class="n">time_series</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	 NOTE: Plot type is set to png
-
-  Generating time series plots...
-
-  Generating time series for ANN...
-	 - time series for TS
-2001 2010
-</pre></div>
 </div>
-<img alt="../../_images/custom_script_4_1.png" src="../../_images/custom_script_4_1.png" />
-</div>
-</div>
+</section>
 <hr class="docutils" />
 <section id="modifying-our-script-for-the-adf">
 <h2>Modifying our script for the ADF<a class="headerlink" href="#modifying-our-script-for-the-adf" title="Permalink to this headline">#</a></h2>
