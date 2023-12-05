@@ -986,14 +986,19 @@ title="Print to PDF"
 <li><p>plot_type</p></li>
 </ul>
 <p>The ADF will create these variables as:</p>
-<p>var_list -&gt;
-all_case_names -&gt;
-case_ts_locs -&gt;
-all_nicknames -&gt;
-plot_type -&gt;</p>
+<p>var_list -&gt; <br>
+all_case_names -&gt; <br>
+case_ts_locs -&gt; <br>
+all_nicknames -&gt; <br>
+plot_type -&gt; <br></p>
 <p>Some important notes:</p>
 <ul class="simple">
-<li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script you are adding in the ADF, in our case: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series.py</span></code></p></li>
+<li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
+<ul>
+<li><p>in our case, the saved python file will be in the plotting directory: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series.py</span></code></p></li>
+</ul>
+</li>
+<li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
