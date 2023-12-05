@@ -986,16 +986,16 @@ title="Print to PDF"
 <li><p>plot_type</p></li>
 </ul>
 <p>The ADF will create these variables as:</p>
-<p>var_list -&gt; <br>
-all_case_names -&gt; <br>
-case_ts_locs -&gt; <br>
-all_nicknames -&gt; <br>
-plot_type -&gt; <br></p>
+<p>var_list -&gt; adfobj.diag_var_list<br>
+all_case_names -&gt; adfobj.get_cam_info(“cam_case_name”, required=True) and adfobj.get_baseline_info(“cam_case_name”, required=True)<br>
+case_ts_locs -&gt; adfobj.get_cam_info(“cam_ts_loc”, required=True) and adfobj.get_baseline_info(“cam_ts_loc”, required=True)<br>
+all_nicknames -&gt; adfobj.case_nicknames[“test_nicknames”] and adfobj.case_nicknames[“base_nickname”]<br>
+plot_type -&gt; basic_info_dict.get(‘plot_type’, ‘png’)<br></p>
 <p>Some important notes:</p>
 <ul class="simple">
 <li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
 <ul>
-<li><p>in our case, the saved python file will be in the plotting directory: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series.py</span></code></p></li>
+<li><p>in our case, we will save the python file in the plotting directory: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series.py</span></code></p></li>
 </ul>
 </li>
 <li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
@@ -1060,7 +1060,7 @@ plot_type -&gt; <br></p>
         <span class="c1">#If dictionary is empty, then there are no observations to compare against,</span>
         <span class="c1">#so quit here:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">var_obs_dict</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No observations found to plot against. So just the test case will be plotted. I pitty the fool who doesn&#39;t have obs values! RRRRRah!!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No observations found to plot against. So just the test case will be plotted.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="c1">#Bundle all case names</span>
             <span class="n">all_case_names</span> <span class="o">=</span> <span class="n">case_names</span>
             <span class="c1">#Gather all nicknames</span>
