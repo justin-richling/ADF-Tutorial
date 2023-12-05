@@ -974,7 +974,7 @@ title="Print to PDF"
 <h2>Modifying our script for the ADF<a class="headerlink" href="#modifying-our-script-for-the-adf" title="Permalink to this headline">#</a></h2>
 <p>What we will want to do next is to reuse a lot of our code, but now we just need to incorporate instances from the ADF object. This sounds complicated and in most cases it isn’t, but it will vary depending on the code you might be trying to integrate in.</p>
 <p>Typically one should expect certain variables to always have an ADF equivalent, such as case names, file locations (time series, climo, etc.), climo years, …</p>
-<p>For this time series plot scenario, we will want to bring in the input variables into the actual <code class="docutils literal notranslate"><span class="pre">time_series</span></code> function and let the ADF object populate those for us:</p>
+<p>For this time series plot scenario, we will want to bring in the input variables into the actual <code class="docutils literal notranslate"><span class="pre">time_series</span></code> function and let the ADF object populate (in this case) all of those for us:</p>
 <ul class="simple">
 <li><p>var_list</p></li>
 <li><p>all_case_names</p></li>
@@ -982,6 +982,12 @@ title="Print to PDF"
 <li><p>all_nicknames</p></li>
 <li><p>plot_type</p></li>
 </ul>
+<p>The ADF will create these variables as:</p>
+<p>var_list -&gt;
+all_case_names -&gt;
+case_ts_locs -&gt;
+all_nicknames -&gt;
+plot_type -&gt;</p>
 </section>
 </section>
 
