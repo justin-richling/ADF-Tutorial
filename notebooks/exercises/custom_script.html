@@ -620,7 +620,7 @@ title="Print to PDF"
 
 <span class="c1"># Main plotting routine</span>
 
-<span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">time_series_plot</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This script plots time series.</span>
 <span class="sd">    Compare CAM climatologies against other</span>
@@ -1037,9 +1037,9 @@ title="Print to PDF"
 </div>
 <h4><u>Some important notes:</u></h4>
 <ul class="simple">
-<li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
+<li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series_plot</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
 <ul>
-<li><p>in our case, we will save the python file in the plotting directory: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series.py</span></code></p></li>
+<li><p>in our case, we will save the python file in the plotting directory: <code class="docutils literal notranslate"><span class="pre">scripts/plotting/time_series_plot.py</span></code></p></li>
 </ul>
 </li>
 <li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
@@ -1048,7 +1048,7 @@ title="Print to PDF"
 <code class="docutils literal notranslate"><span class="pre">vres</span> <span class="pre">=</span> <span class="pre">res[var]</span></code> (specify info about specific variable)</p></li>
 </ul>
 <div class="full-width docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">adfobj</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_series_plot</span><span class="p">(</span><span class="n">adfobj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This script plots time series.</span>
 <span class="sd">    Compare CAM climatologies against other</span>
