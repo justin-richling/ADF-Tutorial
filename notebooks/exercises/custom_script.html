@@ -1039,6 +1039,7 @@ title="Print to PDF"
 <li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
 <li><p>you can take advantage of the variable defaults file the ADF provides to really refine your plotting and calculations for variable by variable basis. This is done below with the line <code class="docutils literal notranslate"><span class="pre">res</span> <span class="pre">=</span> <span class="pre">adfobj.variable_defaults</span></code> (grab info about all variables) and <code class="docutils literal notranslate"><span class="pre">vres</span> <span class="pre">=</span> <span class="pre">res[var]</span></code> (specify info about specific variable)</p></li>
 </ul>
+<div class="full-width docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">adfobj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This script plots time series.</span>
@@ -1268,6 +1269,7 @@ title="Print to PDF"
             <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plot_name</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>
