@@ -31,17 +31,20 @@ Feel free to explore this tutorial in any order you wish, but the layout is as f
 Intro to the ADF
  - intro/outputs
  
-Installation
+Installation and Setup
 
 ADF Basics
  - use of YAML files for configuring the ADF
  - quick ADF setup
+   
    -> meant for users that have cases ready to try with the ADF
    
 Guided Examples
  - step by step process to run the ADF with supplied sample data
+   
    -> meant for users who want to try the ADF on known cases
- - several examples including:
+
+- several examples including:
    * CAM vs CAM diagnostics
    * CAM vs Obs/Reanalysis diagnostics
    * customization of conifguration files
