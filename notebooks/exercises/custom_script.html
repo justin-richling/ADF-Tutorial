@@ -560,7 +560,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="adding-custom-script-to-your-adf">
 <h1>Adding custom script to your ADF<a class="headerlink" href="#adding-custom-script-to-your-adf" title="Permalink to this headline">#</a></h1>
 <p>Since individual scientists like to look at specific diagnostics, not every script can be brought in to the ADF. A handy option for your ADF package could be implementing your own custom scripts. This may not be a trivial process, but hopefully this example will help if you want to add your own scripts to your ADF.</p>
-<p>This is not a required step if you have your own diagnostics, you could always keep them out of the ADF and run them post ADF. If this makes more sense, please see the ADF in Jupyter section.</p>
+<p>This is not a required step if you have your own diagnostics, you could always keep them out of the ADF and run them post ADF. If this makes more sense, please see the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basic_examples/jupyter.html">ADF in Jupyter</a> section.</p>
 <p>For this demo, we will be taking an annual time series plotting script and adding it to the ADF infrastructure.</p>
 <p>Time Series Plotting Script:</p>
 <ul class="simple">
@@ -988,11 +988,11 @@ title="Print to PDF"
 <li><p>plot_type</p></li>
 </ul>
 <p>The ADF will create these variables as:</p>
-<p><strong>var_list</strong> -> `adfobj.diag_var_list`</p>
-<p>all_case_names -> adfobj.get_cam_info("cam_case_name", required=True) and adfobj.get_baseline_info("cam_case_name", required=True)</p>
-<p>case_ts_locs -> adfobj.get_cam_info("cam_ts_loc", required=True) and adfobj.get_baseline_info("cam_ts_loc", required=True)</p>
-<p>all_nicknames -> adfobj.case_nicknames["test_nicknames"] and adfobj.case_nicknames["base_nickname"]</p>
-<p>plot_type -> basic_info_dict.get('plot_type', 'png')</p>
+<p><strong>var_list</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.diag_var_list</span></code></p>
+<p><strong>all_case_names</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.get_cam_info("cam_case_name", required=True)</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.get_baseline_info("cam_case_name", required=True)</span></code></p>
+<p><strong>case_ts_locs</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.get_cam_info("cam_ts_loc", required=True)</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.get_baseline_info("cam_ts_loc", required=True)</span></code></p>
+<p><strong>all_nicknames</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.case_nicknames["test_nicknames"]</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.case_nicknames["base_nickname"]</span></code></p>
+<p><strong>plot_type</strong> -> <code class="docutils literal notranslate"><span class="pre">basic_info_dict.get('plot_type', 'png')</span></code></p>
 <p>Some important notes:</p>
 <ul class="simple">
 <li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
