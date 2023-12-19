@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
    YAML files
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../basics/run_basics.html">
    Setting up
    <strong>
@@ -168,6 +168,40 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
    ADF run - optional
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/terminal_run.html">
+     Setting up
+     <strong>
+      your
+     </strong>
+     ADF run via terminal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/jupyter_run.html">
+     Setting up
+     <strong>
+      your
+     </strong>
+     Jupyter ADF run
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/outputs.html">
+     Exploring
+     <strong>
+      your
+     </strong>
+     ADF outputs
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -195,8 +229,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="custom_defaults.html">
    Custom Variable Defaults For the ADF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -239,8 +273,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +295,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -987,12 +1021,14 @@ title="Print to PDF"
 <li><p>all_nicknames</p></li>
 <li><p>plot_type</p></li>
 </ul>
+<div class="full-width docutils">
 <p>The ADF will create these variables as:</p>
 <p><strong>var_list</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.diag_var_list</span></code></p>
 <p><strong>all_case_names</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.get_cam_info("cam_case_name", required=True)</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.get_baseline_info("cam_case_name", required=True)</span></code></p>
 <p><strong>case_ts_locs</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.get_cam_info("cam_ts_loc", required=True)</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.get_baseline_info("cam_ts_loc", required=True)</span></code></p>
 <p><strong>all_nicknames</strong> -> <code class="docutils literal notranslate"><span class="pre">adfobj.case_nicknames["test_nicknames"]</span></code> and <code class="docutils literal notranslate"><span class="pre">adfobj.case_nicknames["base_nickname"]</span></code></p>
 <p><strong>plot_type</strong> -> <code class="docutils literal notranslate"><span class="pre">basic_info_dict.get('plot_type', 'png')</span></code></p>
+</div>
 <p>Some important notes:</p>
 <ul class="simple">
 <li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
