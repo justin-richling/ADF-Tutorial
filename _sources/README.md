@@ -28,18 +28,18 @@ There is a reference section that is meant to dive deeper into aspects of the AD
 
 Feel free to explore this tutorial in any order you wish, but the layout is as follows:
 
-Intro to the ADF
+<h3><u>Intro to the ADF</u></h3>
  - intro/outputs
  
-Installation and Setup
+<h3><u>Installation and Setup</u></h3>
 
-ADF Basics
+<h3><u>ADF Basics</u></h3>
  - use of YAML files for configuring the ADF
  - quick ADF setup
    
    -> meant for users that have cases ready to try with the ADF
    
-Guided Examples
+<h3><u>Guided Examples</u></h3>
  - step by step process to run the ADF with supplied sample data
    
    -> meant for users who want to try the ADF on known cases
@@ -51,11 +51,11 @@ Guided Examples
    * adding custom plots to user's ADF (advanced)
    * using the ADF in a Jupyter session (Jupyter Hub/Notebook)
 
-ADF Reference
+<h3><u>ADF Reference</u></h3>
  - detailed information about the ADF
    * libraries and python scripts
    * config yaml files
    
-Troubleshooting the ADF
+<h3><u>Troubleshooting the ADF</u></h3>
  - ways of contact for support
  - frequently asked questions
