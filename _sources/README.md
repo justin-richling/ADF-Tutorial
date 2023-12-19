@@ -44,7 +44,7 @@ There is a reference section that is meant to dive deeper into aspects of the AD
 
  - step by step process to run the ADF with supplied sample data
    
-   -> meant for users who want to try the ADF on known cases
+   -> meant for users who want to try the ADF in an example setting
 
 - several examples including:
    * CAM vs CAM diagnostics
