@@ -988,11 +988,11 @@ title="Print to PDF"
 <li><p>plot_type</p></li>
 </ul>
 <p>The ADF will create these variables as:</p>
-<p>var_list -&gt; adfobj.diag_var_list<br>
-all_case_names -&gt; adfobj.get_cam_info(“cam_case_name”, required=True) and adfobj.get_baseline_info(“cam_case_name”, required=True)<br>
-case_ts_locs -&gt; adfobj.get_cam_info(“cam_ts_loc”, required=True) and adfobj.get_baseline_info(“cam_ts_loc”, required=True)<br>
-all_nicknames -&gt; adfobj.case_nicknames[“test_nicknames”] and adfobj.case_nicknames[“base_nickname”]<br>
-plot_type -&gt; basic_info_dict.get(‘plot_type’, ‘png’)<br></p>
+<p>var_list -> adfobj.diag_var_list</p>
+<p>all_case_names -> adfobj.get_cam_info("cam_case_name", required=True) and adfobj.get_baseline_info("cam_case_name", required=True)</p>
+<p>case_ts_locs -> adfobj.get_cam_info("cam_ts_loc", required=True) and adfobj.get_baseline_info("cam_ts_loc", required=True)</p>
+<p>all_nicknames -> adfobj.case_nicknames["test_nicknames"] and adfobj.case_nicknames["base_nickname"]</p>
+<p>plot_type -> basic_info_dict.get('plot_type', 'png')</p>
 <p>Some important notes:</p>
 <ul class="simple">
 <li><p>the name of the function (<code class="docutils literal notranslate"><span class="pre">time_series</span></code>) must match the name of the script (minus the .py) you are adding in the ADF.</p>
