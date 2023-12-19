@@ -17,10 +17,6 @@
 
 This material is based upon work supported by the National Center for Atmospheric Research (NCAR), which is a major facility sponsored by the National Science Foundation (NSF) under Cooperative Agreement No. 1852977. Staff time on this project was also supported by NSF award numbers <???>
 
-    
-The purpose of this tutorial is to give exposure to what the ADF is and which users would benefit from using it.
-    
-The ADF tutorial will start with a basic intro to what exaclty is the ADF and what kind of diagnostics it produces. Then we will 
 
 The purpose of this tutorial/demo is to give some exposure to what the ADF is and who could benefit from using it. This tutorial is meant to encompass basic to advanced uses of the ADF with guided examples to follow with sample data. It also could be uses for a quick how-to for folks eager to try it with their own cases/data. 
 
