@@ -22,7 +22,7 @@ The purpose of this tutorial/demo is to give some exposure to what the ADF is an
 
 There is a reference section that is meant to dive deeper into aspects of the ADF as well as a Frequently Asked Questions (FAQ) section at the end for some common questions/gotchas that can arise from using the ADF.
 
-Feel free to explore this tutorial in any order you wish, but the layout is as follows:
+<h5>Feel free to explore this tutorial in any order you wish, but the layout is as follows:</h5>
 
 <h3><u>Intro to the ADF</u></h3>
 
