@@ -29,7 +29,10 @@ There is a reference section that is meant to dive deeper into aspects of the AD
 Feel free to explore this tutorial in any order you wish, but the layout is as follows:
 
 <h3><u>Intro to the ADF</u></h3>
- - intro/outputs
+ - key features
+ - ADF comparisons
+ - ADF flow/layout/setup
+ - outputs
  
 <h3><u>Installation and Setup</u></h3>
 
