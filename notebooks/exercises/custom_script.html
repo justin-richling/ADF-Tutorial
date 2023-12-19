@@ -1018,22 +1018,22 @@ title="Print to PDF"
 <div class="full-width docutils">
 <p>The ADF will create these variables as:</p>
 <p><strong>var_list</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre" style="color:black">var_list</span></code><code class="docutils literal notranslate"><span class="pre"> = adfobj.diag_var_list</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre" style="color:black">var_list = </span></code><code class="docutils literal notranslate"><span class="pre">adfobj.diag_var_list</span></code></p>
 <p><strong>all_case_names</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">case_name = adfobj.get_cam_info("cam_case_name", required=True)</span></code> -> comes out as a list</p>
-<p><code class="docutils literal notranslate"><span class="pre">baseline_name = adfobj.get_baseline_info("cam_case_name", required=True)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">all_case_names = case_name + [baseline_name]</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">case_name = adfobj.get_cam_info("cam_case_name", required=True)</span></code> -> comes out as a list</p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">baseline_name = adfobj.get_baseline_info("cam_case_name", required=True)</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">all_case_names = case_name + [baseline_name]</span></code></p>
 <p><strong>case_ts_locs</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">case_ts_loc = adfobj.get_cam_info("cam_ts_loc", required=True)</span></code> -> comes out as a list</p>
-<p><code class="docutils literal notranslate"><span class="pre">baseline_ts_loc = adfobj.get_baseline_info("cam_ts_loc", required=True)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">case_ts_locs = case_ts_loc + [baseline_ts_loc]</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">case_ts_loc = adfobj.get_cam_info("cam_ts_loc", required=True)</span></code> -> comes out as a list</p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">baseline_ts_loc = adfobj.get_baseline_info("cam_ts_loc", required=True)</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">case_ts_locs = case_ts_loc + [baseline_ts_loc]</span></code></p>
 <p><strong>all_nicknames</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">case_nickname = adfobj.case_nicknames["test_nicknames"]</span></code> -> comes out as a list</p>
-<p><code class="docutils literal notranslate"><span class="pre">baseline_nickname = adfobj.case_nicknames["base_nickname"]</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">all_nicknames = case_nickname + [baseline_nickname]</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">case_nickname = adfobj.case_nicknames["test_nicknames"]</span></code> -> comes out as a list</p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">baseline_nickname = adfobj.case_nicknames["base_nickname"]</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">all_nicknames = case_nickname + [baseline_nickname]</span></code></p>
 <p><strong>plot_type</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">basic_info_dict = adfobj.read_config_var("diag_basic_info", required=True)</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">plot_type = basic_info_dict.get('plot_type', 'png')</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">basic_info_dict = adfobj.read_config_var("diag_basic_info", required=True)</span></code></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre">plot_type = basic_info_dict.get('plot_type', 'png')</span></code></p>
 </div>
 <h4><u>Some important notes:</u></h4>
 <ul class="simple">
@@ -1043,7 +1043,9 @@ title="Print to PDF"
 </ul>
 </li>
 <li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
-<li><p>you can take advantage of the variable defaults file the ADF provides to really refine your plotting and calculations for variable by variable basis. This is done below with the line <code class="docutils literal notranslate"><span class="pre">res</span> <span class="pre">=</span> <span class="pre">adfobj.variable_defaults</span></code> (grab info about all variables) and <code class="docutils literal notranslate"><span class="pre">vres</span> <span class="pre">=</span> <span class="pre">res[var]</span></code> (specify info about specific variable)</p></li>
+<li><p>you can take advantage of the variable defaults file the ADF provides to really refine your plotting and calculations for variable by variable basis. This is done below with the lines:<br>
+<code class="docutils literal notranslate"><span class="pre">res</span> <span class="pre">=</span> <span class="pre">adfobj.variable_defaults</span></code> (grab info about all variables) and<br>
+<code class="docutils literal notranslate"><span class="pre">vres</span> <span class="pre">=</span> <span class="pre">res[var]</span></code> (specify info about specific variable)</p></li>
 </ul>
 <div class="full-width docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">adfobj</span><span class="p">):</span>
