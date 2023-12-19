@@ -1038,13 +1038,12 @@ title="Print to PDF"
 
     <span class="c1">#Extract needed quantities from ADF object:</span>
     <span class="c1">#-----------------------------------------</span>
+
     <span class="c1"># Case names</span>
     <span class="n">case_names</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s1">&#39;cam_case_name&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     
     <span class="c1"># Case time series file locations</span>
     <span class="n">case_ts_loc</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_cam_info</span><span class="p">(</span><span class="s2">&quot;cam_ts_loc&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    
-    
 
     <span class="c1">#Grab all case nickname(s)</span>
     <span class="n">test_nicknames</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">case_nicknames</span><span class="p">[</span><span class="s2">&quot;test_nicknames&quot;</span><span class="p">]</span>
@@ -1071,14 +1070,6 @@ title="Print to PDF"
             <span class="n">case_ts_locs</span> <span class="o">=</span> <span class="n">case_ts_loc</span>
             <span class="n">all_nicknames</span> <span class="o">=</span> <span class="n">test_nicknames</span>
 
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        else:</span>
-<span class="sd">            #Bundle all case names</span>
-<span class="sd">            all_case_names = case_names + [data_name]</span>
-<span class="sd">            #Gather all nicknames</span>
-<span class="sd">            all_nicknames = test_nicknames + [base_nickname]</span>
-<span class="sd">            case_ts_locs = case_ts_loc + [data_ts_loc]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">data_name</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_case_name&quot;</span><span class="p">)</span>
         <span class="n">data_ts_loc</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_baseline_info</span><span class="p">(</span><span class="s2">&quot;cam_ts_loc&quot;</span><span class="p">)</span>
@@ -1088,12 +1079,8 @@ title="Print to PDF"
         <span class="n">all_nicknames</span> <span class="o">=</span> <span class="n">test_nicknames</span> <span class="o">+</span> <span class="p">[</span><span class="n">base_nickname</span><span class="p">]</span>
     <span class="c1">#End if</span>
 
-    <span class="c1">#Bundle all case names</span>
-    <span class="c1">#all_case_names = case_names + [data_name]</span>
+    <span class="c1">#Get number of cases for plotting</span>
     <span class="n">case_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_case_names</span><span class="p">)</span>
-
-    <span class="c1">#Gather all nicknames</span>
-    <span class="c1">#all_nicknames = test_nicknames + [base_nickname]</span>
 
     <span class="c1">#ADF variable which contains the output path for plots and tables:</span>
     <span class="n">plot_location</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">plot_location</span>
@@ -1114,6 +1101,7 @@ title="Print to PDF"
     <span class="k">else</span><span class="p">:</span>
         <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>    
 
+    <span class="c1">#Read in info from the variable defaults yaml file</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">variable_defaults</span> <span class="c1">#dict of variable-specific plot preferences</span>
     <span class="c1">#or an empty dictionary if use_defaults was not specified in config (YAML) file.</span>
 
@@ -1128,8 +1116,6 @@ title="Print to PDF"
     <span class="n">redo_plot</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_basic_info</span><span class="p">(</span><span class="s1">&#39;redo_plot&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2"> NOTE: redo_plot is set to &#39;</span><span class="si">{</span><span class="n">redo_plot</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
 
-    <span class="c1">#Grab only time series variables from YAML file</span>
-    <span class="c1">#ts_var_list = adfobj.timeseries_var_list</span>
 
     <span class="c1">#Set up the plots</span>
     <span class="c1">#################</span>
@@ -1146,9 +1132,7 @@ title="Print to PDF"
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  Generating time series for </span><span class="si">{</span><span class="n">season</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
 
     <span class="c1">#Loop over variables:</span>
-    <span class="c1">#for var in ann_var_list:</span>
     <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">var_list</span><span class="p">:</span>
-    <span class="c1">#if 1==1:</span>
         <span class="c1">#Check res for any variable specific options that need to be used BEFORE going to the plot:</span>
         <span class="k">if</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
             <span class="n">vres</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">var</span><span class="p">]</span>
@@ -1164,16 +1148,6 @@ title="Print to PDF"
         <span class="n">title_var</span> <span class="o">=</span> <span class="s2">&quot;Global&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2"> - time series for </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        <span class="c1">#Set plotting parameters based off whether the user wants</span>
-        <span class="c1">#5-yr rolling average</span>
-        <span class="c1">#Currently RESTOM is defaulted to 5-yr rolling avg</span>
-        <span class="n">rolling</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="c1">#if &#39;ts&#39; in vres:</span>
-        <span class="c1">#    if &quot;rolling&quot; in vres[&#39;ts&#39;]:</span>
-        <span class="c1">#        rolling = True</span>
-        <span class="c1">#        rolling_months = vres[&#39;ts&#39;][&quot;rolling&quot;][&quot;months&quot;]</span>
-        <span class="c1">#        print(&quot;rolling_months&quot;,rolling_months,&quot;\n&quot;)</span>
-
         <span class="c1">#Loop over test cases:</span>
         <span class="c1">#----------------------</span>
         <span class="c1">#Create lists to hold all min/max values for var data (for each case)</span>
@@ -1181,12 +1155,11 @@ title="Print to PDF"
         <span class="n">maxs</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">for</span> <span class="n">case_idx</span><span class="p">,</span> <span class="n">case_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_case_names</span><span class="p">):</span>
-            <span class="k">if</span> <span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">case_name</span> <span class="o">==</span> <span class="n">data_name</span><span class="p">:</span>
-                    <span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s2">&quot;--&quot;</span><span class="p">}</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="n">case_idx</span><span class="p">],</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s2">&quot;-&quot;</span><span class="p">}</span>
-                <span class="c1">#End if</span>
+            <span class="k">if</span> <span class="n">case_name</span> <span class="o">==</span> <span class="n">data_name</span><span class="p">:</span>
+                <span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s2">&quot;--&quot;</span><span class="p">}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="n">case_idx</span><span class="p">],</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s2">&quot;-&quot;</span><span class="p">}</span>
+            <span class="c1">#End if</span>
             
             <span class="c1">#Generate input file path:</span>
             <span class="n">input_location</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">case_ts_locs</span><span class="p">[</span><span class="n">case_idx</span><span class="p">])</span>
@@ -1205,11 +1178,8 @@ title="Print to PDF"
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">   Variable &#39;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&#39; has a vertical dimension, &quot;</span><span class="o">+</span>\
                       <span class="s2">&quot;which is currently not supported for the AMWG Table. Skipping...&quot;</span><span class="p">)</span>
                 <span class="c1">#Skip this variable and move to the next variable in var_list:</span>
-                <span class="c1">#continue</span>
+                <span class="k">continue</span>
             <span class="c1">#End if</span>
-
-            <span class="c1">#Extract defaults for variable:</span>
-            <span class="c1">#var_default_dict = var_defaults.get(var, {})</span>
 
             <span class="c1"># we should check if we need to do area averaging:</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -1221,7 +1191,6 @@ title="Print to PDF"
             
             <span class="c1">#Get yearly averages for all available years</span>
             <span class="n">vals_case</span> <span class="o">=</span> <span class="n">annual_mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">whole_years</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">time_name</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-            <span class="c1">#vals_case = ann_ts.copy()</span>
 
             <span class="c1">#Grab min and max vals from each test case</span>
             <span class="n">mins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">vals_case</span><span class="p">))</span>
@@ -1231,6 +1200,7 @@ title="Print to PDF"
             <span class="n">yrs</span> <span class="o">=</span> <span class="n">vals_case</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">values</span>
 
             <span class="n">name</span> <span class="o">=</span> <span class="n">all_nicknames</span><span class="p">[</span><span class="n">case_idx</span><span class="p">]</span>
+            <span class="c1">#If case is baseline case, add text to legend string</span>
             <span class="k">if</span> <span class="n">case_idx</span> <span class="o">==</span> <span class="p">(</span><span class="n">case_num</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
                 <span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> (baseline)&quot;</span>
 
@@ -1244,15 +1214,12 @@ title="Print to PDF"
 
         <span class="c1">#Set Main title for subplots:</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Series </span><span class="si">{</span><span class="n">title_var</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">season</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
-
-        <span class="n">unit</span> <span class="o">=</span> <span class="n">unit_str</span><span class="c1">#data.units</span>
-        <span class="c1">#yrs = ann_ts.year</span>
         
         <span class="c1">#Minor tweak to not plot variables that have vertical levels.</span>
         <span class="c1">#TODO: Clean up this check - JR</span>
         <span class="c1">#mins and maxs are blank lists when trying to ignore variables...</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">mins</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">maxs</span><span class="p">):</span>
-            <span class="n">ax</span> <span class="o">=</span> <span class="n">_format_yaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">case_num</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="o">**</span><span class="n">vres</span><span class="p">)</span>
+            <span class="n">ax</span> <span class="o">=</span> <span class="n">_format_yaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">case_num</span><span class="p">,</span> <span class="n">unit_str</span><span class="p">,</span> <span class="o">**</span><span class="n">vres</span><span class="p">)</span>
             <span class="n">ax</span> <span class="o">=</span> <span class="n">_format_xaxis</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">yrs</span><span class="p">)</span>
 
             <span class="c1">#Set up legend</span>
