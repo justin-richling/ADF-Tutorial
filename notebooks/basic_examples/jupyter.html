@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
    YAML files
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../basics/run_basics.html">
    Setting up
    <strong>
@@ -168,6 +168,40 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
    ADF run - optional
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/terminal_run.html">
+     Setting up
+     <strong>
+      your
+     </strong>
+     ADF run via terminal - optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/jupyter_run.html">
+     Setting up
+     <strong>
+      your
+     </strong>
+     Jupyter ADF run - optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/run_basics/outputs.html">
+     Exploring
+     <strong>
+      your
+     </strong>
+     ADF outputs
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -195,8 +229,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/custom_defaults.html">
    Custom Variable Defaults For the ADF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -239,8 +273,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/intro.html">
    ADF Basics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +295,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../reference/yaml.html">
    YAML Config Files
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -651,7 +685,7 @@ title="Print to PDF"
 <section id="why-jupyter">
 <h2>Why Jupyter?<a class="headerlink" href="#why-jupyter" title="Permalink to this headline">#</a></h2>
 <p>If you are looking to use the ADF in a more developmental or interactive way, using Jupyter will offer a lot more flexibility than running through the terminal.</p>
-<p>One major advantage of this way fo running the ADF will allow the user to immediately have access to output data in a Jupyter notebook which can allow for further development or use of diagnostics that aren’t in the ADF by defualt.</p>
+<p>One major advantage of this way of running the ADF will allow the user to immediately have access to output data in a Jupyter notebook which can allow for further development or use of diagnostics that aren’t in the ADF by defualt.</p>
 <p>One scenario to highlight this flexibility could be for tuning specific parameters of your model run that need a specific diagnostics set of tools that maybe only good for this tune. Now the user can build custom diagnostics code within the same Jupyter notebook that the ADF was run in!</p>
 <p>If you need help with navigating Jupyter Nobeooks or NCAR’s JupyterHub, please see the <a>reference section</a> of this tutorial.</p>
 </section>
@@ -1644,7 +1678,7 @@ f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001
 </div>
 <h5>Let's build a custom diagnsotics plot!</h5><section id="stratocumulus-over-california-example">
 <h3>Stratocumulus Over California Example<a class="headerlink" href="#stratocumulus-over-california-example" title="Permalink to this headline">#</a></h3>
-<p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a custom routine to calculate and plot statocumulus clouds over California.</p>
+<p>Now that we have the ADF done and still have access to all the information contained in the ADF, let’s run a custom routine to calculate and plot stratocumulus clouds over California.</p>
 <p>The point of this example is to highlight using a script not contained in the ADF to simulate custom analysis (that may be a one off diagnsotics need), all within the same notebook as our ADF run.</p>
 <p>Again, this can be very helpful becasue the ADF object has all the paths for the input/output data and case information already saved for convienence.</p>
 <div class="cell docutils container">
