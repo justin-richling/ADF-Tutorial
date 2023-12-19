@@ -1034,6 +1034,8 @@ title="Print to PDF"
 <p><strong>plot_type</strong></p>
 <p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre" style="color:black">basic_info_dict = </span></code><code class="docutils literal notranslate"><span class="pre">adfobj.read_config_var("diag_basic_info", required=True)</span></code></p>
 <p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre" style="color:black">plot_type = </span></code><code class="docutils literal notranslate"><span class="pre" style="color:black">basic_info_dict.get('plot_type', 'png')</span></code></p>
+<p><strong>plot_location</strong></p>
+<p style="margin-top: -5px;">&emsp;&ensp; <code class="docutils literal notranslate"><span class="pre" style="color:black">plot_location = </span></code><code class="docutils literal notranslate"><span class="pre">adfobj.get_basic_info("cam_diag_plot_loc")</span></code></p>
 </div>
 <h4><u>Some important notes:</u></h4>
 <ul class="simple">
@@ -1127,24 +1129,13 @@ title="Print to PDF"
     <span class="c1">#Get number of cases for plotting</span>
     <span class="n">case_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_case_names</span><span class="p">)</span>
 
-    <span class="c1">#ADF variable which contains the output path for plots and tables:</span>
-    <span class="n">plot_location</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">plot_location</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">plot_location</span><span class="p">:</span>
-        <span class="n">plot_location</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_basic_info</span><span class="p">(</span><span class="s2">&quot;cam_diag_plot_loc&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">plot_location</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">pl</span> <span class="ow">in</span> <span class="n">plot_location</span><span class="p">:</span>
-            <span class="n">plpth</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">pl</span><span class="p">)</span>
-            <span class="c1">#Check if plot output directory exists, and if not, then create it:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">plpth</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
-                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">    &#39;</span><span class="si">{</span><span class="n">pl</span><span class="si">}</span><span class="s2">&#39; not found, making new directory&quot;</span><span class="p">)</span>
-                <span class="n">plpth</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ambiguous plotting location since all cases go on same plot. Will put them in first location: </span><span class="si">{</span><span class="n">main_site_assets_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">main_site_assets_path</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>    
+    <span class="c1">#ADF variable which contains the output path for plots:</span>
+    <span class="n">plot_location</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">get_basic_info</span><span class="p">(</span><span class="s2">&quot;cam_diag_plot_loc&quot;</span><span class="p">)</span>
+    <span class="n">plot_location</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>
+    <span class="c1">#Check if plot output directory exists, and if not, then create it:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">plot_location</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">    &#39;</span><span class="si">{</span><span class="n">plot_location</span><span class="si">}</span><span class="s2">&#39; not found, making new directory&quot;</span><span class="p">)</span>
+        <span class="n">plot_location</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1">#Read in info from the variable defaults yaml file</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">adfobj</span><span class="o">.</span><span class="n">variable_defaults</span> <span class="c1">#dict of variable-specific plot preferences</span>
