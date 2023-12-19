@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="ADF Demo Setup" href="../../basic_examples/readme.html" />
-    <link rel="prev" title="Setting up your Jupyter ADF run - optional" href="jupyter_run.html" />
+    <link rel="prev" title="Running your ADF" href="adf_run.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -175,21 +175,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="terminal_run.html">
-     Setting up
+    <a class="reference internal" href="adf_run.html">
+     Running
      <strong>
       your
      </strong>
-     ADF run via terminal - optional
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="jupyter_run.html">
-     Setting up
-     <strong>
-      your
-     </strong>
-     Jupyter ADF run - optional
+     ADF
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -520,12 +511,53 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-the-adf-output">
+   Check the ADF output
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locally">
+     Locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterhub">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -537,6 +569,36 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-the-adf-output">
+   Check the ADF output
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locally">
+     Locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterhub">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -546,6 +608,57 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exploring-strong-your-strong-adf-outputs">
 <h1>Exploring <strong>your</strong> ADF outputs<a class="headerlink" href="#exploring-strong-your-strong-adf-outputs" title="Permalink to this headline">#</a></h1>
+<section id="check-the-adf-output">
+<h2>Check the ADF output<a class="headerlink" href="#check-the-adf-output" title="Permalink to this headline">#</a></h2>
+<p>If your ADF run completes there are a couple ways to explore the output plots</p>
+<section id="locally">
+<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">#</a></h3>
+<p>If the ADF ran successfully, we can navigate to where we set the diagnostic plots output:</p>
+<div class="full-width docutils">
+<p> On a CISL machine, navigate to the root ADF directory</p>
+<p><code class="docutils literal notranslate"><span class="pre"> /glade/scratch/&lt;user&gt;/ADF/plots/</span></code></p>
+<p> Then go to where you assigned the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location in the run-time config file</p>
+<p><code class="docutils literal notranslate"><span class="pre"> f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001_1995_2000_vs_f.cam6_3_106.FLTHIST_v0a.ne30.dcs_effgw_rdg.001_1995_2000/</span></code></p>
+</div>
+</section>
+<section id="jupyterhub">
+<h3>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this headline">#</a></h3>
+<p>apidfjwd</p>
+</section>
+<section id="website">
+<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
+<p>If you choose to create HTML files you can publish those to a web server. In the diagnostics plotting location (<code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code>) you set in the run-time config file, a <code class="docutils literal notranslate"><span class="pre">website</span></code> directory exists where all the html and css files are saved.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
+├── plots
+│   └── &lt;test case&gt;_&lt;start year&gt;_&lt;end year&gt;_vs_&lt;baseline case&gt;_&lt;start year&gt;_&lt;end year&gt;
+│       └── website
+│           ├── assets
+│           ├── html_img
+│           ├── html_table
+│           └── templates
+</pre></div>
+</div>
+<p>Example: If you have a project page on a CGD machine like Tungsten, it is a simple secure copy of files to the server:</p>
+<style>
+    #box {
+    word-wrap:normal;
+    overflow:scroll;
+}
+</style>
+<p> Navigate to the <code class="docutils literal notranslate"><span class="pre">cam_diag_plot_loc</span></code> location and copy all the files from the <code class="docutils literal notranslate"><span class="pre">website</span></code> directory to the server address:</p>
+<p> For Tungsten:
+     <code class="docutils literal notranslate"><span class="pre" style="color: black;">scp -r website/* <a class="reference external" href="http://tungsten.cgd.ucar.edu">tungsten.cgd.ucar.edu</a>:/path/to/your/project/page/</span></code></p>
+<div class="admonition tip" style="padding-right: 7px">
+<div><h6>A sample website:</h6></div>
+<p><a href="https://webext.cgd.ucar.edu/FLTHIST/f.cam6_3_132.FLTHIST_ne30.001/atm/f.cam6_3_132.FLTHIST_ne30.001_1995_2011_vs_f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae.001_1995_2011/index.html" target="_blank">f.cam6_3_132.FLTHIST_ne30.001 vs f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae.001</a></p>
+</div>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Feel free to explore more guided and detailed examples to highlight the different ADF setups in the <a href="https://justin-richling.github.io/ADF-Tutorial/notebooks/basic_examples/readme.html"><strong>GUIDED EXAMPLES</strong></a> section for step by step setup for provided sample data.</p>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -575,11 +688,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="jupyter_run.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="adf_run.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Setting up <strong>your</strong> Jupyter ADF run - optional</p>
+            <p class="prev-next-title">Running <strong>your</strong> ADF</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../basic_examples/readme.html" title="next page">
