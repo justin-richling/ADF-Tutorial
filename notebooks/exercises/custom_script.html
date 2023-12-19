@@ -620,7 +620,7 @@ title="Print to PDF"
 
 <span class="c1"># Main plotting routine</span>
 
-<span class="k">def</span> <span class="nf">time_series_plot</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">time_series_plot</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">,</span> <span class="n">plot_location</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This script plots time series.</span>
 <span class="sd">    Compare CAM time series against other</span>
@@ -633,7 +633,6 @@ title="Print to PDF"
     <span class="n">case_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_case_names</span><span class="p">)</span>
 
     <span class="c1">#Location to save plot:</span>
-    <span class="n">plot_location</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span>
     <span class="n">plot_location</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>
 
 
@@ -989,8 +988,11 @@ title="Print to PDF"
 <span class="c1"># Set case nicknames</span>
 <span class="n">all_nicknames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FCLTHIST&quot;</span><span class="p">,</span> <span class="s2">&quot;FLTHIST&quot;</span><span class="p">]</span>
 
-<span class="c1">#Set plot file type:</span>
+<span class="c1"># Set plot file type:</span>
 <span class="n">plot_type</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span>
+
+<span class="c1"># Set saved plot location</span>
+<span class="n">plot_location</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span>
 
 <span class="c1"># Run the time series function with inputs</span>
 <span class="n">time_series</span><span class="p">(</span><span class="n">var_list</span><span class="p">,</span> <span class="n">all_case_names</span><span class="p">,</span> <span class="n">case_ts_locs</span><span class="p">,</span> <span class="n">all_nicknames</span><span class="p">,</span> <span class="n">plot_type</span><span class="p">)</span>
