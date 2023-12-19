@@ -599,7 +599,7 @@ title="Print to PDF"
 
     <span class="c1">#ADF variable which contains the output path for plots and tables:</span>
     <span class="n">plot_location</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span>
-    <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>    
+    <span class="n">plot_loc</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">plot_location</span><span class="p">)</span>
 
 
     <span class="c1">#Set up the plots</span>
@@ -999,6 +999,7 @@ plot_type -&gt; basic_info_dict.get(‘plot_type’, ‘png’)<br></p>
 </ul>
 </li>
 <li><p>the only input for your function should be the ADF python object (<code class="docutils literal notranslate"><span class="pre">adfobj</span></code>)</p></li>
+<li><p>you can take advantage of the variable defaults file the ADF provides to really refine your plotting and calculations for variable by variable basis.</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">adfobj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
